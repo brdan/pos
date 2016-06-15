@@ -1,0 +1,19 @@
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\bin\Debug\POS.exe.config
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\bin\Debug\POS.exe
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\bin\Debug\POS.pdb
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.frmLogin.resources
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.frmSplash.resources
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.frmCustomers.resources
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.frmDashboard.resources
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.frmStock.resources
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.Properties.Resources.resources
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.csproj.GenerateResource.Cache
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.exe
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.pdb
+C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.csprojResolveAssemblyReference.cache
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\bin\Debug\POS.exe.config
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\obj\Debug\POS.exe
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\obj\Debug\POS.pdb
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\bin\Debug\POS.exe.config
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.exe
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.pdb
