@@ -396,7 +396,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(844, 232);
+            this.label11.Location = new System.Drawing.Point(844, 239);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 21);
             this.label11.TabIndex = 22;
@@ -432,7 +432,7 @@
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.lblState.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblState.Location = new System.Drawing.Point(844, 263);
+            this.lblState.Location = new System.Drawing.Point(844, 271);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(27, 20);
             this.lblState.TabIndex = 18;
@@ -757,7 +757,7 @@
             // lblMale
             // 
             this.lblMale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(163)))), ((int)(((byte)(223)))));
-            this.lblMale.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblMale.ForeColor = System.Drawing.Color.White;
             this.lblMale.Location = new System.Drawing.Point(174, 140);
             this.lblMale.Name = "lblMale";

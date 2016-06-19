@@ -60,6 +60,9 @@
             this.SubCategories = new System.Windows.Forms.TabPage();
             this.sc_sub_tab = new System.Windows.Forms.TabControl();
             this.scStep1 = new System.Windows.Forms.TabPage();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.cbScAlert = new System.Windows.Forms.CheckBox();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -118,6 +121,9 @@
             this.Products = new System.Windows.Forms.TabPage();
             this.product_sub_tab = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.txtProdCostPrice = new System.Windows.Forms.TextBox();
@@ -206,12 +212,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pColour = new System.Windows.Forms.ColorDialog();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
             this.Tab.SuspendLayout();
             this.Categories.SuspendLayout();
             this.cat_sub_tab.SuspendLayout();
@@ -703,6 +703,42 @@
             this.scStep1.TabIndex = 1;
             this.scStep1.Text = "Step 1";
             // 
+            // label63
+            // 
+            this.label63.BackColor = System.Drawing.Color.DarkGreen;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label63.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label63.Location = new System.Drawing.Point(292, 278);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(24, 24);
+            this.label63.TabIndex = 155;
+            this.label63.Text = "£";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label64
+            // 
+            this.label64.BackColor = System.Drawing.Color.DarkGreen;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label64.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label64.Location = new System.Drawing.Point(499, 278);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(24, 24);
+            this.label64.TabIndex = 156;
+            this.label64.Text = "£";
+            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            this.label37.BackColor = System.Drawing.Color.DarkGreen;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label37.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label37.Location = new System.Drawing.Point(186, 278);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(24, 24);
+            this.label37.TabIndex = 155;
+            this.label37.Text = "£";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -904,7 +940,7 @@
             // lblScVAT
             // 
             this.lblScVAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(179)))), ((int)(((byte)(149)))));
-            this.lblScVAT.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblScVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblScVAT.ForeColor = System.Drawing.Color.White;
             this.lblScVAT.Location = new System.Drawing.Point(587, 419);
             this.lblScVAT.Name = "lblScVAT";
@@ -1455,6 +1491,42 @@
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Step 2";
             // 
+            // label35
+            // 
+            this.label35.BackColor = System.Drawing.Color.DarkGreen;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label35.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label35.Location = new System.Drawing.Point(292, 278);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(24, 24);
+            this.label35.TabIndex = 153;
+            this.label35.Text = "£";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            this.label36.BackColor = System.Drawing.Color.DarkGreen;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label36.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label36.Location = new System.Drawing.Point(499, 278);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(24, 24);
+            this.label36.TabIndex = 154;
+            this.label36.Text = "£";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.BackColor = System.Drawing.Color.DarkGreen;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label34.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label34.Location = new System.Drawing.Point(186, 278);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(24, 24);
+            this.label34.TabIndex = 152;
+            this.label34.Text = "£";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel24
             // 
             this.panel24.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1840,7 +1912,7 @@
             // lblProdVAT
             // 
             this.lblProdVAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(179)))), ((int)(((byte)(149)))));
-            this.lblProdVAT.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblProdVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblProdVAT.ForeColor = System.Drawing.Color.White;
             this.lblProdVAT.Location = new System.Drawing.Point(593, 419);
             this.lblProdVAT.Name = "lblProdVAT";
@@ -2215,7 +2287,7 @@
             this.label59.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.ForeColor = System.Drawing.Color.Gainsboro;
             this.label59.Location = new System.Drawing.Point(51, 353);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(114, 19);
@@ -2227,7 +2299,7 @@
             this.label60.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label60.ForeColor = System.Drawing.Color.White;
+            this.label60.ForeColor = System.Drawing.Color.Gainsboro;
             this.label60.Location = new System.Drawing.Point(51, 312);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(114, 19);
@@ -2239,7 +2311,7 @@
             this.label61.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label61.ForeColor = System.Drawing.Color.White;
+            this.label61.ForeColor = System.Drawing.Color.Gainsboro;
             this.label61.Location = new System.Drawing.Point(51, 273);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(107, 19);
@@ -2251,7 +2323,7 @@
             this.label56.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.ForeColor = System.Drawing.Color.Gainsboro;
             this.label56.Location = new System.Drawing.Point(51, 234);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(114, 19);
@@ -2263,7 +2335,7 @@
             this.label57.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label57.ForeColor = System.Drawing.Color.White;
+            this.label57.ForeColor = System.Drawing.Color.Gainsboro;
             this.label57.Location = new System.Drawing.Point(51, 193);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(114, 19);
@@ -2275,7 +2347,7 @@
             this.label58.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.ForeColor = System.Drawing.Color.Gainsboro;
             this.label58.Location = new System.Drawing.Point(51, 154);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(107, 19);
@@ -2287,7 +2359,7 @@
             this.label53.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label53.ForeColor = System.Drawing.Color.White;
+            this.label53.ForeColor = System.Drawing.Color.Gainsboro;
             this.label53.Location = new System.Drawing.Point(51, 111);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(114, 19);
@@ -2299,7 +2371,7 @@
             this.label55.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.ForeColor = System.Drawing.Color.Gainsboro;
             this.label55.Location = new System.Drawing.Point(51, 31);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(107, 19);
@@ -2311,7 +2383,7 @@
             this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.ForeColor = System.Drawing.Color.Gainsboro;
             this.label54.Location = new System.Drawing.Point(51, 70);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(114, 19);
@@ -2347,7 +2419,7 @@
             this.label50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label50.ForeColor = System.Drawing.Color.White;
+            this.label50.ForeColor = System.Drawing.Color.Gainsboro;
             this.label50.Location = new System.Drawing.Point(39, 116);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(114, 19);
@@ -2359,7 +2431,7 @@
             this.label51.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label51.ForeColor = System.Drawing.Color.White;
+            this.label51.ForeColor = System.Drawing.Color.Gainsboro;
             this.label51.Location = new System.Drawing.Point(39, 75);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(114, 19);
@@ -2371,7 +2443,7 @@
             this.label52.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label52.ForeColor = System.Drawing.Color.White;
+            this.label52.ForeColor = System.Drawing.Color.Gainsboro;
             this.label52.Location = new System.Drawing.Point(39, 36);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(107, 19);
@@ -2397,6 +2469,7 @@
             this.panel32.Controls.Add(this.label49);
             this.panel32.Controls.Add(this.label48);
             this.panel32.Controls.Add(this.label47);
+            this.panel32.ForeColor = System.Drawing.Color.Gainsboro;
             this.panel32.Location = new System.Drawing.Point(48, 147);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(365, 173);
@@ -2407,7 +2480,7 @@
             this.label49.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label49.ForeColor = System.Drawing.Color.White;
+            this.label49.ForeColor = System.Drawing.Color.Gainsboro;
             this.label49.Location = new System.Drawing.Point(39, 110);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(114, 19);
@@ -2419,7 +2492,7 @@
             this.label48.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label48.ForeColor = System.Drawing.Color.White;
+            this.label48.ForeColor = System.Drawing.Color.Gainsboro;
             this.label48.Location = new System.Drawing.Point(39, 69);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(114, 19);
@@ -2431,7 +2504,7 @@
             this.label47.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label47.ForeColor = System.Drawing.Color.White;
+            this.label47.ForeColor = System.Drawing.Color.Gainsboro;
             this.label47.Location = new System.Drawing.Point(39, 30);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(107, 19);
@@ -2507,78 +2580,6 @@
             this.btnBack.TabIndex = 9;
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // label34
-            // 
-            this.label34.BackColor = System.Drawing.Color.DarkGreen;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label34.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label34.Location = new System.Drawing.Point(186, 278);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(24, 24);
-            this.label34.TabIndex = 152;
-            this.label34.Text = "£";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.BackColor = System.Drawing.Color.DarkGreen;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label35.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label35.Location = new System.Drawing.Point(292, 278);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(24, 24);
-            this.label35.TabIndex = 153;
-            this.label35.Text = "£";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.DarkGreen;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label36.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label36.Location = new System.Drawing.Point(499, 278);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(24, 24);
-            this.label36.TabIndex = 154;
-            this.label36.Text = "£";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            this.label37.BackColor = System.Drawing.Color.DarkGreen;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label37.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label37.Location = new System.Drawing.Point(186, 278);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(24, 24);
-            this.label37.TabIndex = 155;
-            this.label37.Text = "£";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label63
-            // 
-            this.label63.BackColor = System.Drawing.Color.DarkGreen;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label63.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label63.Location = new System.Drawing.Point(292, 278);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(24, 24);
-            this.label63.TabIndex = 155;
-            this.label63.Text = "£";
-            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label64
-            // 
-            this.label64.BackColor = System.Drawing.Color.DarkGreen;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label64.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label64.Location = new System.Drawing.Point(499, 278);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(24, 24);
-            this.label64.TabIndex = 156;
-            this.label64.Text = "£";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmStock
             // 

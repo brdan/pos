@@ -14,5 +14,7 @@ namespace POS.Classes
         public static List<Subcategory> Subcategories = new List<Subcategory>();
         public static List<Product> Products = new List<Product>();
         public static List<Theme> Themes = new List<Theme>();
+        public static List<Order> Orders = new List<Order>();
+        public static List<Cart> Carts = new List<Cart>();
     }
 }

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.IO;
+using System.Xml.Linq;
+using System.Text.RegularExpressions;
 
 namespace POS.Classes
 {

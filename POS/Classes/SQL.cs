@@ -13,7 +13,7 @@ namespace POS.Classes
     {
         /*as one of your MASTER refinations, think of using single-functions and utilising the oftype() + interface features to 
          figure out which type the code is dealing with, and what its fields are :P*/
-        static string cnxString = "Data Source=.;Initial Catalog=pos;Integrated Security=True";
+        static string cnxString = @"Data Source=MOHAMED-PC\SQLEXPRESS;Initial Catalog=POS;Integrated Security=True";
         public static void Init()
         {
             //Initial Connection (Used for everything)
@@ -126,7 +126,6 @@ namespace POS.Classes
                     }
                 }
             }
-
             #endregion
 
             //Subcategories
@@ -233,38 +232,93 @@ namespace POS.Classes
             }
             #endregion
 
-            //Themes
+            //Themes (Commented-Out ...for now)
             #region Themes
-            using (SqlCommand cmd = new SqlCommand("SELECT * FROM themes", cnx))
+            //using (SqlCommand cmd = new SqlCommand("SELECT * FROM themes", cnx))
+            //{
+            //    using (SqlDataReader dr = cmd.ExecuteReader())
+            //    {
+            //        while (dr.Read())
+            //        {
+            //            Theme t = new Theme();
+            //            int i = 0;
+            //            var allProps = t.GetType().GetProperties();
+            //            foreach (var prop in allProps)
+            //            {
+            //                var data = dr[i];                      
+            //                if (prop.PropertyType == typeof(Color))
+            //                {
+            //                    data = Color.FromArgb(Convert.ToInt32(data));
+            //                    prop.SetValue(t, Convert.ChangeType(data, prop.PropertyType));
+            //                }
+            //                else if (data.GetType() == typeof(DBNull))
+            //                {
+            //                    data = "0";
+            //                }
+            //                else
+            //                    prop.SetValue(t, Convert.ChangeType(dr[i], prop.PropertyType));
+            //                i++;
+            //            }
+            //            Collections.Themes.Add(t);
+            //        }
+            //    }
+            //}
+            #endregion
+
+
+            //The carts first - so I can assign them to orders when I load the order next
+            #region Carts
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM carts", cnx))
             {
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        Theme t = new Theme();
+                        Cart x = new Cart();
                         int i = 0;
-                        var allProps = t.GetType().GetProperties();
+                        var allProps = x.GetType().GetProperties();
                         foreach (var prop in allProps)
                         {
-                            var data = dr[i];                      
-                            if (prop.PropertyType == typeof(Color))
+                            var data = dr[i];
+                            if (data != DBNull.Value)
                             {
-                                data = Color.FromArgb(Convert.ToInt32(data));
-                                prop.SetValue(t, Convert.ChangeType(data, prop.PropertyType));
+                                prop.SetValue(x, Convert.ChangeType(data, prop.PropertyType));
                             }
-                            else if (data.GetType() == typeof(DBNull))
-                            {
-                                data = "0";
-                            }
-                            else
-                                prop.SetValue(t, Convert.ChangeType(dr[i], prop.PropertyType));
                             i++;
                         }
-                        Collections.Themes.Add(t);
+                        Collections.Carts.Add(x);
                     }
                 }
             }
-            #endregion
+            #endregion  
+
+            //Orders 
+            #region Orders
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM orders", cnx))
+            {
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        Order x = new Order();
+                        int i = 0;
+                        var allProps = x.GetType().GetProperties();
+                        foreach (var prop in allProps)
+                        {
+                            var data = dr[i];
+                            if (data != DBNull.Value)
+                            {
+                                System.Windows.Forms.MessageBox.Show(prop.Name);
+                                prop.SetValue(x, Convert.ChangeType(data, prop.PropertyType));
+                            }
+                            i++;
+                        }
+                        Collections.Orders.Add(x);
+                    }
+                }
+            }
+            #endregion  
+
             cnx.Close();
         }
 
@@ -394,6 +448,7 @@ namespace POS.Classes
                 cmd.Parameters.Add(new SqlParameter("vat", p.VAT));
                 cmd.Parameters.Add(new SqlParameter("instock_qty", p.InStockQty));
                 cmd.Parameters.Add(new SqlParameter("image", Functions.imageToByteArray(p.Picture)));
+                cmd.Parameters.Add(new SqlParameter("reorder_lvl", Functions.imageToByteArray(p.Picture)));
 
                 p.ID = (int)(decimal)cmd.ExecuteScalar();
                 Collections.Products.Add(p);

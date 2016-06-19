@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
 namespace POS
@@ -22,7 +23,7 @@ namespace POS
         }
 
         private void frmSplash_Load(object sender, EventArgs e)
-        {
+        {            
             SQL.Init();
         }
 
