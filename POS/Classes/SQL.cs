@@ -265,34 +265,29 @@ namespace POS.Classes
             //}
             #endregion
 
-
-            //The carts first - so I can assign them to orders when I load the order next
-            #region Carts
+            //The order items first - so I can assign them to carts, then orders when I load the order next
+            #region Order Items
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM carts", cnx))
             {
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        Cart x = new Cart();
-                        int i = 0;
-                        var allProps = x.GetType().GetProperties();
-                        foreach (var prop in allProps)
-                        {
-                            var data = dr[i];
-                            if (data != DBNull.Value)
-                            {
-                                prop.SetValue(x, Convert.ChangeType(data, prop.PropertyType));
-                            }
-                            i++;
-                        }
-                        Collections.Carts.Add(x);
+                        OrderItem oI = new OrderItem();
+                        oI.ID = Convert.ToInt32(dr["id"]);
+                        oI.OrderID = Convert.ToInt32(dr["order_id"]);
+                        oI.Description = dr["description"].ToString();
+                        oI.Modifiers = Functions.ToList(dr["modifiers"].ToString());
+                        oI.Discounts = Functions.ToList(dr["discounts"].ToString());
+                        oI.ItemPrice = Convert.ToDecimal(dr["price"]);
+                        Collections.OrderItems.Add(oI);
                     }
                 }
             }
-            #endregion  
+            #endregion
 
-            //Orders 
+            /* Retrive orders independently of their carts, then match the carts with the order ID, 
+            the carts should contain all items */
             #region Orders
             using (SqlCommand cmd = new SqlCommand("SELECT * FROM orders", cnx))
             {
@@ -308,12 +303,18 @@ namespace POS.Classes
                             var data = dr[i];
                             if (data != DBNull.Value)
                             {
-                                System.Windows.Forms.MessageBox.Show(prop.Name);
                                 prop.SetValue(x, Convert.ChangeType(data, prop.PropertyType));
                             }
                             i++;
                         }
+                        //Filter out its Cart
+                        Cart c = new Cart();
+                        c.OrderID = x.ID;
+                        c.Items = Collections.OrderItems.Where(oi => oi.OrderID == c.OrderID).ToList();
+
+
                         Collections.Orders.Add(x);
+                        Collections.Carts.Add(c);
                     }
                 }
             }

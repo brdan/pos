@@ -73,6 +73,7 @@
             // 
             // btnNewOrder
             // 
+            this.btnNewOrder.AccessibleName = "NewOrder";
             this.btnNewOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.btnNewOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewOrder.Font = new System.Drawing.Font("Segoe UI", 12F);

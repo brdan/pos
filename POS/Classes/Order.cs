@@ -24,12 +24,27 @@ namespace POS.Classes
         public decimal TotalPaid { get; set; }
         public string Notes { get; set; }
         public Dictionary<string,string> Discounts { get; set; }
+
+        public Cart getCart()
+        {
+            Cart ca = new Cart();
+            try
+            {
+                ca = Collections.Carts.First(c => c.OrderID == ID);
+            }
+            catch (Exception)
+            {
+                System.Windows.Forms.MessageBox.Show("Something is wrong with the cart for this order...");
+            }
+
+            return ca;
+        }
     }
 
     public class OrderItem
     {
         public int ID { get; set; }
-        public int Qty { get; set; }
+        public int OrderID { get; set; }
         public string Description { get; set; }
         public Dictionary<string, string> Modifiers = new Dictionary<string, string>();
         public Dictionary<string, string> Discounts = new Dictionary<string, string>();
@@ -39,7 +54,6 @@ namespace POS.Classes
 
     public class Cart
     {
-        public int ID { get; set; }
         public int OrderID { get; set; }
         public List<OrderItem> Items;
     }

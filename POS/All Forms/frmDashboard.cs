@@ -35,9 +35,16 @@ namespace POS
                 case "LOGOUT":
                     break;
                 default:
-                    typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null);
-                    Thread.Sleep(50);
-                    this.Hide();
+                    try
+                    {
+                        typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null);
+                        Thread.Sleep(50);
+                        this.Hide();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Something is wrong with this routing!", "Cannot Route");
+                    }
                     break;
             }
         }

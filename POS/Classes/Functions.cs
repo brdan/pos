@@ -179,7 +179,19 @@ namespace POS.Classes
             else
                 return str;
         }
+        public static Dictionary<string,string> ToList(string str)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
 
+            string[] modifiers = str.Split('^');
+            foreach(string modifierPair in modifiers)
+            {
+                string key = modifierPair.Substring(0, modifierPair.IndexOf('@'));
+                string value = modifierPair.Substring(key.Length + 1, modifierPair.Length - (key.Length + 1));
+                dict.Add(key, value);
+            }
+            return dict;
+        }
 
 
     }

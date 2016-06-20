@@ -14,6 +14,7 @@ namespace POS.Classes
         static frmDashboard rDashboard = new frmDashboard();
         static frmCustomers rCustomers = new frmCustomers();
         static frmStock rStock = new frmStock();
+        static frmNewOrder rOrder = new frmNewOrder();
 
         public static void Login()
         {
@@ -31,6 +32,11 @@ namespace POS.Classes
         public static void StockManagement()
         {
             rStock.Index();
+        }
+
+        public static void NewOrder()
+        {
+            rOrder.Index();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace POS
         public frmNewOrder()
         {
             InitializeComponent();
+        }
+
+        public void Index()
+        {
+            Tab.SelectTab(0);
+
+            this.Show();
+        }
+
+        private void frmNewOrder_Load(object sender, EventArgs e)
+        {
+            Functions.GiveBorder(Tab, this, Color.FromArgb(44, 62, 80));
         }
     }
 }
