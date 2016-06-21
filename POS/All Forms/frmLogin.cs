@@ -60,12 +60,22 @@ namespace POS
                     break;
                 case "OK":
                     if (txtPin.Text.Length > 0)
-                        if (Functions.VerifyUserPIN(Convert.ToInt32(txtPin.Text)))
+                    {
+                        User u = Functions.VerifyUserPIN(Convert.ToInt32(txtPin.Text));
+                        if (u)
                         {
+                            //set as logged in user
+                            Collections.CurrentUser = u;
+
                             Router.Dashboard();
                             Thread.Sleep(50);
                             this.Hide();
                         }
+                        else
+                        {
+                            MessageBox.Show("Couldn't sign you in - user did not verify!", "Verification Failed");
+                        }
+                    }
                     break;
 
 

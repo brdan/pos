@@ -12,5 +12,19 @@ namespace POS.Classes
         public string Username { get; set; }
         public string Password { get; set; }
         public int PIN { get; set; }
+
+        public User()
+        {
+            ID = 0;
+        }
+
+        public static bool operator true(User user)
+        {
+            return (user.ID != 0);
+        }
+        public static bool operator false(User user)
+        {
+            return (user.ID == 0);
+        }
     }
 }

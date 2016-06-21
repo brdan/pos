@@ -163,12 +163,22 @@ namespace POS.Classes
 
             return true;
         }
-        public static bool VerifyUserPIN(int pin)
+        public static User VerifyUserPIN(int pin)
         {
-            bool toReturn = false;
-            if (Collections.Users.Where(n => n.PIN == pin).ToList().Count > 0)
-                toReturn = true;
-            return toReturn;
+            User user = new User();
+            try
+            {
+                user = Collections.Users.First(u => u.PIN == pin);
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show("User not verified properly."); doing this on the view-level
+            }
+            return user;
+        }
+        public static void Hi()
+        {
+
         }
 
         //String Modifiers

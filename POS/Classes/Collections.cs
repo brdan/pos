@@ -8,6 +8,8 @@ namespace POS.Classes
 {
     public static class Collections
     {
+        public static User CurrentUser;
+
         public static List<User> Users = new List<User>();
         public static List<Customer> Customers = new List<Customer>();
         public static List<Category> Categories = new List<Category>();
