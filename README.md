@@ -7,6 +7,7 @@
 ### Questions ####
 
 Dont we need to store customer payment details?
+
 Does Drive-Thru and Delivery require additional procedures?
 
 ---
