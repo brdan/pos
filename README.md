@@ -1,6 +1,7 @@
 # POS #
 
----
+
+---
 
 
 ### Questions ####
@@ -11,12 +12,19 @@ Does Drive-Thru and Delivery require additional procedures?
 ---
 
 ### Required Functionalities on Order Screen ####
+
 Browsing Items (lookup tools)
+
 Adding Items
+
 Cart System
+
 Miscellaneous Item
+
 Edit Item
+
 Print Order
+
 Modifiers (to items)
 Discounts (available for both orders and items)
 
