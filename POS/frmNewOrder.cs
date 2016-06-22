@@ -18,6 +18,9 @@ namespace POS
             InitializeComponent();
         }
         Order tempOrder;
+        Cart tempCart;
+        bool cartColourPattern = true;
+        bool cartScrollDirection;
         public void Index()
         {
             Tab.SelectTab(0);
@@ -46,6 +49,7 @@ namespace POS
             *  4 - Comlpleted
             */
             tempOrder = new Order();
+            tempCart = new Cart();
 
             int routePath = Convert.ToInt16(btn.AccessibleName);
 
@@ -74,18 +78,69 @@ namespace POS
             }
 
         }
+        public void addItem(Product p)
+        {
+            Color pattern = cartColourPattern ? Color.FromArgb(50, 68, 86) : Color.FromArgb(60, 78, 96);
+            cartColourPattern = !cartColourPattern;
+            Font itemFont = new Font("Segoe UI Light", 13.00f);
+
+            //Item Container
+            FlowLayoutPanel flp = new FlowLayoutPanel();
+            flp.Size = new Size(342, 36);
+            flp.Margin = new Padding(0, 0, 0, 0);
+            flp.AccessibleName = p.ID.ToString();
+
+            //Item Name Label
+            Label lblName = new Label();
+            lblName.Font = itemFont;
+            lblName.Text = p.Name;
+            lblName.ForeColor = Color.Gainsboro;
+            lblName.BackColor = pattern;
+            lblName.Margin = new Padding(0, 0, 0, 0);
+            lblName.Padding = new Padding(5, 5, 5, 5);
+            lblName.Size = new Size(258, 36);
+            lblName.Click += lbl_Click;
+
+            //Item Price Label
+            Label lblPrice = new Label();
+            lblPrice.Font = itemFont;
+            lblPrice.Text = Settings.Setting["currency"] + p.CostPrice;
+            lblPrice.ForeColor = Color.Gainsboro;
+            lblPrice.BackColor = pattern;
+            lblPrice.Margin = new Padding(0, 0, 0, 0);
+            lblPrice.Padding = new Padding(5, 5, 5, 5);
+            lblPrice.Size = new Size(84, 36);
+            lblPrice.TextAlign = ContentAlignment.MiddleRight;
+            lblPrice.Click += lbl_Click;
+
+            flp.Controls.Add(lblName);
+            flp.Controls.Add(lblPrice);
+            flp_cart.Controls.Add(flp);
+
+            OrderItem newItem = new OrderItem();
+            newItem.Description = p.Name;
+            newItem.ItemPrice = p.CostPrice;
+            tempCart.Items.Add(newItem);
+
+
+        }
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+            foreach (Control c in lbl.Parent.Controls)
+                c.BackColor = Color.FromArgb(41, 128, 185);
+        }
 
         private void frmNewOrder_Load(object sender, EventArgs e)
         {
             Functions.GiveBorder(Tab, this, Color.FromArgb(44, 62, 80));
         }
-
         private void btnOrderType(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             initOrder(btn);
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             /*
@@ -106,6 +161,28 @@ namespace POS
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addItem(Collections.Products.First());
+        }
 
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try { if (cartScrollDirection) flp_cart.VerticalScroll.Value-=10; else flp_cart.VerticalScroll.Value+=10; } catch (Exception) { }
+        }
+        private void btnScroll_MouseDown(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            cartScrollDirection = btn.Text == "▲" ? true : false;
+            timer1.Start();
+        }
+
+        private void btnScroll_MouseUp(object sender, MouseEventArgs e)
+        {
+            timer1.Stop();
+        }
     }
 }

@@ -55,6 +55,6 @@ namespace POS.Classes
     public class Cart
     {
         public int OrderID { get; set; }
-        public List<OrderItem> Items;
+        public List<OrderItem> Items = new List<OrderItem>();
     }
 }
