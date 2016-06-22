@@ -53,6 +53,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Cart = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label56 = new System.Windows.Forms.Label();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@
             this.Payment = new System.Windows.Forms.TabPage();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label56 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -418,6 +418,27 @@
             this.Cart.Size = new System.Drawing.Size(1016, 679);
             this.Cart.TabIndex = 2;
             this.Cart.Text = "Order Cart";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(650, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 84);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "add discount";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label56
+            // 
+            this.label56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label56.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label56.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label56.Location = new System.Drawing.Point(358, 45);
+            this.label56.Margin = new System.Windows.Forms.Padding(0);
+            this.label56.Name = "label56";
+            this.label56.Padding = new System.Windows.Forms.Padding(5);
+            this.label56.Size = new System.Drawing.Size(18, 513);
+            this.label56.TabIndex = 30;
             // 
             // flowLayoutPanel5
             // 
@@ -837,27 +858,6 @@
             // 
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label56
-            // 
-            this.label56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label56.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label56.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label56.Location = new System.Drawing.Point(358, 45);
-            this.label56.Margin = new System.Windows.Forms.Padding(0);
-            this.label56.Name = "label56";
-            this.label56.Padding = new System.Windows.Forms.Padding(5);
-            this.label56.Size = new System.Drawing.Size(18, 513);
-            this.label56.TabIndex = 30;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(650, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 84);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "add item";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmNewOrder
             // 
