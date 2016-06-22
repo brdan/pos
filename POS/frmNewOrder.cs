@@ -21,7 +21,7 @@ namespace POS
         Cart tempCart;
         bool cartColourPattern = true;
         bool cartScrollDirection;
-        int selectItemIndex = -1;
+        int selectedItemIndex = -1;
 
         public void Index()
         {
@@ -102,7 +102,7 @@ namespace POS
             lblName.Margin = new Padding(0, 0, 0, 0);
             lblName.Padding = new Padding(5, 5, 5, 5);
             lblName.Size = new Size(258, 36);
-            lblName.Click += lbl_Click;
+            lblName.Click += item_Click;
 
             //Item Price Label
             Label lblPrice = new Label();
@@ -114,7 +114,7 @@ namespace POS
             lblPrice.Padding = new Padding(5, 5, 5, 5);
             lblPrice.Size = new Size(84, 36);
             lblPrice.TextAlign = ContentAlignment.MiddleRight;
-            lblPrice.Click += lbl_Click;
+            lblPrice.Click += item_Click;
 
             flp.Controls.Add(lblName);
             flp.Controls.Add(lblPrice);
@@ -130,25 +130,25 @@ namespace POS
         public void deselect(Control c)
         {
             flp_cart.Controls[flp_cart.Controls.IndexOf(c)].Controls.OfType<Control>().ToList().ForEach(sc => sc.BackColor = Color.FromArgb(Convert.ToInt32(c.AccessibleDescription)));
-            selectItemIndex = -1;
+            selectedItemIndex = -1;
 
         }
 
-        private void lbl_Click(object sender, EventArgs e)
+
+        private void item_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
+            lbl.Parent.Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
 
-            if (selectItemIndex != -1)
-                deselect(flp_cart.Controls[selectItemIndex]);
-            
+            if (selectedItemIndex != -1) deselect(flp_cart.Controls[selectedItemIndex]);
 
-            if(selectItemIndex == -1)
+            if (selectedItemIndex == -1)
             {
-         
-                flp_cart.Controls[flp_cart.Controls.IndexOf(lbl.Parent)].Controls.OfType<Control>().ToList().ForEach(c=>c.BackColor = Color.FromArgb(41, 128, 185));
-                selectItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
+                flp_cart.Controls[flp_cart.Controls.IndexOf(lbl.Parent)].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+                selectedItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
             }
         }
+
 
         private void frmNewOrder_Load(object sender, EventArgs e)
         {
@@ -189,8 +189,31 @@ namespace POS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try { if (cartScrollDirection) { if (flp_cart.VerticalScroll.Value <= 10) flp_cart.VerticalScroll.Value--; else flp_cart.VerticalScroll.Value -= 10; } else flp_cart.VerticalScroll.Value += 10; } catch (Exception) { }
+
+            //control the thresholds with message box, so u know when to slow them down
+            try
+            {
+                if (cartScrollDirection)
+                {
+                    if (flp_cart.VerticalScroll.Value > 0 && flp_cart.VerticalScroll.Value <= 20)
+                        flp_cart.VerticalScroll.Value--;
+
+                    else
+                        flp_cart.VerticalScroll.Value -= 10;
+                }
+                else {
+
+                    if (flp_cart.VerticalScroll.Value >= (flp_cart.VerticalScroll.Maximum - 20) && flp_cart.VerticalScroll.Value <= flp_cart.VerticalScroll.Maximum)
+                        flp_cart.VerticalScroll.Value++;
+
+                    else
+                        flp_cart.VerticalScroll.Value += 10;
+                }
+            }
+            catch (Exception) { }
         }
+
+
         private void btnScroll_MouseDown(object sender, MouseEventArgs e)
         {
             Button btn = (Button)sender;
@@ -201,6 +224,18 @@ namespace POS
         private void btnScroll_MouseUp(object sender, MouseEventArgs e)
         {
             timer1.Stop();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (selectedItemIndex == -1)
+            {
+                MessageBox.Show("You must select an item to add this to...");
+            }
+            else
+            {
+                //add discountmod
+            }
         }
     }
 }
