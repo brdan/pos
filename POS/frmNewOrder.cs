@@ -21,6 +21,8 @@ namespace POS
         Cart tempCart;
         bool cartColourPattern = true;
         bool cartScrollDirection;
+        int selectItemIndex = -1;
+
         public void Index()
         {
             Tab.SelectTab(0);
@@ -89,6 +91,7 @@ namespace POS
             flp.Size = new Size(342, 36);
             flp.Margin = new Padding(0, 0, 0, 0);
             flp.AccessibleName = p.ID.ToString();
+            flp.AccessibleDescription = pattern.ToArgb().ToString();
 
             //Item Name Label
             Label lblName = new Label();
@@ -124,12 +127,27 @@ namespace POS
 
 
         }
+        public void deselect(Control c)
+        {
+            flp_cart.Controls[flp_cart.Controls.IndexOf(c)].Controls.OfType<Control>().ToList().ForEach(sc => sc.BackColor = Color.FromArgb(Convert.ToInt32(c.AccessibleDescription)));
+            selectItemIndex = -1;
+
+        }
 
         private void lbl_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
-            foreach (Control c in lbl.Parent.Controls)
-                c.BackColor = Color.FromArgb(41, 128, 185);
+
+            if (selectItemIndex != -1)
+                deselect(flp_cart.Controls[selectItemIndex]);
+            
+
+            if(selectItemIndex == -1)
+            {
+         
+                flp_cart.Controls[flp_cart.Controls.IndexOf(lbl.Parent)].Controls.OfType<Control>().ToList().ForEach(c=>c.BackColor = Color.FromArgb(41, 128, 185));
+                selectItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
+            }
         }
 
         private void frmNewOrder_Load(object sender, EventArgs e)
@@ -171,7 +189,7 @@ namespace POS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try { if (cartScrollDirection) flp_cart.VerticalScroll.Value-=10; else flp_cart.VerticalScroll.Value+=10; } catch (Exception) { }
+            try { if (cartScrollDirection) { if (flp_cart.VerticalScroll.Value <= 10) flp_cart.VerticalScroll.Value--; else flp_cart.VerticalScroll.Value -= 10; } else flp_cart.VerticalScroll.Value += 10; } catch (Exception) { }
         }
         private void btnScroll_MouseDown(object sender, MouseEventArgs e)
         {
