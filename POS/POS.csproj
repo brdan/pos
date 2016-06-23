@@ -93,6 +93,12 @@
     <Compile Include="All Forms\frmStock.Designer.cs">
       <DependentUpon>frmStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CartSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CartSystem.Designer.cs">
+      <DependentUpon>CartSystem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNewOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="All Forms\frmStock.resx">
       <DependentUpon>frmStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CartSystem.resx">
+      <DependentUpon>CartSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewOrder.resx">
       <DependentUpon>frmNewOrder.cs</DependentUpon>
