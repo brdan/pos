@@ -21,7 +21,6 @@ namespace POS
         Cart tempCart;
         bool cartColourPattern = true;
         bool cartScrollDirection;
-        bool cooling = false;
         int coolValue = 0;
         int selectedItemIndex = -1;
 
@@ -241,7 +240,66 @@ namespace POS
             else
             {
                 //add discountmod
-                //
+                //step 1: check if item has secondary slot (for sub-items
+                Control selectedItem = flp_cart.Controls[selectedItemIndex];
+                if(GetNextControl(selectedItem,true).Margin.Left == 45)
+                {
+                    //yes, has sub-box
+                    MessageBox.Show("Has box");
+                } else
+                {
+                    MessageBox.Show("No box, making one!");
+                    FlowLayoutPanel flp = new FlowLayoutPanel();
+                    flp.AutoSize = true;
+                    flp.Margin = new Padding(45, 0, 0, 0);
+                    flp_cart.Controls.Add(flp);
+                    flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
+
+
+                }
+
+                MessageBox.Show("adding item");
+                Control parent = flp_cart.Controls[selectedItemIndex + 1];
+                //the three labels
+                Label lblIcon = new Label();
+                lblIcon.BackColor = Color.FromArgb(14, 32, 50);
+                lblIcon.ForeColor = Color.Gainsboro;
+                lblIcon.Font = new Font("Heydings Icons", 15.00f);
+                lblIcon.Margin = new Padding(0, 0, 0, 0);
+                lblIcon.Padding = new Padding(1, 1, 1, 1);
+                lblIcon.Size = new Size(38, 25);
+                lblIcon.Text = "t";
+                lblIcon.TextAlign = ContentAlignment.MiddleCenter;
+
+                Label lblName = new Label();
+                lblName.BackColor = Color.FromArgb(24, 42, 60);
+                lblName.ForeColor = Color.Gainsboro;
+                lblName.Font = new Font("Segoe UI", 10.00f);
+                lblName.Margin = new Padding(0, 0, 0, 0);
+                lblName.Padding = new Padding(2, 2, 2, 2);
+                lblName.Size = new Size(193, 25);
+                lblName.Text = "muuuuki~ :3";
+
+                Label lblPrice = new Label();
+                lblPrice.BackColor = Color.FromArgb(24, 42, 60);
+                lblPrice.ForeColor = Color.Gainsboro;
+                lblPrice.Text = Settings.Setting["currency"] + "33.99";
+                Font font = new Font("Segoe UI", 10.00f);
+                if (lblPrice.Text.Length > 7)
+                    font = new Font("Segoe UI", 9.00f);
+                else if (lblPrice.Text.Length > 9)
+                    font = new Font("Segoe UI", 7.00f);
+                lblPrice.Font = font;
+                lblPrice.TextAlign = ContentAlignment.MiddleLeft;
+                lblPrice.Margin = new Padding(0, 0, 0, 0);
+                lblPrice.Padding = new Padding(2, 2, 2, 2);
+                lblPrice.Size = new Size(84, 25);
+                
+
+                //add controls
+                parent.Controls.Add(lblIcon);
+                parent.Controls.Add(lblName);
+                parent.Controls.Add(lblPrice);
             }
         }
 

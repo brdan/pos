@@ -67,12 +67,6 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
             this.btnScrollDown = new System.Windows.Forms.Button();
             this.btnScrollUp = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -83,6 +77,15 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.cooler = new System.Windows.Forms.Timer(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -442,11 +445,11 @@
             this.label56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label56.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label56.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label56.Location = new System.Drawing.Point(358, 49);
+            this.label56.Location = new System.Drawing.Point(356, 49);
             this.label56.Margin = new System.Windows.Forms.Padding(0);
             this.label56.Name = "label56";
             this.label56.Padding = new System.Windows.Forms.Padding(5);
-            this.label56.Size = new System.Drawing.Size(18, 510);
+            this.label56.Size = new System.Drawing.Size(20, 510);
             this.label56.TabIndex = 30;
             // 
             // flowLayoutPanel5
@@ -458,7 +461,7 @@
             this.flowLayoutPanel5.Location = new System.Drawing.Point(603, 133);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(360, 509);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(340, 509);
             this.flowLayoutPanel5.TabIndex = 15;
             this.flowLayoutPanel5.Visible = false;
             // 
@@ -481,7 +484,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(5);
-            this.label5.Size = new System.Drawing.Size(276, 40);
+            this.label5.Size = new System.Drawing.Size(257, 40);
             this.label5.TabIndex = 29;
             this.label5.Text = "label5";
             // 
@@ -490,7 +493,7 @@
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(68)))), ((int)(((byte)(86)))));
             this.label22.Font = new System.Drawing.Font("Segoe UI Light", 9F);
             this.label22.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label22.Location = new System.Drawing.Point(276, 0);
+            this.label22.Location = new System.Drawing.Point(257, 0);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
             this.label22.Padding = new System.Windows.Forms.Padding(5);
@@ -518,7 +521,7 @@
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
             this.label23.Padding = new System.Windows.Forms.Padding(5);
-            this.label23.Size = new System.Drawing.Size(276, 40);
+            this.label23.Size = new System.Drawing.Size(257, 40);
             this.label23.TabIndex = 29;
             this.label23.Text = "label23";
             // 
@@ -527,7 +530,7 @@
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(78)))), ((int)(((byte)(96)))));
             this.label24.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label24.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label24.Location = new System.Drawing.Point(276, 0);
+            this.label24.Location = new System.Drawing.Point(257, 0);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
             this.label24.Padding = new System.Windows.Forms.Padding(5);
@@ -542,21 +545,23 @@
             this.flowLayoutPanel11.Controls.Add(this.label34);
             this.flowLayoutPanel11.Controls.Add(this.label35);
             this.flowLayoutPanel11.Controls.Add(this.label36);
-            this.flowLayoutPanel11.Controls.Add(this.label37);
-            this.flowLayoutPanel11.Controls.Add(this.label38);
-            this.flowLayoutPanel11.Controls.Add(this.label39);
-            this.flowLayoutPanel11.Controls.Add(this.label40);
-            this.flowLayoutPanel11.Controls.Add(this.label41);
-            this.flowLayoutPanel11.Controls.Add(this.label42);
+            this.flowLayoutPanel11.Controls.Add(this.label7);
+            this.flowLayoutPanel11.Controls.Add(this.label8);
+            this.flowLayoutPanel11.Controls.Add(this.label9);
+            this.flowLayoutPanel11.Controls.Add(this.label10);
+            this.flowLayoutPanel11.Controls.Add(this.label11);
+            this.flowLayoutPanel11.Controls.Add(this.label12);
+            this.flowLayoutPanel11.Controls.Add(this.label13);
+            this.flowLayoutPanel11.Controls.Add(this.label14);
+            this.flowLayoutPanel11.Controls.Add(this.label15);
             this.flowLayoutPanel11.Location = new System.Drawing.Point(45, 80);
             this.flowLayoutPanel11.Margin = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(315, 75);
+            this.flowLayoutPanel11.Size = new System.Drawing.Size(295, 100);
             this.flowLayoutPanel11.TabIndex = 30;
             // 
             // label34
             // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
             this.label34.Font = new System.Drawing.Font("Heydings Icons", 15F);
             this.label34.ForeColor = System.Drawing.Color.Gainsboro;
@@ -589,99 +594,15 @@
             this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.label36.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label36.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label36.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label36.Location = new System.Drawing.Point(231, 0);
             this.label36.Margin = new System.Windows.Forms.Padding(0);
             this.label36.Name = "label36";
             this.label36.Padding = new System.Windows.Forms.Padding(2);
-            this.label36.Size = new System.Drawing.Size(84, 25);
+            this.label36.Size = new System.Drawing.Size(64, 25);
             this.label36.TabIndex = 26;
-            this.label36.Text = " - 1.99";
-            // 
-            // label37
-            // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.label37.Font = new System.Drawing.Font("Heydings Icons", 15F);
-            this.label37.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label37.Location = new System.Drawing.Point(0, 25);
-            this.label37.Margin = new System.Windows.Forms.Padding(0);
-            this.label37.Name = "label37";
-            this.label37.Padding = new System.Windows.Forms.Padding(1);
-            this.label37.Size = new System.Drawing.Size(38, 25);
-            this.label37.TabIndex = 24;
-            this.label37.Text = "a";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label38.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label38.Location = new System.Drawing.Point(38, 25);
-            this.label38.Margin = new System.Windows.Forms.Padding(0);
-            this.label38.Name = "label38";
-            this.label38.Padding = new System.Windows.Forms.Padding(2);
-            this.label38.Size = new System.Drawing.Size(193, 25);
-            this.label38.TabIndex = 25;
-            this.label38.Text = " Student Discount";
-            // 
-            // label39
-            // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label39.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label39.Location = new System.Drawing.Point(231, 25);
-            this.label39.Margin = new System.Windows.Forms.Padding(0);
-            this.label39.Name = "label39";
-            this.label39.Padding = new System.Windows.Forms.Padding(2);
-            this.label39.Size = new System.Drawing.Size(84, 25);
-            this.label39.TabIndex = 23;
-            this.label39.Text = " - 1999.99";
-            // 
-            // label40
-            // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.label40.Font = new System.Drawing.Font("Heydings Icons", 15F);
-            this.label40.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label40.Location = new System.Drawing.Point(0, 50);
-            this.label40.Margin = new System.Windows.Forms.Padding(0);
-            this.label40.Name = "label40";
-            this.label40.Padding = new System.Windows.Forms.Padding(1);
-            this.label40.Size = new System.Drawing.Size(38, 25);
-            this.label40.TabIndex = 28;
-            this.label40.Text = "a";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label41
-            // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.label41.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label41.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label41.Location = new System.Drawing.Point(38, 50);
-            this.label41.Margin = new System.Windows.Forms.Padding(0);
-            this.label41.Name = "label41";
-            this.label41.Padding = new System.Windows.Forms.Padding(2);
-            this.label41.Size = new System.Drawing.Size(193, 25);
-            this.label41.TabIndex = 29;
-            this.label41.Text = " Student Discount";
-            // 
-            // label42
-            // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.label42.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label42.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label42.Location = new System.Drawing.Point(231, 50);
-            this.label42.Margin = new System.Windows.Forms.Padding(0);
-            this.label42.Name = "label42";
-            this.label42.Padding = new System.Windows.Forms.Padding(2);
-            this.label42.Size = new System.Drawing.Size(84, 25);
-            this.label42.TabIndex = 27;
-            this.label42.Text = " - 1999.99";
+            this.label36.Text = "$1,000,000.00";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnScrollDown
             // 
@@ -775,6 +696,138 @@
             this.cooler.Interval = 10;
             this.cooler.Tick += new System.EventHandler(this.cooler_Tick);
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.label7.Font = new System.Drawing.Font("Heydings Icons", 15F);
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(0, 25);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(1);
+            this.label7.Size = new System.Drawing.Size(38, 25);
+            this.label7.TabIndex = 27;
+            this.label7.Text = " t";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label8.Location = new System.Drawing.Point(38, 25);
+            this.label8.Margin = new System.Windows.Forms.Padding(0);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(2);
+            this.label8.Size = new System.Drawing.Size(193, 25);
+            this.label8.TabIndex = 28;
+            this.label8.Text = " Student Discount";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Location = new System.Drawing.Point(231, 25);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
+            this.label9.Name = "label9";
+            this.label9.Padding = new System.Windows.Forms.Padding(2);
+            this.label9.Size = new System.Drawing.Size(64, 25);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "$190000.99";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.label10.Font = new System.Drawing.Font("Heydings Icons", 15F);
+            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label10.Location = new System.Drawing.Point(0, 50);
+            this.label10.Margin = new System.Windows.Forms.Padding(0);
+            this.label10.Name = "label10";
+            this.label10.Padding = new System.Windows.Forms.Padding(1);
+            this.label10.Size = new System.Drawing.Size(38, 25);
+            this.label10.TabIndex = 30;
+            this.label10.Text = " t";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(38, 50);
+            this.label11.Margin = new System.Windows.Forms.Padding(0);
+            this.label11.Name = "label11";
+            this.label11.Padding = new System.Windows.Forms.Padding(2);
+            this.label11.Size = new System.Drawing.Size(193, 25);
+            this.label11.TabIndex = 31;
+            this.label11.Text = " Student Discount";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Location = new System.Drawing.Point(231, 50);
+            this.label12.Margin = new System.Windows.Forms.Padding(0);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(2);
+            this.label12.Size = new System.Drawing.Size(64, 25);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "$10.99";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.label13.Font = new System.Drawing.Font("Heydings Icons", 15F);
+            this.label13.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label13.Location = new System.Drawing.Point(0, 75);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Padding = new System.Windows.Forms.Padding(1);
+            this.label13.Size = new System.Drawing.Size(38, 25);
+            this.label13.TabIndex = 33;
+            this.label13.Text = " t";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(38, 75);
+            this.label14.Margin = new System.Windows.Forms.Padding(0);
+            this.label14.Name = "label14";
+            this.label14.Padding = new System.Windows.Forms.Padding(2);
+            this.label14.Size = new System.Drawing.Size(193, 25);
+            this.label14.TabIndex = 34;
+            this.label14.Text = " Student Discount";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label15.Location = new System.Drawing.Point(231, 75);
+            this.label15.Margin = new System.Windows.Forms.Padding(0);
+            this.label15.Name = "label15";
+            this.label15.Padding = new System.Windows.Forms.Padding(2);
+            this.label15.Size = new System.Drawing.Size(64, 25);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "$10.99";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmNewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -857,17 +910,20 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer cooler;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }
