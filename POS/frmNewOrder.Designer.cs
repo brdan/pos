@@ -53,6 +53,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Cart = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label56 = new System.Windows.Forms.Label();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
@@ -80,6 +81,8 @@
             this.Payment = new System.Windows.Forms.TabPage();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.cooler = new System.Windows.Forms.Timer(this.components);
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -396,6 +399,7 @@
             // Cart
             // 
             this.Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.Cart.Controls.Add(this.label6);
             this.Cart.Controls.Add(this.button2);
             this.Cart.Controls.Add(this.label56);
             this.Cart.Controls.Add(this.flowLayoutPanel5);
@@ -410,6 +414,18 @@
             this.Cart.Size = new System.Drawing.Size(1016, 679);
             this.Cart.TabIndex = 2;
             this.Cart.Text = "Order Cart";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(392, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 25);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Cart";
             // 
             // button2
             // 
@@ -426,11 +442,11 @@
             this.label56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label56.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label56.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label56.Location = new System.Drawing.Point(358, 45);
+            this.label56.Location = new System.Drawing.Point(358, 49);
             this.label56.Margin = new System.Windows.Forms.Padding(0);
             this.label56.Name = "label56";
             this.label56.Padding = new System.Windows.Forms.Padding(5);
-            this.label56.Size = new System.Drawing.Size(18, 513);
+            this.label56.Size = new System.Drawing.Size(18, 510);
             this.label56.TabIndex = 30;
             // 
             // flowLayoutPanel5
@@ -453,7 +469,7 @@
             this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(360, 36);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(360, 40);
             this.flowLayoutPanel8.TabIndex = 38;
             // 
             // label5
@@ -465,32 +481,32 @@
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(5);
-            this.label5.Size = new System.Drawing.Size(276, 36);
+            this.label5.Size = new System.Drawing.Size(276, 40);
             this.label5.TabIndex = 29;
             this.label5.Text = "label5";
             // 
             // label22
             // 
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(68)))), ((int)(((byte)(86)))));
-            this.label22.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label22.Font = new System.Drawing.Font("Segoe UI Light", 9F);
             this.label22.ForeColor = System.Drawing.Color.Gainsboro;
             this.label22.Location = new System.Drawing.Point(276, 0);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
             this.label22.Padding = new System.Windows.Forms.Padding(5);
-            this.label22.Size = new System.Drawing.Size(84, 36);
+            this.label22.Size = new System.Drawing.Size(84, 40);
             this.label22.TabIndex = 36;
-            this.label22.Text = "£29.00";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label22.Text = "£1,000,000.00";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel9
             // 
             this.flowLayoutPanel9.Controls.Add(this.label23);
             this.flowLayoutPanel9.Controls.Add(this.label24);
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(0, 36);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(360, 36);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(360, 40);
             this.flowLayoutPanel9.TabIndex = 37;
             // 
             // label23
@@ -502,7 +518,7 @@
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
             this.label23.Padding = new System.Windows.Forms.Padding(5);
-            this.label23.Size = new System.Drawing.Size(276, 36);
+            this.label23.Size = new System.Drawing.Size(276, 40);
             this.label23.TabIndex = 29;
             this.label23.Text = "label23";
             // 
@@ -515,7 +531,7 @@
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
             this.label24.Padding = new System.Windows.Forms.Padding(5);
-            this.label24.Size = new System.Drawing.Size(84, 36);
+            this.label24.Size = new System.Drawing.Size(84, 40);
             this.label24.TabIndex = 36;
             this.label24.Text = "£29.00";
             this.label24.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -532,7 +548,7 @@
             this.flowLayoutPanel11.Controls.Add(this.label40);
             this.flowLayoutPanel11.Controls.Add(this.label41);
             this.flowLayoutPanel11.Controls.Add(this.label42);
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(45, 72);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(45, 80);
             this.flowLayoutPanel11.Margin = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             this.flowLayoutPanel11.Size = new System.Drawing.Size(315, 75);
@@ -708,7 +724,7 @@
             this.flp_cart.Location = new System.Drawing.Point(16, 49);
             this.flp_cart.Margin = new System.Windows.Forms.Padding(0);
             this.flp_cart.Name = "flp_cart";
-            this.flp_cart.Size = new System.Drawing.Size(360, 509);
+            this.flp_cart.Size = new System.Drawing.Size(360, 510);
             this.flp_cart.TabIndex = 0;
             // 
             // label4
@@ -750,6 +766,15 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 10;
+            // 
+            // cooler
+            // 
+            this.cooler.Interval = 10;
+            this.cooler.Tick += new System.EventHandler(this.cooler_Tick);
+            // 
             // frmNewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -759,6 +784,7 @@
             this.Controls.Add(this.Tab);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNewOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -840,5 +866,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer cooler;
     }
 }
