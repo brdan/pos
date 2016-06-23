@@ -84,27 +84,25 @@ namespace POS.Controls
             }
             else
             {
-                //add discountmod
-                //step 1: check if item has secondary slot (for sub-items
+                //Adding Discounts & Modifications
+
                 Control selectedItem = flp_cart.Controls[selectedItemIndex];
-                if (GetNextControl(selectedItem, true).Margin.Left == 27)
+                MessageBox.Show(selectedItem.GetType().ToString());
+                flp_cart.Refresh();
+                flp_cart.PerformLayout();
+
+                //If sub-box doesn't exist, quickly create it.
+                if (flp_cart.Controls[flp_cart.Controls.IndexOf(selectedItem) + 1].Margin.Left != 27)
                 {
-                    //yes, has sub-box
-                    MessageBox.Show("Has box");
-                }
-                else
-                {
-                    MessageBox.Show("No box, making one!");
+                    MessageBox.Show("No box, making one!...");
                     FlowLayoutPanel flp = new FlowLayoutPanel();
                     flp.AutoSize = true;
                     flp.Margin = new Padding(27, 0, 0, 0);
                     flp_cart.Controls.Add(flp);
                     flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
 
-
                 }
 
-                MessageBox.Show("adding item");
                 Control parent = flp_cart.Controls[selectedItemIndex + 1];
                 //the three labels
                 Label lblIcon = new Label();
