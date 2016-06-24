@@ -18,6 +18,7 @@ namespace POS.Controls
         int coolValue = 0;
         int selectedItemIndex = -1;
 
+
         public CartSystem()
         {
             InitializeComponent();
@@ -76,7 +77,7 @@ namespace POS.Controls
             flp_cart.Controls[flp_cart.Controls.IndexOf(c)].Controls.OfType<Control>().ToList().ForEach(sc => sc.BackColor = Color.FromArgb(Convert.ToInt32(c.AccessibleDescription)));
             selectedItemIndex = -1;
         }
-        public void AddDiscount()
+        public void AddSubItem(bool DiscountOrModifier, string textString, string priceString)
         {
             if (selectedItemIndex == -1)
             {
@@ -87,14 +88,12 @@ namespace POS.Controls
                 //Adding Discounts & Modifications
 
                 Control selectedItem = flp_cart.Controls[selectedItemIndex];
-                MessageBox.Show(selectedItem.GetType().ToString());
                 flp_cart.Refresh();
                 flp_cart.PerformLayout();
 
                 //If sub-box doesn't exist, quickly create it.
                 if (flp_cart.Controls[flp_cart.Controls.IndexOf(selectedItem) + 1].Margin.Left != 27)
                 {
-                    MessageBox.Show("No box, making one!...");
                     FlowLayoutPanel flp = new FlowLayoutPanel();
                     flp.AutoSize = true;
                     flp.Margin = new Padding(27, 0, 0, 0);
@@ -112,32 +111,43 @@ namespace POS.Controls
                 lblIcon.Margin = new Padding(0, 0, 0, 0);
                 lblIcon.Padding = new Padding(1, 1, 1, 1);
                 lblIcon.Size = new Size(38, 25);
-                lblIcon.Text = "t";
+                lblIcon.Dock = DockStyle.Left;
+                lblIcon.Text = DiscountOrModifier ? "t" : "a";
                 lblIcon.TextAlign = ContentAlignment.MiddleCenter;
+                lblIcon.Click += subItem_Click;
 
                 Label lblName = new Label();
                 lblName.BackColor = Color.FromArgb(24, 42, 60);
                 lblName.ForeColor = Color.Gainsboro;
-                lblName.Font = new Font("Segoe UI", 10.00f);
+                lblName.Font = new Font("Segoe UI", 9.00f);
                 lblName.Margin = new Padding(0, 0, 0, 0);
                 lblName.Padding = new Padding(2, 2, 2, 2);
-                lblName.Size = new Size(193, 25);
-                lblName.Text = "muuuuki~ :3";
+                lblName.Text = textString;
+                lblName.TextAlign = ContentAlignment.MiddleLeft;
+                lblName.AutoSize = true;
+                lblName.MaximumSize = new Size(195, 0);
+                lblName.MinimumSize = new Size(195, 25);
+                lblName.Click += subItem_Click;
+
 
                 Label lblPrice = new Label();
-                lblPrice.BackColor = Color.FromArgb(24, 42, 60);
-                lblPrice.ForeColor = Color.Gainsboro;
-                lblPrice.Text = Settings.Setting["currency"] + "1,000,000.00";
+                lblPrice.BackColor = Color.FromArgb(34, 52, 70);
+                lblPrice.ForeColor = DiscountOrModifier ? Color.FromArgb(46, 204, 113) : Color.FromArgb(231, 76, 60);
+                string str = DiscountOrModifier ? "-" : "+";
+                lblPrice.Text = str + Settings.Setting["currency"] + priceString;
                 Font font = new Font("Segoe UI", 10.00f);
-                if (lblPrice.Text.Length > 7)
+                if (lblPrice.Text.Length > 5)
                     font = new Font("Segoe UI", 9.00f);
-                else if (lblPrice.Text.Length > 9)
-                    font = new Font("Segoe UI", 7.00f);
+                else if (lblPrice.Text.Length > 7)
+                    font = new Font("Segoe UI", 5.00f);
                 lblPrice.Font = font;
-                lblPrice.TextAlign = ContentAlignment.MiddleLeft;
+                lblPrice.TextAlign = ContentAlignment.MiddleCenter;
                 lblPrice.Margin = new Padding(0, 0, 0, 0);
                 lblPrice.Padding = new Padding(2, 2, 2, 2);
-                lblPrice.Size = new Size(84, 25);
+                lblPrice.MaximumSize = new Size(80, 0);
+                lblPrice.MinimumSize = new Size(80, 25);
+                lblPrice.AutoSize = true;
+                lblPrice.Click += subItem_Click;
 
 
                 //add controls
@@ -147,8 +157,13 @@ namespace POS.Controls
             }
         }
 
+        private void subItem_Click(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+           
+            MessageBox.Show("You've clicked on a sub-item");
+        }
 
-        
         private void item_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
@@ -246,6 +261,7 @@ namespace POS.Controls
 
             }
         }
-        #endregion 
+        #endregion
+
     }
 }

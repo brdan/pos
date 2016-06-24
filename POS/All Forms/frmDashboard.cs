@@ -38,7 +38,7 @@ namespace POS
                     try
                     {
                         typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null);
-                        Thread.Sleep(50);
+                        Thread.Sleep(100);
                         this.Hide();
                     }
                     catch (Exception)
