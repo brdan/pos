@@ -189,18 +189,23 @@ namespace POS.Classes
             else
                 return str;
         }
-        public static Dictionary<string,string> ToList(string str)
+        public static List<SubItem> ToList(string str)
         {
-            Dictionary<string, string> dict = new Dictionary<string, string>();
+            List<SubItem> sIs = new List<SubItem>();
+            //mod@Modifier1@1.99^mod@Modifier2@2.99^mod@Modifier3@3.99^dis@Some Discount@1.00
 
-            string[] modifiers = str.Split('^');
-            foreach(string modifierPair in modifiers)
+            string[] sub_item_info = str.Split('^');
+            foreach(string info in sub_item_info)
             {
-                string key = modifierPair.Substring(0, modifierPair.IndexOf('@'));
-                string value = modifierPair.Substring(key.Length + 1, modifierPair.Length - (key.Length + 1));
-                dict.Add(key, value);
+                string type = info.Substring(0, 3);
+
+                SubItem sI = new SubItem();
+                sI.DiscountOrModifier = type == "dis" ? true : false;
+                sI.StringText = info.Substring(type.Length + 1, (info.IndexOf('@', info.IndexOf('@') + 1) - 4));
+                sI.Price = Math.Round(Convert.ToDecimal(info.Substring(type.Length + sI.StringText.Length + 2, info.Length - (type.Length + sI.StringText.Length + 2))), 2, MidpointRounding.AwayFromZero);
+                sIs.Add(sI);
             }
-            return dict;
+            return sIs;
         }
 
 

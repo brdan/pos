@@ -113,7 +113,7 @@ namespace POS
 
         private void btnAddDiscount_Click(object sender, EventArgs e)
         {
-            CartSystem.AddSubItem(true, "This is a discount", "1.99");
+           // CartSystem.AddSubItem(true, "This is a discount", "1.99");
             CartSystem.AddSubItem(false, "And this is a modifier", "1.99");
         }
     }

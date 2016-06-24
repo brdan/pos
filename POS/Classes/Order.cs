@@ -46,8 +46,7 @@ namespace POS.Classes
         public int ID { get; set; }
         public int OrderID { get; set; }
         public string Description { get; set; }
-        public Dictionary<string, string> Modifiers = new Dictionary<string, string>();
-        public Dictionary<string, string> Discounts = new Dictionary<string, string>();
+        public List<SubItem> SubItems = new List<SubItem>();
         public decimal ItemPrice { get; set; }
 
     }
@@ -56,6 +55,11 @@ namespace POS.Classes
     {
         public int OrderID { get; set; }
         public List<OrderItem> Items = new List<OrderItem>();
-
+    }
+    public class SubItem
+    {
+        public bool DiscountOrModifier { get; set; }
+        public string StringText { get; set; }
+        public decimal Price { get; set; }
     }
 }

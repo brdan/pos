@@ -51,13 +51,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Cart = new System.Windows.Forms.TabPage();
+            this.CartSystem = new POS.Controls.CartSystem();
+            this.btnAddDiscount = new System.Windows.Forms.Button();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.Payment = new System.Windows.Forms.TabPage();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnAddItem = new System.Windows.Forms.Button();
-            this.btnAddDiscount = new System.Windows.Forms.Button();
-            this.CartSystem = new POS.Controls.CartSystem();
-            this.Cart = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -67,8 +69,8 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.Cart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -267,6 +269,7 @@
             // Tables
             // 
             this.Tables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Tables.Controls.Add(this.label5);
             this.Tables.Controls.Add(this.btnCatSubmit);
             this.Tables.Controls.Add(this.label1);
             this.Tables.Controls.Add(this.panel3);
@@ -298,7 +301,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(720, 39);
+            this.label1.Location = new System.Drawing.Point(308, -263);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 21);
             this.label1.TabIndex = 54;
@@ -309,7 +312,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.panel3.Controls.Add(this.nudCatSortDisplay);
-            this.panel3.Location = new System.Drawing.Point(724, 63);
+            this.panel3.Location = new System.Drawing.Point(312, -239);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(132, 43);
             this.panel3.TabIndex = 53;
@@ -361,11 +364,68 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(11, 11);
+            this.label3.Location = new System.Drawing.Point(-401, -291);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "Select Table";
+            // 
+            // Cart
+            // 
+            this.Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.Cart.Controls.Add(this.label6);
+            this.Cart.Controls.Add(this.CartSystem);
+            this.Cart.Controls.Add(this.btnAddDiscount);
+            this.Cart.Controls.Add(this.btnAddItem);
+            this.Cart.Controls.Add(this.label4);
+            this.Cart.Location = new System.Drawing.Point(4, 22);
+            this.Cart.Name = "Cart";
+            this.Cart.Padding = new System.Windows.Forms.Padding(3);
+            this.Cart.Size = new System.Drawing.Size(1016, 679);
+            this.Cart.TabIndex = 2;
+            this.Cart.Text = "Order Cart";
+            // 
+            // CartSystem
+            // 
+            this.CartSystem.AutoSize = true;
+            this.CartSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.CartSystem.Location = new System.Drawing.Point(16, 57);
+            this.CartSystem.Margin = new System.Windows.Forms.Padding(0);
+            this.CartSystem.Name = "CartSystem";
+            this.CartSystem.Size = new System.Drawing.Size(476, 616);
+            this.CartSystem.TabIndex = 32;
+            // 
+            // btnAddDiscount
+            // 
+            this.btnAddDiscount.Location = new System.Drawing.Point(820, 16);
+            this.btnAddDiscount.Name = "btnAddDiscount";
+            this.btnAddDiscount.Size = new System.Drawing.Size(140, 84);
+            this.btnAddDiscount.TabIndex = 31;
+            this.btnAddDiscount.Text = "add discount";
+            this.btnAddDiscount.UseVisualStyleBackColor = true;
+            this.btnAddDiscount.Click += new System.EventHandler(this.btnAddDiscount_Click);
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.Location = new System.Drawing.Point(674, 16);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(140, 84);
+            this.btnAddItem.TabIndex = 12;
+            this.btnAddItem.Text = "add item";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(-401, -291);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Cart";
             // 
             // Payment
             // 
@@ -389,61 +449,29 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // label4
+            // label5
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(11, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 25);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Cart";
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(11, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 25);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Select Table";
             // 
-            // btnAddItem
+            // label6
             // 
-            this.btnAddItem.Location = new System.Drawing.Point(674, 16);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(140, 84);
-            this.btnAddItem.TabIndex = 12;
-            this.btnAddItem.Text = "add item";
-            this.btnAddItem.UseVisualStyleBackColor = true;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
-            // 
-            // btnAddDiscount
-            // 
-            this.btnAddDiscount.Location = new System.Drawing.Point(820, 16);
-            this.btnAddDiscount.Name = "btnAddDiscount";
-            this.btnAddDiscount.Size = new System.Drawing.Size(140, 84);
-            this.btnAddDiscount.TabIndex = 31;
-            this.btnAddDiscount.Text = "add discount";
-            this.btnAddDiscount.UseVisualStyleBackColor = true;
-            this.btnAddDiscount.Click += new System.EventHandler(this.btnAddDiscount_Click);
-            // 
-            // CartSystem
-            // 
-            this.CartSystem.AutoSize = true;
-            this.CartSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.CartSystem.Location = new System.Drawing.Point(16, 47);
-            this.CartSystem.Margin = new System.Windows.Forms.Padding(0);
-            this.CartSystem.Name = "CartSystem";
-            this.CartSystem.Size = new System.Drawing.Size(476, 616);
-            this.CartSystem.TabIndex = 32;
-            // 
-            // Cart
-            // 
-            this.Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Cart.Controls.Add(this.CartSystem);
-            this.Cart.Controls.Add(this.btnAddDiscount);
-            this.Cart.Controls.Add(this.btnAddItem);
-            this.Cart.Controls.Add(this.label4);
-            this.Cart.Location = new System.Drawing.Point(4, 22);
-            this.Cart.Name = "Cart";
-            this.Cart.Padding = new System.Windows.Forms.Padding(3);
-            this.Cart.Size = new System.Drawing.Size(1016, 679);
-            this.Cart.TabIndex = 2;
-            this.Cart.Text = "Order Cart";
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(11, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 25);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Your Cart";
             // 
             // frmNewOrder
             // 
@@ -472,9 +500,9 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.Cart.ResumeLayout(false);
             this.Cart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,5 +538,7 @@
         private System.Windows.Forms.Button btnAddDiscount;
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

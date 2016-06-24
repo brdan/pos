@@ -17,7 +17,8 @@ namespace POS.Controls
         bool cartScrollDirection;
         int coolValue = 0;
         int selectedItemIndex = -1;
-
+        string currSymbol = "£";
+        decimal totalPrice = 0.00M;
 
         public CartSystem()
         {
@@ -70,6 +71,10 @@ namespace POS.Controls
             newItem.ItemPrice = p.CostPrice;
             TempCart.Items.Add(newItem);
 
+            //Update Prices
+            totalPrice += newItem.ItemPrice;
+            lblTotalPrice.Text = Settings.Setting["currency"] + totalPrice;
+
 
         }
         public void Deselect(Control c)
@@ -79,6 +84,7 @@ namespace POS.Controls
         }
         public void AddSubItem(bool DiscountOrModifier, string textString, string priceString)
         {
+            #region Main Functionality
             if (selectedItemIndex == -1)
             {
                 MessageBox.Show("You must select an item to add this to...");
@@ -92,14 +98,25 @@ namespace POS.Controls
                 flp_cart.PerformLayout();
 
                 //If sub-box doesn't exist, quickly create it.
-                if (flp_cart.Controls[flp_cart.Controls.IndexOf(selectedItem) + 1].Margin.Left != 27)
+                try
+                {
+                    if (flp_cart.Controls[flp_cart.Controls.IndexOf(selectedItem) + 1].Margin.Left != 27)
+                    {
+                        FlowLayoutPanel flp = new FlowLayoutPanel();
+                        flp.AutoSize = true;
+                        flp.Margin = new Padding(27, 0, 0, 0);
+                        flp_cart.Controls.Add(flp);
+                        flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
+
+                    }
+                }
+                catch (Exception)
                 {
                     FlowLayoutPanel flp = new FlowLayoutPanel();
                     flp.AutoSize = true;
                     flp.Margin = new Padding(27, 0, 0, 0);
                     flp_cart.Controls.Add(flp);
                     flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
-
                 }
 
                 Control parent = flp_cart.Controls[selectedItemIndex + 1];
@@ -107,7 +124,7 @@ namespace POS.Controls
                 Label lblIcon = new Label();
                 lblIcon.BackColor = Color.FromArgb(14, 32, 50);
                 lblIcon.ForeColor = Color.Gainsboro;
-                lblIcon.Font = new Font("Heydings Icons", 15.00f);
+                lblIcon.Font = new Font("Heydings Icons", 13.00f);
                 lblIcon.Margin = new Padding(0, 0, 0, 0);
                 lblIcon.Padding = new Padding(1, 1, 1, 1);
                 lblIcon.Size = new Size(38, 25);
@@ -132,9 +149,9 @@ namespace POS.Controls
 
                 Label lblPrice = new Label();
                 lblPrice.BackColor = Color.FromArgb(34, 52, 70);
-                lblPrice.ForeColor = DiscountOrModifier ? Color.FromArgb(46, 204, 113) : Color.FromArgb(231, 76, 60);
+                lblPrice.ForeColor = DiscountOrModifier ? Color.FromArgb(231, 76, 60) : Color.FromArgb(46, 204, 113);
                 string str = DiscountOrModifier ? "-" : "+";
-                lblPrice.Text = str + Settings.Setting["currency"] + priceString;
+                lblPrice.Text = str + currSymbol + priceString;
                 Font font = new Font("Segoe UI", 10.00f);
                 if (lblPrice.Text.Length > 5)
                     font = new Font("Segoe UI", 9.00f);
@@ -155,6 +172,13 @@ namespace POS.Controls
                 parent.Controls.Add(lblName);
                 parent.Controls.Add(lblPrice);
             }
+            #endregion
+            // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
+
+
+            //Updating prices according to the added/deducted price on the item, also will need to update the item's `Price` field accordingly
+
+
         }
 
         private void subItem_Click(object sender, EventArgs e)
@@ -262,6 +286,11 @@ namespace POS.Controls
             }
         }
         #endregion
+
+        private void CartSystem_Load(object sender, EventArgs e)
+        {
+            lblTotalPrice.Text = totalPrice.ToString();
+        }
 
     }
 }
