@@ -17,6 +17,7 @@ namespace POS
         {
             InitializeComponent();
         }
+
         Order tempOrder;
 
         public void Index()
@@ -60,7 +61,7 @@ namespace POS
                 case 1:
                     loadCart(tempOrder);
                     //lblTitle.Text = "Creating Order...";
-                   // btnBack.AccessibleName = "1";
+                    // btnBack.AccessibleName = "1";
                     break;
 
                 case 2:
@@ -80,6 +81,7 @@ namespace POS
         private void frmNewOrder_Load(object sender, EventArgs e)
         {
             Functions.GiveBorder(Tab, this, Color.FromArgb(44, 62, 80));
+            Functions.GiveBorder(OrderTab, Cart, Color.FromArgb(44, 62, 80));
         }
         private void btnOrderType(object sender, EventArgs e)
         {
@@ -106,9 +108,44 @@ namespace POS
             }
         }
 
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            switch (((Button)sender).AccessibleName)
+            {
+                case "Product":
+                    foreach (Category c in Collections.Categories)
+                    {
+                        //alternative views, dgv's, panels with images etc. < (not for categories dude wth)
+                        Button btnCategory = new Button();
+                        btnCategory.Size = new Size(153, 57);
+                        btnCategory.Text = c.Name;
+                        btnCategory.UseMnemonic = false;
+                        btnCategory.AccessibleName = c.ID.ToString();
+                        btnCategory.Font = new Font("Segoe UI Light", 10.00f);
+                        btnCategory.ForeColor = Color.LightGray;
+                        btnCategory.BackColor = c.Colour;
+                        btnCategory.FlatStyle = FlatStyle.Flat;
+                        btnCategory.Click += btnCategory_Click;
+
+                        flp_products.Controls.Add(btnCategory);
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+
+            OrderTab.SelectTab(((Button)sender).AccessibleName);
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("I'm a category :3");
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            CartSystem.AddItem(Collections.Products.First());
+            OrderTab.SelectTab(0);
         }
     }
 }

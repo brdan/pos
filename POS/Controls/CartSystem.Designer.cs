@@ -78,10 +78,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 642);
+            this.panel1.Location = new System.Drawing.Point(0, 623);
             this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 100);
+            this.panel1.Size = new System.Drawing.Size(267, 119);
             this.panel1.TabIndex = 34;
             // 
             // panel2
@@ -90,20 +90,20 @@
             this.panel2.Controls.Add(this.lblTotalPrice);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(137, 0);
+            this.panel2.Location = new System.Drawing.Point(138, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(153, 100);
+            this.panel2.Size = new System.Drawing.Size(129, 119);
             this.panel2.TabIndex = 43;
             // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI Light", 15F);
-            this.lblTotalPrice.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTotalPrice.Location = new System.Drawing.Point(16, 40);
+            this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.lblTotalPrice.Location = new System.Drawing.Point(7, 44);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(0, 28);
+            this.lblTotalPrice.Size = new System.Drawing.Size(0, 25);
             this.lblTotalPrice.TabIndex = 38;
             // 
             // label4
@@ -111,7 +111,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(18, 20);
+            this.label4.Location = new System.Drawing.Point(9, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 37;
@@ -122,7 +122,7 @@
             this.lblVAT.AutoSize = true;
             this.lblVAT.Font = new System.Drawing.Font("Segoe UI Light", 10F);
             this.lblVAT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblVAT.Location = new System.Drawing.Point(84, 41);
+            this.lblVAT.Location = new System.Drawing.Point(89, 45);
             this.lblVAT.Name = "lblVAT";
             this.lblVAT.Size = new System.Drawing.Size(33, 19);
             this.lblVAT.TabIndex = 42;
@@ -133,7 +133,7 @@
             this.lblDiscount.AutoSize = true;
             this.lblDiscount.Font = new System.Drawing.Font("Segoe UI Light", 10F);
             this.lblDiscount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDiscount.Location = new System.Drawing.Point(84, 65);
+            this.lblDiscount.Location = new System.Drawing.Point(89, 69);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(33, 19);
             this.lblDiscount.TabIndex = 41;
@@ -144,7 +144,7 @@
             this.lblSubTotal.AutoSize = true;
             this.lblSubTotal.Font = new System.Drawing.Font("Segoe UI Light", 10F);
             this.lblSubTotal.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblSubTotal.Location = new System.Drawing.Point(84, 17);
+            this.lblSubTotal.Location = new System.Drawing.Point(89, 21);
             this.lblSubTotal.Name = "lblSubTotal";
             this.lblSubTotal.Size = new System.Drawing.Size(33, 19);
             this.lblSubTotal.TabIndex = 40;
@@ -155,7 +155,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(8, 44);
+            this.label5.Location = new System.Drawing.Point(13, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 39;
@@ -166,7 +166,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(8, 68);
+            this.label3.Location = new System.Drawing.Point(13, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 38;
@@ -177,7 +177,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(8, 20);
+            this.label2.Location = new System.Drawing.Point(13, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 37;
