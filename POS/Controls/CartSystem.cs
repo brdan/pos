@@ -17,7 +17,6 @@ namespace POS.Controls
         bool cartScrollDirection;
         int coolValue = 0;
         int selectedItemIndex = -1;
-        string currSymbol = "£";
         decimal totalPrice = 0.00M;
 
         public CartSystem()
@@ -30,11 +29,12 @@ namespace POS.Controls
         {
             Color pattern = cartColourPattern ? Color.FromArgb(50, 68, 86) : Color.FromArgb(60, 78, 96);
             cartColourPattern = !cartColourPattern;
-            Font itemFont = new Font("Segoe UI Light", 13.00f);
+            Font itemFont = new Font("Segoe UI", 10.00f);
 
             //Item Container
             FlowLayoutPanel flp = new FlowLayoutPanel();
-            flp.Size = new Size(342, 40);
+            flp.Size = new Size(268, 60);
+            flp.AutoSize = true;
             flp.Margin = new Padding(0, 0, 0, 0);
             flp.AccessibleName = p.ID.ToString();
             flp.AccessibleDescription = pattern.ToArgb().ToString();
@@ -47,7 +47,10 @@ namespace POS.Controls
             lblName.BackColor = pattern;
             lblName.Margin = new Padding(0, 0, 0, 0);
             lblName.Padding = new Padding(5, 5, 5, 5);
-            lblName.Size = new Size(258, 40);
+            lblName.AutoSize = true;
+            lblName.TextAlign = ContentAlignment.MiddleLeft;
+            lblName.MinimumSize = new Size(204, 60);
+            lblName.MaximumSize = new Size(204, 0);
             lblName.Click += item_Click;
 
             //Item Price Label
@@ -59,7 +62,10 @@ namespace POS.Controls
             lblPrice.BackColor = pattern;
             lblPrice.Margin = new Padding(0, 0, 0, 0);
             lblPrice.Padding = new Padding(5, 5, 5, 5);
-            lblPrice.Size = new Size(84, 40);
+            lblPrice.AutoSize = true;
+            lblPrice.MinimumSize = new Size(64, 60);
+            lblPrice.MaximumSize = new Size(64, 0);
+            lblPrice.Dock = DockStyle.Right;
             lblPrice.Click += item_Click;
 
             flp.Controls.Add(lblName);
@@ -98,6 +104,7 @@ namespace POS.Controls
                 flp_cart.PerformLayout();
 
                 //If sub-box doesn't exist, quickly create it.
+                #region Creates Sub-Box if it's non-existent
                 try
                 {
                     if (flp_cart.Controls[flp_cart.Controls.IndexOf(selectedItem) + 1].Margin.Left != 27)
@@ -118,7 +125,9 @@ namespace POS.Controls
                     flp_cart.Controls.Add(flp);
                     flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
                 }
+                #endregion
 
+                #region Designs the three labels based on parameters, then adds it to the Sub-Box
                 Control parent = flp_cart.Controls[selectedItemIndex + 1];
                 //the three labels
                 Label lblIcon = new Label();
@@ -146,12 +155,11 @@ namespace POS.Controls
                 lblName.MinimumSize = new Size(195, 25);
                 lblName.Click += subItem_Click;
 
-
                 Label lblPrice = new Label();
                 lblPrice.BackColor = Color.FromArgb(34, 52, 70);
                 lblPrice.ForeColor = DiscountOrModifier ? Color.FromArgb(231, 76, 60) : Color.FromArgb(46, 204, 113);
                 string str = DiscountOrModifier ? "-" : "+";
-                lblPrice.Text = str + currSymbol + priceString;
+                lblPrice.Text = str + Settings.Setting["currency"] + priceString;
                 Font font = new Font("Segoe UI", 10.00f);
                 if (lblPrice.Text.Length > 5)
                     font = new Font("Segoe UI", 9.00f);
@@ -171,13 +179,36 @@ namespace POS.Controls
                 parent.Controls.Add(lblIcon);
                 parent.Controls.Add(lblName);
                 parent.Controls.Add(lblPrice);
+                #endregion
+
+
+                #region Price Updating
+                // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
+                decimal newParentItemPrice = 0.00M;
+                //Updating prices according to the added/deducted price on the item, also will need to update the item's `Price` field accordingly
+                if (DiscountOrModifier)
+                {
+                    //deduct
+                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
+                    newParentItemPrice = parentItemPrice - Convert.ToDecimal(priceString);
+                    if (newParentItemPrice < 0.00M)
+                        newParentItemPrice = 0.00M;
+
+                    totalPrice -= (parentItemPrice - newParentItemPrice); //this way no negative value issues
+                }
+                else
+                {
+                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
+                    newParentItemPrice = Convert.ToDecimal(priceString) + parentItemPrice;
+                    totalPrice += Convert.ToDecimal(priceString);
+                }
+
+                //updating prices
+                flp_cart.Controls[selectedItemIndex].Controls[1].Text = Settings.Setting["currency"] + newParentItemPrice;
+                lblTotalPrice.Text = Settings.Setting["currency"] + totalPrice.ToString();
+                #endregion
             }
             #endregion
-            // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
-
-
-            //Updating prices according to the added/deducted price on the item, also will need to update the item's `Price` field accordingly
-
 
         }
 
@@ -206,11 +237,17 @@ namespace POS.Controls
 
 
         #region Scrolling Functionality
-        private void btnScrollUp_MouseDown(object sender, MouseEventArgs e)
+        private void btnScroll_MouseDown(object sender, MouseEventArgs e)
         {
-            Button btn = (Button)sender;
+            Label btn = (Label)sender;
             cartScrollDirection = btn.Text == "▲" ? true : false;
             tmrScroll.Start();
+        }
+        private void btnScroll_MouseUp(object sender, MouseEventArgs e)
+        {
+            tmrScroll.Stop();
+            coolValue = cartScrollDirection ? flp_cart.VerticalScroll.Value - 50 : flp_cart.VerticalScroll.Value + 50;
+            tmrCool.Start();
         }
         private void tmrScroll_Tick(object sender, EventArgs e)
         {
@@ -234,12 +271,6 @@ namespace POS.Controls
             }
             flp_cart.PerformLayout();
             flp_cart.Refresh();
-        }
-        private void btnScrollDown_MouseUp(object sender, MouseEventArgs e)
-        {
-            tmrScroll.Stop();
-            coolValue = cartScrollDirection ? flp_cart.VerticalScroll.Value - 50 : flp_cart.VerticalScroll.Value + 50;
-            tmrCool.Start();
         }
         private void tmrCool_Tick(object sender, EventArgs e)
         {

@@ -59,8 +59,8 @@ namespace POS
             {
                 case 1:
                     loadCart(tempOrder);
-                    lblTitle.Text = "Creating Order...";
-                    btnBack.AccessibleName = "1";
+                    //lblTitle.Text = "Creating Order...";
+                   // btnBack.AccessibleName = "1";
                     break;
 
                 case 2:
@@ -97,7 +97,7 @@ namespace POS
             {
                 case 1:
                     Tab.SelectTab(0);
-                    lblTitle.Text = "Order Menu";
+                    //lblTitle.Text = "Order Menu";
                     break;
 
 
@@ -106,15 +106,9 @@ namespace POS
             }
         }
 
-        private void btnAddItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             CartSystem.AddItem(Collections.Products.First());
-        }
-
-        private void btnAddDiscount_Click(object sender, EventArgs e)
-        {
-           // CartSystem.AddSubItem(true, "This is a discount", "1.99");
-            CartSystem.AddSubItem(false, "And this is a modifier", "1.99");
         }
     }
 }

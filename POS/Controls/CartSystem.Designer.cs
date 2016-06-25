@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.flp_cart = new System.Windows.Forms.FlowLayoutPanel();
-            this.label56 = new System.Windows.Forms.Label();
-            this.btnScrollDown = new System.Windows.Forms.Button();
-            this.btnScrollUp = new System.Windows.Forms.Button();
             this.tmrScroll = new System.Windows.Forms.Timer(this.components);
             this.tmrCool = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,6 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.su = new System.Windows.Forms.Label();
+            this.sd = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,44 +55,8 @@
             this.flp_cart.Location = new System.Drawing.Point(0, 0);
             this.flp_cart.Margin = new System.Windows.Forms.Padding(0);
             this.flp_cart.Name = "flp_cart";
-            this.flp_cart.Size = new System.Drawing.Size(360, 510);
+            this.flp_cart.Size = new System.Drawing.Size(290, 642);
             this.flp_cart.TabIndex = 1;
-            // 
-            // label56
-            // 
-            this.label56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label56.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label56.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label56.Location = new System.Drawing.Point(340, 0);
-            this.label56.Margin = new System.Windows.Forms.Padding(0);
-            this.label56.Name = "label56";
-            this.label56.Padding = new System.Windows.Forms.Padding(5);
-            this.label56.Size = new System.Drawing.Size(20, 510);
-            this.label56.TabIndex = 31;
-            // 
-            // btnScrollDown
-            // 
-            this.btnScrollDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.btnScrollDown.Location = new System.Drawing.Point(396, 225);
-            this.btnScrollDown.Name = "btnScrollDown";
-            this.btnScrollDown.Size = new System.Drawing.Size(77, 49);
-            this.btnScrollDown.TabIndex = 33;
-            this.btnScrollDown.Text = "▼";
-            this.btnScrollDown.UseVisualStyleBackColor = true;
-            this.btnScrollDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnScrollUp_MouseDown);
-            this.btnScrollDown.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnScrollDown_MouseUp);
-            // 
-            // btnScrollUp
-            // 
-            this.btnScrollUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.btnScrollUp.Location = new System.Drawing.Point(396, 170);
-            this.btnScrollUp.Name = "btnScrollUp";
-            this.btnScrollUp.Size = new System.Drawing.Size(77, 49);
-            this.btnScrollUp.TabIndex = 32;
-            this.btnScrollUp.Text = "▲";
-            this.btnScrollUp.UseVisualStyleBackColor = true;
-            this.btnScrollUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnScrollUp_MouseDown);
-            this.btnScrollUp.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnScrollDown_MouseUp);
             // 
             // tmrScroll
             // 
@@ -115,9 +78,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 509);
+            this.panel1.Location = new System.Drawing.Point(0, 642);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 100);
+            this.panel1.Size = new System.Drawing.Size(290, 100);
             this.panel1.TabIndex = 34;
             // 
             // panel2
@@ -126,19 +90,20 @@
             this.panel2.Controls.Add(this.lblTotalPrice);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(175, 0);
+            this.panel2.Location = new System.Drawing.Point(137, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 100);
+            this.panel2.Size = new System.Drawing.Size(153, 100);
             this.panel2.TabIndex = 43;
             // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI Light", 20F);
+            this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI Light", 15F);
             this.lblTotalPrice.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTotalPrice.Location = new System.Drawing.Point(24, 33);
+            this.lblTotalPrice.Location = new System.Drawing.Point(16, 40);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(0, 37);
+            this.lblTotalPrice.Size = new System.Drawing.Size(0, 28);
             this.lblTotalPrice.TabIndex = 38;
             // 
             // label4
@@ -146,7 +111,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(28, 20);
+            this.label4.Location = new System.Drawing.Point(18, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 37;
@@ -218,20 +183,49 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "SUB-TOTAL";
             // 
+            // su
+            // 
+            this.su.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
+            this.su.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.su.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.su.Location = new System.Drawing.Point(267, 371);
+            this.su.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.su.Name = "su";
+            this.su.Size = new System.Drawing.Size(35, 371);
+            this.su.TabIndex = 39;
+            this.su.Text = "▼";
+            this.su.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.su.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnScroll_MouseDown);
+            this.su.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnScroll_MouseUp);
+            // 
+            // sd
+            // 
+            this.sd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
+            this.sd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.sd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.sd.Location = new System.Drawing.Point(267, 0);
+            this.sd.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.sd.Name = "sd";
+            this.sd.Size = new System.Drawing.Size(35, 371);
+            this.sd.TabIndex = 40;
+            this.sd.Text = "▲";
+            this.sd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sd.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnScroll_MouseDown);
+            this.sd.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnScroll_MouseUp);
+            // 
             // CartSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.Controls.Add(this.sd);
+            this.Controls.Add(this.su);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnScrollDown);
-            this.Controls.Add(this.btnScrollUp);
-            this.Controls.Add(this.label56);
             this.Controls.Add(this.flp_cart);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CartSystem";
-            this.Size = new System.Drawing.Size(533, 638);
+            this.Size = new System.Drawing.Size(302, 742);
             this.Load += new System.EventHandler(this.CartSystem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -244,9 +238,6 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flp_cart;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Button btnScrollDown;
-        private System.Windows.Forms.Button btnScrollUp;
         private System.Windows.Forms.Timer tmrScroll;
         private System.Windows.Forms.Timer tmrCool;
         private System.Windows.Forms.Panel panel1;
@@ -259,5 +250,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label su;
+        private System.Windows.Forms.Label sd;
     }
 }
