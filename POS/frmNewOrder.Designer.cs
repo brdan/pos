@@ -54,10 +54,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Cart = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.OrderTab = new System.Windows.Forms.TabControl();
-            this.MenuTab = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
+            this.Dashboard = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.Product = new System.Windows.Forms.TabPage();
+            this.flp_products = new System.Windows.Forms.FlowLayoutPanel();
             this.Lookup = new System.Windows.Forms.TabPage();
             this.Print = new System.Windows.Forms.TabPage();
             this.Edit = new System.Windows.Forms.TabPage();
@@ -78,7 +78,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Payment = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
-            this.flp_products = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblCartTitle = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblViewMode0 = new System.Windows.Forms.Label();
+            this.lblViewMode1 = new System.Windows.Forms.Label();
+            this.lblViewMode2 = new System.Windows.Forms.Label();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -90,9 +97,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Cart.SuspendLayout();
             this.OrderTab.SuspendLayout();
-            this.MenuTab.SuspendLayout();
+            this.Dashboard.SuspendLayout();
             this.Product.SuspendLayout();
             this.Payment.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tab
@@ -302,7 +310,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(-11525, -9317);
+            this.label12.Location = new System.Drawing.Point(-12349, -9985);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(145, 25);
             this.label12.TabIndex = 59;
@@ -314,7 +322,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(-12349, -9921);
+            this.label10.Location = new System.Drawing.Point(-13173, -10589);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(145, 25);
             this.label10.TabIndex = 58;
@@ -326,7 +334,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(-12761, -10223);
+            this.label7.Location = new System.Drawing.Point(-13585, -10891);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 25);
             this.label7.TabIndex = 57;
@@ -338,7 +346,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(-13173, -10525);
+            this.label5.Location = new System.Drawing.Point(-13997, -11193);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 25);
             this.label5.TabIndex = 56;
@@ -363,7 +371,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-12876, -10799);
+            this.label1.Location = new System.Drawing.Point(-13700, -11467);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 21);
             this.label1.TabIndex = 54;
@@ -374,7 +382,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.panel3.Controls.Add(this.nudCatSortDisplay);
-            this.panel3.Location = new System.Drawing.Point(-12872, -10775);
+            this.panel3.Location = new System.Drawing.Point(-13696, -11443);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(132, 43);
             this.panel3.TabIndex = 53;
@@ -427,7 +435,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(-13585, -10827);
+            this.label3.Location = new System.Drawing.Point(-14409, -11495);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 25);
             this.label3.TabIndex = 10;
@@ -436,6 +444,7 @@
             // Cart
             // 
             this.Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.Cart.Controls.Add(this.lblCartTitle);
             this.Cart.Controls.Add(this.button1);
             this.Cart.Controls.Add(this.OrderTab);
             this.Cart.Controls.Add(this.label14);
@@ -451,60 +460,50 @@
             this.Cart.TabIndex = 2;
             this.Cart.Text = "Order Cart";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(891, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 33);
-            this.button1.TabIndex = 64;
-            this.button1.Text = "Back to menu";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // OrderTab
             // 
-            this.OrderTab.Controls.Add(this.MenuTab);
+            this.OrderTab.Controls.Add(this.Dashboard);
             this.OrderTab.Controls.Add(this.Product);
             this.OrderTab.Controls.Add(this.Lookup);
             this.OrderTab.Controls.Add(this.Print);
             this.OrderTab.Controls.Add(this.Edit);
             this.OrderTab.Controls.Add(this.Discount);
             this.OrderTab.Controls.Add(this.Modifier);
-            this.OrderTab.Location = new System.Drawing.Point(302, 0);
+            this.OrderTab.Location = new System.Drawing.Point(302, -22);
             this.OrderTab.Margin = new System.Windows.Forms.Padding(0);
             this.OrderTab.Name = "OrderTab";
             this.OrderTab.SelectedIndex = 0;
-            this.OrderTab.Size = new System.Drawing.Size(714, 746);
+            this.OrderTab.Size = new System.Drawing.Size(714, 768);
             this.OrderTab.TabIndex = 63;
             // 
-            // MenuTab
+            // Dashboard
             // 
-            this.MenuTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
-            this.MenuTab.Controls.Add(this.label13);
-            this.MenuTab.Controls.Add(this.button6);
-            this.MenuTab.Controls.Add(this.button5);
-            this.MenuTab.Controls.Add(this.button4);
-            this.MenuTab.Controls.Add(this.button3);
-            this.MenuTab.Controls.Add(this.button2);
-            this.MenuTab.Controls.Add(this.btnProducts);
-            this.MenuTab.Location = new System.Drawing.Point(4, 22);
-            this.MenuTab.Margin = new System.Windows.Forms.Padding(0);
-            this.MenuTab.Name = "MenuTab";
-            this.MenuTab.Size = new System.Drawing.Size(706, 720);
-            this.MenuTab.TabIndex = 0;
-            this.MenuTab.Text = "Menu";
+            this.Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Dashboard.Controls.Add(this.panel2);
+            this.Dashboard.Controls.Add(this.button6);
+            this.Dashboard.Controls.Add(this.button5);
+            this.Dashboard.Controls.Add(this.button4);
+            this.Dashboard.Controls.Add(this.button3);
+            this.Dashboard.Controls.Add(this.button2);
+            this.Dashboard.Controls.Add(this.btnProducts);
+            this.Dashboard.Location = new System.Drawing.Point(4, 22);
+            this.Dashboard.Margin = new System.Windows.Forms.Padding(0);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(706, 742);
+            this.Dashboard.TabIndex = 0;
+            this.Dashboard.Text = "Menu";
             // 
-            // label13
+            // button1
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label13.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label13.Location = new System.Drawing.Point(330, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 25);
-            this.label13.TabIndex = 68;
-            this.label13.Text = "Menu ";
+            this.button1.AccessibleName = "Dashboard";
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button1.Location = new System.Drawing.Point(970, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(36, 40);
+            this.button1.TabIndex = 64;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // button6
             // 
@@ -598,62 +597,76 @@
             // 
             // Product
             // 
-            this.Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.Product.Controls.Add(this.lblViewMode2);
+            this.Product.Controls.Add(this.lblViewMode1);
+            this.Product.Controls.Add(this.lblViewMode0);
+            this.Product.Controls.Add(this.label13);
+            this.Product.Controls.Add(this.panel5);
             this.Product.Controls.Add(this.flp_products);
             this.Product.Location = new System.Drawing.Point(4, 22);
             this.Product.Margin = new System.Windows.Forms.Padding(0);
             this.Product.Name = "Product";
-            this.Product.Size = new System.Drawing.Size(706, 720);
+            this.Product.Size = new System.Drawing.Size(706, 742);
             this.Product.TabIndex = 1;
             this.Product.Text = "Product";
             // 
+            // flp_products
+            // 
+            this.flp_products.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.flp_products.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flp_products.Location = new System.Drawing.Point(0, 48);
+            this.flp_products.Name = "flp_products";
+            this.flp_products.Size = new System.Drawing.Size(706, 694);
+            this.flp_products.TabIndex = 0;
+            // 
             // Lookup
             // 
-            this.Lookup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Lookup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Lookup.Location = new System.Drawing.Point(4, 22);
             this.Lookup.Name = "Lookup";
             this.Lookup.Padding = new System.Windows.Forms.Padding(3);
-            this.Lookup.Size = new System.Drawing.Size(706, 720);
+            this.Lookup.Size = new System.Drawing.Size(706, 742);
             this.Lookup.TabIndex = 2;
             this.Lookup.Text = "Lookup";
             // 
             // Print
             // 
-            this.Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Print.Location = new System.Drawing.Point(4, 22);
             this.Print.Name = "Print";
             this.Print.Padding = new System.Windows.Forms.Padding(3);
-            this.Print.Size = new System.Drawing.Size(706, 720);
+            this.Print.Size = new System.Drawing.Size(706, 742);
             this.Print.TabIndex = 3;
             this.Print.Text = "Print";
             // 
             // Edit
             // 
-            this.Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Edit.Location = new System.Drawing.Point(4, 22);
             this.Edit.Name = "Edit";
             this.Edit.Padding = new System.Windows.Forms.Padding(3);
-            this.Edit.Size = new System.Drawing.Size(706, 720);
+            this.Edit.Size = new System.Drawing.Size(706, 742);
             this.Edit.TabIndex = 4;
             this.Edit.Text = "Edit";
             // 
             // Discount
             // 
-            this.Discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Discount.Location = new System.Drawing.Point(4, 22);
             this.Discount.Name = "Discount";
             this.Discount.Padding = new System.Windows.Forms.Padding(3);
-            this.Discount.Size = new System.Drawing.Size(706, 720);
+            this.Discount.Size = new System.Drawing.Size(706, 742);
             this.Discount.TabIndex = 5;
             this.Discount.Text = "Discount";
             // 
             // Modifier
             // 
-            this.Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Modifier.Location = new System.Drawing.Point(4, 22);
             this.Modifier.Name = "Modifier";
             this.Modifier.Padding = new System.Windows.Forms.Padding(3);
-            this.Modifier.Size = new System.Drawing.Size(706, 720);
+            this.Modifier.Size = new System.Drawing.Size(706, 742);
             this.Modifier.TabIndex = 6;
             this.Modifier.Text = "Modifier";
             // 
@@ -663,7 +676,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(-11056, -9343);
+            this.label14.Location = new System.Drawing.Point(-11880, -10011);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 25);
             this.label14.TabIndex = 61;
@@ -675,7 +688,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(-12349, -9947);
+            this.label11.Location = new System.Drawing.Point(-13173, -10615);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 25);
             this.label11.TabIndex = 9;
@@ -687,7 +700,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label8.Location = new System.Drawing.Point(-12761, -10249);
+            this.label8.Location = new System.Drawing.Point(-13585, -10917);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 25);
             this.label8.TabIndex = 58;
@@ -699,7 +712,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(-13173, -10546);
+            this.label6.Location = new System.Drawing.Point(-13997, -11214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 25);
             this.label6.TabIndex = 57;
@@ -722,7 +735,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(-13585, -10853);
+            this.label4.Location = new System.Drawing.Point(-14409, -11521);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 25);
             this.label4.TabIndex = 11;
@@ -745,19 +758,113 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Light", 13F);
             this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(-12761, -10249);
+            this.label9.Location = new System.Drawing.Point(-13585, -10917);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 25);
             this.label9.TabIndex = 9;
             this.label9.Text = "Payment";
             // 
-            // flp_products
+            // lblCartTitle
             // 
-            this.flp_products.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flp_products.Location = new System.Drawing.Point(0, 41);
-            this.flp_products.Name = "flp_products";
-            this.flp_products.Size = new System.Drawing.Size(706, 679);
-            this.flp_products.TabIndex = 0;
+            this.lblCartTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCartTitle.AutoSize = true;
+            this.lblCartTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.lblCartTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblCartTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCartTitle.Location = new System.Drawing.Point(317, 14);
+            this.lblCartTitle.Name = "lblCartTitle";
+            this.lblCartTitle.Size = new System.Drawing.Size(91, 19);
+            this.lblCartTitle.TabIndex = 9;
+            this.lblCartTitle.Text = "DASHBOARD";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(706, 48);
+            this.panel2.TabIndex = 68;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.label13.Font = new System.Drawing.Font("Heydings Icons", 20F);
+            this.label13.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label13.Location = new System.Drawing.Point(132, 4);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 40);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "M";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel5.Controls.Add(this.txtSearch);
+            this.panel5.Location = new System.Drawing.Point(174, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(264, 40);
+            this.panel5.TabIndex = 15;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtSearch.Location = new System.Drawing.Point(12, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(237, 20);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.Text = "Search...";
+            // 
+            // lblViewMode0
+            // 
+            this.lblViewMode0.AccessibleName = "0";
+            this.lblViewMode0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblViewMode0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.lblViewMode0.Font = new System.Drawing.Font("Heydings Icons", 15.75F);
+            this.lblViewMode0.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblViewMode0.Location = new System.Drawing.Point(444, 5);
+            this.lblViewMode0.Name = "lblViewMode0";
+            this.lblViewMode0.Size = new System.Drawing.Size(39, 40);
+            this.lblViewMode0.TabIndex = 17;
+            this.lblViewMode0.Text = "k";
+            this.lblViewMode0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblViewMode0.Click += new System.EventHandler(this.productViewMode_Click);
+            // 
+            // lblViewMode1
+            // 
+            this.lblViewMode1.AccessibleName = "1";
+            this.lblViewMode1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblViewMode1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.lblViewMode1.Font = new System.Drawing.Font("Heydings Icons", 15.75F);
+            this.lblViewMode1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblViewMode1.Location = new System.Drawing.Point(489, 5);
+            this.lblViewMode1.Name = "lblViewMode1";
+            this.lblViewMode1.Size = new System.Drawing.Size(39, 40);
+            this.lblViewMode1.TabIndex = 18;
+            this.lblViewMode1.Text = "J";
+            this.lblViewMode1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblViewMode1.Click += new System.EventHandler(this.productViewMode_Click);
+            // 
+            // lblViewMode2
+            // 
+            this.lblViewMode2.AccessibleName = "2";
+            this.lblViewMode2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblViewMode2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.lblViewMode2.Font = new System.Drawing.Font("Heydings Icons", 15.75F);
+            this.lblViewMode2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblViewMode2.Location = new System.Drawing.Point(534, 4);
+            this.lblViewMode2.Name = "lblViewMode2";
+            this.lblViewMode2.Size = new System.Drawing.Size(39, 40);
+            this.lblViewMode2.TabIndex = 19;
+            this.lblViewMode2.Text = "5";
+            this.lblViewMode2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblViewMode2.Click += new System.EventHandler(this.productViewMode_Click);
             // 
             // frmNewOrder
             // 
@@ -787,11 +894,12 @@
             this.Cart.ResumeLayout(false);
             this.Cart.PerformLayout();
             this.OrderTab.ResumeLayout(false);
-            this.MenuTab.ResumeLayout(false);
-            this.MenuTab.PerformLayout();
+            this.Dashboard.ResumeLayout(false);
             this.Product.ResumeLayout(false);
             this.Payment.ResumeLayout(false);
             this.Payment.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -833,7 +941,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.TabControl OrderTab;
-        private System.Windows.Forms.TabPage MenuTab;
+        private System.Windows.Forms.TabPage Dashboard;
         private System.Windows.Forms.TabPage Product;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
@@ -845,8 +953,15 @@
         private System.Windows.Forms.TabPage Discount;
         private System.Windows.Forms.TabPage Modifier;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flp_products;
+        private System.Windows.Forms.Label lblCartTitle;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblViewMode0;
+        private System.Windows.Forms.Label lblViewMode2;
+        private System.Windows.Forms.Label lblViewMode1;
     }
 }

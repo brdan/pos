@@ -19,6 +19,7 @@ namespace POS
         }
 
         Order tempOrder;
+        int itemViewMode = 0; //0 - Rectangles, 1 - List, 2 - Information Boxes
 
         public void Index()
         {
@@ -116,6 +117,7 @@ namespace POS
                     foreach (Category c in Collections.Categories)
                     {
                         //alternative views, dgv's, panels with images etc. < (not for categories dude wth)
+                        //44 categories fit in this form without scroll
                         Button btnCategory = new Button();
                         btnCategory.Size = new Size(153, 57);
                         btnCategory.Text = c.Name;
@@ -134,8 +136,8 @@ namespace POS
                 default:
                     break;
             }
-
             OrderTab.SelectTab(((Button)sender).AccessibleName);
+            lblCartTitle.Text = ((Button)sender).AccessibleName.ToUpper();
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
@@ -146,6 +148,19 @@ namespace POS
         private void button1_Click(object sender, EventArgs e)
         {
             OrderTab.SelectTab(0);
+        }
+
+        private void productViewMode_Click(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+
+            lblViewMode0.BackColor = Color.FromArgb(24, 42, 60);
+            lblViewMode1.BackColor = Color.FromArgb(24, 42, 60);
+            lblViewMode2.BackColor = Color.FromArgb(24, 42, 60);
+
+            lbl.BackColor = Color.FromArgb(14, 32, 50);
+            itemViewMode = Convert.ToInt16(lbl.AccessibleName);
+            MessageBox.Show("New View Mode: " + itemViewMode);
         }
     }
 }
