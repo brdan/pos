@@ -330,6 +330,7 @@
             this.txtPin.Name = "txtPin";
             this.txtPin.Size = new System.Drawing.Size(237, 31);
             this.txtPin.TabIndex = 10;
+            this.txtPin.Text = "0121";
             this.txtPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPin.UseSystemPasswordChar = true;
             // 

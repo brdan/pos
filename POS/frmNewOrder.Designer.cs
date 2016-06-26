@@ -86,6 +86,12 @@
             this.lblViewMode0 = new System.Windows.Forms.Label();
             this.lblViewMode1 = new System.Windows.Forms.Label();
             this.lblViewMode2 = new System.Windows.Forms.Label();
+            this.sd = new System.Windows.Forms.Label();
+            this.su = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -99,8 +105,10 @@
             this.OrderTab.SuspendLayout();
             this.Dashboard.SuspendLayout();
             this.Product.SuspendLayout();
+            this.flp_products.SuspendLayout();
             this.Payment.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tab
@@ -498,9 +506,9 @@
             this.button1.AccessibleName = "Dashboard";
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button1.Location = new System.Drawing.Point(970, 4);
+            this.button1.Location = new System.Drawing.Point(976, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 40);
+            this.button1.Size = new System.Drawing.Size(32, 40);
             this.button1.TabIndex = 64;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnMenu_Click);
@@ -598,6 +606,8 @@
             // Product
             // 
             this.Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.Product.Controls.Add(this.sd);
+            this.Product.Controls.Add(this.su);
             this.Product.Controls.Add(this.lblViewMode2);
             this.Product.Controls.Add(this.lblViewMode1);
             this.Product.Controls.Add(this.lblViewMode0);
@@ -613,7 +623,9 @@
             // 
             // flp_products
             // 
+            this.flp_products.AutoScroll = true;
             this.flp_products.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.flp_products.Controls.Add(this.panel4);
             this.flp_products.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flp_products.Location = new System.Drawing.Point(0, 48);
             this.flp_products.Name = "flp_products";
@@ -828,7 +840,7 @@
             this.lblViewMode0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
             this.lblViewMode0.Font = new System.Drawing.Font("Heydings Icons", 15.75F);
             this.lblViewMode0.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblViewMode0.Location = new System.Drawing.Point(444, 5);
+            this.lblViewMode0.Location = new System.Drawing.Point(444, 4);
             this.lblViewMode0.Name = "lblViewMode0";
             this.lblViewMode0.Size = new System.Drawing.Size(39, 40);
             this.lblViewMode0.TabIndex = 17;
@@ -843,7 +855,7 @@
             this.lblViewMode1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.lblViewMode1.Font = new System.Drawing.Font("Heydings Icons", 15.75F);
             this.lblViewMode1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblViewMode1.Location = new System.Drawing.Point(489, 5);
+            this.lblViewMode1.Location = new System.Drawing.Point(489, 4);
             this.lblViewMode1.Name = "lblViewMode1";
             this.lblViewMode1.Size = new System.Drawing.Size(39, 40);
             this.lblViewMode1.TabIndex = 18;
@@ -865,6 +877,81 @@
             this.lblViewMode2.Text = "5";
             this.lblViewMode2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblViewMode2.Click += new System.EventHandler(this.productViewMode_Click);
+            // 
+            // sd
+            // 
+            this.sd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
+            this.sd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.sd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.sd.Location = new System.Drawing.Point(670, 48);
+            this.sd.Margin = new System.Windows.Forms.Padding(0);
+            this.sd.Name = "sd";
+            this.sd.Size = new System.Drawing.Size(36, 322);
+            this.sd.TabIndex = 66;
+            this.sd.Text = "▲";
+            this.sd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // su
+            // 
+            this.su.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
+            this.su.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.su.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.su.Location = new System.Drawing.Point(670, 370);
+            this.su.Margin = new System.Windows.Forms.Padding(0);
+            this.su.Name = "su";
+            this.su.Size = new System.Drawing.Size(36, 372);
+            this.su.TabIndex = 65;
+            this.su.Text = "▼";
+            this.su.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label20.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label20.Location = new System.Drawing.Point(0, 0);
+            this.label20.Margin = new System.Windows.Forms.Padding(0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(440, 29);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Category Name";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label19.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label19.Location = new System.Drawing.Point(440, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(115, 29);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Sub-categories";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label18.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label18.Location = new System.Drawing.Point(555, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(115, 29);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Products";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(78)))), ((int)(((byte)(96)))));
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Location = new System.Drawing.Point(0, 3);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(670, 29);
+            this.panel4.TabIndex = 82;
             // 
             // frmNewOrder
             // 
@@ -896,10 +983,12 @@
             this.OrderTab.ResumeLayout(false);
             this.Dashboard.ResumeLayout(false);
             this.Product.ResumeLayout(false);
+            this.flp_products.ResumeLayout(false);
             this.Payment.ResumeLayout(false);
             this.Payment.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -963,5 +1052,11 @@
         private System.Windows.Forms.Label lblViewMode0;
         private System.Windows.Forms.Label lblViewMode2;
         private System.Windows.Forms.Label lblViewMode1;
+        private System.Windows.Forms.Label sd;
+        private System.Windows.Forms.Label su;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }
