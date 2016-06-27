@@ -14,3 +14,4 @@ C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.cspro
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\bin\Debug\POS.exe.config
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\obj\Debug\POS.exe
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\obj\Debug\POS.pdb
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\bin\Debug\POS.exe.config
