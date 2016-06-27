@@ -55,7 +55,7 @@
             this.flp_cart.Location = new System.Drawing.Point(0, 0);
             this.flp_cart.Margin = new System.Windows.Forms.Padding(0);
             this.flp_cart.Name = "flp_cart";
-            this.flp_cart.Size = new System.Drawing.Size(290, 642);
+            this.flp_cart.Size = new System.Drawing.Size(290, 623);
             this.flp_cart.TabIndex = 1;
             // 
             // tmrScroll
@@ -79,7 +79,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, 623);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 119);
             this.panel1.TabIndex = 34;
@@ -91,7 +91,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(138, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(129, 119);
             this.panel2.TabIndex = 43;
@@ -189,7 +189,7 @@
             this.su.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.su.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
             this.su.Location = new System.Drawing.Point(267, 371);
-            this.su.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.su.Margin = new System.Windows.Forms.Padding(0);
             this.su.Name = "su";
             this.su.Size = new System.Drawing.Size(35, 371);
             this.su.TabIndex = 39;
@@ -204,7 +204,7 @@
             this.sd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.sd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
             this.sd.Location = new System.Drawing.Point(267, 0);
-            this.sd.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.sd.Margin = new System.Windows.Forms.Padding(0);
             this.sd.Name = "sd";
             this.sd.Size = new System.Drawing.Size(35, 371);
             this.sd.TabIndex = 40;

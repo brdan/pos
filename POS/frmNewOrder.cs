@@ -76,6 +76,9 @@ namespace POS
             }
 
         }
+
+        //First and Second are named so because it can contain both Categories & Subcategories
+        //Whereas the third page can only ever contain products, hence the naming convention
         void generateFirstPageItems()
         {
             #region Notes
@@ -90,11 +93,14 @@ namespace POS
             #endregion
 
             flp_products.Controls.Clear();
+            List<Category> categories = Collections.Categories.OrderBy(x => x.SortDisplay).ToList();
+            List<Product> products = Collections.Products.Where(pr => pr.CategoryID == 0).OrderBy(pr => pr.SortDisplay).ToList();
+            List<Subcategory> subcategories = Collections.Subcategories.Where(sc => sc.CategoryID == 0).OrderBy(sc => sc.SortDisplay).ToList();
             if (itemViewMode == 0)
             {
                 //The following items belong on the front page of the Item Browser
-                #region All categories
-                foreach (Category c in Collections.Categories.OrderBy(x => x.SortDisplay))
+                #region Category Header + Generation
+                foreach (Category c in categories)
                 {
                     Button btn = new Button();
 
@@ -107,13 +113,13 @@ namespace POS
                     btn.ForeColor = Color.LightGray;
                     btn.BackColor = c.Colour;
                     btn.FlatStyle = FlatStyle.Flat;
-                    btn.Click += btnCategory_Click;
+                    btn.Click += btnFirstPageItems_Click;
 
                     flp_products.Controls.Add(btn);
                 }
                 #endregion
-                #region Sub-categories that do not have any categories (in other words, a category with behaviour)
-                foreach (Subcategory sc in Collections.Subcategories.Where(sc => sc.CategoryID == 0).OrderBy(sc => sc.SortDisplay))
+                #region Category-less Sub-Category Header + Generation
+                foreach (Subcategory sc in subcategories)
                 {
 
                     Button btn = new Button();
@@ -127,13 +133,13 @@ namespace POS
                     btn.ForeColor = Color.LightGray;
                     btn.BackColor = sc.Colour;
                     btn.FlatStyle = FlatStyle.Flat;
-                    btn.Click += btnCategory_Click;
+                    btn.Click += btnFirstPageItems_Click;
 
                     flp_products.Controls.Add(btn);
                 }
                 #endregion
-                #region Products with neither categories nor sub-categories (direct add too cart)
-                foreach (Product pr in Collections.Products.Where(pr => pr.CategoryID == 0).OrderBy(pr => pr.SortDisplay))
+                #region Category-and-sub-category-less Product Header + Generation
+                foreach (Product pr in products)
                 {
                     Button btn = new Button();
 
@@ -146,7 +152,7 @@ namespace POS
                     btn.ForeColor = Color.LightGray;
                     btn.BackColor = pr.Colour;
                     btn.FlatStyle = FlatStyle.Flat;
-                    btn.Click += btnCategory_Click;
+                    btn.Click += btnProduct_Click;
 
                     flp_products.Controls.Add(btn);
                 }
@@ -156,6 +162,7 @@ namespace POS
             {
                 #region Category Header + Generation
                 //This is list mode, so I need to generate a header, category first!
+                #region The header
                 Panel header = new Panel();
                 header.Margin = new Padding(0, 0, 0, 0);
                 header.Size = new Size(670, 29);
@@ -197,57 +204,59 @@ namespace POS
                 header.Controls.Add(lblHSubCount);
 
                 flp_products.Controls.Add(header);
+                #endregion
 
-                foreach (Category c in Collections.Categories.OrderBy(x => x.SortDisplay))
+                foreach (Category c in categories)
                 {
                     List<IStock> catsChildren = Functions.GetChildren(c);
-                    int subCats = 0; int prods = 0;
-                    foreach (IStock child in catsChildren)
-                    {
-                        if (child is Subcategory)
-                            subCats++;
-                        else if (child is Product)
-                            prods++;
-                    }
 
-                    Panel pnl = new Panel();
+                    FlowLayoutPanel pnl = new FlowLayoutPanel();
                     pnl.Size = new Size(670, 40);
                     pnl.Margin = new Padding(0, 0, 0, 0);
                     pnl.BackColor = c.Colour;
+                    pnl.AutoSize = true;
 
                     Label lblName = new Label();
                     lblName.Text = c.Name;
                     lblName.Font = new Font("Segoe UI", 10.00f);
                     lblName.ForeColor = Color.Gainsboro;
-                    lblName.TextAlign = ContentAlignment.MiddleLeft;
                     lblName.AccessibleName = c.ID.ToString();
-                    lblName.AccessibleDescription = "S";
+                    lblName.AccessibleDescription = "C";
+                    lblName.TextAlign = ContentAlignment.MiddleLeft;
+                    lblName.Margin = new Padding(0, 0, 0, 0);
                     lblName.Location = new Point(0, 0);
+                    lblName.AutoSize = true;
                     lblName.MinimumSize = new Size(440, 40);
                     lblName.MaximumSize = new Size(440, 0);
-                    lblName.AutoSize = false;
-                    lblName.Click += btnCategory_Click;
+                    lblName.Click += btnFirstPageItems_Click;
 
                     Label lblProd = new Label();
                     lblProd.Font = new Font("Segoe UI", 10.00f);
                     lblProd.ForeColor = Color.Gainsboro;
-                    lblProd.Text = prods.ToString();
+                    lblProd.Text = catsChildren.OfType<Product>().ToList().Count.ToString();
                     lblProd.TextAlign = ContentAlignment.MiddleCenter;
+                    lblProd.Margin = new Padding(0, 0, 0, 0);
                     lblProd.AccessibleName = c.ID.ToString();
-                    lblProd.AccessibleDescription = "S";
+                    lblProd.AutoSize = true;
+                    lblProd.MinimumSize = new Size(115, 40);
+                    lblProd.MaximumSize = new Size(115, 0);
+                    lblProd.AccessibleDescription = "C";
                     lblProd.Location = new Point(440, 0);
-                    lblProd.Size = new Size(115, 40);
-                    lblProd.Click += btnCategory_Click;
+                    lblProd.Click += btnFirstPageItems_Click;
 
                     Label lblSc = new Label();
                     lblSc.Font = new Font("Segoe UI", 10.00f);
                     lblSc.ForeColor = Color.Gainsboro;
-                    lblSc.Text = subCats.ToString();
+                    lblSc.Margin = new Padding(0, 0, 0, 0);
+                    lblSc.Text = catsChildren.OfType<Subcategory>().ToList().Count.ToString();
                     lblSc.TextAlign = ContentAlignment.MiddleCenter;
                     lblSc.AccessibleName = c.ID.ToString();
+                    lblSc.AccessibleDescription = "C";
                     lblSc.Location = new Point(555, 0);
-                    lblSc.Size = new Size(115, 40);
-                    lblSc.Click += btnCategory_Click;
+                    lblSc.AutoSize = true;
+                    lblSc.MinimumSize = new Size(115, 40);
+                    lblSc.MaximumSize = new Size(115, 0);
+                    lblSc.Click += btnFirstPageItems_Click;
 
                     pnl.Controls.Add(lblName);
                     pnl.Controls.Add(lblSc);
@@ -257,6 +266,8 @@ namespace POS
                 }
                 #endregion
                 #region Category-less Sub-Category Header + Generation
+               
+                #region header
                 Panel header2 = new Panel();
                 header2.Margin = new Padding(0, 50, 0, 0);
                 header2.Size = new Size(670, 29);
@@ -296,15 +307,17 @@ namespace POS
                 header2.Controls.Add(lblH2Price);
 
                 flp_products.Controls.Add(header2);
+                #endregion
 
-                foreach (Subcategory sc in Collections.Subcategories.Where(sc => sc.CategoryID == 0).OrderBy(x => x.SortDisplay))
+                foreach (Subcategory sc in subcategories)
                 {
                     List<Product> subcatsChildren = Collections.Products.Where(pr => pr.SubcategoryID == sc.ID).ToList();
 
-                    Panel pnl = new Panel();
+                    FlowLayoutPanel pnl = new FlowLayoutPanel();
                     pnl.Size = new Size(670, 40);
                     pnl.Margin = new Padding(0, 0, 0, 0);
                     pnl.BackColor = sc.Colour;
+                    pnl.AutoSize = true;
 
                     Label lblName = new Label();
                     lblName.Text = sc.Name;
@@ -314,10 +327,10 @@ namespace POS
                     lblName.AccessibleName = sc.ID.ToString();
                     lblName.AccessibleDescription = "S";
                     lblName.Location = new Point(0, 0);
+                    lblName.AutoSize = true;
                     lblName.MinimumSize = new Size(440, 40);
                     lblName.MaximumSize = new Size(440, 0);
-                    lblName.AutoSize = false;
-                    lblName.Click += btnCategory_Click;
+                    lblName.Click += btnFirstPageItems_Click;
 
                     Label lblProd = new Label();
                     lblProd.Font = new Font("Segoe UI", 10.00f);
@@ -327,8 +340,10 @@ namespace POS
                     lblProd.AccessibleName = sc.ID.ToString();
                     lblProd.AccessibleDescription = "S";
                     lblProd.Location = new Point(440, 0);
-                    lblProd.Size = new Size(115, 40);
-                    lblProd.Click += btnCategory_Click;
+                    lblProd.AutoSize = true;
+                    lblProd.MinimumSize = new Size(115, 40);
+                    lblProd.MaximumSize = new Size(115, 0);
+                    lblProd.Click += btnFirstPageItems_Click;
 
                     Label lblPrice = new Label();
                     lblPrice.Font = new Font("Segoe UI", 10.00f);
@@ -338,8 +353,10 @@ namespace POS
                     lblPrice.AccessibleName = sc.ID.ToString();
                     lblPrice.AccessibleDescription = "S";
                     lblPrice.Location = new Point(555, 0);
-                    lblPrice.Size = new Size(115, 40);
-                    lblPrice.Click += btnCategory_Click;
+                    lblPrice.AutoSize = true;
+                    lblPrice.MinimumSize = new Size(115, 40);
+                    lblPrice.MaximumSize = new Size(115, 0);
+                    lblPrice.Click += btnFirstPageItems_Click;
 
                     pnl.Controls.Add(lblName);
                     pnl.Controls.Add(lblProd);
@@ -349,6 +366,7 @@ namespace POS
                 }
                 #endregion
                 #region Category-and-sub-category-less Product Header + Generation
+                #region header
                 Panel header3 = new Panel();
                 header3.Margin = new Padding(0, 50, 0, 0);
                 header3.Size = new Size(670, 29);
@@ -388,14 +406,15 @@ namespace POS
                 header3.Controls.Add(lblH3Price);
 
                 flp_products.Controls.Add(header3);
-
-                foreach (Product pr in Collections.Products.Where(pr => pr.CategoryID == 0).OrderBy(x => x.SortDisplay))
+                #endregion
+                foreach (Product pr in products)
                 {
 
-                    Panel pnl = new Panel();
+                    FlowLayoutPanel pnl = new FlowLayoutPanel();
                     pnl.Size = new Size(670, 40);
                     pnl.Margin = new Padding(0, 0, 0, 0);
                     pnl.BackColor = pr.Colour;
+                    pnl.AutoSize = true;
 
                     Label lblName = new Label();
                     lblName.Text = pr.Name;
@@ -405,10 +424,11 @@ namespace POS
                     lblName.AccessibleName = pr.ID.ToString();
                     lblName.AccessibleDescription = "P";
                     lblName.Location = new Point(0, 0);
+                    lblName.AutoSize = true;
                     lblName.MinimumSize = new Size(440, 40);
                     lblName.MaximumSize = new Size(440, 0);
-                    lblName.AutoSize = false;
-                    lblName.Click += btnCategory_Click;
+       
+                    lblName.Click += btnProduct_Click;
 
                     Label lblProd = new Label();
                     lblProd.Font = new Font("Segoe UI", 10.00f);
@@ -418,8 +438,10 @@ namespace POS
                     lblProd.AccessibleName = pr.ID.ToString();
                     lblProd.AccessibleDescription = "P";
                     lblProd.Location = new Point(440, 0);
-                    lblProd.Size = new Size(115, 40);
-                    lblProd.Click += btnCategory_Click;
+                    lblProd.AutoSize = true;
+                    lblProd.MinimumSize = new Size(115, 40);
+                    lblProd.MaximumSize= new Size(115, 0);
+                    lblProd.Click += btnProduct_Click;
 
                     Label lblPrice = new Label();
                     lblPrice.Font = new Font("Segoe UI", 10.00f);
@@ -429,8 +451,10 @@ namespace POS
                     lblPrice.AccessibleName = pr.ID.ToString();
                     lblPrice.AccessibleDescription = "P";
                     lblPrice.Location = new Point(555, 0);
-                    lblPrice.Size = new Size(115, 40);
-                    lblPrice.Click += btnCategory_Click;
+                    lblPrice.AutoSize = true;
+                    lblPrice.MinimumSize = new Size(115, 40);
+                    lblPrice.MaximumSize = new Size(115, 0);
+                    lblPrice.Click += btnProduct_Click;
 
                     pnl.Controls.Add(lblName);
                     pnl.Controls.Add(lblProd);
@@ -441,32 +465,550 @@ namespace POS
                 #endregion
             }
         }
-        void generateCategoryDescendants(int category_id, string type)
+        void generateSecondPageItems(int parent_id, string type)
         {
             //if P if C if S - add directly, get childs, get childs//..........................................................................................
-            List<IStock> children = new List<IStock>();
-            Collections.Subcategories.Where(sc => sc.CategoryID == category_id).ToList().ForEach(sc => children.Add(sc));
-            Collections.Products.Where(pr => pr.CategoryID == category_id && pr.SubcategoryID == 0).ToList().ForEach(pr => children.Add(pr));
+            switch (type)
+            {
+                case "C":
+                    List<IStock> catChildren = new List<IStock>();
+                    Collections.Subcategories.Where(sc => sc.CategoryID == parent_id).ToList().ForEach(sc => catChildren.Add(sc));
+                    Collections.Products.Where(pr => pr.CategoryID == parent_id && pr.SubcategoryID == 0).ToList().ForEach(pr => catChildren.Add(pr));
+
+                    flp_products.Controls.Clear();
+                    if (itemViewMode == 0)
+                    {
+                        //The following items belong on the second page of the Item Browser
+                        #region Sub-categories belonging to this category
+                        foreach (Subcategory sc in catChildren.OfType<Subcategory>().ToList().OrderBy(x => x.SortDisplay))
+                        {
+                            Button btn = new Button();
+
+                            btn.Size = new Size(153, 57);
+                            btn.Text = sc.Name;
+                            btn.UseMnemonic = false;
+                            btn.AccessibleName = sc.ID.ToString();
+                            btn.AccessibleDescription = "S";
+                            btn.Font = new Font("Segoe UI Light", 10.00f);
+                            btn.ForeColor = Color.LightGray;
+                            btn.BackColor = sc.Colour;
+                            btn.FlatStyle = FlatStyle.Flat;
+                            btn.Click += btnSecondPageItems_Click;
+
+                            flp_products.Controls.Add(btn);
+                        }
+                        #endregion
+                        #region Products with no Sub-Category, but have this Category assigned to them
+                        foreach (Product pr in catChildren.OfType<Product>().ToList().OrderBy(x => x.SortDisplay))
+                        {
+                            Button btn = new Button();
+
+                            btn.Size = new Size(153, 57);
+                            btn.Text = pr.Name;
+                            btn.UseMnemonic = false;
+                            btn.AccessibleName = pr.ID.ToString();
+                            btn.AccessibleDescription = "P";
+                            btn.Font = new Font("Segoe UI Light", 10.00f);
+                            btn.ForeColor = Color.LightGray;
+                            btn.BackColor = pr.Colour;
+                            btn.FlatStyle = FlatStyle.Flat;
+                            btn.Click += btnProduct_Click;
+
+                            flp_products.Controls.Add(btn);
+                        }
+                        #endregion
+                    }
+                    else if (itemViewMode == 1)
+                    {
+                        #region Sub-category Header + Generation
+                        #region header
+                        Panel header = new Panel();
+                        header.Margin = new Padding(0, 0, 0, 0);
+                        header.Size = new Size(670, 29);
+
+                        Label lblHName = new Label();
+                        lblHName.Text = "Sub-Category Name";
+                        lblHName.Font = new Font("Segoe UI", 10.00f);
+                        lblHName.ForeColor = Color.Gainsboro;
+                        lblHName.BackColor = Color.FromArgb(14, 32, 50);
+                        lblHName.Size = new Size(440, 29);
+                        lblHName.TextAlign = ContentAlignment.MiddleLeft;
+
+                        //subcat count
+                        Label lblHProdCount = new Label();
+                        lblHProdCount.Text = "Products";
+                        lblHProdCount.Font = new Font("Segoe UI", 10.00f);
+                        lblHProdCount.ForeColor = Color.Gainsboro;
+                        lblHProdCount.BackColor = Color.FromArgb(14, 32, 50);
+                        lblHProdCount.Size = new Size(115, 29);
+                        lblHProdCount.Location = new Point(440, 0);
+                        lblHProdCount.TextAlign = ContentAlignment.MiddleCenter;
+                        lblHProdCount.Margin = new Padding(0, 0, 0, 0);
+
+                        //prod count
+                        Label lblHPrice = new Label();
+                        lblHPrice.Text = "Price (" + Settings.Setting["currency"] + ")";
+                        lblHPrice.Font = new Font("Segoe UI", 10.00f);
+                        lblHPrice.ForeColor = Color.Gainsboro;
+                        lblHPrice.BackColor = Color.FromArgb(14, 32, 50);
+                        lblHPrice.Size = new Size(115, 29);
+                        lblHPrice.TextAlign = ContentAlignment.MiddleCenter;
+                        lblHPrice.Location = new Point(555, 0);
+                        lblHPrice.Margin = new Padding(0, 0, 0, 0);
+
+                        header.Controls.Add(lblHName);
+                        header.Controls.Add(lblHProdCount);
+                        header.Controls.Add(lblHPrice);
+
+                        flp_products.Controls.Add(header);
+                        #endregion
+
+                        foreach (Subcategory sc in catChildren.OfType<Subcategory>().ToList().OrderBy(x => x.SortDisplay))
+                        {
+
+                            FlowLayoutPanel pnl = new FlowLayoutPanel();
+                            pnl.Size = new Size(670, 40);
+                            pnl.Margin = new Padding(0, 0, 0, 0);
+                            pnl.BackColor = sc.Colour;
+                            pnl.AutoSize = true;
+
+                            Label lblName = new Label();
+                            lblName.Text = sc.Name;
+                            lblName.Font = new Font("Segoe UI", 10.00f);
+                            lblName.ForeColor = Color.Gainsboro;
+                            lblName.TextAlign = ContentAlignment.MiddleLeft;
+                            lblName.AccessibleName = sc.ID.ToString();
+                            lblName.AccessibleDescription = "S";
+                            lblName.Location = new Point(0, 0);
+                            lblName.AutoSize = true;
+                            lblName.MinimumSize = new Size(440, 40);
+                            lblName.MaximumSize = new Size(440, 0);
+                            lblName.Click += btnSecondPageItems_Click;
+
+                            Label lblProd = new Label();
+                            lblProd.Font = new Font("Segoe UI", 10.00f);
+                            lblProd.ForeColor = Color.Gainsboro;
+                            lblProd.Text = Collections.Products.Where(p => p.SubcategoryID == sc.ID).ToList().Count.ToString();
+                            lblProd.TextAlign = ContentAlignment.MiddleCenter;
+                            lblProd.AccessibleName = sc.ID.ToString();
+                            lblProd.AccessibleDescription = "S";
+                            lblProd.Location = new Point(440, 0);
+                            lblProd.AutoSize = true;
+                            lblProd.MinimumSize = new Size(115, 40);
+                            lblProd.MaximumSize = new Size(115, 0);
+                            lblProd.Click += btnSecondPageItems_Click;
+
+                            Label lblPrice = new Label();
+                            lblPrice.Font = new Font("Segoe UI", 10.00f);
+                            lblPrice.ForeColor = Color.Gainsboro;
+                            lblPrice.Text = sc.CostPrice.ToString();
+                            lblPrice.TextAlign = ContentAlignment.MiddleCenter;
+                            lblPrice.AccessibleName = sc.ID.ToString();
+                            lblPrice.AccessibleDescription = "S";
+                            lblPrice.Location = new Point(555, 0);
+                            lblPrice.AutoSize = true;
+                            lblPrice.MinimumSize = new Size(115, 40);
+                            lblPrice.MaximumSize = new Size(115, 0);
+                            lblPrice.Click += btnSecondPageItems_Click;
+
+                            pnl.Controls.Add(lblName);
+                            pnl.Controls.Add(lblProd);
+                            pnl.Controls.Add(lblPrice);
+
+                            flp_products.Controls.Add(pnl);
+                        }
+                        #endregion
+                        #region Sub-category-less Product Header + Generation
+                        #region header
+                        Panel header2 = new Panel();
+                        header2.Margin = new Padding(0, 50, 0, 0);
+                        header2.Size = new Size(670, 29);
+
+                        Label lblH2Name = new Label();
+                        lblH2Name.Text = "Product Name";
+                        lblH2Name.Font = new Font("Segoe UI", 10.00f);
+                        lblH2Name.ForeColor = Color.Gainsboro;
+                        lblH2Name.BackColor = Color.FromArgb(14, 32, 50);
+                        lblH2Name.Size = new Size(440, 29);
+                        lblH2Name.TextAlign = ContentAlignment.MiddleLeft;
+
+                        //subcat count
+                        Label lblH2ProdCount = new Label();
+                        lblH2ProdCount.Text = "In Stock";
+                        lblH2ProdCount.Font = new Font("Segoe UI", 10.00f);
+                        lblH2ProdCount.ForeColor = Color.Gainsboro;
+                        lblH2ProdCount.BackColor = Color.FromArgb(14, 32, 50);
+                        lblH2ProdCount.Size = new Size(115, 29);
+                        lblH2ProdCount.Location = new Point(440, 0);
+                        lblH2ProdCount.TextAlign = ContentAlignment.MiddleCenter;
+                        lblH2ProdCount.Margin = new Padding(0, 0, 0, 0);
+
+                        //prod count
+                        Label lblH2Price = new Label();
+                        lblH2Price.Text = "Price (" + Settings.Setting["currency"] + ")";
+                        lblH2Price.Font = new Font("Segoe UI", 10.00f);
+                        lblH2Price.ForeColor = Color.Gainsboro;
+                        lblH2Price.BackColor = Color.FromArgb(14, 32, 50);
+                        lblH2Price.Size = new Size(115, 29);
+                        lblH2Price.TextAlign = ContentAlignment.MiddleCenter;
+                        lblH2Price.Location = new Point(555, 0);
+                        lblH2Price.Margin = new Padding(0, 0, 0, 0);
+
+                        header2.Controls.Add(lblH2Name);
+                        header2.Controls.Add(lblH2ProdCount);
+                        header2.Controls.Add(lblH2Price);
+
+                        flp_products.Controls.Add(header2);
+                        #endregion
+
+                        foreach (Product pr in catChildren.OfType<Product>().ToList().OrderBy(x => x.SortDisplay))
+                        {
+
+                            FlowLayoutPanel pnl = new FlowLayoutPanel();
+                            pnl.Size = new Size(670, 40);
+                            pnl.Margin = new Padding(0, 0, 0, 0);
+                            pnl.BackColor = pr.Colour;
+                            pnl.AutoSize = true;
+
+                            Label lblName = new Label();
+                            lblName.Text = pr.Name;
+                            lblName.Font = new Font("Segoe UI", 10.00f);
+                            lblName.ForeColor = Color.Gainsboro;
+                            lblName.TextAlign = ContentAlignment.MiddleLeft;
+                            lblName.AccessibleName = pr.ID.ToString();
+                            lblName.AccessibleDescription = "P";
+                            lblName.Location = new Point(0, 0);
+                            lblName.AutoSize = true;
+                            lblName.MinimumSize = new Size(440, 40);
+                            lblName.MaximumSize = new Size(440, 0);
+                            lblName.Click += btnProduct_Click;
+
+                            Label lblProd = new Label();
+                            lblProd.Font = new Font("Segoe UI", 10.00f);
+                            lblProd.ForeColor = Color.Gainsboro;
+                            lblProd.Text = pr.InStockQty > 0 ? "Yes" : "No";
+                            lblProd.TextAlign = ContentAlignment.MiddleCenter;
+                            lblProd.AccessibleName = pr.ID.ToString();
+                            lblProd.AccessibleDescription = "P";
+                            lblProd.Location = new Point(440, 0);
+                            lblProd.AutoSize = true;
+                            lblProd.MinimumSize = new Size(115, 40);
+                            lblProd.MaximumSize = new Size(115, 0);
+                            lblProd.Click += btnProduct_Click;
+
+                            Label lblPrice = new Label();
+                            lblPrice.Font = new Font("Segoe UI", 10.00f);
+                            lblPrice.ForeColor = Color.Gainsboro;
+                            lblPrice.Text = pr.CostPrice.ToString();
+                            lblPrice.TextAlign = ContentAlignment.MiddleCenter;
+                            lblPrice.AccessibleName = pr.ID.ToString();
+                            lblPrice.AccessibleDescription = "P";
+                            lblPrice.Location = new Point(555, 0);
+                            lblPrice.AutoSize = true;
+                            lblPrice.MinimumSize = new Size(115, 40);
+                            lblPrice.MaximumSize = new Size(115, 0);
+                            lblPrice.Click += btnProduct_Click;
+
+                            pnl.Controls.Add(lblName);
+                            pnl.Controls.Add(lblProd);
+                            pnl.Controls.Add(lblPrice);
+
+                            flp_products.Controls.Add(pnl);
+                        }
+                        #endregion
+                    }
+
+                    break;
+
+                case "S":
+                    List<Product> subcatChildren = Collections.Products.Where(pr => pr.SubcategoryID == parent_id).OrderBy(x => x.SortDisplay).ToList();
+
+                    flp_products.Controls.Clear();
+                    if (itemViewMode == 0)
+                    {
+                        //The following items belong on the second page of the Item Browser
+                        #region Products of this Sub-category
+                        foreach (Product pr in subcatChildren)
+                        {
+                            Button btn = new Button();
+                            btn.Size = new Size(153, 57);
+                            btn.Text = pr.Name;
+                            btn.UseMnemonic = false;
+                            btn.AccessibleName = pr.ID.ToString();
+                            btn.AccessibleDescription = "P";
+                            btn.Font = new Font("Segoe UI Light", 10.00f);
+                            btn.ForeColor = Color.LightGray;
+                            btn.BackColor = pr.Colour;
+                            btn.FlatStyle = FlatStyle.Flat;
+                            btn.Click += btnFirstPageItems_Click;
+
+                            flp_products.Controls.Add(btn);
+                        }
+                        #endregion
+                    }
+                    else if (itemViewMode == 1)
+                    {
+                        #region Product Header + Generation
+                        #region header
+                        Panel header2 = new Panel();
+                        header2.Margin = new Padding(0, 0, 0, 0);
+                        header2.Size = new Size(670, 29);
+
+                        Label lblH2Name = new Label();
+                        lblH2Name.Text = "Product Name";
+                        lblH2Name.Font = new Font("Segoe UI", 10.00f);
+                        lblH2Name.ForeColor = Color.Gainsboro;
+                        lblH2Name.BackColor = Color.FromArgb(14, 32, 50);
+                        lblH2Name.Size = new Size(440, 29);
+                        lblH2Name.TextAlign = ContentAlignment.MiddleLeft;
+
+                        //subcat count
+                        Label lblH2ProdCount = new Label();
+                        lblH2ProdCount.Text = "In Stock";
+                        lblH2ProdCount.Font = new Font("Segoe UI", 10.00f);
+                        lblH2ProdCount.ForeColor = Color.Gainsboro;
+                        lblH2ProdCount.BackColor = Color.FromArgb(14, 32, 50);
+                        lblH2ProdCount.Size = new Size(115, 29);
+                        lblH2ProdCount.Location = new Point(440, 0);
+                        lblH2ProdCount.TextAlign = ContentAlignment.MiddleCenter;
+                        lblH2ProdCount.Margin = new Padding(0, 0, 0, 0);
+
+                        //prod count
+                        Label lblH2Price = new Label();
+                        lblH2Price.Text = "Price (" + Settings.Setting["currency"] + ")";
+                        lblH2Price.Font = new Font("Segoe UI", 10.00f);
+                        lblH2Price.ForeColor = Color.Gainsboro;
+                        lblH2Price.BackColor = Color.FromArgb(14, 32, 50);
+                        lblH2Price.Size = new Size(115, 29);
+                        lblH2Price.TextAlign = ContentAlignment.MiddleCenter;
+                        lblH2Price.Location = new Point(555, 0);
+                        lblH2Price.Margin = new Padding(0, 0, 0, 0);
+
+                        header2.Controls.Add(lblH2Name);
+                        header2.Controls.Add(lblH2ProdCount);
+                        header2.Controls.Add(lblH2Price);
+
+                        flp_products.Controls.Add(header2);
+                        #endregion
+
+                        foreach (Product pr in subcatChildren)
+                        {
+
+                            FlowLayoutPanel pnl = new FlowLayoutPanel();
+                            pnl.Size = new Size(670, 40);
+                            pnl.Margin = new Padding(0, 0, 0, 0);
+                            pnl.BackColor = pr.Colour;
+                            pnl.AutoSize = true;
+                           
+
+                            Label lblName = new Label();
+                            lblName.Text = pr.Name;
+                            lblName.Font = new Font("Segoe UI", 10.00f);
+                            lblName.ForeColor = Color.Gainsboro;
+                            lblName.TextAlign = ContentAlignment.MiddleLeft;
+                            lblName.AccessibleName = pr.ID.ToString();
+                            lblName.AccessibleDescription = "P";
+                            lblName.Location = new Point(0, 0);
+                            lblName.AutoSize = true;
+                            lblName.MinimumSize = new Size(440, 40);
+                            lblName.MaximumSize = new Size(440, 0);
+                            lblName.Click += btnProduct_Click;
+
+                            Label lblProd = new Label();
+                            lblProd.Font = new Font("Segoe UI", 10.00f);
+                            lblProd.ForeColor = Color.Gainsboro;
+                            lblProd.Text = pr.InStockQty > 0 ? "Yes" : "No";
+                            lblProd.TextAlign = ContentAlignment.MiddleCenter;
+                            lblProd.AccessibleName = pr.ID.ToString();
+                            lblProd.AccessibleDescription = "P";
+                            lblProd.Location = new Point(440, 0);
+                            lblProd.AutoSize = true;
+                            lblProd.MinimumSize = new Size(115, 40);
+                            lblProd.MaximumSize = new Size(115, 0);
+                            lblProd.Click += btnProduct_Click;
+
+                            Label lblPrice = new Label();
+                            lblPrice.Font = new Font("Segoe UI", 10.00f);
+                            lblPrice.ForeColor = Color.Gainsboro;
+                            lblPrice.Text = pr.CostPrice.ToString();
+                            lblPrice.TextAlign = ContentAlignment.MiddleCenter;
+                            lblPrice.AccessibleName = pr.ID.ToString();
+                            lblPrice.AccessibleDescription = "P";
+                            lblPrice.Location = new Point(555, 0);
+                            lblPrice.AutoSize = true;
+                            lblPrice.MinimumSize = new Size(115, 40);
+                            lblPrice.MaximumSize = new Size(115, 0);
+                            lblPrice.Click += btnProduct_Click;
+
+                            pnl.Controls.Add(lblName);
+                            pnl.Controls.Add(lblProd);
+                            pnl.Controls.Add(lblPrice);
+
+                            flp_products.Controls.Add(pnl);
+                        }
+                        #endregion
+                    }
+
+                    break;
+                default:
+                    break;
+            }
+          
+        }
+        void generateProducts(int subcat_id)
+        {
+            //these can only be products
+            flp_products.Controls.Clear();
+            List<Product> products = Collections.Products.Where(x => x.SubcategoryID == subcat_id).OrderBy(x=>x.SortDisplay).ToList();
+
+            if (itemViewMode == 0)
+            {
+                #region Products
+                foreach (Product pr in products)
+                {
+                    Button btn = new Button();
+
+                    btn.Size = new Size(153, 57);
+                    btn.Text = pr.Name;
+                    btn.UseMnemonic = false;
+                    btn.AccessibleName = pr.ID.ToString();
+                    btn.Font = new Font("Segoe UI Light", 10.00f);
+                    btn.ForeColor = Color.LightGray;
+                    btn.BackColor = pr.Colour;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.Click += btnProduct_Click;
+
+                    flp_products.Controls.Add(btn);
+                }
+                #endregion
+            }
+            else if (itemViewMode == 1)
+            {
+                #region Product Generation
+                #region header
+
+                Panel header = new Panel();
+                header.Margin = new Padding(0, 0, 0, 0);
+                header.Size = new Size(670, 29);
+
+                Label lblHName = new Label();
+                lblHName.Text = "Product Name";
+                lblHName.Font = new Font("Segoe UI", 10.00f);
+                lblHName.ForeColor = Color.Gainsboro;
+                lblHName.BackColor = Color.FromArgb(14, 32, 50);
+                lblHName.Size = new Size(440, 29);
+                lblHName.TextAlign = ContentAlignment.MiddleLeft;
+
+                //subcat count
+                Label lblHProdCount = new Label();
+                lblHProdCount.Text = "In Stock";
+                lblHProdCount.Font = new Font("Segoe UI", 10.00f);
+                lblHProdCount.ForeColor = Color.Gainsboro;
+                lblHProdCount.BackColor = Color.FromArgb(14, 32, 50);
+                lblHProdCount.Size = new Size(115, 29);
+                lblHProdCount.Location = new Point(440, 0);
+                lblHProdCount.TextAlign = ContentAlignment.MiddleCenter;
+                lblHProdCount.Margin = new Padding(0, 0, 0, 0);
+
+                //prod count
+                Label lblHPrice = new Label();
+                lblHPrice.Text = "Price (" + Settings.Setting["currency"] + ")";
+                lblHPrice.Font = new Font("Segoe UI", 10.00f);
+                lblHPrice.ForeColor = Color.Gainsboro;
+                lblHPrice.BackColor = Color.FromArgb(14, 32, 50);
+                lblHPrice.Size = new Size(115, 29);
+                lblHPrice.TextAlign = ContentAlignment.MiddleCenter;
+                lblHPrice.Location = new Point(555, 0);
+                lblHPrice.Margin = new Padding(0, 0, 0, 0);
+
+                header.Controls.Add(lblHName);
+                header.Controls.Add(lblHProdCount);
+                header.Controls.Add(lblHPrice);
+
+                flp_products.Controls.Add(header);
+                #endregion
+                foreach (Product pr in products)
+                {
+
+                    FlowLayoutPanel pnl = new FlowLayoutPanel();
+                    pnl.Size = new Size(670, 40);
+                    pnl.Margin = new Padding(0, 0, 0, 0);
+                    pnl.BackColor = pr.Colour;
+                    pnl.AutoSize = true;
+
+                    Label lblName = new Label();
+                    lblName.Text = pr.Name;
+                    lblName.Font = new Font("Segoe UI", 10.00f);
+                    lblName.ForeColor = Color.Gainsboro;
+                    lblName.TextAlign = ContentAlignment.MiddleLeft;
+                    lblName.AccessibleName = pr.ID.ToString();
+                    lblName.Location = new Point(0, 0);
+                    lblName.AutoSize = true;
+                    lblName.MinimumSize = new Size(440, 40);
+                    lblName.MaximumSize = new Size(440, 0);
+                    lblName.Click += btnProduct_Click;
+
+                    Label lblProd = new Label();
+                    lblProd.Font = new Font("Segoe UI", 10.00f);
+                    lblProd.ForeColor = Color.Gainsboro;
+                    lblProd.Text = pr.InStockQty > 0 ? "Yes" : "No";
+                    lblProd.TextAlign = ContentAlignment.MiddleCenter;
+                    lblProd.AccessibleName = pr.ID.ToString();
+                    lblProd.Location = new Point(440, 0);
+                    lblProd.AutoSize = true;
+                    lblProd.MinimumSize = new Size(115, 40);
+                    lblProd.MaximumSize = new Size(115, 0);
+                    lblProd.Click += btnProduct_Click;
+
+                    Label lblPrice = new Label();
+                    lblPrice.Font = new Font("Segoe UI", 10.00f);
+                    lblPrice.ForeColor = Color.Gainsboro;
+                    lblPrice.Text = pr.CostPrice.ToString();
+                    lblPrice.TextAlign = ContentAlignment.MiddleCenter;
+                    lblPrice.AccessibleName = pr.ID.ToString();
+                    lblPrice.Location = new Point(555, 0);
+                    lblPrice.AutoSize = true;
+                    lblPrice.MinimumSize = new Size(115, 40);
+                    lblPrice.MaximumSize = new Size(115, 0);
+                    lblPrice.Click += btnProduct_Click;
+
+                    pnl.Controls.Add(lblName);
+                    pnl.Controls.Add(lblProd);
+                    pnl.Controls.Add(lblPrice);
+
+                    flp_products.Controls.Add(pnl);
+                }
+                #endregion
+            }
+
         }
 
-        private void btnCategory_Click(object sender, EventArgs e)
+        void btnFirstPageItems_Click(object sender, EventArgs e)
         {
             Control c = (Control)sender;
-            generateCategoryDescendants(Convert.ToInt32(c.AccessibleName), c.AccessibleDescription);
+            generateSecondPageItems(Convert.ToInt32(c.AccessibleName), c.AccessibleDescription);
+        }
+        void btnSecondPageItems_Click(object sender, EventArgs e)
+        {
+            Control c = (Control)sender;
+            generateProducts(Convert.ToInt32(c.AccessibleName));
+        }
+        void btnProduct_Click(object sender, EventArgs e)
+        {
+            CartSystem.AddItem(Collections.Products.Where(pr => pr.ID == Convert.ToInt64(((Control)sender).AccessibleName)).First());
         }
 
-
-        private void frmNewOrder_Load(object sender, EventArgs e)
+        void frmNewOrder_Load(object sender, EventArgs e)
         {
             Functions.GiveBorder(Tab, this, Color.FromArgb(44, 62, 80));
             Functions.GiveBorder(OrderTab, Cart, Color.FromArgb(44, 62, 80));
         }
-        private void btnOrderType(object sender, EventArgs e)
+        void btnOrderType(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             initOrder(btn);
         }
-        private void btnBack_Click(object sender, EventArgs e)
+        void btnBack_Click(object sender, EventArgs e)
         {
             /*
              1 - Back to Order Menu
@@ -485,8 +1027,7 @@ namespace POS
                     break;
             }
         }
-
-        private void btnMenu_Click(object sender, EventArgs e)
+        void btnMenu_Click(object sender, EventArgs e)
         {
             switch (((Button)sender).AccessibleName)
             {
@@ -500,13 +1041,11 @@ namespace POS
             OrderTab.SelectTab(((Button)sender).AccessibleName);
             lblCartTitle.Text = ((Button)sender).AccessibleName.ToUpper();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        void button1_Click(object sender, EventArgs e)
         {
             OrderTab.SelectTab(0);
         }
-
-        private void productViewMode_Click(object sender, EventArgs e)
+        void productViewMode_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
 
@@ -518,10 +1057,17 @@ namespace POS
             itemViewMode = Convert.ToInt16(lbl.AccessibleName);
             generateFirstPageItems();
         }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
+        void button7_Click(object sender, EventArgs e)
         {
-
+            CartSystem.AddItem(Collections.Products.First());
+        }
+        void button8_Click(object sender, EventArgs e)
+        {
+            CartSystem.AddSubItem(false, "Extra Chilli Eni", "00.20");
+        }
+        void button9_Click(object sender, EventArgs e)
+        {
+            CartSystem.AddSubItem(true, "Discount cus undytghjgfdyhkjgfdxghjyjkcle baji eni", "1.00");
         }
     }
 }

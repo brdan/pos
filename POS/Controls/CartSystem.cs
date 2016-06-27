@@ -111,7 +111,7 @@ namespace POS.Controls
                     {
                         FlowLayoutPanel flp = new FlowLayoutPanel();
                         flp.AutoSize = true;
-                        flp.Margin = new Padding(27, 0, 0, 0);
+                        flp.Margin = new Padding(20, 0, 0, 0);
                         flp_cart.Controls.Add(flp);
                         flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
 
@@ -121,7 +121,7 @@ namespace POS.Controls
                 {
                     FlowLayoutPanel flp = new FlowLayoutPanel();
                     flp.AutoSize = true;
-                    flp.Margin = new Padding(27, 0, 0, 0);
+                    flp.Margin = new Padding(10, 0, 0, 0);
                     flp_cart.Controls.Add(flp);
                     flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
                 }
@@ -136,7 +136,7 @@ namespace POS.Controls
                 lblIcon.Font = new Font("Heydings Icons", 13.00f);
                 lblIcon.Margin = new Padding(0, 0, 0, 0);
                 lblIcon.Padding = new Padding(1, 1, 1, 1);
-                lblIcon.Size = new Size(38, 25);
+                lblIcon.Size = new Size(30, 25);
                 lblIcon.Dock = DockStyle.Left;
                 lblIcon.Text = DiscountOrModifier ? "t" : "a";
                 lblIcon.TextAlign = ContentAlignment.MiddleCenter;
@@ -151,8 +151,9 @@ namespace POS.Controls
                 lblName.Text = textString;
                 lblName.TextAlign = ContentAlignment.MiddleLeft;
                 lblName.AutoSize = true;
-                lblName.MaximumSize = new Size(195, 0);
-                lblName.MinimumSize = new Size(195, 25);
+                lblName.Dock = DockStyle.Left;
+                lblName.MaximumSize = new Size(160, 0);
+                lblName.MinimumSize = new Size(160, 25);
                 lblName.Click += subItem_Click;
 
                 Label lblPrice = new Label();
@@ -166,11 +167,13 @@ namespace POS.Controls
                 else if (lblPrice.Text.Length > 7)
                     font = new Font("Segoe UI", 5.00f);
                 lblPrice.Font = font;
-                lblPrice.TextAlign = ContentAlignment.MiddleCenter;
+                lblPrice.Dock = DockStyle.Left;
+                lblPrice.TextAlign = ContentAlignment.MiddleLeft;
                 lblPrice.Margin = new Padding(0, 0, 0, 0);
+                lblPrice.BackColor = Color.FromArgb(24, 42, 60);
                 lblPrice.Padding = new Padding(2, 2, 2, 2);
-                lblPrice.MaximumSize = new Size(80, 0);
-                lblPrice.MinimumSize = new Size(80, 25);
+                lblPrice.MaximumSize = new Size(63, 0);
+                lblPrice.MinimumSize = new Size(63, 25);
                 lblPrice.AutoSize = true;
                 lblPrice.Click += subItem_Click;
 
@@ -180,7 +183,6 @@ namespace POS.Controls
                 parent.Controls.Add(lblName);
                 parent.Controls.Add(lblPrice);
                 #endregion
-
 
                 #region Price Updating
                 // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
@@ -232,8 +234,6 @@ namespace POS.Controls
                 selectedItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
             }
         }
-
-
 
 
         #region Scrolling Functionality
