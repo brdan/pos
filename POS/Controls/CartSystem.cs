@@ -14,16 +14,34 @@ namespace POS.Controls
     public partial class CartSystem : UserControl
     {
         bool cartColourPattern = true;
+        bool pnlOptionsVisible = false;
         bool cartScrollDirection;
         int coolValue = 0;
         int selectedItemIndex = -1;
-        decimal totalPrice = 0.00M;
+        decimal _totalPrice = 0.00M;
+        decimal totalPrice
+        {
+            get { return _totalPrice; }
+            set
+            {
+                _totalPrice = value;
+                lblTotalPrice.Text = Settings.Setting["currency"] + _totalPrice.ToString();
+            }
+        }
 
+
+
+        Cart TempCart = new Cart();
         public CartSystem()
         {
             InitializeComponent();
         }
-        Cart TempCart = new Cart();
+
+        public void Deselect(Control c)
+        {
+            flp_cart.Controls[flp_cart.Controls.IndexOf(c)].Controls.OfType<Control>().ToList().ForEach(sc => sc.BackColor = Color.FromArgb(Convert.ToInt32(c.AccessibleDescription)));
+            selectedItemIndex = -1;
+        }
 
         public void AddItem(Product p)
         {
@@ -79,21 +97,84 @@ namespace POS.Controls
 
             //Update Prices
             totalPrice += newItem.ItemPrice;
-            lblTotalPrice.Text = Settings.Setting["currency"] + totalPrice;
 
 
         }
-        public void Deselect(Control c)
+        private void item_Click(object sender, EventArgs e)
         {
-            flp_cart.Controls[flp_cart.Controls.IndexOf(c)].Controls.OfType<Control>().ToList().ForEach(sc => sc.BackColor = Color.FromArgb(Convert.ToInt32(c.AccessibleDescription)));
-            selectedItemIndex = -1;
-        }
-        public void AddSubItem(bool DiscountOrModifier, string textString, string priceString)
-        {
-            #region Main Functionality
+            Label lbl = (Label)sender;
+            int lastSelectedIndex = -1;
+            //If something is already selected, clear all selection
+            if (selectedItemIndex != -1)
+            {
+                lastSelectedIndex = selectedItemIndex;
+                Deselect(flp_cart.Controls[selectedItemIndex]);
+            }
+
+            //If nothing is selected (after clearing)
             if (selectedItemIndex == -1)
             {
-                MessageBox.Show("You must select an item to add this to...");
+                if (flp_cart.Controls.IndexOf(lbl.Parent) != lastSelectedIndex)
+                {
+                    //flp_cart.Controls[flp_cart.Controls.IndexOf(lbl.Parent)].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+                    selectedItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
+                    lbl.Parent.Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+                    pnlOptionsVisible = false;
+                    tmrOptions.Start();
+
+                }
+                else
+                {
+                    lastSelectedIndex = -1;
+                    pnlOptionsVisible = true;
+                    tmrOptions.Start();
+                }
+            }
+
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Control selectedItem = flp_cart.Controls[selectedItemIndex];
+            int thisItem = flp_cart.Controls.IndexOf(selectedItem);
+            try
+            {
+                //Remove sub-items
+                if(flp_cart.Controls[selectedItemIndex + 1].Margin.Left == 20)
+                {
+                    flp_cart.Controls.Remove(flp_cart.Controls[selectedItemIndex + 1]);
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            //Deduct price
+            decimal price = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
+            totalPrice -= price;
+
+            //Deselect Logically
+            Deselect(selectedItem);
+
+            //Visually Remove
+            flp_cart.Controls.Remove(selectedItem);
+
+            if (flp_cart.Controls.Count > 0)
+            {
+                selectedItemIndex = thisItem;
+                flp_cart.Controls[thisItem].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+            } else
+            {
+                pnlOptionsVisible = true;
+                tmrOptions.Start();
+            }
+        }
+
+
+        public void AddSubItem(bool DiscountOrModifier, string textString, string priceString)
+        {
+            if (selectedItemIndex == -1)
+            {
+                MessageBox.Show("You must select an item to add this to...", "No item selected");
             }
             else
             {
@@ -107,7 +188,7 @@ namespace POS.Controls
                 #region Creates Sub-Box if it's non-existent
                 try
                 {
-                    if (flp_cart.Controls[flp_cart.Controls.IndexOf(selectedItem) + 1].Margin.Left != 27)
+                    if (flp_cart.Controls[selectedItemIndex + 1].Margin.Left != 20)
                     {
                         FlowLayoutPanel flp = new FlowLayoutPanel();
                         flp.AutoSize = true;
@@ -121,7 +202,7 @@ namespace POS.Controls
                 {
                     FlowLayoutPanel flp = new FlowLayoutPanel();
                     flp.AutoSize = true;
-                    flp.Margin = new Padding(10, 0, 0, 0);
+                    flp.Margin = new Padding(20, 0, 0, 0);
                     flp_cart.Controls.Add(flp);
                     flp_cart.Controls.SetChildIndex(flp, selectedItemIndex + 1);
                 }
@@ -207,13 +288,9 @@ namespace POS.Controls
 
                 //updating prices
                 flp_cart.Controls[selectedItemIndex].Controls[1].Text = Settings.Setting["currency"] + newParentItemPrice;
-                lblTotalPrice.Text = Settings.Setting["currency"] + totalPrice.ToString();
                 #endregion
             }
-            #endregion
-
         }
-
         private void subItem_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
@@ -221,21 +298,28 @@ namespace POS.Controls
             MessageBox.Show("You've clicked on a sub-item");
         }
 
-        private void item_Click(object sender, EventArgs e)
+
+        #region Options animation and Control load
+        private void tmrOptions_Tick(object sender, EventArgs e)
         {
-            Label lbl = (Label)sender;
-            lbl.Parent.Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
-
-            if (selectedItemIndex != -1) Deselect(flp_cart.Controls[selectedItemIndex]);
-
-            if (selectedItemIndex == -1)
-            {
-                flp_cart.Controls[flp_cart.Controls.IndexOf(lbl.Parent)].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
-                selectedItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
-            }
+            if (!pnlOptionsVisible)
+                if (pnlOptions.Height < 122)
+                    pnlOptions.Height+=2;
+                else
+                {
+                    tmrOptions.Stop();
+                    pnlOptions.Visible = true;
+                }
+            else if (pnlOptionsVisible)
+                if (pnlOptions.Height > 0)
+                    pnlOptions.Height-=2;
+                else
+                {
+                    tmrOptions.Stop();
+                    pnlOptionsVisible = false;
+                }
         }
-
-
+        #endregion
         #region Scrolling Functionality
         private void btnScroll_MouseDown(object sender, MouseEventArgs e)
         {
@@ -317,11 +401,5 @@ namespace POS.Controls
             }
         }
         #endregion
-
-        private void CartSystem_Load(object sender, EventArgs e)
-        {
-            lblTotalPrice.Text = totalPrice.ToString();
-        }
-
     }
 }
