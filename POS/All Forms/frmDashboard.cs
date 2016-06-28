@@ -20,10 +20,11 @@ namespace POS
             InitializeComponent();
         }
         //What's with all the e-commerce, delivery stuff? lel
-        public void Index()
+        public bool Index()
         {
 
             this.Show();
+            return true;
         }
 
 
@@ -37,9 +38,11 @@ namespace POS
                 default:
                     try
                     {
-                        typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null);
-                        Thread.Sleep(100);
-                        this.Hide();
+                        if((bool)typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null))
+                        {
+                            Thread.Sleep(50);
+                            this.Hide();
+                        }
                     }
                     catch (Exception)
                     {

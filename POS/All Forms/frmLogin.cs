@@ -18,13 +18,14 @@ namespace POS
         {
             InitializeComponent();
         }
-        public void Index(bool popup = false)
+        public bool Index(bool popup = false)
         {
-
             if (popup)
                 this.ShowDialog();
             else
                 this.Show();
+
+            return true;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

@@ -341,6 +341,8 @@
             this.Search.Controls.Add(this.pnlCatColour);
             this.Search.Controls.Add(this.panel2);
             this.Search.Controls.Add(this.label1);
+            this.Search.Font = new System.Drawing.Font("Segoe UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(126)))), ((int)(((byte)(4)))));
             this.Search.Location = new System.Drawing.Point(4, 22);
             this.Search.Name = "Search";
             this.Search.Padding = new System.Windows.Forms.Padding(3);

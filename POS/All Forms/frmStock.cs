@@ -33,7 +33,7 @@ namespace POS
         Subcategory scEdited = new Subcategory();
         Product pEdited = new Product();
 
-        public void Index()
+        public bool Index()
         {
             Tab.SelectTab("Dashboard");
 
@@ -47,6 +47,7 @@ namespace POS
 
 
             this.Show();
+            return true;
         }
         public void refreshCategory()
         {

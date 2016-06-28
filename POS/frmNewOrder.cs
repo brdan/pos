@@ -21,10 +21,11 @@ namespace POS
         Order tempOrder;
         int itemViewMode = 0; //0 - Rectangles, 1 - List, 2 - Information Boxes
 
-        public void Index()
+        public bool Index()
         {
             Tab.SelectTab(0);
             this.Show();
+            return true;
         }
         public void loadCart(Order o)
         {
@@ -77,8 +78,8 @@ namespace POS
 
         }
 
-        //First and Second are named so because it can contain both Categories & Subcategories
-        //Whereas the third page can only ever contain products, hence the naming convention
+        /*First and Second are named so because it can contain both Categories & Subcategories
+        Whereas the third page can only ever contain products, hence the naming convention*/
         void generateFirstPageItems()
         {
             #region Notes
@@ -1029,17 +1030,26 @@ namespace POS
         }
         void btnMenu_Click(object sender, EventArgs e)
         {
-            switch (((Button)sender).AccessibleName)
+            try
             {
-                case "Product":
-                    generateFirstPageItems();
-                    break;
 
-                default:
-                    break;
+                switch (((Button)sender).AccessibleName)
+                {
+                    case "Product":
+                        generateFirstPageItems();
+                        break;
+
+                    default:
+                        break;
+                }
+                OrderTab.SelectTab(((Button)sender).AccessibleName);
+                lblCartTitle.Text = ((Button)sender).AccessibleName.ToUpper();
             }
-            OrderTab.SelectTab(((Button)sender).AccessibleName);
-            lblCartTitle.Text = ((Button)sender).AccessibleName.ToUpper();
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         void button1_Click(object sender, EventArgs e)
         {
@@ -1063,11 +1073,11 @@ namespace POS
         }
         void button8_Click(object sender, EventArgs e)
         {
-            CartSystem.AddSubItem(false, "Extra Chilli Eni", "00.20");
+            CartSystem.AddSubItem(false, "Extra Chilli", "00.20");
         }
         void button9_Click(object sender, EventArgs e)
         {
-            CartSystem.AddSubItem(true, "Discount cus undytghjgfdyhkjgfdxghjyjkcle baji eni", "1.00");
+            CartSystem.AddSubItem(true, "Student Discount", "1.00");
         }
     }
 }

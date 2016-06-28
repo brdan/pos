@@ -16,27 +16,27 @@ namespace POS.Classes
         static frmStock rStock = new frmStock();
         static frmNewOrder rOrder = new frmNewOrder();
 
-        public static void Login()
+        public static bool Login()
         {
-            rLogin.Index();
+            return rLogin.Index();
         }
-        public static void Dashboard()
+        public static bool Dashboard()
         {
-            rDashboard.Index();
+            return rDashboard.Index();
         }
-        public static void Customers()
+        public static bool Customers()
         {
-            rCustomers.Index();
-        }
-
-        public static void StockManagement()
-        {
-            rStock.Index();
+            return rCustomers.Index();
         }
 
-        public static void NewOrder()
+        public static bool StockManagement()
         {
-            rOrder.Index();
+            return rStock.Index();
+        }
+
+        public static bool NewOrder()
+        {
+            return rOrder.Index();
         }
     }
 }

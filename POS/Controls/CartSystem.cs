@@ -29,8 +29,6 @@ namespace POS.Controls
             }
         }
 
-
-
         Cart TempCart = new Cart();
         public CartSystem()
         {
@@ -73,7 +71,7 @@ namespace POS.Controls
 
             //Item Price Label
             Label lblPrice = new Label();
-            lblPrice.Font = itemFont;
+            lblPrice.Font = new Font("Segoe UI", 10.00f, FontStyle.Bold);
             lblPrice.Text = Settings.Setting["currency"] + p.CostPrice;
             lblPrice.TextAlign = ContentAlignment.MiddleCenter;
             lblPrice.ForeColor = Color.Gainsboro;
@@ -134,42 +132,53 @@ namespace POS.Controls
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Control selectedItem = flp_cart.Controls[selectedItemIndex];
-            int thisItem = flp_cart.Controls.IndexOf(selectedItem);
-            try
+            if (selectedItemIndex != -1)
             {
-                //Remove sub-items
-                if(flp_cart.Controls[selectedItemIndex + 1].Margin.Left == 20)
+                Control selectedItem = flp_cart.Controls[selectedItemIndex];
+                int thisItem = flp_cart.Controls.IndexOf(selectedItem);
+                try
                 {
-                    flp_cart.Controls.Remove(flp_cart.Controls[selectedItemIndex + 1]);
+                    //Remove sub-items
+                    if (flp_cart.Controls[selectedItemIndex + 1].Margin.Left == 20)
+                    {
+                        flp_cart.Controls.Remove(flp_cart.Controls[selectedItemIndex + 1]);
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                //Deduct price
+                decimal price = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
+                totalPrice -= price;
+
+                //Deselect Logically
+                Deselect(selectedItem);
+
+                //Visually Remove
+                flp_cart.Controls.Remove(selectedItem);
+
+                //Selecting the subsequent product; if none exists, options slide down.
+                if (flp_cart.Controls.Count > 0)
+                {
+                    if (thisItem != flp_cart.Controls.Count)
+                    {
+                        selectedItemIndex = thisItem;
+                    }
+                    else
+                    {
+                        selectedItemIndex = thisItem - 1;
+                    }
+
+                    flp_cart.Controls[selectedItemIndex].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+                }
+                else
+                {
+                    pnlOptionsVisible = true;
+                    tmrOptions.Start();
                 }
             }
-            catch (Exception)
-            {
-            }
-
-            //Deduct price
-            decimal price = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
-            totalPrice -= price;
-
-            //Deselect Logically
-            Deselect(selectedItem);
-
-            //Visually Remove
-            flp_cart.Controls.Remove(selectedItem);
-
-            if (flp_cart.Controls.Count > 0)
-            {
-                selectedItemIndex = thisItem;
-                flp_cart.Controls[thisItem].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
-            } else
-            {
-                pnlOptionsVisible = true;
-                tmrOptions.Start();
-            }
         }
-
-
         public void AddSubItem(bool DiscountOrModifier, string textString, string priceString)
         {
             if (selectedItemIndex == -1)
@@ -289,12 +298,16 @@ namespace POS.Controls
                 //updating prices
                 flp_cart.Controls[selectedItemIndex].Controls[1].Text = Settings.Setting["currency"] + newParentItemPrice;
                 #endregion
+
+                #region Changing the colour to indicate price influence
+                flp_cart.Controls[selectedItemIndex].Controls[1].ForeColor = Color.FromArgb(232, 126, 4);
+                #endregion 
             }
         }
         private void subItem_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
-           
+
             MessageBox.Show("You've clicked on a sub-item");
         }
 
@@ -304,7 +317,7 @@ namespace POS.Controls
         {
             if (!pnlOptionsVisible)
                 if (pnlOptions.Height < 122)
-                    pnlOptions.Height+=2;
+                    pnlOptions.Height += 2;
                 else
                 {
                     tmrOptions.Stop();
@@ -312,7 +325,7 @@ namespace POS.Controls
                 }
             else if (pnlOptionsVisible)
                 if (pnlOptions.Height > 0)
-                    pnlOptions.Height-=2;
+                    pnlOptions.Height -= 2;
                 else
                 {
                     tmrOptions.Stop();

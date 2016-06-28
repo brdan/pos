@@ -22,7 +22,7 @@ namespace POS
          
         }
         Customer viewedCustomer;
-        public void Index()
+        public bool Index()
         {
             //Clears pane and begins to draw customers
             flp_customers.Controls.Clear();
@@ -30,6 +30,7 @@ namespace POS
                 paintCustomer(c);
             lblRecordCount.Text = Collections.Customers.Count.ToString();
             this.Show();
+            return true;
         }
         public void paintCustomer(Customer c)
         {
