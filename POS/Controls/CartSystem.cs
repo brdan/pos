@@ -55,6 +55,21 @@ namespace POS.Controls
             flp.AccessibleName = p.ID.ToString();
             flp.AccessibleDescription = pattern.ToArgb().ToString();
 
+            //Item Qty Label
+            Label lblQty = new Label();
+            lblQty.Font = itemFont;
+            lblQty.Text = "1";
+            lblQty.ForeColor = Color.Gainsboro;
+            lblQty.BackColor = pattern;
+            lblQty.Margin = new Padding(0, 0, 0, 0);
+            lblQty.Padding = new Padding(5, 5, 5, 5);
+            lblQty.AutoSize = true;
+            lblQty.TextAlign = ContentAlignment.MiddleCenter;
+            lblQty.MinimumSize = new Size(32, 60);
+            lblQty.MaximumSize = new Size(32, 0);
+            lblQty.Dock = DockStyle.Left;
+            lblQty.Click += item_Click;
+
             //Item Name Label
             Label lblName = new Label();
             lblName.Font = itemFont;
@@ -65,8 +80,8 @@ namespace POS.Controls
             lblName.Padding = new Padding(5, 5, 5, 5);
             lblName.AutoSize = true;
             lblName.TextAlign = ContentAlignment.MiddleLeft;
-            lblName.MinimumSize = new Size(204, 60);
-            lblName.MaximumSize = new Size(204, 0);
+            lblName.MinimumSize = new Size(172, 60);
+            lblName.MaximumSize = new Size(172, 0);
             lblName.Click += item_Click;
 
             //Item Price Label
@@ -84,6 +99,7 @@ namespace POS.Controls
             lblPrice.Dock = DockStyle.Right;
             lblPrice.Click += item_Click;
 
+            flp.Controls.Add(lblQty);
             flp.Controls.Add(lblName);
             flp.Controls.Add(lblPrice);
             flp_cart.Controls.Add(flp);
@@ -149,7 +165,7 @@ namespace POS.Controls
                 }
 
                 //Deduct price
-                decimal price = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
+                decimal price = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
                 totalPrice -= price;
 
                 //Deselect Logically
@@ -281,7 +297,7 @@ namespace POS.Controls
                 if (DiscountOrModifier)
                 {
                     //deduct
-                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
+                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
                     newParentItemPrice = parentItemPrice - Convert.ToDecimal(priceString);
                     if (newParentItemPrice < 0.00M)
                         newParentItemPrice = 0.00M;
@@ -290,17 +306,17 @@ namespace POS.Controls
                 }
                 else
                 {
-                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[1].Text.Substring(1));
+                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
                     newParentItemPrice = Convert.ToDecimal(priceString) + parentItemPrice;
                     totalPrice += Convert.ToDecimal(priceString);
                 }
 
                 //updating prices
-                flp_cart.Controls[selectedItemIndex].Controls[1].Text = Settings.Setting["currency"] + newParentItemPrice;
+                flp_cart.Controls[selectedItemIndex].Controls[2].Text = Settings.Setting["currency"] + newParentItemPrice;
                 #endregion
 
                 #region Changing the colour to indicate price influence
-                flp_cart.Controls[selectedItemIndex].Controls[1].ForeColor = Color.FromArgb(232, 126, 4);
+                flp_cart.Controls[selectedItemIndex].Controls[2].ForeColor = Color.FromArgb(232, 126, 4);
                 #endregion 
             }
         }

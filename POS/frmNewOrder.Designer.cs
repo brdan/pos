@@ -42,6 +42,7 @@
             this.btnOther = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Tables = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
             this.btnCatSubmit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.nudCatSortDisplay = new System.Windows.Forms.NumericUpDown();
@@ -51,7 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Cart = new System.Windows.Forms.TabPage();
             this.lblCartTitle = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.OrderTab = new System.Windows.Forms.TabControl();
             this.Dashboard = new System.Windows.Forms.TabPage();
             this.button11 = new System.Windows.Forms.Button();
@@ -66,7 +67,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
-            this.Product = new System.Windows.Forms.TabPage();
+            this.Products = new System.Windows.Forms.TabPage();
             this.sd = new System.Windows.Forms.Label();
             this.su = new System.Windows.Forms.Label();
             this.lblViewMode2 = new System.Windows.Forms.Label();
@@ -109,6 +110,10 @@
             this.CartSystem = new POS.Controls.CartSystem();
             this.Payment = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -121,10 +126,14 @@
             this.Cart.SuspendLayout();
             this.OrderTab.SuspendLayout();
             this.Dashboard.SuspendLayout();
-            this.Product.SuspendLayout();
+            this.Products.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flp_products.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.Lookup.SuspendLayout();
+            this.Edit.SuspendLayout();
+            this.Discount.SuspendLayout();
+            this.Modifier.SuspendLayout();
             this.ConvertOrder.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -183,15 +192,15 @@
             // 
             this.btnDelivery.AccessibleDescription = "Delivery";
             this.btnDelivery.AccessibleName = "3";
-            this.btnDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelivery.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.btnDelivery.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnDelivery.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnDelivery.Location = new System.Drawing.Point(53, 53);
             this.btnDelivery.Name = "btnDelivery";
             this.btnDelivery.Size = new System.Drawing.Size(435, 124);
             this.btnDelivery.TabIndex = 10;
-            this.btnDelivery.Text = "Delivery";
+            this.btnDelivery.Text = "DELIVERY";
             this.btnDelivery.UseVisualStyleBackColor = false;
             this.btnDelivery.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -199,15 +208,15 @@
             // 
             this.btnBar.AccessibleDescription = "Bar";
             this.btnBar.AccessibleName = "1";
-            this.btnBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBar.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.btnBar.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnBar.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBar.Location = new System.Drawing.Point(494, 53);
             this.btnBar.Name = "btnBar";
             this.btnBar.Size = new System.Drawing.Size(435, 124);
             this.btnBar.TabIndex = 12;
-            this.btnBar.Text = "Bar";
+            this.btnBar.Text = "BAR";
             this.btnBar.UseVisualStyleBackColor = false;
             this.btnBar.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -215,15 +224,15 @@
             // 
             this.btnDriveThru.AccessibleDescription = "Drive-Thru";
             this.btnDriveThru.AccessibleName = "1";
-            this.btnDriveThru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDriveThru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnDriveThru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDriveThru.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.btnDriveThru.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnDriveThru.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnDriveThru.Location = new System.Drawing.Point(53, 183);
             this.btnDriveThru.Name = "btnDriveThru";
             this.btnDriveThru.Size = new System.Drawing.Size(435, 124);
             this.btnDriveThru.TabIndex = 13;
-            this.btnDriveThru.Text = "Drive-Thru";
+            this.btnDriveThru.Text = "DRIVE-THRU";
             this.btnDriveThru.UseVisualStyleBackColor = false;
             this.btnDriveThru.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -231,15 +240,15 @@
             // 
             this.brnDineIn.AccessibleDescription = "Dine-in";
             this.brnDineIn.AccessibleName = "2";
-            this.brnDineIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.brnDineIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.brnDineIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnDineIn.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.brnDineIn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.brnDineIn.ForeColor = System.Drawing.Color.Gainsboro;
             this.brnDineIn.Location = new System.Drawing.Point(494, 183);
             this.brnDineIn.Name = "brnDineIn";
             this.brnDineIn.Size = new System.Drawing.Size(435, 124);
             this.brnDineIn.TabIndex = 14;
-            this.brnDineIn.Text = "Dine-in";
+            this.brnDineIn.Text = "DINE-IN";
             this.brnDineIn.UseVisualStyleBackColor = false;
             this.brnDineIn.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -247,15 +256,15 @@
             // 
             this.btnReservation.AccessibleDescription = "Reservation";
             this.btnReservation.AccessibleName = "2";
-            this.btnReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservation.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.btnReservation.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnReservation.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReservation.Location = new System.Drawing.Point(53, 313);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(435, 124);
             this.btnReservation.TabIndex = 15;
-            this.btnReservation.Text = "Reservation";
+            this.btnReservation.Text = "RESERVATION";
             this.btnReservation.UseVisualStyleBackColor = false;
             this.btnReservation.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -263,15 +272,15 @@
             // 
             this.btnWebOrder.AccessibleDescription = "Web Order";
             this.btnWebOrder.AccessibleName = "1";
-            this.btnWebOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnWebOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnWebOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWebOrder.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.btnWebOrder.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnWebOrder.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnWebOrder.Location = new System.Drawing.Point(494, 313);
             this.btnWebOrder.Name = "btnWebOrder";
             this.btnWebOrder.Size = new System.Drawing.Size(435, 124);
             this.btnWebOrder.TabIndex = 16;
-            this.btnWebOrder.Text = "Web Order";
+            this.btnWebOrder.Text = "WEB ORDER";
             this.btnWebOrder.UseVisualStyleBackColor = false;
             this.btnWebOrder.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -279,15 +288,15 @@
             // 
             this.btnTakeAway.AccessibleDescription = "Takeaway";
             this.btnTakeAway.AccessibleName = "1";
-            this.btnTakeAway.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnTakeAway.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnTakeAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakeAway.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.btnTakeAway.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnTakeAway.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnTakeAway.Location = new System.Drawing.Point(53, 443);
             this.btnTakeAway.Name = "btnTakeAway";
             this.btnTakeAway.Size = new System.Drawing.Size(435, 124);
             this.btnTakeAway.TabIndex = 17;
-            this.btnTakeAway.Text = "Takeaway";
+            this.btnTakeAway.Text = "TAKEAWAY";
             this.btnTakeAway.UseVisualStyleBackColor = false;
             this.btnTakeAway.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -295,15 +304,15 @@
             // 
             this.btnOther.AccessibleDescription = "Other";
             this.btnOther.AccessibleName = "1";
-            this.btnOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOther.Font = new System.Drawing.Font("Segoe UI Light", 18F);
+            this.btnOther.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.btnOther.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnOther.Location = new System.Drawing.Point(494, 443);
             this.btnOther.Name = "btnOther";
             this.btnOther.Size = new System.Drawing.Size(435, 124);
             this.btnOther.TabIndex = 18;
-            this.btnOther.Text = "Other";
+            this.btnOther.Text = "OTHER";
             this.btnOther.UseVisualStyleBackColor = false;
             this.btnOther.Click += new System.EventHandler(this.btnOrderType);
             // 
@@ -311,17 +320,18 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(11, 17);
+            this.label2.Location = new System.Drawing.Point(11, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 25);
+            this.label2.Size = new System.Drawing.Size(152, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Select Order Type";
+            this.label2.Text = "SELECT ORDER TYPE";
             // 
             // Tables
             // 
             this.Tables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Tables.Controls.Add(this.label17);
             this.Tables.Controls.Add(this.btnCatSubmit);
             this.Tables.Controls.Add(this.panel3);
             this.Tables.Controls.Add(this.panel1);
@@ -332,6 +342,18 @@
             this.Tables.Size = new System.Drawing.Size(1016, 742);
             this.Tables.TabIndex = 1;
             this.Tables.Text = "Table Management";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label17.Location = new System.Drawing.Point(11, 11);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(123, 20);
+            this.label17.TabIndex = 56;
+            this.label17.Text = "SELECT A TABLE";
             // 
             // btnCatSubmit
             // 
@@ -414,7 +436,7 @@
             // 
             this.Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.Cart.Controls.Add(this.lblCartTitle);
-            this.Cart.Controls.Add(this.button1);
+            this.Cart.Controls.Add(this.btnMenu);
             this.Cart.Controls.Add(this.OrderTab);
             this.Cart.Controls.Add(this.label11);
             this.Cart.Controls.Add(this.label8);
@@ -433,33 +455,33 @@
             this.lblCartTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCartTitle.AutoSize = true;
             this.lblCartTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.lblCartTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblCartTitle.Font = new System.Drawing.Font("Segoe UI", 10.75F, System.Drawing.FontStyle.Bold);
             this.lblCartTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCartTitle.Location = new System.Drawing.Point(-921, -988);
+            this.lblCartTitle.Location = new System.Drawing.Point(315, 13);
             this.lblCartTitle.Name = "lblCartTitle";
-            this.lblCartTitle.Size = new System.Drawing.Size(91, 19);
+            this.lblCartTitle.Size = new System.Drawing.Size(103, 20);
             this.lblCartTitle.TabIndex = 9;
             this.lblCartTitle.Text = "DASHBOARD";
             // 
-            // button1
+            // btnMenu
             // 
-            this.button1.AccessibleName = "Dashboard";
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Heydings Icons", 15.75F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.button1.Location = new System.Drawing.Point(935, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
-            this.button1.TabIndex = 64;
-            this.button1.Text = "H";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnMenu_Click);
+            this.btnMenu.AccessibleName = "Dashboard";
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Heydings Icons", 15.75F);
+            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.btnMenu.Location = new System.Drawing.Point(932, 4);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(75, 40);
+            this.btnMenu.TabIndex = 64;
+            this.btnMenu.Text = "H";
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // OrderTab
             // 
             this.OrderTab.Controls.Add(this.Dashboard);
-            this.OrderTab.Controls.Add(this.Product);
+            this.OrderTab.Controls.Add(this.Products);
             this.OrderTab.Controls.Add(this.Lookup);
             this.OrderTab.Controls.Add(this.Print);
             this.OrderTab.Controls.Add(this.Edit);
@@ -596,7 +618,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(187, 108);
             this.button5.TabIndex = 66;
-            this.button5.Text = "MODIFIERS";
+            this.button5.Text = "MODIFIER";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.btnMenu_Click);
             // 
@@ -611,7 +633,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(187, 108);
             this.button4.TabIndex = 65;
-            this.button4.Text = "DISCOUNTS";
+            this.button4.Text = "DISCOUNT";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.btnMenu_Click);
             // 
@@ -647,7 +669,7 @@
             // 
             // btnProducts
             // 
-            this.btnProducts.AccessibleName = "Product";
+            this.btnProducts.AccessibleName = "Products";
             this.btnProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducts.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
@@ -660,23 +682,23 @@
             this.btnProducts.UseVisualStyleBackColor = false;
             this.btnProducts.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // Product
+            // Products
             // 
-            this.Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.Product.Controls.Add(this.sd);
-            this.Product.Controls.Add(this.su);
-            this.Product.Controls.Add(this.lblViewMode2);
-            this.Product.Controls.Add(this.lblViewMode1);
-            this.Product.Controls.Add(this.lblViewMode0);
-            this.Product.Controls.Add(this.label13);
-            this.Product.Controls.Add(this.panel5);
-            this.Product.Controls.Add(this.flp_products);
-            this.Product.Location = new System.Drawing.Point(4, 22);
-            this.Product.Margin = new System.Windows.Forms.Padding(0);
-            this.Product.Name = "Product";
-            this.Product.Size = new System.Drawing.Size(706, 742);
-            this.Product.TabIndex = 1;
-            this.Product.Text = "Product";
+            this.Products.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.Products.Controls.Add(this.sd);
+            this.Products.Controls.Add(this.su);
+            this.Products.Controls.Add(this.lblViewMode2);
+            this.Products.Controls.Add(this.lblViewMode1);
+            this.Products.Controls.Add(this.lblViewMode0);
+            this.Products.Controls.Add(this.label13);
+            this.Products.Controls.Add(this.panel5);
+            this.Products.Controls.Add(this.flp_products);
+            this.Products.Location = new System.Drawing.Point(4, 22);
+            this.Products.Margin = new System.Windows.Forms.Padding(0);
+            this.Products.Name = "Products";
+            this.Products.Size = new System.Drawing.Size(706, 742);
+            this.Products.TabIndex = 1;
+            this.Products.Text = "Product";
             // 
             // sd
             // 
@@ -847,9 +869,10 @@
             // Lookup
             // 
             this.Lookup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Lookup.Controls.Add(this.panel10);
             this.Lookup.Location = new System.Drawing.Point(4, 22);
+            this.Lookup.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.Lookup.Name = "Lookup";
-            this.Lookup.Padding = new System.Windows.Forms.Padding(3);
             this.Lookup.Size = new System.Drawing.Size(706, 742);
             this.Lookup.TabIndex = 2;
             this.Lookup.Text = "Lookup";
@@ -867,9 +890,10 @@
             // Edit
             // 
             this.Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Edit.Controls.Add(this.panel11);
             this.Edit.Location = new System.Drawing.Point(4, 22);
+            this.Edit.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.Edit.Name = "Edit";
-            this.Edit.Padding = new System.Windows.Forms.Padding(3);
             this.Edit.Size = new System.Drawing.Size(706, 742);
             this.Edit.TabIndex = 4;
             this.Edit.Text = "Edit";
@@ -877,9 +901,10 @@
             // Discount
             // 
             this.Discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Discount.Controls.Add(this.panel12);
             this.Discount.Location = new System.Drawing.Point(4, 22);
+            this.Discount.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.Discount.Name = "Discount";
-            this.Discount.Padding = new System.Windows.Forms.Padding(3);
             this.Discount.Size = new System.Drawing.Size(706, 742);
             this.Discount.TabIndex = 5;
             this.Discount.Text = "Discount";
@@ -887,9 +912,10 @@
             // Modifier
             // 
             this.Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Modifier.Controls.Add(this.panel13);
             this.Modifier.Location = new System.Drawing.Point(4, 22);
+            this.Modifier.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.Modifier.Name = "Modifier";
-            this.Modifier.Padding = new System.Windows.Forms.Padding(3);
             this.Modifier.Size = new System.Drawing.Size(706, 742);
             this.Modifier.TabIndex = 6;
             this.Modifier.Text = "Modifier";
@@ -1166,6 +1192,44 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Payment";
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(706, 48);
+            this.panel10.TabIndex = 69;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(706, 48);
+            this.panel11.TabIndex = 69;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(706, 48);
+            this.panel12.TabIndex = 69;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(706, 48);
+            this.panel13.TabIndex = 69;
+            // 
             // frmNewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1195,11 +1259,15 @@
             this.Cart.PerformLayout();
             this.OrderTab.ResumeLayout(false);
             this.Dashboard.ResumeLayout(false);
-            this.Product.ResumeLayout(false);
+            this.Products.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.flp_products.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.Lookup.ResumeLayout(false);
+            this.Edit.ResumeLayout(false);
+            this.Discount.ResumeLayout(false);
+            this.Modifier.ResumeLayout(false);
             this.ConvertOrder.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -1219,7 +1287,6 @@
         private System.Windows.Forms.TabControl Tab;
         private System.Windows.Forms.TabPage OrderType;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnDelivery;
         private System.Windows.Forms.Button btnBar;
         private System.Windows.Forms.Button btnDriveThru;
         private System.Windows.Forms.Button brnDineIn;
@@ -1247,7 +1314,7 @@
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.TabControl OrderTab;
         private System.Windows.Forms.TabPage Dashboard;
-        private System.Windows.Forms.TabPage Product;
+        private System.Windows.Forms.TabPage Products;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
@@ -1258,7 +1325,7 @@
         private System.Windows.Forms.TabPage Discount;
         private System.Windows.Forms.TabPage Modifier;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.FlowLayoutPanel flp_products;
         private System.Windows.Forms.Label lblCartTitle;
         private System.Windows.Forms.Panel panel2;
@@ -1296,5 +1363,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnDelivery;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
     }
 }

@@ -25,6 +25,7 @@ namespace POS
         {
             Tab.SelectTab(0);
             this.Show();
+            lblCartTitle.Location = new Point(315, 13);
             return true;
         }
         public void loadCart(Order o)

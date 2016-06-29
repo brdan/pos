@@ -276,6 +276,7 @@ namespace POS.Classes
                         OrderItem oI = new OrderItem();
                         oI.ID = Convert.ToInt32(dr["id"]);
                         oI.OrderID = Convert.ToInt32(dr["order_id"]);
+                        oI.Qty = Convert.ToInt16(dr["qty"]);
                         oI.Description = dr["description"].ToString();
                         oI.SubItems = Functions.ToList(dr["sub_items"].ToString());
                         oI.ItemPrice = Convert.ToDecimal(dr["price"]);

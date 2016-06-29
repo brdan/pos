@@ -45,6 +45,7 @@ namespace POS.Classes
     {
         public int ID { get; set; }
         public int OrderID { get; set; }
+        public int Qty { get; set; }
         public string Description { get; set; }
         public List<SubItem> SubItems = new List<SubItem>();
         public decimal ItemPrice { get; set; }
