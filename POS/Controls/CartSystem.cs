@@ -34,6 +34,7 @@ namespace POS.Controls
 
         //Publics
         public event EventHandler ItemEdit;
+        public event EventHandler ItemDiscount;
         Control selectedItem = null;
         public CartSystem()
         {
@@ -83,7 +84,7 @@ namespace POS.Controls
             //Item Name Label
             Label lblName = new Label();
             lblName.Font = new Font("Segoe UI", 8.00f, FontStyle.Bold);
-            lblName.Text = lblName.Text.ToUpper();
+            lblName.Text = p.Name.ToUpper();
             lblName.ForeColor = Color.Gainsboro;
             lblName.BackColor = pattern;
             lblName.Margin = new Padding(0, 0, 0, 0);
@@ -456,6 +457,16 @@ namespace POS.Controls
 
                 if (ItemEdit != null)
                     ItemEdit(new object(), new EventArgs());
+            }
+        }
+        private void btnDiscount_Click(object sender, EventArgs e)
+        {
+            if (selectedItemIndex != -1)
+            {
+                selectedItem = flp_cart.Controls[selectedItemIndex];
+
+                if (ItemDiscount != null)
+                    ItemDiscount(new object(), new EventArgs());
             }
         }
         #endregion

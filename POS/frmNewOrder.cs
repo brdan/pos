@@ -985,6 +985,27 @@ namespace POS
 
         }
 
+        //Sanitisation
+        void SanitiseDiscount()
+        {
+
+            //Resetting button colours
+            btnRemoveDiscounts.BackColor = Color.FromArgb(185, 52, 62);
+            btnDiscountFreeDeserts.BackColor = Color.FromArgb(34, 52, 70);
+            btnDiscountFreeDrinks.BackColor = Color.FromArgb(34, 52, 70);
+            btnDiscountFreeModifiers.BackColor = Color.FromArgb(34, 52, 70);
+            btnDiscountFreeOrder.BackColor = Color.FromArgb(34, 52, 70);
+            btnDiscountOrder.BackColor = Color.FromArgb(64, 64, 0);
+            btnDiscountAllItems.BackColor = Color.FromArgb(64, 64, 0);
+
+            lblDiscountIsPercent.Text = "Apply a total discount of                              ( % ) on: ";
+            lblDiscountSelection.Text = "the selected item";
+
+            txtDiscountAmount.Parent.Show();
+            txtDiscountAmount.Text = "0.00";
+
+        }
+
         void btnFirstPageItems_Click(object sender, EventArgs e)
         {
             Control c = (Control)sender;
@@ -1093,6 +1114,17 @@ namespace POS
 
         }
 
+        private void CartSystem_ItemDiscount(object sender, EventArgs e)
+        {
+            SanitiseDiscount();
+            OrderTab.SelectTab("Discount");
+            lblCartTitle.Text = "DISCOUNT ITEM";
+
+            
+           
+
+
+        }
         private void edit_Qty(object sender, EventArgs e)
         {
             int qty = ((Button)sender).Name.Contains("Down") ? Convert.ToInt16(lblEditQty.Text) - 1 : Convert.ToInt16(lblEditQty.Text) + 1;
@@ -1100,10 +1132,32 @@ namespace POS
             if(qty > 0) //and less than max-qty
             lblEditQty.Text = qty.ToString();
         }
-
         private void btnEditSave_Click(object sender, EventArgs e)
         {
             CartSystem.EditItem(lblEditQty.Text, txtEditDescription.Text, txtEditPrice.Text);
+        }
+
+        private void btnDiscountSave_Click(object sender, EventArgs e)
+        {
+            string name = txtDiscountName.TextLength > 0 ? txtDiscountName.Text : "Unnamed Discount";
+            CartSystem.AddSubItem(true, name, txtDiscountAmount.Text);
+        }
+
+        private void btnRemoveDiscounts_Click(object sender, EventArgs e)
+        {
+            if (btnRemoveDiscounts.BackColor == Color.FromArgb(185, 52, 62))
+            {
+                btnRemoveDiscounts.BackColor = Color.FromArgb(165, 32, 42);
+
+                txtDiscountAmount.Parent.Hide();
+
+                lblDiscountIsPercent.Text = "Remove all discounts from: ";
+
+            } else
+            {
+                SanitiseDiscount();
+            }
+
         }
     }
 }

@@ -315,6 +315,7 @@
             this.btnDiscount.TabIndex = 0;
             this.btnDiscount.Text = "r";
             this.btnDiscount.UseVisualStyleBackColor = false;
+            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
             // tmrOptions
             // 
