@@ -1036,7 +1036,7 @@ namespace POS
 
                 switch (((Button)sender).AccessibleName)
                 {
-                    case "Product":
+                    case "Products":
                         generateFirstPageItems();
                         break;
 
@@ -1079,6 +1079,31 @@ namespace POS
         void button9_Click(object sender, EventArgs e)
         {
             CartSystem.AddSubItem(true, "Student Discount", "1.00");
+        }
+
+        private void CartSystem_ItemEdit(object sender, EventArgs e)
+        {
+            OrderTab.SelectTab("Edit");
+            lblCartTitle.Text = "EDIT ITEM";
+            
+            //Loading data into edit page
+            lblEditQty.Text = CartSystem.GetSelectedItem().Qty;
+            txtEditDescription.Text = CartSystem.GetSelectedItem().Description;
+            txtEditPrice.Text = CartSystem.GetSelectedItem().Price;
+
+        }
+
+        private void edit_Qty(object sender, EventArgs e)
+        {
+            int qty = ((Button)sender).Name.Contains("Down") ? Convert.ToInt16(lblEditQty.Text) - 1 : Convert.ToInt16(lblEditQty.Text) + 1;
+
+            if(qty > 0) //and less than max-qty
+            lblEditQty.Text = qty.ToString();
+        }
+
+        private void btnEditSave_Click(object sender, EventArgs e)
+        {
+            CartSystem.EditItem(lblEditQty.Text, txtEditDescription.Text, txtEditPrice.Text);
         }
     }
 }

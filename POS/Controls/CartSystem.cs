@@ -13,6 +13,7 @@ namespace POS.Controls
 {
     public partial class CartSystem : UserControl
     {
+        //Privates
         bool cartColourPattern = true;
         bool pnlOptionsVisible = false;
         bool cartScrollDirection;
@@ -30,22 +31,31 @@ namespace POS.Controls
         }
 
         Cart TempCart = new Cart();
+
+        //Publics
+        public event EventHandler ItemEdit;
+        Control selectedItem = null;
         public CartSystem()
         {
             InitializeComponent();
         }
-
+        public dynamic GetSelectedItem()
+        {
+            dynamic item = new System.Dynamic.ExpandoObject();
+            item.Qty = selectedItem.Controls[0].Text;
+            item.Description = selectedItem.Controls[1].Text;
+            item.Price = selectedItem.Controls[2].Text.Substring(1);
+            return item;
+        }
         public void Deselect(Control c)
         {
             flp_cart.Controls[flp_cart.Controls.IndexOf(c)].Controls.OfType<Control>().ToList().ForEach(sc => sc.BackColor = Color.FromArgb(Convert.ToInt32(c.AccessibleDescription)));
             selectedItemIndex = -1;
         }
-
         public void AddItem(Product p)
         {
             Color pattern = cartColourPattern ? Color.FromArgb(50, 68, 86) : Color.FromArgb(60, 78, 96);
             cartColourPattern = !cartColourPattern;
-            Font itemFont = new Font("Segoe UI", 10.00f);
 
             //Item Container
             FlowLayoutPanel flp = new FlowLayoutPanel();
@@ -57,7 +67,7 @@ namespace POS.Controls
 
             //Item Qty Label
             Label lblQty = new Label();
-            lblQty.Font = itemFont;
+            lblQty.Font = new Font("Segoe UI", 9.00f);
             lblQty.Text = "1";
             lblQty.ForeColor = Color.Gainsboro;
             lblQty.BackColor = pattern;
@@ -65,23 +75,23 @@ namespace POS.Controls
             lblQty.Padding = new Padding(5, 5, 5, 5);
             lblQty.AutoSize = true;
             lblQty.TextAlign = ContentAlignment.MiddleCenter;
-            lblQty.MinimumSize = new Size(32, 60);
-            lblQty.MaximumSize = new Size(32, 0);
+            lblQty.MinimumSize = new Size(35, 60);
+            lblQty.MaximumSize = new Size(35, 0);
             lblQty.Dock = DockStyle.Left;
             lblQty.Click += item_Click;
 
             //Item Name Label
             Label lblName = new Label();
-            lblName.Font = itemFont;
-            lblName.Text = p.Name;
+            lblName.Font = new Font("Segoe UI", 8.00f, FontStyle.Bold);
+            lblName.Text = lblName.Text.ToUpper();
             lblName.ForeColor = Color.Gainsboro;
             lblName.BackColor = pattern;
             lblName.Margin = new Padding(0, 0, 0, 0);
             lblName.Padding = new Padding(5, 5, 5, 5);
             lblName.AutoSize = true;
             lblName.TextAlign = ContentAlignment.MiddleLeft;
-            lblName.MinimumSize = new Size(172, 60);
-            lblName.MaximumSize = new Size(172, 0);
+            lblName.MinimumSize = new Size(169, 60);
+            lblName.MaximumSize = new Size(169, 0);
             lblName.Click += item_Click;
 
             //Item Price Label
@@ -113,6 +123,12 @@ namespace POS.Controls
             totalPrice += newItem.ItemPrice;
 
 
+        }
+        public void EditItem(string qty, string description, string price)
+        {
+            selectedItem.Controls[0].Text = qty;
+            selectedItem.Controls[1].Text = description;
+            selectedItem.Controls[2].Text = Settings.Setting["currency"] + price;
         }
         private void item_Click(object sender, EventArgs e)
         {
@@ -146,55 +162,6 @@ namespace POS.Controls
             }
 
         }
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (selectedItemIndex != -1)
-            {
-                Control selectedItem = flp_cart.Controls[selectedItemIndex];
-                int thisItem = flp_cart.Controls.IndexOf(selectedItem);
-                try
-                {
-                    //Remove sub-items
-                    if (flp_cart.Controls[selectedItemIndex + 1].Margin.Left == 20)
-                    {
-                        flp_cart.Controls.Remove(flp_cart.Controls[selectedItemIndex + 1]);
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-                //Deduct price
-                decimal price = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
-                totalPrice -= price;
-
-                //Deselect Logically
-                Deselect(selectedItem);
-
-                //Visually Remove
-                flp_cart.Controls.Remove(selectedItem);
-
-                //Selecting the subsequent product; if none exists, options slide down.
-                if (flp_cart.Controls.Count > 0)
-                {
-                    if (thisItem != flp_cart.Controls.Count)
-                    {
-                        selectedItemIndex = thisItem;
-                    }
-                    else
-                    {
-                        selectedItemIndex = thisItem - 1;
-                    }
-
-                    flp_cart.Controls[selectedItemIndex].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
-                }
-                else
-                {
-                    pnlOptionsVisible = true;
-                    tmrOptions.Start();
-                }
-            }
-        }
         public void AddSubItem(bool DiscountOrModifier, string textString, string priceString)
         {
             if (selectedItemIndex == -1)
@@ -205,7 +172,7 @@ namespace POS.Controls
             {
                 //Adding Discounts & Modifications
 
-                Control selectedItem = flp_cart.Controls[selectedItemIndex];
+                selectedItem = flp_cart.Controls[selectedItemIndex];
                 flp_cart.Refresh();
                 flp_cart.PerformLayout();
 
@@ -427,6 +394,68 @@ namespace POS.Controls
             catch (Exception)
             {
 
+            }
+        }
+        #endregion
+
+        #region Item Options
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (selectedItemIndex != -1)
+            {
+                selectedItem = flp_cart.Controls[selectedItemIndex];
+                int thisItem = flp_cart.Controls.IndexOf(selectedItem);
+                try
+                {
+                    //Remove sub-items
+                    if (flp_cart.Controls[selectedItemIndex + 1].Margin.Left == 20)
+                    {
+                        flp_cart.Controls.Remove(flp_cart.Controls[selectedItemIndex + 1]);
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+                //Deduct price
+                decimal price = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
+                totalPrice -= price;
+
+                //Deselect
+                Deselect(selectedItem);
+
+                //Visually Remove
+                flp_cart.Controls.Remove(selectedItem);
+
+                //Selecting the subsequent product; if none exists, options slide down.
+                if (flp_cart.Controls.Count > 0)
+                {
+                    if (thisItem != flp_cart.Controls.Count)
+                    {
+                        selectedItemIndex = thisItem;
+                    }
+                    else
+                    {
+                        selectedItemIndex = thisItem - 1;
+                    }
+
+                    flp_cart.Controls[selectedItemIndex].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+                }
+                else
+                {
+                    pnlOptionsVisible = true;
+                    tmrOptions.Start();
+                }
+            }
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (selectedItemIndex != -1)
+            {
+                selectedItem = flp_cart.Controls[selectedItemIndex];
+
+                if (ItemEdit != null)
+                    ItemEdit(new object(), new EventArgs());
             }
         }
         #endregion

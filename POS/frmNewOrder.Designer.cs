@@ -82,10 +82,29 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.Lookup = new System.Windows.Forms.TabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.Print = new System.Windows.Forms.TabPage();
             this.Edit = new System.Windows.Forms.TabPage();
+            this.btnEditSave = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.btnEditQtyDown = new System.Windows.Forms.Button();
+            this.lblEditQty = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnEditQtyUp = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.txtEditDescription = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.Discount = new System.Windows.Forms.TabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.Modifier = new System.Windows.Forms.TabPage();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.ConvertOrder = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -107,13 +126,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.CartSystem = new POS.Controls.CartSystem();
             this.Payment = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.CartSystem = new POS.Controls.CartSystem();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.txtEditPrice = new System.Windows.Forms.TextBox();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -132,6 +150,8 @@
             this.panel4.SuspendLayout();
             this.Lookup.SuspendLayout();
             this.Edit.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.Discount.SuspendLayout();
             this.Modifier.SuspendLayout();
             this.ConvertOrder.SuspendLayout();
@@ -144,6 +164,7 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Payment.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tab
@@ -871,11 +892,20 @@
             this.Lookup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Lookup.Controls.Add(this.panel10);
             this.Lookup.Location = new System.Drawing.Point(4, 22);
-            this.Lookup.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Lookup.Margin = new System.Windows.Forms.Padding(0);
             this.Lookup.Name = "Lookup";
             this.Lookup.Size = new System.Drawing.Size(706, 742);
             this.Lookup.TabIndex = 2;
             this.Lookup.Text = "Lookup";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(706, 48);
+            this.panel10.TabIndex = 69;
             // 
             // Print
             // 
@@ -890,35 +920,269 @@
             // Edit
             // 
             this.Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Edit.Controls.Add(this.label23);
+            this.Edit.Controls.Add(this.panel16);
+            this.Edit.Controls.Add(this.btnEditSave);
+            this.Edit.Controls.Add(this.label24);
+            this.Edit.Controls.Add(this.panel15);
+            this.Edit.Controls.Add(this.btnEditQtyDown);
+            this.Edit.Controls.Add(this.lblEditQty);
+            this.Edit.Controls.Add(this.label22);
+            this.Edit.Controls.Add(this.label21);
+            this.Edit.Controls.Add(this.btnEditQtyUp);
+            this.Edit.Controls.Add(this.panel14);
             this.Edit.Controls.Add(this.panel11);
             this.Edit.Location = new System.Drawing.Point(4, 22);
-            this.Edit.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Edit.Margin = new System.Windows.Forms.Padding(0);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(706, 742);
             this.Edit.TabIndex = 4;
             this.Edit.Text = "Edit";
+            // 
+            // btnEditSave
+            // 
+            this.btnEditSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnEditSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEditSave.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEditSave.Location = new System.Drawing.Point(584, 682);
+            this.btnEditSave.Name = "btnEditSave";
+            this.btnEditSave.Size = new System.Drawing.Size(106, 39);
+            this.btnEditSave.TabIndex = 78;
+            this.btnEditSave.Text = "SAVE";
+            this.btnEditSave.UseVisualStyleBackColor = false;
+            this.btnEditSave.Click += new System.EventHandler(this.btnEditSave_Click);
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(506, 67);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(121, 21);
+            this.label24.TabIndex = 77;
+            this.label24.Text = "QUICK ACTIONS";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
+            this.panel15.Controls.Add(this.button16);
+            this.panel15.Controls.Add(this.button15);
+            this.panel15.Controls.Add(this.button14);
+            this.panel15.Controls.Add(this.button13);
+            this.panel15.Controls.Add(this.button12);
+            this.panel15.Location = new System.Drawing.Point(510, 108);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(180, 300);
+            this.panel15.TabIndex = 76;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button16.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button16.Location = new System.Drawing.Point(20, 222);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(143, 40);
+            this.button16.TabIndex = 80;
+            this.button16.Text = "DELETE DUPLICATES";
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button15.Location = new System.Drawing.Point(20, 176);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(143, 40);
+            this.button15.TabIndex = 79;
+            this.button15.Text = "DUPLICATE ITEM";
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button14.Location = new System.Drawing.Point(20, 130);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(143, 40);
+            this.button14.TabIndex = 78;
+            this.button14.Text = "REDUCE QTY TO 1";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button13.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button13.Location = new System.Drawing.Point(20, 84);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(143, 40);
+            this.button13.TabIndex = 77;
+            this.button13.Text = "NO DISCOUNTS";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button12.Location = new System.Drawing.Point(20, 38);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(143, 40);
+            this.button12.TabIndex = 76;
+            this.button12.Text = "NO MODIFIERS";
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // btnEditQtyDown
+            // 
+            this.btnEditQtyDown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditQtyDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(52)))), ((int)(((byte)(62)))));
+            this.btnEditQtyDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditQtyDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.btnEditQtyDown.ForeColor = System.Drawing.Color.LightGray;
+            this.btnEditQtyDown.Location = new System.Drawing.Point(13, 176);
+            this.btnEditQtyDown.Name = "btnEditQtyDown";
+            this.btnEditQtyDown.Size = new System.Drawing.Size(69, 52);
+            this.btnEditQtyDown.TabIndex = 75;
+            this.btnEditQtyDown.Text = "-";
+            this.btnEditQtyDown.UseVisualStyleBackColor = false;
+            this.btnEditQtyDown.Click += new System.EventHandler(this.edit_Qty);
+            // 
+            // lblEditQty
+            // 
+            this.lblEditQty.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEditQty.AutoSize = true;
+            this.lblEditQty.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblEditQty.ForeColor = System.Drawing.Color.White;
+            this.lblEditQty.Location = new System.Drawing.Point(101, 149);
+            this.lblEditQty.Name = "lblEditQty";
+            this.lblEditQty.Size = new System.Drawing.Size(49, 37);
+            this.lblEditQty.TabIndex = 74;
+            this.lblEditQty.Text = "45";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(9, 67);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(119, 21);
+            this.label22.TabIndex = 73;
+            this.label22.Text = "ITEM QUANTITY";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(9, 291);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(141, 21);
+            this.label21.TabIndex = 72;
+            this.label21.Text = "ITEM DESCRIPTION";
+            // 
+            // btnEditQtyUp
+            // 
+            this.btnEditQtyUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditQtyUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.btnEditQtyUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditQtyUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.btnEditQtyUp.ForeColor = System.Drawing.Color.LightGray;
+            this.btnEditQtyUp.Location = new System.Drawing.Point(13, 108);
+            this.btnEditQtyUp.Name = "btnEditQtyUp";
+            this.btnEditQtyUp.Size = new System.Drawing.Size(69, 52);
+            this.btnEditQtyUp.TabIndex = 71;
+            this.btnEditQtyUp.Text = "+";
+            this.btnEditQtyUp.UseVisualStyleBackColor = false;
+            this.btnEditQtyUp.Click += new System.EventHandler(this.edit_Qty);
+            // 
+            // panel14
+            // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel14.Controls.Add(this.txtEditDescription);
+            this.panel14.Location = new System.Drawing.Point(13, 315);
+            this.panel14.Name = "panel14";
+            this.panel14.Padding = new System.Windows.Forms.Padding(7);
+            this.panel14.Size = new System.Drawing.Size(438, 93);
+            this.panel14.TabIndex = 70;
+            // 
+            // txtEditDescription
+            // 
+            this.txtEditDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.txtEditDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEditDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEditDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtEditDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtEditDescription.Location = new System.Drawing.Point(7, 7);
+            this.txtEditDescription.Multiline = true;
+            this.txtEditDescription.Name = "txtEditDescription";
+            this.txtEditDescription.Size = new System.Drawing.Size(424, 79);
+            this.txtEditDescription.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(706, 48);
+            this.panel11.TabIndex = 69;
             // 
             // Discount
             // 
             this.Discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Discount.Controls.Add(this.panel12);
             this.Discount.Location = new System.Drawing.Point(4, 22);
-            this.Discount.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Discount.Margin = new System.Windows.Forms.Padding(0);
             this.Discount.Name = "Discount";
             this.Discount.Size = new System.Drawing.Size(706, 742);
             this.Discount.TabIndex = 5;
             this.Discount.Text = "Discount";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(706, 48);
+            this.panel12.TabIndex = 69;
             // 
             // Modifier
             // 
             this.Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Modifier.Controls.Add(this.panel13);
             this.Modifier.Location = new System.Drawing.Point(4, 22);
-            this.Modifier.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Modifier.Margin = new System.Windows.Forms.Padding(0);
             this.Modifier.Name = "Modifier";
             this.Modifier.Size = new System.Drawing.Size(706, 742);
             this.Modifier.TabIndex = 6;
             this.Modifier.Text = "Modifier";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(706, 48);
+            this.panel13.TabIndex = 69;
             // 
             // ConvertOrder
             // 
@@ -1158,17 +1422,6 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Cart";
             // 
-            // CartSystem
-            // 
-            this.CartSystem.AutoSize = true;
-            this.CartSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.CartSystem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.CartSystem.Location = new System.Drawing.Point(0, 0);
-            this.CartSystem.Margin = new System.Windows.Forms.Padding(0);
-            this.CartSystem.Name = "CartSystem";
-            this.CartSystem.Size = new System.Drawing.Size(302, 742);
-            this.CartSystem.TabIndex = 32;
-            // 
             // Payment
             // 
             this.Payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
@@ -1192,43 +1445,55 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Payment";
             // 
-            // panel10
+            // CartSystem
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(706, 48);
-            this.panel10.TabIndex = 69;
+            this.CartSystem.AutoSize = true;
+            this.CartSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.CartSystem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CartSystem.Location = new System.Drawing.Point(0, 0);
+            this.CartSystem.Margin = new System.Windows.Forms.Padding(0);
+            this.CartSystem.Name = "CartSystem";
+            this.CartSystem.Size = new System.Drawing.Size(302, 742);
+            this.CartSystem.TabIndex = 32;
+            this.CartSystem.ItemEdit += new System.EventHandler(this.CartSystem_ItemEdit);
             // 
-            // panel11
+            // label23
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(706, 48);
-            this.panel11.TabIndex = 69;
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(9, 454);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(87, 21);
+            this.label23.TabIndex = 80;
+            this.label23.Text = "ITEM PRICE";
             // 
-            // panel12
+            // panel16
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(706, 48);
-            this.panel12.TabIndex = 69;
+            this.panel16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel16.Controls.Add(this.txtEditPrice);
+            this.panel16.Location = new System.Drawing.Point(13, 488);
+            this.panel16.Name = "panel16";
+            this.panel16.Padding = new System.Windows.Forms.Padding(7);
+            this.panel16.Size = new System.Drawing.Size(172, 52);
+            this.panel16.TabIndex = 79;
             // 
-            // panel13
+            // txtEditPrice
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(706, 48);
-            this.panel13.TabIndex = 69;
+            this.txtEditPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.txtEditPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEditPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEditPrice.Font = new System.Drawing.Font("Segoe UI", 15.25F);
+            this.txtEditPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtEditPrice.Location = new System.Drawing.Point(7, 7);
+            this.txtEditPrice.Multiline = true;
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.Size = new System.Drawing.Size(158, 38);
+            this.txtEditPrice.TabIndex = 1;
+            this.txtEditPrice.Text = "2.00";
+            this.txtEditPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmNewOrder
             // 
@@ -1266,6 +1531,10 @@
             this.panel4.ResumeLayout(false);
             this.Lookup.ResumeLayout(false);
             this.Edit.ResumeLayout(false);
+            this.Edit.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.Discount.ResumeLayout(false);
             this.Modifier.ResumeLayout(false);
             this.ConvertOrder.ResumeLayout(false);
@@ -1279,6 +1548,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Payment.ResumeLayout(false);
             this.Payment.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1369,5 +1640,23 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button btnEditQtyUp;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.TextBox txtEditDescription;
+        private System.Windows.Forms.Button btnEditQtyDown;
+        private System.Windows.Forms.Label lblEditQty;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btnEditSave;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.TextBox txtEditPrice;
     }
 }

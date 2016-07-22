@@ -301,6 +301,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "i";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDiscount
             // 
@@ -328,7 +329,7 @@
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 34);
+            this.label8.Size = new System.Drawing.Size(35, 34);
             this.label8.TabIndex = 68;
             this.label8.Text = "QTY";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,10 +339,10 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(32, 0);
+            this.label9.Location = new System.Drawing.Point(35, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 34);
+            this.label9.Size = new System.Drawing.Size(169, 34);
             this.label9.TabIndex = 69;
             this.label9.Text = "DESCRIPTION";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
