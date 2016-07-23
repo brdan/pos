@@ -131,39 +131,7 @@ namespace POS.Controls
             selectedItem.Controls[1].Text = description;
             selectedItem.Controls[2].Text = Settings.Setting["currency"] + price;
         }
-        private void item_Click(object sender, EventArgs e)
-        {
-            Label lbl = (Label)sender;
-            int lastSelectedIndex = -1;
-            //If something is already selected, clear all selection
-            if (selectedItemIndex != -1)
-            {
-                lastSelectedIndex = selectedItemIndex;
-                Deselect(flp_cart.Controls[selectedItemIndex]);
-            }
-
-            //If nothing is selected (after clearing)
-            if (selectedItemIndex == -1)
-            {
-                if (flp_cart.Controls.IndexOf(lbl.Parent) != lastSelectedIndex)
-                {
-                    //flp_cart.Controls[flp_cart.Controls.IndexOf(lbl.Parent)].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
-                    selectedItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
-                    lbl.Parent.Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
-                    pnlOptionsVisible = false;
-                    tmrOptions.Start();
-
-                }
-                else
-                {
-                    lastSelectedIndex = -1;
-                    pnlOptionsVisible = true;
-                    tmrOptions.Start();
-                }
-            }
-
-        }
-        public void AddSubItem(bool DiscountOrModifier, string textString, string priceString)
+        public void AddSubItem(bool DiscountOrModifier, string textString, string priceString, bool isPercent = false)
         {
             if (selectedItemIndex == -1)
             {
@@ -201,6 +169,32 @@ namespace POS.Controls
                 }
                 #endregion
 
+                #region Price Updating
+                // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
+                decimal newParentItemPrice = 0.00M;
+                //Updating prices according to the added/deducted price on the item, also will need to update the item's `Price` field accordingly
+                if (DiscountOrModifier)
+                {
+                    //deduct
+                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
+
+                    //is price fixed or percentage? 
+                    decimal priceToDeduct = isPercent ? (Convert.ToDecimal(priceString) * parentItemPrice) / 100 : Convert.ToDecimal(priceString);
+
+                    newParentItemPrice = parentItemPrice - priceToDeduct;
+                    if (newParentItemPrice < 0.00M)
+                        newParentItemPrice = 0.00M;
+
+                    totalPrice -= (parentItemPrice - newParentItemPrice); //this way no negative value issues
+                }
+                else
+                {
+                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
+                    newParentItemPrice = Convert.ToDecimal(priceString) + parentItemPrice;
+                    totalPrice += Convert.ToDecimal(priceString);
+                }
+                #endregion
+
                 #region Designs the three labels based on parameters, then adds it to the Sub-Box
                 Control parent = flp_cart.Controls[selectedItemIndex + 1];
                 //the three labels
@@ -234,7 +228,10 @@ namespace POS.Controls
                 lblPrice.BackColor = Color.FromArgb(34, 52, 70);
                 lblPrice.ForeColor = DiscountOrModifier ? Color.FromArgb(231, 76, 60) : Color.FromArgb(46, 204, 113);
                 string str = DiscountOrModifier ? "-" : "+";
-                lblPrice.Text = str + Settings.Setting["currency"] + priceString;
+
+                decimal displayPrice = isPercent ? ((Convert.ToDecimal(priceString) * Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1))) / 100) : Convert.ToDecimal(priceString);
+                
+                lblPrice.Text = str + Settings.Setting["currency"] + Math.Round(displayPrice, 2, MidpointRounding.AwayFromZero);
                 Font font = new Font("Segoe UI", 10.00f);
                 if (lblPrice.Text.Length > 5)
                     font = new Font("Segoe UI", 9.00f);
@@ -258,36 +255,60 @@ namespace POS.Controls
                 parent.Controls.Add(lblPrice);
                 #endregion
 
-                #region Price Updating
-                // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
-                decimal newParentItemPrice = 0.00M;
-                //Updating prices according to the added/deducted price on the item, also will need to update the item's `Price` field accordingly
-                if (DiscountOrModifier)
-                {
-                    //deduct
-                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
-                    newParentItemPrice = parentItemPrice - Convert.ToDecimal(priceString);
-                    if (newParentItemPrice < 0.00M)
-                        newParentItemPrice = 0.00M;
-
-                    totalPrice -= (parentItemPrice - newParentItemPrice); //this way no negative value issues
-                }
-                else
-                {
-                    decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
-                    newParentItemPrice = Convert.ToDecimal(priceString) + parentItemPrice;
-                    totalPrice += Convert.ToDecimal(priceString);
-                }
-
-                //updating prices
-                flp_cart.Controls[selectedItemIndex].Controls[2].Text = Settings.Setting["currency"] + newParentItemPrice;
-                #endregion
-
-                #region Changing the colour to indicate price influence
+                #region Finally, updating price visual and changing the colour to indicate price influence
+                flp_cart.Controls[selectedItemIndex].Controls[2].Text = Settings.Setting["currency"] + Math.Round(newParentItemPrice, 2, MidpointRounding.AwayFromZero);
                 flp_cart.Controls[selectedItemIndex].Controls[2].ForeColor = Color.FromArgb(232, 126, 4);
                 #endregion 
             }
         }
+        public void RemoveDiscounts(int clause = 1)
+        {
+            //1: just the item, 2: all items, 3: order discounts, 4: wipe the whole thing clean of discounts
+            switch (clause)
+            {
+                case 1: 
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+
+        private void item_Click(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+            int lastSelectedIndex = -1;
+            //If something is already selected, clear all selection
+            if (selectedItemIndex != -1)
+            {
+                lastSelectedIndex = selectedItemIndex;
+                Deselect(flp_cart.Controls[selectedItemIndex]);
+            }
+
+            //If nothing is selected (after clearing)
+            if (selectedItemIndex == -1)
+            {
+                if (flp_cart.Controls.IndexOf(lbl.Parent) != lastSelectedIndex)
+                {
+                    //flp_cart.Controls[flp_cart.Controls.IndexOf(lbl.Parent)].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+                    selectedItemIndex = flp_cart.Controls.IndexOf(lbl.Parent);
+                    lbl.Parent.Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));
+                    pnlOptionsVisible = false;
+                    tmrOptions.Start();
+
+                }
+                else
+                {
+                    lastSelectedIndex = -1;
+                    pnlOptionsVisible = true;
+                    tmrOptions.Start();
+                }
+            }
+
+        }
+        
         private void subItem_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
@@ -317,6 +338,7 @@ namespace POS.Controls
                 }
         }
         #endregion
+      
         #region Scrolling Functionality
         private void btnScroll_MouseDown(object sender, MouseEventArgs e)
         {

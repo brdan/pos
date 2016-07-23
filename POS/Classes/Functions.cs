@@ -21,6 +21,7 @@ namespace POS.Classes
             Graphics formGraphics;
             formGraphics = txt.Parent.Parent.CreateGraphics();
             formGraphics.FillRectangle(myBrush, new Rectangle(txt.Parent.Location.X - 1, txt.Parent.Location.Y - 1, txt.Parent.Width + 2, txt.Parent.Height + 2));
+            
             await Task.Delay(3000);
             txt.Parent.Parent.Invalidate();
 

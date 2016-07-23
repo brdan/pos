@@ -30,4 +30,3 @@ C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.Propertie
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.csproj.GenerateResource.Cache
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.exe
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.pdb
-C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.csprojResolveAssemblyReference.cache

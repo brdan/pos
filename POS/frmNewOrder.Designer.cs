@@ -85,6 +85,8 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.Print = new System.Windows.Forms.TabPage();
             this.Edit = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.txtEditPrice = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.btnEditSave = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
@@ -103,49 +105,11 @@
             this.txtEditDescription = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.Discount = new System.Windows.Forms.TabPage();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.Modifier = new System.Windows.Forms.TabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.ConvertOrder = new System.Windows.Forms.TabPage();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Payment = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.btnDiscountOrder = new System.Windows.Forms.Button();
-            this.btnDiscountFreeModifiers = new System.Windows.Forms.Button();
-            this.btnDiscountFreeDrinks = new System.Windows.Forms.Button();
-            this.btnDiscountFreeDeserts = new System.Windows.Forms.Button();
-            this.btnDiscountAllItems = new System.Windows.Forms.Button();
-            this.btnDiscountFreeOrder = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.btnDiscountSave = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.txtEditPrice = new System.Windows.Forms.TextBox();
             this.panel19 = new System.Windows.Forms.Panel();
             this.txtDiscountAmount = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.txtDiscountName = new System.Windows.Forms.TextBox();
             this.flp_discounts = new System.Windows.Forms.FlowLayoutPanel();
             this.button17 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
@@ -180,14 +144,51 @@
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
-            this.btnRemoveDiscounts = new System.Windows.Forms.Button();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.txtDiscountName = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.CartSystem = new POS.Controls.CartSystem();
+            this.label28 = new System.Windows.Forms.Label();
+            this.btnDiscountSave = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.btnDiscountJustThis = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.btnDiscountFreeOrder = new System.Windows.Forms.Button();
+            this.btnDiscountAllItems = new System.Windows.Forms.Button();
+            this.btnDiscountOrder = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btnDiscountFreeDeserts = new System.Windows.Forms.Button();
+            this.btnDiscountFreeDrinks = new System.Windows.Forms.Button();
+            this.btnDiscountFreeModifiers = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label31 = new System.Windows.Forms.Label();
             this.lblDiscountIsPercent = new System.Windows.Forms.Label();
             this.lblDiscountSelection = new System.Windows.Forms.Label();
+            this.Modifier = new System.Windows.Forms.TabPage();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ConvertOrder = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Payment = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CartSystem = new POS.Controls.CartSystem();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -206,9 +207,15 @@
             this.panel4.SuspendLayout();
             this.Lookup.SuspendLayout();
             this.Edit.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
             this.Discount.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.flp_discounts.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.Modifier.SuspendLayout();
             this.ConvertOrder.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -220,12 +227,6 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Payment.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.flp_discounts.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tab
@@ -1000,6 +1001,32 @@
             this.Edit.TabIndex = 4;
             this.Edit.Text = "Edit";
             // 
+            // panel16
+            // 
+            this.panel16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel16.Controls.Add(this.txtEditPrice);
+            this.panel16.Location = new System.Drawing.Point(13, 492);
+            this.panel16.Name = "panel16";
+            this.panel16.Padding = new System.Windows.Forms.Padding(7);
+            this.panel16.Size = new System.Drawing.Size(152, 46);
+            this.panel16.TabIndex = 98;
+            // 
+            // txtEditPrice
+            // 
+            this.txtEditPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.txtEditPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEditPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEditPrice.Font = new System.Drawing.Font("Segoe UI", 15.25F);
+            this.txtEditPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtEditPrice.Location = new System.Drawing.Point(7, 7);
+            this.txtEditPrice.Multiline = true;
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.Size = new System.Drawing.Size(138, 32);
+            this.txtEditPrice.TabIndex = 1;
+            this.txtEditPrice.Text = "2.00";
+            this.txtEditPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label23
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1220,7 +1247,6 @@
             // 
             this.Discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Discount.Controls.Add(this.panel19);
-            this.Discount.Controls.Add(this.flowLayoutPanel2);
             this.Discount.Controls.Add(this.label30);
             this.Discount.Controls.Add(this.panel17);
             this.Discount.Controls.Add(this.flp_discounts);
@@ -1230,484 +1256,13 @@
             this.Discount.Controls.Add(this.label26);
             this.Discount.Controls.Add(this.panel18);
             this.Discount.Controls.Add(this.panel12);
+            this.Discount.Controls.Add(this.flowLayoutPanel2);
             this.Discount.Location = new System.Drawing.Point(4, 22);
             this.Discount.Margin = new System.Windows.Forms.Padding(0);
             this.Discount.Name = "Discount";
             this.Discount.Size = new System.Drawing.Size(706, 742);
             this.Discount.TabIndex = 5;
             this.Discount.Text = "Discount";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(706, 48);
-            this.panel12.TabIndex = 69;
-            // 
-            // Modifier
-            // 
-            this.Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.Modifier.Controls.Add(this.panel13);
-            this.Modifier.Location = new System.Drawing.Point(4, 22);
-            this.Modifier.Margin = new System.Windows.Forms.Padding(0);
-            this.Modifier.Name = "Modifier";
-            this.Modifier.Size = new System.Drawing.Size(706, 742);
-            this.Modifier.TabIndex = 6;
-            this.Modifier.Text = "Modifier";
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(706, 48);
-            this.panel13.TabIndex = 69;
-            // 
-            // ConvertOrder
-            // 
-            this.ConvertOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.ConvertOrder.Controls.Add(this.panel9);
-            this.ConvertOrder.Controls.Add(this.panel8);
-            this.ConvertOrder.Controls.Add(this.panel7);
-            this.ConvertOrder.Controls.Add(this.panel6);
-            this.ConvertOrder.Location = new System.Drawing.Point(4, 22);
-            this.ConvertOrder.Name = "ConvertOrder";
-            this.ConvertOrder.Padding = new System.Windows.Forms.Padding(3);
-            this.ConvertOrder.Size = new System.Drawing.Size(706, 742);
-            this.ConvertOrder.TabIndex = 7;
-            this.ConvertOrder.Text = "Convert";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel9.Controls.Add(this.label15);
-            this.panel9.Controls.Add(this.label16);
-            this.panel9.Controls.Add(this.pictureBox6);
-            this.panel9.Location = new System.Drawing.Point(495, 53);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(157, 226);
-            this.panel9.TabIndex = 3;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Green;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label15.Location = new System.Drawing.Point(100, 201);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 25);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "£3.49";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label16.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label16.Location = new System.Drawing.Point(0, 116);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(157, 33);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "A Glass of Coca Cola";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.pictureBox5);
-            this.panel8.Location = new System.Drawing.Point(332, 53);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(157, 226);
-            this.panel8.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Green;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(100, 201);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 25);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "£3.49";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(0, 116);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(157, 33);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "A Glass of Coca Cola";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.pictureBox4);
-            this.panel7.Location = new System.Drawing.Point(169, 53);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(157, 226);
-            this.panel7.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Green;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(100, 201);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 25);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "£3.49";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(0, 116);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 33);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "A Glass of Coca Cola";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Location = new System.Drawing.Point(6, 53);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(157, 226);
-            this.panel6.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Green;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(100, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 25);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "£3.49";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(0, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "A Glass of Coca Cola";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(-15645, -12619);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 25);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Your Cart";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label8.Location = new System.Drawing.Point(-16057, -12921);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 25);
-            this.label8.TabIndex = 58;
-            this.label8.Text = "Your Cart";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(-16469, -13218);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 25);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Your Cart";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(-16881, -13525);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 25);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Cart";
-            // 
-            // Payment
-            // 
-            this.Payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
-            this.Payment.Controls.Add(this.label9);
-            this.Payment.Location = new System.Drawing.Point(4, 22);
-            this.Payment.Name = "Payment";
-            this.Payment.Padding = new System.Windows.Forms.Padding(3);
-            this.Payment.Size = new System.Drawing.Size(1016, 742);
-            this.Payment.TabIndex = 3;
-            this.Payment.Text = "Payment";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(-16057, -12921);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Payment";
-            // 
-            // label26
-            // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(506, 67);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(121, 21);
-            this.label26.TabIndex = 88;
-            this.label26.Text = "QUICK ACTIONS";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
-            this.panel18.Controls.Add(this.btnRemoveDiscounts);
-            this.panel18.Controls.Add(this.label29);
-            this.panel18.Controls.Add(this.btnDiscountFreeOrder);
-            this.panel18.Controls.Add(this.btnDiscountAllItems);
-            this.panel18.Controls.Add(this.btnDiscountOrder);
-            this.panel18.Controls.Add(this.label25);
-            this.panel18.Controls.Add(this.btnDiscountFreeDeserts);
-            this.panel18.Controls.Add(this.btnDiscountFreeDrinks);
-            this.panel18.Controls.Add(this.btnDiscountFreeModifiers);
-            this.panel18.Location = new System.Drawing.Point(510, 108);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(180, 528);
-            this.panel18.TabIndex = 87;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(9, 67);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(155, 21);
-            this.label27.TabIndex = 93;
-            this.label27.Text = "THIS DISCOUNT WILL";
-            // 
-            // label25
-            // 
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label25.Location = new System.Drawing.Point(15, 349);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(146, 27);
-            this.label25.TabIndex = 95;
-            this.label25.Text = "SPECIAL SELECTIONS";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnDiscountOrder
-            // 
-            this.btnDiscountOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnDiscountOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountOrder.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountOrder.Location = new System.Drawing.Point(18, 379);
-            this.btnDiscountOrder.Name = "btnDiscountOrder";
-            this.btnDiscountOrder.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountOrder.TabIndex = 96;
-            this.btnDiscountOrder.Text = "ORDER DISCOUNT";
-            this.btnDiscountOrder.UseVisualStyleBackColor = false;
-            // 
-            // btnDiscountFreeModifiers
-            // 
-            this.btnDiscountFreeModifiers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeModifiers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeModifiers.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeModifiers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeModifiers.Location = new System.Drawing.Point(18, 131);
-            this.btnDiscountFreeModifiers.Name = "btnDiscountFreeModifiers";
-            this.btnDiscountFreeModifiers.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeModifiers.TabIndex = 76;
-            this.btnDiscountFreeModifiers.Text = "FREE MODIFIERS";
-            this.btnDiscountFreeModifiers.UseVisualStyleBackColor = false;
-            // 
-            // btnDiscountFreeDrinks
-            // 
-            this.btnDiscountFreeDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeDrinks.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeDrinks.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeDrinks.Location = new System.Drawing.Point(18, 177);
-            this.btnDiscountFreeDrinks.Name = "btnDiscountFreeDrinks";
-            this.btnDiscountFreeDrinks.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeDrinks.TabIndex = 77;
-            this.btnDiscountFreeDrinks.Text = "FREE DRINKS";
-            this.btnDiscountFreeDrinks.UseVisualStyleBackColor = false;
-            // 
-            // btnDiscountFreeDeserts
-            // 
-            this.btnDiscountFreeDeserts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeDeserts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeDeserts.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeDeserts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeDeserts.Location = new System.Drawing.Point(18, 223);
-            this.btnDiscountFreeDeserts.Name = "btnDiscountFreeDeserts";
-            this.btnDiscountFreeDeserts.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeDeserts.TabIndex = 78;
-            this.btnDiscountFreeDeserts.Text = "FREE DESERTS";
-            this.btnDiscountFreeDeserts.UseVisualStyleBackColor = false;
-            // 
-            // btnDiscountAllItems
-            // 
-            this.btnDiscountAllItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnDiscountAllItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountAllItems.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountAllItems.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountAllItems.Location = new System.Drawing.Point(18, 425);
-            this.btnDiscountAllItems.Name = "btnDiscountAllItems";
-            this.btnDiscountAllItems.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountAllItems.TabIndex = 97;
-            this.btnDiscountAllItems.Text = "ON EVERY ITEM";
-            this.btnDiscountAllItems.UseVisualStyleBackColor = false;
-            // 
-            // btnDiscountFreeOrder
-            // 
-            this.btnDiscountFreeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeOrder.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeOrder.Location = new System.Drawing.Point(18, 269);
-            this.btnDiscountFreeOrder.Name = "btnDiscountFreeOrder";
-            this.btnDiscountFreeOrder.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeOrder.TabIndex = 98;
-            this.btnDiscountFreeOrder.Text = "FREE ORDER";
-            this.btnDiscountFreeOrder.UseVisualStyleBackColor = false;
-            // 
-            // label29
-            // 
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.label29.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label29.Location = new System.Drawing.Point(15, 97);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(146, 27);
-            this.label29.TabIndex = 99;
-            this.label29.Text = "SHORTCUT DISCOUNTS";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnDiscountSave
-            // 
-            this.btnDiscountSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountSave.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountSave.Location = new System.Drawing.Point(584, 682);
-            this.btnDiscountSave.Name = "btnDiscountSave";
-            this.btnDiscountSave.Size = new System.Drawing.Size(106, 39);
-            this.btnDiscountSave.TabIndex = 95;
-            this.btnDiscountSave.Text = "SAVE";
-            this.btnDiscountSave.UseVisualStyleBackColor = false;
-            this.btnDiscountSave.Click += new System.EventHandler(this.btnDiscountSave_Click);
-            // 
-            // panel16
-            // 
-            this.panel16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel16.Controls.Add(this.txtEditPrice);
-            this.panel16.Location = new System.Drawing.Point(13, 492);
-            this.panel16.Name = "panel16";
-            this.panel16.Padding = new System.Windows.Forms.Padding(7);
-            this.panel16.Size = new System.Drawing.Size(152, 46);
-            this.panel16.TabIndex = 98;
-            // 
-            // txtEditPrice
-            // 
-            this.txtEditPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.txtEditPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEditPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEditPrice.Font = new System.Drawing.Font("Segoe UI", 15.25F);
-            this.txtEditPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtEditPrice.Location = new System.Drawing.Point(7, 7);
-            this.txtEditPrice.Multiline = true;
-            this.txtEditPrice.Name = "txtEditPrice";
-            this.txtEditPrice.Size = new System.Drawing.Size(138, 32);
-            this.txtEditPrice.TabIndex = 1;
-            this.txtEditPrice.Text = "2.00";
-            this.txtEditPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel19
             // 
@@ -1734,18 +1289,42 @@
             this.txtDiscountAmount.TabIndex = 1;
             this.txtDiscountAmount.Text = "2.00";
             this.txtDiscountAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDiscountAmount.Click += new System.EventHandler(this.txtDiscountAmount_Click);
             // 
-            // label28
+            // label30
             // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(9, 304);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(156, 21);
-            this.label28.TabIndex = 101;
-            this.label28.Text = "BROWSE DISCOUNTS";
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label30.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label30.Location = new System.Drawing.Point(9, 191);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(113, 21);
+            this.label30.TabIndex = 106;
+            this.label30.Text = "Discount Name";
+            // 
+            // panel17
+            // 
+            this.panel17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel17.Controls.Add(this.txtDiscountName);
+            this.panel17.Location = new System.Drawing.Point(13, 218);
+            this.panel17.Name = "panel17";
+            this.panel17.Padding = new System.Windows.Forms.Padding(7);
+            this.panel17.Size = new System.Drawing.Size(469, 46);
+            this.panel17.TabIndex = 105;
+            // 
+            // txtDiscountName
+            // 
+            this.txtDiscountName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.txtDiscountName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiscountName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDiscountName.Font = new System.Drawing.Font("Segoe UI", 15.25F);
+            this.txtDiscountName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtDiscountName.Location = new System.Drawing.Point(7, 7);
+            this.txtDiscountName.Multiline = true;
+            this.txtDiscountName.Name = "txtDiscountName";
+            this.txtDiscountName.Size = new System.Drawing.Size(455, 32);
+            this.txtDiscountName.TabIndex = 1;
             // 
             // flp_discounts
             // 
@@ -2219,54 +1798,523 @@
             this.button54.Text = "ORDER DISCOUNT";
             this.button54.UseVisualStyleBackColor = false;
             // 
-            // btnRemoveDiscounts
+            // label28
             // 
-            this.btnRemoveDiscounts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(52)))), ((int)(((byte)(62)))));
-            this.btnRemoveDiscounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveDiscounts.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnRemoveDiscounts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRemoveDiscounts.Location = new System.Drawing.Point(18, 15);
-            this.btnRemoveDiscounts.Name = "btnRemoveDiscounts";
-            this.btnRemoveDiscounts.Size = new System.Drawing.Size(143, 40);
-            this.btnRemoveDiscounts.TabIndex = 100;
-            this.btnRemoveDiscounts.Text = "REMOVE DISCOUNTS";
-            this.btnRemoveDiscounts.UseVisualStyleBackColor = false;
-            this.btnRemoveDiscounts.Click += new System.EventHandler(this.btnRemoveDiscounts_Click);
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(9, 304);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(156, 21);
+            this.label28.TabIndex = 101;
+            this.label28.Text = "BROWSE DISCOUNTS";
             // 
-            // panel17
+            // btnDiscountSave
             // 
-            this.panel17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel17.Controls.Add(this.txtDiscountName);
-            this.panel17.Location = new System.Drawing.Point(13, 218);
-            this.panel17.Name = "panel17";
-            this.panel17.Padding = new System.Windows.Forms.Padding(7);
-            this.panel17.Size = new System.Drawing.Size(469, 46);
-            this.panel17.TabIndex = 105;
+            this.btnDiscountSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDiscountSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountSave.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountSave.Location = new System.Drawing.Point(584, 682);
+            this.btnDiscountSave.Name = "btnDiscountSave";
+            this.btnDiscountSave.Size = new System.Drawing.Size(106, 39);
+            this.btnDiscountSave.TabIndex = 95;
+            this.btnDiscountSave.Text = "APPLY";
+            this.btnDiscountSave.UseVisualStyleBackColor = false;
+            this.btnDiscountSave.Click += new System.EventHandler(this.btnDiscountSave_Click);
             // 
-            // txtDiscountName
+            // label27
             // 
-            this.txtDiscountName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.txtDiscountName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiscountName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDiscountName.Font = new System.Drawing.Font("Segoe UI", 15.25F);
-            this.txtDiscountName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtDiscountName.Location = new System.Drawing.Point(7, 7);
-            this.txtDiscountName.Multiline = true;
-            this.txtDiscountName.Name = "txtDiscountName";
-            this.txtDiscountName.Size = new System.Drawing.Size(455, 32);
-            this.txtDiscountName.TabIndex = 1;
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(9, 67);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(155, 21);
+            this.label27.TabIndex = 93;
+            this.label27.Text = "THIS DISCOUNT WILL";
             // 
-            // label30
+            // label26
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label30.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label30.Location = new System.Drawing.Point(9, 191);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(113, 21);
-            this.label30.TabIndex = 106;
-            this.label30.Text = "Discount Name";
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(506, 67);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(121, 21);
+            this.label26.TabIndex = 88;
+            this.label26.Text = "QUICK ACTIONS";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
+            this.panel18.Controls.Add(this.btnDiscountJustThis);
+            this.panel18.Controls.Add(this.label29);
+            this.panel18.Controls.Add(this.btnDiscountFreeOrder);
+            this.panel18.Controls.Add(this.btnDiscountAllItems);
+            this.panel18.Controls.Add(this.btnDiscountOrder);
+            this.panel18.Controls.Add(this.label25);
+            this.panel18.Controls.Add(this.btnDiscountFreeDeserts);
+            this.panel18.Controls.Add(this.btnDiscountFreeDrinks);
+            this.panel18.Controls.Add(this.btnDiscountFreeModifiers);
+            this.panel18.Location = new System.Drawing.Point(510, 108);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(180, 528);
+            this.panel18.TabIndex = 87;
+            // 
+            // btnDiscountJustThis
+            // 
+            this.btnDiscountJustThis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(0)))));
+            this.btnDiscountJustThis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountJustThis.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountJustThis.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountJustThis.Location = new System.Drawing.Point(18, 364);
+            this.btnDiscountJustThis.Name = "btnDiscountJustThis";
+            this.btnDiscountJustThis.Size = new System.Drawing.Size(143, 40);
+            this.btnDiscountJustThis.TabIndex = 100;
+            this.btnDiscountJustThis.Text = "JUST THIS ITEM";
+            this.btnDiscountJustThis.UseVisualStyleBackColor = false;
+            // 
+            // label29
+            // 
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.label29.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label29.Location = new System.Drawing.Point(15, 17);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(146, 27);
+            this.label29.TabIndex = 99;
+            this.label29.Text = "SHORTCUT DISCOUNTS";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnDiscountFreeOrder
+            // 
+            this.btnDiscountFreeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDiscountFreeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountFreeOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountFreeOrder.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountFreeOrder.Location = new System.Drawing.Point(18, 189);
+            this.btnDiscountFreeOrder.Name = "btnDiscountFreeOrder";
+            this.btnDiscountFreeOrder.Size = new System.Drawing.Size(143, 40);
+            this.btnDiscountFreeOrder.TabIndex = 98;
+            this.btnDiscountFreeOrder.Text = "FREE ORDER";
+            this.btnDiscountFreeOrder.UseVisualStyleBackColor = false;
+            // 
+            // btnDiscountAllItems
+            // 
+            this.btnDiscountAllItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDiscountAllItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountAllItems.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountAllItems.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountAllItems.Location = new System.Drawing.Point(18, 410);
+            this.btnDiscountAllItems.Name = "btnDiscountAllItems";
+            this.btnDiscountAllItems.Size = new System.Drawing.Size(143, 40);
+            this.btnDiscountAllItems.TabIndex = 97;
+            this.btnDiscountAllItems.Text = "ON EVERY ITEM";
+            this.btnDiscountAllItems.UseVisualStyleBackColor = false;
+            // 
+            // btnDiscountOrder
+            // 
+            this.btnDiscountOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDiscountOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountOrder.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountOrder.Location = new System.Drawing.Point(18, 456);
+            this.btnDiscountOrder.Name = "btnDiscountOrder";
+            this.btnDiscountOrder.Size = new System.Drawing.Size(143, 40);
+            this.btnDiscountOrder.TabIndex = 96;
+            this.btnDiscountOrder.Text = "ON THE ORDER";
+            this.btnDiscountOrder.UseVisualStyleBackColor = false;
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.label25.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label25.Location = new System.Drawing.Point(15, 323);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(146, 27);
+            this.label25.TabIndex = 95;
+            this.label25.Text = "SPECIAL SELECTIONS";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnDiscountFreeDeserts
+            // 
+            this.btnDiscountFreeDeserts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDiscountFreeDeserts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountFreeDeserts.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountFreeDeserts.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountFreeDeserts.Location = new System.Drawing.Point(18, 143);
+            this.btnDiscountFreeDeserts.Name = "btnDiscountFreeDeserts";
+            this.btnDiscountFreeDeserts.Size = new System.Drawing.Size(143, 40);
+            this.btnDiscountFreeDeserts.TabIndex = 78;
+            this.btnDiscountFreeDeserts.Text = "FREE DESERTS";
+            this.btnDiscountFreeDeserts.UseVisualStyleBackColor = false;
+            // 
+            // btnDiscountFreeDrinks
+            // 
+            this.btnDiscountFreeDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDiscountFreeDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountFreeDrinks.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountFreeDrinks.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountFreeDrinks.Location = new System.Drawing.Point(18, 97);
+            this.btnDiscountFreeDrinks.Name = "btnDiscountFreeDrinks";
+            this.btnDiscountFreeDrinks.Size = new System.Drawing.Size(143, 40);
+            this.btnDiscountFreeDrinks.TabIndex = 77;
+            this.btnDiscountFreeDrinks.Text = "FREE DRINKS";
+            this.btnDiscountFreeDrinks.UseVisualStyleBackColor = false;
+            // 
+            // btnDiscountFreeModifiers
+            // 
+            this.btnDiscountFreeModifiers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDiscountFreeModifiers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountFreeModifiers.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountFreeModifiers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountFreeModifiers.Location = new System.Drawing.Point(18, 51);
+            this.btnDiscountFreeModifiers.Name = "btnDiscountFreeModifiers";
+            this.btnDiscountFreeModifiers.Size = new System.Drawing.Size(143, 40);
+            this.btnDiscountFreeModifiers.TabIndex = 76;
+            this.btnDiscountFreeModifiers.Text = "FREE MODIFIERS";
+            this.btnDiscountFreeModifiers.UseVisualStyleBackColor = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(706, 48);
+            this.panel12.TabIndex = 69;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.label31);
+            this.flowLayoutPanel2.Controls.Add(this.lblDiscountIsPercent);
+            this.flowLayoutPanel2.Controls.Add(this.lblDiscountSelection);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 108);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 30);
+            this.flowLayoutPanel2.TabIndex = 107;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI Light", 11F);
+            this.label31.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label31.Location = new System.Drawing.Point(0, 0);
+            this.label31.Margin = new System.Windows.Forms.Padding(0, 0, 110, 0);
+            this.label31.MaximumSize = new System.Drawing.Size(0, 21);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(157, 20);
+            this.label31.TabIndex = 105;
+            this.label31.Text = "Apply a total discount of";
+            // 
+            // lblDiscountIsPercent
+            // 
+            this.lblDiscountIsPercent.AutoSize = true;
+            this.lblDiscountIsPercent.Font = new System.Drawing.Font("Segoe UI Light", 11F);
+            this.lblDiscountIsPercent.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblDiscountIsPercent.Location = new System.Drawing.Point(267, 0);
+            this.lblDiscountIsPercent.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDiscountIsPercent.MaximumSize = new System.Drawing.Size(0, 21);
+            this.lblDiscountIsPercent.Name = "lblDiscountIsPercent";
+            this.lblDiscountIsPercent.Size = new System.Drawing.Size(64, 20);
+            this.lblDiscountIsPercent.TabIndex = 107;
+            this.lblDiscountIsPercent.Text = "( % ) on: ";
+            // 
+            // lblDiscountSelection
+            // 
+            this.lblDiscountSelection.AutoSize = true;
+            this.lblDiscountSelection.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblDiscountSelection.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblDiscountSelection.Location = new System.Drawing.Point(334, 0);
+            this.lblDiscountSelection.Name = "lblDiscountSelection";
+            this.lblDiscountSelection.Size = new System.Drawing.Size(129, 20);
+            this.lblDiscountSelection.TabIndex = 106;
+            this.lblDiscountSelection.Text = "the selected item";
+            // 
+            // Modifier
+            // 
+            this.Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Modifier.Controls.Add(this.panel13);
+            this.Modifier.Location = new System.Drawing.Point(4, 22);
+            this.Modifier.Margin = new System.Windows.Forms.Padding(0);
+            this.Modifier.Name = "Modifier";
+            this.Modifier.Size = new System.Drawing.Size(706, 742);
+            this.Modifier.TabIndex = 6;
+            this.Modifier.Text = "Modifier";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(706, 48);
+            this.panel13.TabIndex = 69;
+            // 
+            // ConvertOrder
+            // 
+            this.ConvertOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.ConvertOrder.Controls.Add(this.panel9);
+            this.ConvertOrder.Controls.Add(this.panel8);
+            this.ConvertOrder.Controls.Add(this.panel7);
+            this.ConvertOrder.Controls.Add(this.panel6);
+            this.ConvertOrder.Location = new System.Drawing.Point(4, 22);
+            this.ConvertOrder.Name = "ConvertOrder";
+            this.ConvertOrder.Padding = new System.Windows.Forms.Padding(3);
+            this.ConvertOrder.Size = new System.Drawing.Size(706, 742);
+            this.ConvertOrder.TabIndex = 7;
+            this.ConvertOrder.Text = "Convert";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Controls.Add(this.label16);
+            this.panel9.Controls.Add(this.pictureBox6);
+            this.panel9.Location = new System.Drawing.Point(495, 53);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(157, 226);
+            this.panel9.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Green;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.Location = new System.Drawing.Point(100, 201);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 25);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "£3.49";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label16.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label16.Location = new System.Drawing.Point(0, 116);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(157, 33);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "A Glass of Coca Cola";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel8.Controls.Add(this.label12);
+            this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.pictureBox5);
+            this.panel8.Location = new System.Drawing.Point(332, 53);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(157, 226);
+            this.panel8.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Green;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.Location = new System.Drawing.Point(100, 201);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 25);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "£3.49";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(0, 116);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(157, 33);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "A Glass of Coca Cola";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.pictureBox4);
+            this.panel7.Location = new System.Drawing.Point(169, 53);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(157, 226);
+            this.panel7.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Green;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(100, 201);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 25);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "£3.49";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label10.Location = new System.Drawing.Point(0, 116);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(157, 33);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "A Glass of Coca Cola";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Location = new System.Drawing.Point(6, 53);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(157, 226);
+            this.panel6.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Green;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(100, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "£3.49";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(0, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "A Glass of Coca Cola";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(-15645, -12619);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 25);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Your Cart";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label8.Location = new System.Drawing.Point(-16057, -12921);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 25);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "Your Cart";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(-16469, -13218);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 25);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Your Cart";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(-16881, -13525);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Cart";
+            // 
+            // Payment
+            // 
+            this.Payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Payment.Controls.Add(this.label9);
+            this.Payment.Location = new System.Drawing.Point(4, 22);
+            this.Payment.Name = "Payment";
+            this.Payment.Padding = new System.Windows.Forms.Padding(3);
+            this.Payment.Size = new System.Drawing.Size(1016, 742);
+            this.Payment.TabIndex = 3;
+            this.Payment.Text = "Payment";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(-16057, -12921);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Payment";
             // 
             // CartSystem
             // 
@@ -2280,39 +2328,6 @@
             this.CartSystem.TabIndex = 32;
             this.CartSystem.ItemEdit += new System.EventHandler(this.CartSystem_ItemEdit);
             this.CartSystem.ItemDiscount += new System.EventHandler(this.CartSystem_ItemDiscount);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.lblDiscountIsPercent);
-            this.flowLayoutPanel2.Controls.Add(this.lblDiscountSelection);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 108);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 30);
-            this.flowLayoutPanel2.TabIndex = 107;
-            // 
-            // lblDiscountIsPercent
-            // 
-            this.lblDiscountIsPercent.AutoSize = true;
-            this.lblDiscountIsPercent.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.lblDiscountIsPercent.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDiscountIsPercent.Location = new System.Drawing.Point(0, 0);
-            this.lblDiscountIsPercent.Margin = new System.Windows.Forms.Padding(0);
-            this.lblDiscountIsPercent.MaximumSize = new System.Drawing.Size(0, 21);
-            this.lblDiscountIsPercent.Name = "lblDiscountIsPercent";
-            this.lblDiscountIsPercent.Size = new System.Drawing.Size(332, 20);
-            this.lblDiscountIsPercent.TabIndex = 105;
-            this.lblDiscountIsPercent.Text = "Apply a total discount of                              ( % ) on: ";
-            // 
-            // lblDiscountSelection
-            // 
-            this.lblDiscountSelection.AutoSize = true;
-            this.lblDiscountSelection.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDiscountSelection.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDiscountSelection.Location = new System.Drawing.Point(335, 0);
-            this.lblDiscountSelection.Name = "lblDiscountSelection";
-            this.lblDiscountSelection.Size = new System.Drawing.Size(129, 20);
-            this.lblDiscountSelection.TabIndex = 106;
-            this.lblDiscountSelection.Text = "the selected item";
             // 
             // frmNewOrder
             // 
@@ -2351,11 +2366,21 @@
             this.Lookup.ResumeLayout(false);
             this.Edit.ResumeLayout(false);
             this.Edit.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.Discount.ResumeLayout(false);
             this.Discount.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.flp_discounts.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.Modifier.ResumeLayout(false);
             this.ConvertOrder.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -2368,16 +2393,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Payment.ResumeLayout(false);
             this.Payment.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.flp_discounts.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2535,12 +2550,13 @@
         private System.Windows.Forms.Button button52;
         private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Button button54;
-        private System.Windows.Forms.Button btnRemoveDiscounts;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.TextBox txtDiscountName;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label lblDiscountIsPercent;
+        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label lblDiscountSelection;
+        private System.Windows.Forms.Button btnDiscountJustThis;
+        private System.Windows.Forms.Label lblDiscountIsPercent;
     }
 }
