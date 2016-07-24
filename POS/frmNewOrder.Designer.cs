@@ -1246,7 +1246,6 @@
             // Discount
             // 
             this.Discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.Discount.Controls.Add(this.panel19);
             this.Discount.Controls.Add(this.label30);
             this.Discount.Controls.Add(this.panel17);
             this.Discount.Controls.Add(this.flp_discounts);
@@ -1269,7 +1268,7 @@
             this.panel19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.panel19.Controls.Add(this.txtDiscountAmount);
-            this.panel19.Location = new System.Drawing.Point(177, 97);
+            this.panel19.Location = new System.Drawing.Point(155, 3);
             this.panel19.Name = "panel19";
             this.panel19.Padding = new System.Windows.Forms.Padding(7);
             this.panel19.Size = new System.Drawing.Size(101, 46);
@@ -1867,6 +1866,7 @@
             // 
             // btnDiscountJustThis
             // 
+            this.btnDiscountJustThis.AccessibleName = "64, 64, 0";
             this.btnDiscountJustThis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(0)))));
             this.btnDiscountJustThis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscountJustThis.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
@@ -1877,6 +1877,7 @@
             this.btnDiscountJustThis.TabIndex = 100;
             this.btnDiscountJustThis.Text = "JUST THIS ITEM";
             this.btnDiscountJustThis.UseVisualStyleBackColor = false;
+            this.btnDiscountJustThis.Click += new System.EventHandler(this.btnDiscountSpecialSelections_Click);
             // 
             // label29
             // 
@@ -1891,6 +1892,7 @@
             // 
             // btnDiscountFreeOrder
             // 
+            this.btnDiscountFreeOrder.AccessibleName = "";
             this.btnDiscountFreeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.btnDiscountFreeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscountFreeOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
@@ -1901,9 +1903,11 @@
             this.btnDiscountFreeOrder.TabIndex = 98;
             this.btnDiscountFreeOrder.Text = "FREE ORDER";
             this.btnDiscountFreeOrder.UseVisualStyleBackColor = false;
+            this.btnDiscountFreeOrder.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
             // 
             // btnDiscountAllItems
             // 
+            this.btnDiscountAllItems.AccessibleName = "34, 34, 0";
             this.btnDiscountAllItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnDiscountAllItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscountAllItems.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
@@ -1914,9 +1918,11 @@
             this.btnDiscountAllItems.TabIndex = 97;
             this.btnDiscountAllItems.Text = "ON EVERY ITEM";
             this.btnDiscountAllItems.UseVisualStyleBackColor = false;
+            this.btnDiscountAllItems.Click += new System.EventHandler(this.btnDiscountSpecialSelections_Click);
             // 
             // btnDiscountOrder
             // 
+            this.btnDiscountOrder.AccessibleName = "34, 34, 0";
             this.btnDiscountOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnDiscountOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscountOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
@@ -1927,6 +1933,7 @@
             this.btnDiscountOrder.TabIndex = 96;
             this.btnDiscountOrder.Text = "ON THE ORDER";
             this.btnDiscountOrder.UseVisualStyleBackColor = false;
+            this.btnDiscountOrder.Click += new System.EventHandler(this.btnDiscountSpecialSelections_Click);
             // 
             // label25
             // 
@@ -1941,6 +1948,7 @@
             // 
             // btnDiscountFreeDeserts
             // 
+            this.btnDiscountFreeDeserts.AccessibleName = "";
             this.btnDiscountFreeDeserts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.btnDiscountFreeDeserts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscountFreeDeserts.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
@@ -1951,9 +1959,11 @@
             this.btnDiscountFreeDeserts.TabIndex = 78;
             this.btnDiscountFreeDeserts.Text = "FREE DESERTS";
             this.btnDiscountFreeDeserts.UseVisualStyleBackColor = false;
+            this.btnDiscountFreeDeserts.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
             // 
             // btnDiscountFreeDrinks
             // 
+            this.btnDiscountFreeDrinks.AccessibleName = "";
             this.btnDiscountFreeDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.btnDiscountFreeDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscountFreeDrinks.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
@@ -1964,9 +1974,11 @@
             this.btnDiscountFreeDrinks.TabIndex = 77;
             this.btnDiscountFreeDrinks.Text = "FREE DRINKS";
             this.btnDiscountFreeDrinks.UseVisualStyleBackColor = false;
+            this.btnDiscountFreeDrinks.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
             // 
             // btnDiscountFreeModifiers
             // 
+            this.btnDiscountFreeModifiers.AccessibleName = "";
             this.btnDiscountFreeModifiers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.btnDiscountFreeModifiers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscountFreeModifiers.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
@@ -1977,6 +1989,7 @@
             this.btnDiscountFreeModifiers.TabIndex = 76;
             this.btnDiscountFreeModifiers.Text = "FREE MODIFIERS";
             this.btnDiscountFreeModifiers.UseVisualStyleBackColor = false;
+            this.btnDiscountFreeModifiers.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
             // 
             // panel12
             // 
@@ -1991,49 +2004,52 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label31);
+            this.flowLayoutPanel2.Controls.Add(this.panel19);
             this.flowLayoutPanel2.Controls.Add(this.lblDiscountIsPercent);
             this.flowLayoutPanel2.Controls.Add(this.lblDiscountSelection);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 108);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 107);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 30);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 80);
             this.flowLayoutPanel2.TabIndex = 107;
+            this.flowLayoutPanel2.Tag = "";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label31.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label31.Location = new System.Drawing.Point(0, 0);
-            this.label31.Margin = new System.Windows.Forms.Padding(0, 0, 110, 0);
+            this.label31.Location = new System.Drawing.Point(0, 15);
+            this.label31.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.label31.MaximumSize = new System.Drawing.Size(0, 21);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(157, 20);
+            this.label31.Size = new System.Drawing.Size(152, 20);
             this.label31.TabIndex = 105;
-            this.label31.Text = "Apply a total discount of";
+            this.label31.Text = "Apply FREE MODIFIERS";
             // 
             // lblDiscountIsPercent
             // 
             this.lblDiscountIsPercent.AutoSize = true;
             this.lblDiscountIsPercent.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.lblDiscountIsPercent.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDiscountIsPercent.Location = new System.Drawing.Point(267, 0);
-            this.lblDiscountIsPercent.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDiscountIsPercent.Location = new System.Drawing.Point(259, 15);
+            this.lblDiscountIsPercent.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.lblDiscountIsPercent.MaximumSize = new System.Drawing.Size(0, 21);
             this.lblDiscountIsPercent.Name = "lblDiscountIsPercent";
-            this.lblDiscountIsPercent.Size = new System.Drawing.Size(64, 20);
+            this.lblDiscountIsPercent.Size = new System.Drawing.Size(60, 20);
             this.lblDiscountIsPercent.TabIndex = 107;
-            this.lblDiscountIsPercent.Text = "( % ) on: ";
+            this.lblDiscountIsPercent.Text = "( % ) on:";
             // 
             // lblDiscountSelection
             // 
             this.lblDiscountSelection.AutoSize = true;
             this.lblDiscountSelection.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblDiscountSelection.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDiscountSelection.Location = new System.Drawing.Point(334, 0);
+            this.lblDiscountSelection.Location = new System.Drawing.Point(319, 15);
+            this.lblDiscountSelection.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.lblDiscountSelection.Name = "lblDiscountSelection";
-            this.lblDiscountSelection.Size = new System.Drawing.Size(129, 20);
+            this.lblDiscountSelection.Size = new System.Drawing.Size(101, 20);
             this.lblDiscountSelection.TabIndex = 106;
-            this.lblDiscountSelection.Text = "the selected item";
+            this.lblDiscountSelection.Text = "just this item";
             // 
             // Modifier
             // 

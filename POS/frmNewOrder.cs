@@ -268,7 +268,7 @@ namespace POS
                 }
                 #endregion
                 #region Category-less Sub-Category Header + Generation
-               
+
                 #region header
                 Panel header2 = new Panel();
                 header2.Margin = new Padding(0, 50, 0, 0);
@@ -429,7 +429,7 @@ namespace POS
                     lblName.AutoSize = true;
                     lblName.MinimumSize = new Size(440, 40);
                     lblName.MaximumSize = new Size(440, 0);
-       
+
                     lblName.Click += btnProduct_Click;
 
                     Label lblProd = new Label();
@@ -442,7 +442,7 @@ namespace POS
                     lblProd.Location = new Point(440, 0);
                     lblProd.AutoSize = true;
                     lblProd.MinimumSize = new Size(115, 40);
-                    lblProd.MaximumSize= new Size(115, 0);
+                    lblProd.MaximumSize = new Size(115, 0);
                     lblProd.Click += btnProduct_Click;
 
                     Label lblPrice = new Label();
@@ -801,7 +801,7 @@ namespace POS
                             pnl.Margin = new Padding(0, 0, 0, 0);
                             pnl.BackColor = pr.Colour;
                             pnl.AutoSize = true;
-                           
+
 
                             Label lblName = new Label();
                             lblName.Text = pr.Name;
@@ -855,13 +855,13 @@ namespace POS
                 default:
                     break;
             }
-          
+
         }
         void generateProducts(int subcat_id)
         {
             //these can only be products
             flp_products.Controls.Clear();
-            List<Product> products = Collections.Products.Where(x => x.SubcategoryID == subcat_id).OrderBy(x=>x.SortDisplay).ToList();
+            List<Product> products = Collections.Products.Where(x => x.SubcategoryID == subcat_id).OrderBy(x => x.SortDisplay).ToList();
 
             if (itemViewMode == 0)
             {
@@ -1000,10 +1000,21 @@ namespace POS
             btnDiscountAllItems.BackColor = Color.FromArgb(64, 64, 0);
 
             label31.Text = "Apply a total discount of ";
-            lblDiscountSelection.Text = "the selected item";
+            lblDiscountIsPercent.Text = "( % ) on:";
+            lblDiscountSelection.Text = "just this item";
 
             txtDiscountAmount.Parent.Show();
             txtDiscountAmount.Text = "0.00";
+
+            btnDiscountFreeDeserts.Show();
+            btnDiscountFreeDrinks.Show();
+            btnDiscountFreeModifiers.Show();
+            btnDiscountFreeOrder.Show();
+
+            btnDiscountJustThis.Show();
+            btnDiscountAllItems.Show();
+            btnDiscountOrder.Show();
+            btnDiscountOrder.Show();
 
         }
 
@@ -1107,7 +1118,7 @@ namespace POS
         {
             OrderTab.SelectTab("Edit");
             lblCartTitle.Text = "EDIT ITEM";
-            
+
             //Loading data into edit page
             lblEditQty.Text = CartSystem.GetSelectedItem().Qty;
             txtEditDescription.Text = CartSystem.GetSelectedItem().Description;
@@ -1125,8 +1136,8 @@ namespace POS
         {
             int qty = ((Button)sender).Name.Contains("Down") ? Convert.ToInt16(lblEditQty.Text) - 1 : Convert.ToInt16(lblEditQty.Text) + 1;
 
-            if(qty > 0) //and less than max-qty
-            lblEditQty.Text = qty.ToString();
+            if (qty > 0) //and less than max-qty
+                lblEditQty.Text = qty.ToString();
         }
         private void btnEditSave_Click(object sender, EventArgs e)
         {
@@ -1145,10 +1156,13 @@ namespace POS
             else
             {
                 bool isPercent = lblDiscountIsPercent.Text.Contains("%") ? true : false;
-                if (lblDiscountSelection.Text == "the selected item")
+                if (lblDiscountSelection.Text == "just this item")
                 {
-
                     CartSystem.AddSubItem(true, name, price.ToString(), isPercent);
+                }
+                else if (lblDiscountSelection.Text == "on every item")
+                {
+                    CartSystem.AddDiscountToAll(name, price.ToString(), isPercent);
                 }
             }
         }
@@ -1156,6 +1170,116 @@ namespace POS
         private void txtDiscountAmount_Click(object sender, EventArgs e)
         {
             lblDiscountIsPercent.Text = lblDiscountIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " ) on:" : "( % ) on: ";
+        }
+
+        private void btnDiscountQuickActions_Click(object sender, EventArgs e)
+        {
+            Button[] buttons = {
+                btnDiscountFreeDeserts,
+                btnDiscountFreeDrinks,
+                btnDiscountFreeModifiers,
+                btnDiscountFreeOrder
+            };
+
+            foreach (Button b in buttons) if (b != ((Button)sender)) b.BackColor = Color.FromArgb(34, 52, 70);
+
+            if (((Button)sender).BackColor == Color.FromArgb(14, 32, 50))
+            {
+                //deselected 
+                ((Button)sender).BackColor = Color.FromArgb(34, 52, 70);
+
+                btnDiscountJustThis.Show();
+                btnDiscountAllItems.Show();
+                btnDiscountOrder.Show();
+
+                txtDiscountAmount.Parent.Show();
+                label31.Text = "Apply a total discount of ";
+                lblDiscountIsPercent.Text = "( % ) on:";
+            }
+            else
+            {
+                //selected
+                ((Button)sender).BackColor = Color.FromArgb(14, 32, 50);
+
+                if (((Button)sender).Text != "FREE MODIFIERS")
+                {
+                    btnDiscountJustThis.Hide();
+                    btnDiscountAllItems.Hide();
+                    lblDiscountSelection.Text = "the whole order";
+
+                } else
+                {
+                    btnDiscountJustThis.Show();
+                    btnDiscountAllItems.Show();
+
+                    btnDiscountJustThis.PerformClick();
+                    if (btnDiscountJustThis.BackColor != Color.FromArgb(34, 34, 0))
+                        btnDiscountJustThis.PerformClick();
+
+                    lblDiscountSelection.Text = "just this item";
+
+                }
+
+                txtDiscountAmount.Parent.Hide();
+                label31.Text = "Apply " + ((Button)sender).Text;
+
+                lblDiscountIsPercent.Text = "on:";
+
+                btnDiscountOrder.Hide();
+            }
+
+
+
+        }
+
+        private void btnDiscountSpecialSelections_Click(object sender, EventArgs e)
+        {
+            Button[] buttons = {
+            btnDiscountJustThis,
+            btnDiscountOrder,
+            btnDiscountAllItems
+            };
+
+            foreach (Button b in buttons) if (b != ((Button)sender)) b.BackColor = Color.FromArgb(64, 64, 0);
+
+
+            if (((Button)sender).BackColor == Color.FromArgb(34, 34, 0))
+            {
+                //deselected
+                ((Button)sender).BackColor = Color.FromArgb(64, 64, 0);
+
+                if (((Button)sender).Text == "ON THE ORDER")
+                {
+                    btnDiscountFreeDeserts.Show();
+                    btnDiscountFreeDrinks.Show();
+                    btnDiscountFreeModifiers.Show();
+                    btnDiscountFreeOrder.Show();
+                }
+            }
+            else
+            {
+                //selected
+                ((Button)sender).BackColor = Color.FromArgb(34, 34, 0);
+
+                if (((Button)sender).Text == "ON THE ORDER")
+                {
+                    btnDiscountFreeDeserts.Hide();
+                    btnDiscountFreeDrinks.Hide();
+                    btnDiscountFreeModifiers.Hide();
+                    btnDiscountFreeOrder.Hide();
+                }
+                else
+                {
+                    btnDiscountFreeDeserts.Show();
+                    btnDiscountFreeDrinks.Show();
+                    btnDiscountFreeModifiers.Show();
+                    btnDiscountFreeOrder.Show();
+                }
+
+            }
+            
+
+            lblDiscountSelection.Text = ((Button)sender).Text.ToLower();
         }
     }
 }
