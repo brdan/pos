@@ -31,6 +31,8 @@ namespace POS.Controls
         //Publics
         public event EventHandler ItemEdit;
         public event EventHandler ItemDiscount;
+        public event EventHandler ItemModify;
+
         Control selectedItem = null;
         public CartSystem()
         {
@@ -124,138 +126,16 @@ namespace POS.Controls
         }
         public void EditItem(string qty, string description, string price)
         {
-            selectedItem.Controls[0].Text = qty;
-            selectedItem.Controls[1].Text = description;
-            selectedItem.Controls[2].Text = Settings.Setting["currency"] + price;
-        }
-        public void AddDiscountToAll(string textString, string priceString, bool isPercent = false)
-        {
-
-            foreach(Control c in flp_cart.Controls)
+            if (selectedItemIndex == -1)
             {
-                MessageBox.Show("found an item");
-                if(c.AccessibleDescription == "Item")
-                {
-                    MessageBox.Show("found an item");
-                    //this is an item
-                    selectedItem = c;
-                    int itsIndex = flp_cart.Controls.IndexOf(c);
-
-                    flp_cart.Refresh();
-                    flp_cart.PerformLayout();
-
-                    //If sub-box doesn't exist, quickly create it.
-                    #region Creates Sub-Box if it's non-existent
-                    try
-                    {
-                        if (flp_cart.Controls[itsIndex + 1].Margin.Left != 20)
-                        {
-                            FlowLayoutPanel flp = new FlowLayoutPanel();
-                            flp.AutoSize = true;
-                            flp.Margin = new Padding(20, 0, 0, 0);
-                            flp_cart.Controls.Add(flp);
-                            flp_cart.Controls.SetChildIndex(flp, itsIndex + 1);
-                            MessageBox.Show("adding the box");
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        FlowLayoutPanel flp = new FlowLayoutPanel();
-                        flp.AutoSize = true;
-                        flp.Margin = new Padding(20, 0, 0, 0);
-                        flp_cart.Controls.Add(flp);
-                        flp_cart.Controls.SetChildIndex(flp, itsIndex + 1);
-                    }
-                    #endregion
-
-                    #region Price Updating
-                    // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
-                    decimal newParentItemPrice = 0.00M;
-                    
-                        //deduct
-                        decimal parentItemPrice = Convert.ToDecimal(c.Controls[2].Text.Substring(1));
-
-                        //is price fixed or percentage? 
-                        decimal priceToDeduct = isPercent ? (Convert.ToDecimal(priceString) * parentItemPrice) / 100 : Convert.ToDecimal(priceString);
-
-                        newParentItemPrice = parentItemPrice - priceToDeduct;
-                        if (newParentItemPrice < 0.00M)
-                            newParentItemPrice = 0.00M;
-
-                        totalPrice -= (parentItemPrice - newParentItemPrice); //this way no negative value issues
-                    
-
-                    #endregion
-
-                    #region Designs the three labels based on parameters, then adds it to the Sub-Box
-                    Control parent = flp_cart.Controls[itsIndex + 1];
-                    //the three labels
-                    Label lblIcon = new Label();
-                    lblIcon.BackColor = Color.FromArgb(14, 32, 50);
-                    lblIcon.ForeColor = Color.Gainsboro;
-                    lblIcon.Font = new Font("Heydings Icons", 13.00f);
-                    lblIcon.Margin = new Padding(0, 0, 0, 0);
-                    lblIcon.Padding = new Padding(1, 1, 1, 1);
-                    lblIcon.Size = new Size(30, 25);
-                    lblIcon.Dock = DockStyle.Left;
-                    lblIcon.Text = "t";
-                    lblIcon.TextAlign = ContentAlignment.MiddleCenter;
-                    lblIcon.Click += subItem_Click;
-
-                    Label lblName = new Label();
-                    lblName.BackColor = Color.FromArgb(24, 42, 60);
-                    lblName.ForeColor = Color.Gainsboro;
-                    lblName.Font = new Font("Segoe UI", 9.00f);
-                    lblName.Margin = new Padding(0, 0, 0, 0);
-                    lblName.Padding = new Padding(2, 2, 2, 2);
-                    lblName.Text = textString;
-                    lblName.TextAlign = ContentAlignment.MiddleLeft;
-                    lblName.AutoSize = true;
-                    lblName.Dock = DockStyle.Left;
-                    lblName.MaximumSize = new Size(160, 0);
-                    lblName.MinimumSize = new Size(160, 25);
-                    lblName.Click += subItem_Click;
-
-                    Label lblPrice = new Label();
-                    lblPrice.BackColor = Color.FromArgb(34, 52, 70);
-                    lblPrice.ForeColor =  Color.FromArgb(231, 76, 60);
-                    string str = "-";
-
-                    decimal displayPrice = isPercent ? ((Convert.ToDecimal(priceString) * Convert.ToDecimal(c.Controls[2].Text.Substring(1))) / 100) : Convert.ToDecimal(priceString);
-
-                    lblPrice.Text = str + Settings.Setting["currency"] + Math.Round(displayPrice, 2, MidpointRounding.AwayFromZero);
-                    Font font = new Font("Segoe UI", 10.00f);
-                    if (lblPrice.Text.Length > 5)
-                        font = new Font("Segoe UI", 9.00f);
-                    else if (lblPrice.Text.Length > 7)
-                        font = new Font("Segoe UI", 5.00f);
-                    lblPrice.Font = font;
-                    lblPrice.Dock = DockStyle.Left;
-                    lblPrice.TextAlign = ContentAlignment.MiddleLeft;
-                    lblPrice.Margin = new Padding(0, 0, 0, 0);
-                    lblPrice.BackColor = Color.FromArgb(24, 42, 60);
-                    lblPrice.Padding = new Padding(2, 2, 2, 2);
-                    lblPrice.MaximumSize = new Size(63, 0);
-                    lblPrice.MinimumSize = new Size(63, 25);
-                    lblPrice.AutoSize = true;
-                    lblPrice.Click += subItem_Click;
-
-
-                    //add controls
-                    parent.Controls.Add(lblIcon);
-                    parent.Controls.Add(lblName);
-                    parent.Controls.Add(lblPrice);
-                    #endregion
-
-                    #region Finally, updating price visual and changing the colour to indicate price influence
-                    flp_cart.Controls[itsIndex].Controls[2].Text = Settings.Setting["currency"] + Math.Round(newParentItemPrice, 2, MidpointRounding.AwayFromZero);
-                    flp_cart.Controls[itsIndex].Controls[2].ForeColor = Color.FromArgb(232, 126, 4);
-                    #endregion
-
-
-                }
+                MessageBox.Show("You must select an item to add this to...", "No item selected");
             }
-
+            else
+            {
+                selectedItem.Controls[0].Text = qty;
+                selectedItem.Controls[1].Text = description;
+                selectedItem.Controls[2].Text = Settings.Setting["currency"] + price;
+            }
         }
         public void AddSubItem(bool DiscountOrModifier, string textString, string priceString, bool isPercent = false)
         {
@@ -356,7 +236,7 @@ namespace POS.Controls
                 string str = DiscountOrModifier ? "-" : "+";
 
                 decimal displayPrice = isPercent ? ((Convert.ToDecimal(priceString) * Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1))) / 100) : Convert.ToDecimal(priceString);
-                
+
                 lblPrice.Text = str + Settings.Setting["currency"] + Math.Round(displayPrice, 2, MidpointRounding.AwayFromZero);
                 Font font = new Font("Segoe UI", 10.00f);
                 if (lblPrice.Text.Length > 5)
@@ -392,7 +272,7 @@ namespace POS.Controls
             //1: just the item, 2: all items, 3: order discounts, 4: wipe the whole thing clean of discounts
             switch (clause)
             {
-                case 1: 
+                case 1:
 
                     break;
 
@@ -434,7 +314,7 @@ namespace POS.Controls
             }
 
         }
-        
+
         private void subItem_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
@@ -464,7 +344,7 @@ namespace POS.Controls
                 }
         }
         #endregion
-      
+
         #region Scrolling Functionality
         private void btnScroll_MouseDown(object sender, MouseEventArgs e)
         {
@@ -547,7 +427,7 @@ namespace POS.Controls
         }
         #endregion
 
-        #region Item Options
+        #region Item Options (Delete, Edit, Discount, Modify)
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (selectedItemIndex != -1)
@@ -617,6 +497,19 @@ namespace POS.Controls
                     ItemDiscount(new object(), new EventArgs());
             }
         }
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            if (selectedItemIndex != -1)
+            {
+                selectedItem = flp_cart.Controls[selectedItemIndex];
+
+                if (ItemModify != null)
+                    ItemModify(new object(), new EventArgs());
+            }
+        }
         #endregion
+
+
+
     }
 }

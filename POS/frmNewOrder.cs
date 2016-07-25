@@ -988,34 +988,9 @@ namespace POS
         //Sanitisation
         void SanitiseDiscount()
         {
-
-            //Resetting button colours
-            btnDiscountFreeDeserts.BackColor = Color.FromArgb(34, 52, 70);
-            btnDiscountFreeDrinks.BackColor = Color.FromArgb(34, 52, 70);
-            btnDiscountFreeModifiers.BackColor = Color.FromArgb(34, 52, 70);
-            btnDiscountFreeOrder.BackColor = Color.FromArgb(34, 52, 70);
-
-            btnDiscountJustThis.BackColor = Color.FromArgb(34, 34, 0);
-            btnDiscountOrder.BackColor = Color.FromArgb(64, 64, 0);
-            btnDiscountAllItems.BackColor = Color.FromArgb(64, 64, 0);
-
-            label31.Text = "Apply a total discount of ";
-            lblDiscountIsPercent.Text = "( % ) on:";
-            lblDiscountSelection.Text = "just this item";
-
+            lblDiscountIsPercent.Text = "( % )";
             txtDiscountAmount.Parent.Show();
             txtDiscountAmount.Text = "0.00";
-
-            btnDiscountFreeDeserts.Show();
-            btnDiscountFreeDrinks.Show();
-            btnDiscountFreeModifiers.Show();
-            btnDiscountFreeOrder.Show();
-
-            btnDiscountJustThis.Show();
-            btnDiscountAllItems.Show();
-            btnDiscountOrder.Show();
-            btnDiscountOrder.Show();
-
         }
 
         void btnFirstPageItems_Click(object sender, EventArgs e)
@@ -1156,130 +1131,14 @@ namespace POS
             else
             {
                 bool isPercent = lblDiscountIsPercent.Text.Contains("%") ? true : false;
-                if (lblDiscountSelection.Text == "just this item")
-                {
-                    CartSystem.AddSubItem(true, name, price.ToString(), isPercent);
-                }
-                else if (lblDiscountSelection.Text == "on every item")
-                {
-                    CartSystem.AddDiscountToAll(name, price.ToString(), isPercent);
-                }
+
+                CartSystem.AddSubItem(true, name, price.ToString(), isPercent);
             }
         }
 
         private void txtDiscountAmount_Click(object sender, EventArgs e)
         {
-            lblDiscountIsPercent.Text = lblDiscountIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " ) on:" : "( % ) on: ";
-        }
-
-        private void btnDiscountQuickActions_Click(object sender, EventArgs e)
-        {
-            Button[] buttons = {
-                btnDiscountFreeDeserts,
-                btnDiscountFreeDrinks,
-                btnDiscountFreeModifiers,
-                btnDiscountFreeOrder
-            };
-
-            foreach (Button b in buttons) if (b != ((Button)sender)) b.BackColor = Color.FromArgb(34, 52, 70);
-
-            if (((Button)sender).BackColor == Color.FromArgb(14, 32, 50))
-            {
-                //deselected 
-                ((Button)sender).BackColor = Color.FromArgb(34, 52, 70);
-
-                btnDiscountJustThis.Show();
-                btnDiscountAllItems.Show();
-                btnDiscountOrder.Show();
-
-                txtDiscountAmount.Parent.Show();
-                label31.Text = "Apply a total discount of ";
-                lblDiscountIsPercent.Text = "( % ) on:";
-            }
-            else
-            {
-                //selected
-                ((Button)sender).BackColor = Color.FromArgb(14, 32, 50);
-
-                if (((Button)sender).Text != "FREE MODIFIERS")
-                {
-                    btnDiscountJustThis.Hide();
-                    btnDiscountAllItems.Hide();
-                    lblDiscountSelection.Text = "the whole order";
-
-                } else
-                {
-                    btnDiscountJustThis.Show();
-                    btnDiscountAllItems.Show();
-
-                    btnDiscountJustThis.PerformClick();
-                    if (btnDiscountJustThis.BackColor != Color.FromArgb(34, 34, 0))
-                        btnDiscountJustThis.PerformClick();
-
-                    lblDiscountSelection.Text = "just this item";
-
-                }
-
-                txtDiscountAmount.Parent.Hide();
-                label31.Text = "Apply " + ((Button)sender).Text;
-
-                lblDiscountIsPercent.Text = "on:";
-
-                btnDiscountOrder.Hide();
-            }
-
-
-
-        }
-
-        private void btnDiscountSpecialSelections_Click(object sender, EventArgs e)
-        {
-            Button[] buttons = {
-            btnDiscountJustThis,
-            btnDiscountOrder,
-            btnDiscountAllItems
-            };
-
-            foreach (Button b in buttons) if (b != ((Button)sender)) b.BackColor = Color.FromArgb(64, 64, 0);
-
-
-            if (((Button)sender).BackColor == Color.FromArgb(34, 34, 0))
-            {
-                //deselected
-                ((Button)sender).BackColor = Color.FromArgb(64, 64, 0);
-
-                if (((Button)sender).Text == "ON THE ORDER")
-                {
-                    btnDiscountFreeDeserts.Show();
-                    btnDiscountFreeDrinks.Show();
-                    btnDiscountFreeModifiers.Show();
-                    btnDiscountFreeOrder.Show();
-                }
-            }
-            else
-            {
-                //selected
-                ((Button)sender).BackColor = Color.FromArgb(34, 34, 0);
-
-                if (((Button)sender).Text == "ON THE ORDER")
-                {
-                    btnDiscountFreeDeserts.Hide();
-                    btnDiscountFreeDrinks.Hide();
-                    btnDiscountFreeModifiers.Hide();
-                    btnDiscountFreeOrder.Hide();
-                }
-                else
-                {
-                    btnDiscountFreeDeserts.Show();
-                    btnDiscountFreeDrinks.Show();
-                    btnDiscountFreeModifiers.Show();
-                    btnDiscountFreeOrder.Show();
-                }
-
-            }
-            
-
-            lblDiscountSelection.Text = ((Button)sender).Text.ToLower();
+            lblDiscountIsPercent.Text = lblDiscountIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " )" : "( % )";
         }
     }
 }

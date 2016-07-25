@@ -65,7 +65,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.Products = new System.Windows.Forms.TabPage();
             this.sd = new System.Windows.Forms.Label();
@@ -81,8 +80,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.Lookup = new System.Windows.Forms.TabPage();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.Print = new System.Windows.Forms.TabPage();
             this.Edit = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -107,6 +104,7 @@
             this.Discount = new System.Windows.Forms.TabPage();
             this.panel19 = new System.Windows.Forms.Panel();
             this.txtDiscountAmount = new System.Windows.Forms.TextBox();
+            this.lblDiscountIsPercent = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.txtDiscountName = new System.Windows.Forms.TextBox();
@@ -143,26 +141,14 @@
             this.button51 = new System.Windows.Forms.Button();
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
-            this.button54 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.btnDiscountSave = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.btnDiscountJustThis = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.btnDiscountFreeOrder = new System.Windows.Forms.Button();
-            this.btnDiscountAllItems = new System.Windows.Forms.Button();
-            this.btnDiscountOrder = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.btnDiscountFreeDeserts = new System.Windows.Forms.Button();
-            this.btnDiscountFreeDrinks = new System.Windows.Forms.Button();
-            this.btnDiscountFreeModifiers = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.lblDiscountIsPercent = new System.Windows.Forms.Label();
-            this.lblDiscountSelection = new System.Windows.Forms.Label();
             this.Modifier = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
             this.ConvertOrder = new System.Windows.Forms.TabPage();
@@ -189,6 +175,78 @@
             this.Payment = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.CartSystem = new POS.Controls.CartSystem();
+            this.button88 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button98 = new System.Windows.Forms.Button();
+            this.button99 = new System.Windows.Forms.Button();
+            this.button100 = new System.Windows.Forms.Button();
+            this.button101 = new System.Windows.Forms.Button();
+            this.button102 = new System.Windows.Forms.Button();
+            this.button103 = new System.Windows.Forms.Button();
+            this.button104 = new System.Windows.Forms.Button();
+            this.button105 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button60 = new System.Windows.Forms.Button();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button61 = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.button57 = new System.Windows.Forms.Button();
+            this.button54 = new System.Windows.Forms.Button();
+            this.button58 = new System.Windows.Forms.Button();
+            this.button56 = new System.Windows.Forms.Button();
+            this.button55 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button62 = new System.Windows.Forms.Button();
+            this.button63 = new System.Windows.Forms.Button();
+            this.button64 = new System.Windows.Forms.Button();
+            this.button65 = new System.Windows.Forms.Button();
+            this.button66 = new System.Windows.Forms.Button();
+            this.button67 = new System.Windows.Forms.Button();
+            this.button68 = new System.Windows.Forms.Button();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button70 = new System.Windows.Forms.Button();
+            this.button71 = new System.Windows.Forms.Button();
+            this.button72 = new System.Windows.Forms.Button();
+            this.button73 = new System.Windows.Forms.Button();
+            this.button74 = new System.Windows.Forms.Button();
+            this.button75 = new System.Windows.Forms.Button();
+            this.button76 = new System.Windows.Forms.Button();
+            this.button77 = new System.Windows.Forms.Button();
+            this.button78 = new System.Windows.Forms.Button();
+            this.button79 = new System.Windows.Forms.Button();
+            this.button80 = new System.Windows.Forms.Button();
+            this.button81 = new System.Windows.Forms.Button();
+            this.button82 = new System.Windows.Forms.Button();
+            this.button83 = new System.Windows.Forms.Button();
+            this.button84 = new System.Windows.Forms.Button();
+            this.button85 = new System.Windows.Forms.Button();
+            this.button86 = new System.Windows.Forms.Button();
+            this.button87 = new System.Windows.Forms.Button();
+            this.button89 = new System.Windows.Forms.Button();
+            this.button90 = new System.Windows.Forms.Button();
+            this.button91 = new System.Windows.Forms.Button();
+            this.button92 = new System.Windows.Forms.Button();
+            this.button93 = new System.Windows.Forms.Button();
+            this.button94 = new System.Windows.Forms.Button();
+            this.button95 = new System.Windows.Forms.Button();
+            this.button96 = new System.Windows.Forms.Button();
+            this.button97 = new System.Windows.Forms.Button();
+            this.button106 = new System.Windows.Forms.Button();
+            this.button107 = new System.Windows.Forms.Button();
+            this.button108 = new System.Windows.Forms.Button();
+            this.button109 = new System.Windows.Forms.Button();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -205,7 +263,6 @@
             this.panel5.SuspendLayout();
             this.flp_products.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.Lookup.SuspendLayout();
             this.Edit.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -214,8 +271,6 @@
             this.panel19.SuspendLayout();
             this.panel17.SuspendLayout();
             this.flp_discounts.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.Modifier.SuspendLayout();
             this.ConvertOrder.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -227,6 +282,11 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Payment.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tab
@@ -565,7 +625,6 @@
             // 
             this.OrderTab.Controls.Add(this.Dashboard);
             this.OrderTab.Controls.Add(this.Products);
-            this.OrderTab.Controls.Add(this.Lookup);
             this.OrderTab.Controls.Add(this.Print);
             this.OrderTab.Controls.Add(this.Edit);
             this.OrderTab.Controls.Add(this.Discount);
@@ -591,14 +650,13 @@
             this.Dashboard.Controls.Add(this.button5);
             this.Dashboard.Controls.Add(this.button4);
             this.Dashboard.Controls.Add(this.button3);
-            this.Dashboard.Controls.Add(this.button2);
             this.Dashboard.Controls.Add(this.btnProducts);
             this.Dashboard.Location = new System.Drawing.Point(4, 22);
             this.Dashboard.Margin = new System.Windows.Forms.Padding(0);
             this.Dashboard.Name = "Dashboard";
             this.Dashboard.Size = new System.Drawing.Size(706, 742);
             this.Dashboard.TabIndex = 0;
-            this.Dashboard.Text = "Menu";
+            this.Dashboard.Text = "`";
             // 
             // button11
             // 
@@ -697,9 +755,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button5.Location = new System.Drawing.Point(488, 169);
+            this.button5.Location = new System.Drawing.Point(258, 169);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(187, 108);
+            this.button5.Size = new System.Drawing.Size(417, 108);
             this.button5.TabIndex = 66;
             this.button5.Text = "MODIFIER";
             this.button5.UseVisualStyleBackColor = false;
@@ -734,21 +792,6 @@
             this.button3.Text = "PRINT";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // button2
-            // 
-            this.button2.AccessibleName = "Lookup";
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(258, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 108);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "LOOKUP";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnProducts
             // 
@@ -949,26 +992,6 @@
             this.label20.Text = "Category Name";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Lookup
-            // 
-            this.Lookup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.Lookup.Controls.Add(this.panel10);
-            this.Lookup.Location = new System.Drawing.Point(4, 22);
-            this.Lookup.Margin = new System.Windows.Forms.Padding(0);
-            this.Lookup.Name = "Lookup";
-            this.Lookup.Size = new System.Drawing.Size(706, 742);
-            this.Lookup.TabIndex = 2;
-            this.Lookup.Text = "Lookup";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(706, 48);
-            this.panel10.TabIndex = 69;
-            // 
             // Print
             // 
             this.Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
@@ -1075,7 +1098,7 @@
             this.panel15.Controls.Add(this.button12);
             this.panel15.Location = new System.Drawing.Point(510, 108);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(180, 300);
+            this.panel15.Size = new System.Drawing.Size(180, 315);
             this.panel15.TabIndex = 76;
             // 
             // button16
@@ -1246,16 +1269,17 @@
             // Discount
             // 
             this.Discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Discount.Controls.Add(this.label26);
+            this.Discount.Controls.Add(this.panel18);
+            this.Discount.Controls.Add(this.panel19);
+            this.Discount.Controls.Add(this.lblDiscountIsPercent);
             this.Discount.Controls.Add(this.label30);
             this.Discount.Controls.Add(this.panel17);
             this.Discount.Controls.Add(this.flp_discounts);
             this.Discount.Controls.Add(this.label28);
             this.Discount.Controls.Add(this.btnDiscountSave);
             this.Discount.Controls.Add(this.label27);
-            this.Discount.Controls.Add(this.label26);
-            this.Discount.Controls.Add(this.panel18);
             this.Discount.Controls.Add(this.panel12);
-            this.Discount.Controls.Add(this.flowLayoutPanel2);
             this.Discount.Location = new System.Drawing.Point(4, 22);
             this.Discount.Margin = new System.Windows.Forms.Padding(0);
             this.Discount.Name = "Discount";
@@ -1268,7 +1292,7 @@
             this.panel19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.panel19.Controls.Add(this.txtDiscountAmount);
-            this.panel19.Location = new System.Drawing.Point(155, 3);
+            this.panel19.Location = new System.Drawing.Point(326, 149);
             this.panel19.Name = "panel19";
             this.panel19.Padding = new System.Windows.Forms.Padding(7);
             this.panel19.Size = new System.Drawing.Size(101, 46);
@@ -1290,12 +1314,24 @@
             this.txtDiscountAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDiscountAmount.Click += new System.EventHandler(this.txtDiscountAmount_Click);
             // 
+            // lblDiscountIsPercent
+            // 
+            this.lblDiscountIsPercent.AutoSize = true;
+            this.lblDiscountIsPercent.Font = new System.Drawing.Font("Segoe UI Light", 15F);
+            this.lblDiscountIsPercent.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblDiscountIsPercent.Location = new System.Drawing.Point(430, 156);
+            this.lblDiscountIsPercent.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDiscountIsPercent.Name = "lblDiscountIsPercent";
+            this.lblDiscountIsPercent.Size = new System.Drawing.Size(50, 28);
+            this.lblDiscountIsPercent.TabIndex = 107;
+            this.lblDiscountIsPercent.Text = "( % )";
+            // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.label30.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label30.Location = new System.Drawing.Point(9, 191);
+            this.label30.Location = new System.Drawing.Point(9, 125);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(113, 21);
             this.label30.TabIndex = 106;
@@ -1306,10 +1342,10 @@
             this.panel17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
             this.panel17.Controls.Add(this.txtDiscountName);
-            this.panel17.Location = new System.Drawing.Point(13, 218);
+            this.panel17.Location = new System.Drawing.Point(13, 149);
             this.panel17.Name = "panel17";
             this.panel17.Padding = new System.Windows.Forms.Padding(7);
-            this.panel17.Size = new System.Drawing.Size(469, 46);
+            this.panel17.Size = new System.Drawing.Size(307, 46);
             this.panel17.TabIndex = 105;
             // 
             // txtDiscountName
@@ -1322,7 +1358,7 @@
             this.txtDiscountName.Location = new System.Drawing.Point(7, 7);
             this.txtDiscountName.Multiline = true;
             this.txtDiscountName.Name = "txtDiscountName";
-            this.txtDiscountName.Size = new System.Drawing.Size(455, 32);
+            this.txtDiscountName.Size = new System.Drawing.Size(293, 32);
             this.txtDiscountName.TabIndex = 1;
             // 
             // flp_discounts
@@ -1362,10 +1398,13 @@
             this.flp_discounts.Controls.Add(this.button51);
             this.flp_discounts.Controls.Add(this.button52);
             this.flp_discounts.Controls.Add(this.button53);
-            this.flp_discounts.Controls.Add(this.button54);
-            this.flp_discounts.Location = new System.Drawing.Point(13, 331);
+            this.flp_discounts.Controls.Add(this.button18);
+            this.flp_discounts.Controls.Add(this.button19);
+            this.flp_discounts.Controls.Add(this.button20);
+            this.flp_discounts.Controls.Add(this.button23);
+            this.flp_discounts.Location = new System.Drawing.Point(13, 299);
             this.flp_discounts.Name = "flp_discounts";
-            this.flp_discounts.Size = new System.Drawing.Size(469, 390);
+            this.flp_discounts.Size = new System.Drawing.Size(677, 336);
             this.flp_discounts.TabIndex = 102;
             // 
             // button17
@@ -1376,7 +1415,7 @@
             this.button17.ForeColor = System.Drawing.Color.Gainsboro;
             this.button17.Location = new System.Drawing.Point(3, 3);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(143, 40);
+            this.button17.Size = new System.Drawing.Size(125, 40);
             this.button17.TabIndex = 97;
             this.button17.Text = "ORDER DISCOUNT";
             this.button17.UseVisualStyleBackColor = false;
@@ -1387,9 +1426,9 @@
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button21.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button21.Location = new System.Drawing.Point(152, 3);
+            this.button21.Location = new System.Drawing.Point(134, 3);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(143, 40);
+            this.button21.Size = new System.Drawing.Size(125, 40);
             this.button21.TabIndex = 98;
             this.button21.Text = "ORDER DISCOUNT";
             this.button21.UseVisualStyleBackColor = false;
@@ -1400,9 +1439,9 @@
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button22.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button22.Location = new System.Drawing.Point(301, 3);
+            this.button22.Location = new System.Drawing.Point(265, 3);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(143, 40);
+            this.button22.Size = new System.Drawing.Size(125, 40);
             this.button22.TabIndex = 99;
             this.button22.Text = "ORDER DISCOUNT";
             this.button22.UseVisualStyleBackColor = false;
@@ -1413,9 +1452,9 @@
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button25.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button25.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button25.Location = new System.Drawing.Point(3, 49);
+            this.button25.Location = new System.Drawing.Point(396, 3);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(143, 40);
+            this.button25.Size = new System.Drawing.Size(125, 40);
             this.button25.TabIndex = 100;
             this.button25.Text = "ORDER DISCOUNT";
             this.button25.UseVisualStyleBackColor = false;
@@ -1426,9 +1465,9 @@
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button26.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button26.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button26.Location = new System.Drawing.Point(152, 49);
+            this.button26.Location = new System.Drawing.Point(527, 3);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(143, 40);
+            this.button26.Size = new System.Drawing.Size(125, 40);
             this.button26.TabIndex = 101;
             this.button26.Text = "ORDER DISCOUNT";
             this.button26.UseVisualStyleBackColor = false;
@@ -1439,9 +1478,9 @@
             this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button27.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button27.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button27.Location = new System.Drawing.Point(301, 49);
+            this.button27.Location = new System.Drawing.Point(3, 49);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(143, 40);
+            this.button27.Size = new System.Drawing.Size(125, 40);
             this.button27.TabIndex = 102;
             this.button27.Text = "ORDER DISCOUNT";
             this.button27.UseVisualStyleBackColor = false;
@@ -1452,9 +1491,9 @@
             this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button28.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button28.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button28.Location = new System.Drawing.Point(3, 95);
+            this.button28.Location = new System.Drawing.Point(134, 49);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(143, 40);
+            this.button28.Size = new System.Drawing.Size(125, 40);
             this.button28.TabIndex = 103;
             this.button28.Text = "ORDER DISCOUNT";
             this.button28.UseVisualStyleBackColor = false;
@@ -1465,9 +1504,9 @@
             this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button29.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button29.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button29.Location = new System.Drawing.Point(152, 95);
+            this.button29.Location = new System.Drawing.Point(265, 49);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(143, 40);
+            this.button29.Size = new System.Drawing.Size(125, 40);
             this.button29.TabIndex = 104;
             this.button29.Text = "ORDER DISCOUNT";
             this.button29.UseVisualStyleBackColor = false;
@@ -1478,9 +1517,9 @@
             this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button30.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button30.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button30.Location = new System.Drawing.Point(301, 95);
+            this.button30.Location = new System.Drawing.Point(396, 49);
             this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(143, 40);
+            this.button30.Size = new System.Drawing.Size(125, 40);
             this.button30.TabIndex = 105;
             this.button30.Text = "ORDER DISCOUNT";
             this.button30.UseVisualStyleBackColor = false;
@@ -1491,9 +1530,9 @@
             this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button31.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button31.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button31.Location = new System.Drawing.Point(3, 141);
+            this.button31.Location = new System.Drawing.Point(527, 49);
             this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(143, 40);
+            this.button31.Size = new System.Drawing.Size(125, 40);
             this.button31.TabIndex = 106;
             this.button31.Text = "ORDER DISCOUNT";
             this.button31.UseVisualStyleBackColor = false;
@@ -1504,9 +1543,9 @@
             this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button32.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button32.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button32.Location = new System.Drawing.Point(152, 141);
+            this.button32.Location = new System.Drawing.Point(3, 95);
             this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(143, 40);
+            this.button32.Size = new System.Drawing.Size(125, 40);
             this.button32.TabIndex = 107;
             this.button32.Text = "ORDER DISCOUNT";
             this.button32.UseVisualStyleBackColor = false;
@@ -1517,9 +1556,9 @@
             this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button33.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button33.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button33.Location = new System.Drawing.Point(301, 141);
+            this.button33.Location = new System.Drawing.Point(134, 95);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(143, 40);
+            this.button33.Size = new System.Drawing.Size(125, 40);
             this.button33.TabIndex = 108;
             this.button33.Text = "ORDER DISCOUNT";
             this.button33.UseVisualStyleBackColor = false;
@@ -1530,9 +1569,9 @@
             this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button34.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button34.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button34.Location = new System.Drawing.Point(3, 187);
+            this.button34.Location = new System.Drawing.Point(265, 95);
             this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(143, 40);
+            this.button34.Size = new System.Drawing.Size(125, 40);
             this.button34.TabIndex = 109;
             this.button34.Text = "ORDER DISCOUNT";
             this.button34.UseVisualStyleBackColor = false;
@@ -1543,9 +1582,9 @@
             this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button35.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button35.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button35.Location = new System.Drawing.Point(152, 187);
+            this.button35.Location = new System.Drawing.Point(396, 95);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(143, 40);
+            this.button35.Size = new System.Drawing.Size(125, 40);
             this.button35.TabIndex = 110;
             this.button35.Text = "ORDER DISCOUNT";
             this.button35.UseVisualStyleBackColor = false;
@@ -1556,9 +1595,9 @@
             this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button36.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button36.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button36.Location = new System.Drawing.Point(301, 187);
+            this.button36.Location = new System.Drawing.Point(527, 95);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(143, 40);
+            this.button36.Size = new System.Drawing.Size(125, 40);
             this.button36.TabIndex = 111;
             this.button36.Text = "ORDER DISCOUNT";
             this.button36.UseVisualStyleBackColor = false;
@@ -1569,9 +1608,9 @@
             this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button37.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button37.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button37.Location = new System.Drawing.Point(3, 233);
+            this.button37.Location = new System.Drawing.Point(3, 141);
             this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(143, 40);
+            this.button37.Size = new System.Drawing.Size(125, 40);
             this.button37.TabIndex = 112;
             this.button37.Text = "ORDER DISCOUNT";
             this.button37.UseVisualStyleBackColor = false;
@@ -1582,9 +1621,9 @@
             this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button38.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button38.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button38.Location = new System.Drawing.Point(152, 233);
+            this.button38.Location = new System.Drawing.Point(134, 141);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(143, 40);
+            this.button38.Size = new System.Drawing.Size(125, 40);
             this.button38.TabIndex = 113;
             this.button38.Text = "ORDER DISCOUNT";
             this.button38.UseVisualStyleBackColor = false;
@@ -1595,9 +1634,9 @@
             this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button39.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button39.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button39.Location = new System.Drawing.Point(301, 233);
+            this.button39.Location = new System.Drawing.Point(265, 141);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(143, 40);
+            this.button39.Size = new System.Drawing.Size(125, 40);
             this.button39.TabIndex = 114;
             this.button39.Text = "ORDER DISCOUNT";
             this.button39.UseVisualStyleBackColor = false;
@@ -1608,9 +1647,9 @@
             this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button40.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button40.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button40.Location = new System.Drawing.Point(3, 279);
+            this.button40.Location = new System.Drawing.Point(396, 141);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(143, 40);
+            this.button40.Size = new System.Drawing.Size(125, 40);
             this.button40.TabIndex = 115;
             this.button40.Text = "ORDER DISCOUNT";
             this.button40.UseVisualStyleBackColor = false;
@@ -1621,9 +1660,9 @@
             this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button41.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button41.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button41.Location = new System.Drawing.Point(152, 279);
+            this.button41.Location = new System.Drawing.Point(527, 141);
             this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(143, 40);
+            this.button41.Size = new System.Drawing.Size(125, 40);
             this.button41.TabIndex = 116;
             this.button41.Text = "ORDER DISCOUNT";
             this.button41.UseVisualStyleBackColor = false;
@@ -1634,9 +1673,9 @@
             this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button42.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button42.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button42.Location = new System.Drawing.Point(301, 279);
+            this.button42.Location = new System.Drawing.Point(3, 187);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(143, 40);
+            this.button42.Size = new System.Drawing.Size(125, 40);
             this.button42.TabIndex = 117;
             this.button42.Text = "ORDER DISCOUNT";
             this.button42.UseVisualStyleBackColor = false;
@@ -1647,9 +1686,9 @@
             this.button43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button43.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button43.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button43.Location = new System.Drawing.Point(3, 325);
+            this.button43.Location = new System.Drawing.Point(134, 187);
             this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(143, 40);
+            this.button43.Size = new System.Drawing.Size(125, 40);
             this.button43.TabIndex = 118;
             this.button43.Text = "ORDER DISCOUNT";
             this.button43.UseVisualStyleBackColor = false;
@@ -1660,9 +1699,9 @@
             this.button44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button44.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button44.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button44.Location = new System.Drawing.Point(152, 325);
+            this.button44.Location = new System.Drawing.Point(265, 187);
             this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(143, 40);
+            this.button44.Size = new System.Drawing.Size(125, 40);
             this.button44.TabIndex = 119;
             this.button44.Text = "ORDER DISCOUNT";
             this.button44.UseVisualStyleBackColor = false;
@@ -1673,9 +1712,9 @@
             this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button45.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button45.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button45.Location = new System.Drawing.Point(301, 325);
+            this.button45.Location = new System.Drawing.Point(396, 187);
             this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(143, 40);
+            this.button45.Size = new System.Drawing.Size(125, 40);
             this.button45.TabIndex = 120;
             this.button45.Text = "ORDER DISCOUNT";
             this.button45.UseVisualStyleBackColor = false;
@@ -1686,9 +1725,9 @@
             this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button46.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button46.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button46.Location = new System.Drawing.Point(3, 371);
+            this.button46.Location = new System.Drawing.Point(527, 187);
             this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(143, 40);
+            this.button46.Size = new System.Drawing.Size(125, 40);
             this.button46.TabIndex = 121;
             this.button46.Text = "ORDER DISCOUNT";
             this.button46.UseVisualStyleBackColor = false;
@@ -1699,9 +1738,9 @@
             this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button47.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button47.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button47.Location = new System.Drawing.Point(152, 371);
+            this.button47.Location = new System.Drawing.Point(3, 233);
             this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(143, 40);
+            this.button47.Size = new System.Drawing.Size(125, 40);
             this.button47.TabIndex = 122;
             this.button47.Text = "ORDER DISCOUNT";
             this.button47.UseVisualStyleBackColor = false;
@@ -1712,9 +1751,9 @@
             this.button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button48.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button48.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button48.Location = new System.Drawing.Point(301, 371);
+            this.button48.Location = new System.Drawing.Point(134, 233);
             this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(143, 40);
+            this.button48.Size = new System.Drawing.Size(125, 40);
             this.button48.TabIndex = 123;
             this.button48.Text = "ORDER DISCOUNT";
             this.button48.UseVisualStyleBackColor = false;
@@ -1725,9 +1764,9 @@
             this.button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button49.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button49.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button49.Location = new System.Drawing.Point(3, 417);
+            this.button49.Location = new System.Drawing.Point(265, 233);
             this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(143, 40);
+            this.button49.Size = new System.Drawing.Size(125, 40);
             this.button49.TabIndex = 124;
             this.button49.Text = "ORDER DISCOUNT";
             this.button49.UseVisualStyleBackColor = false;
@@ -1738,9 +1777,9 @@
             this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button50.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button50.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button50.Location = new System.Drawing.Point(152, 417);
+            this.button50.Location = new System.Drawing.Point(396, 233);
             this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(143, 40);
+            this.button50.Size = new System.Drawing.Size(125, 40);
             this.button50.TabIndex = 125;
             this.button50.Text = "ORDER DISCOUNT";
             this.button50.UseVisualStyleBackColor = false;
@@ -1751,9 +1790,9 @@
             this.button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button51.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button51.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button51.Location = new System.Drawing.Point(301, 417);
+            this.button51.Location = new System.Drawing.Point(527, 233);
             this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(143, 40);
+            this.button51.Size = new System.Drawing.Size(125, 40);
             this.button51.TabIndex = 126;
             this.button51.Text = "ORDER DISCOUNT";
             this.button51.UseVisualStyleBackColor = false;
@@ -1764,9 +1803,9 @@
             this.button52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button52.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button52.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button52.Location = new System.Drawing.Point(3, 463);
+            this.button52.Location = new System.Drawing.Point(3, 279);
             this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(143, 40);
+            this.button52.Size = new System.Drawing.Size(125, 40);
             this.button52.TabIndex = 127;
             this.button52.Text = "ORDER DISCOUNT";
             this.button52.UseVisualStyleBackColor = false;
@@ -1777,25 +1816,64 @@
             this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button53.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
             this.button53.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button53.Location = new System.Drawing.Point(152, 463);
+            this.button53.Location = new System.Drawing.Point(134, 279);
             this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(143, 40);
+            this.button53.Size = new System.Drawing.Size(125, 40);
             this.button53.TabIndex = 128;
             this.button53.Text = "ORDER DISCOUNT";
             this.button53.UseVisualStyleBackColor = false;
             // 
-            // button54
+            // button18
             // 
-            this.button54.BackColor = System.Drawing.Color.Teal;
-            this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button54.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button54.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button54.Location = new System.Drawing.Point(301, 463);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(143, 40);
-            this.button54.TabIndex = 129;
-            this.button54.Text = "ORDER DISCOUNT";
-            this.button54.UseVisualStyleBackColor = false;
+            this.button18.BackColor = System.Drawing.Color.Teal;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button18.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button18.Location = new System.Drawing.Point(265, 279);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(125, 40);
+            this.button18.TabIndex = 129;
+            this.button18.Text = "ORDER DISCOUNT";
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.Teal;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button19.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button19.Location = new System.Drawing.Point(396, 279);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(125, 40);
+            this.button19.TabIndex = 130;
+            this.button19.Text = "ORDER DISCOUNT";
+            this.button19.UseVisualStyleBackColor = false;
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.Teal;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button20.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button20.Location = new System.Drawing.Point(527, 279);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(125, 40);
+            this.button20.TabIndex = 131;
+            this.button20.Text = "ORDER DISCOUNT";
+            this.button20.UseVisualStyleBackColor = false;
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.Teal;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button23.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button23.Location = new System.Drawing.Point(3, 325);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(125, 40);
+            this.button23.TabIndex = 132;
+            this.button23.Text = "ORDER DISCOUNT";
+            this.button23.UseVisualStyleBackColor = false;
             // 
             // label28
             // 
@@ -1803,7 +1881,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(9, 304);
+            this.label28.Location = new System.Drawing.Point(9, 272);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(156, 21);
             this.label28.TabIndex = 101;
@@ -1831,165 +1909,9 @@
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(9, 67);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(155, 21);
+            this.label27.Size = new System.Drawing.Size(120, 21);
             this.label27.TabIndex = 93;
-            this.label27.Text = "THIS DISCOUNT WILL";
-            // 
-            // label26
-            // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(506, 67);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(121, 21);
-            this.label26.TabIndex = 88;
-            this.label26.Text = "QUICK ACTIONS";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
-            this.panel18.Controls.Add(this.btnDiscountJustThis);
-            this.panel18.Controls.Add(this.label29);
-            this.panel18.Controls.Add(this.btnDiscountFreeOrder);
-            this.panel18.Controls.Add(this.btnDiscountAllItems);
-            this.panel18.Controls.Add(this.btnDiscountOrder);
-            this.panel18.Controls.Add(this.label25);
-            this.panel18.Controls.Add(this.btnDiscountFreeDeserts);
-            this.panel18.Controls.Add(this.btnDiscountFreeDrinks);
-            this.panel18.Controls.Add(this.btnDiscountFreeModifiers);
-            this.panel18.Location = new System.Drawing.Point(510, 108);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(180, 528);
-            this.panel18.TabIndex = 87;
-            // 
-            // btnDiscountJustThis
-            // 
-            this.btnDiscountJustThis.AccessibleName = "64, 64, 0";
-            this.btnDiscountJustThis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(0)))));
-            this.btnDiscountJustThis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountJustThis.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountJustThis.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountJustThis.Location = new System.Drawing.Point(18, 364);
-            this.btnDiscountJustThis.Name = "btnDiscountJustThis";
-            this.btnDiscountJustThis.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountJustThis.TabIndex = 100;
-            this.btnDiscountJustThis.Text = "JUST THIS ITEM";
-            this.btnDiscountJustThis.UseVisualStyleBackColor = false;
-            this.btnDiscountJustThis.Click += new System.EventHandler(this.btnDiscountSpecialSelections_Click);
-            // 
-            // label29
-            // 
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.label29.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label29.Location = new System.Drawing.Point(15, 17);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(146, 27);
-            this.label29.TabIndex = 99;
-            this.label29.Text = "SHORTCUT DISCOUNTS";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnDiscountFreeOrder
-            // 
-            this.btnDiscountFreeOrder.AccessibleName = "";
-            this.btnDiscountFreeOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeOrder.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeOrder.Location = new System.Drawing.Point(18, 189);
-            this.btnDiscountFreeOrder.Name = "btnDiscountFreeOrder";
-            this.btnDiscountFreeOrder.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeOrder.TabIndex = 98;
-            this.btnDiscountFreeOrder.Text = "FREE ORDER";
-            this.btnDiscountFreeOrder.UseVisualStyleBackColor = false;
-            this.btnDiscountFreeOrder.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
-            // 
-            // btnDiscountAllItems
-            // 
-            this.btnDiscountAllItems.AccessibleName = "34, 34, 0";
-            this.btnDiscountAllItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnDiscountAllItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountAllItems.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountAllItems.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountAllItems.Location = new System.Drawing.Point(18, 410);
-            this.btnDiscountAllItems.Name = "btnDiscountAllItems";
-            this.btnDiscountAllItems.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountAllItems.TabIndex = 97;
-            this.btnDiscountAllItems.Text = "ON EVERY ITEM";
-            this.btnDiscountAllItems.UseVisualStyleBackColor = false;
-            this.btnDiscountAllItems.Click += new System.EventHandler(this.btnDiscountSpecialSelections_Click);
-            // 
-            // btnDiscountOrder
-            // 
-            this.btnDiscountOrder.AccessibleName = "34, 34, 0";
-            this.btnDiscountOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnDiscountOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountOrder.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountOrder.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountOrder.Location = new System.Drawing.Point(18, 456);
-            this.btnDiscountOrder.Name = "btnDiscountOrder";
-            this.btnDiscountOrder.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountOrder.TabIndex = 96;
-            this.btnDiscountOrder.Text = "ON THE ORDER";
-            this.btnDiscountOrder.UseVisualStyleBackColor = false;
-            this.btnDiscountOrder.Click += new System.EventHandler(this.btnDiscountSpecialSelections_Click);
-            // 
-            // label25
-            // 
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label25.Location = new System.Drawing.Point(15, 323);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(146, 27);
-            this.label25.TabIndex = 95;
-            this.label25.Text = "SPECIAL SELECTIONS";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnDiscountFreeDeserts
-            // 
-            this.btnDiscountFreeDeserts.AccessibleName = "";
-            this.btnDiscountFreeDeserts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeDeserts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeDeserts.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeDeserts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeDeserts.Location = new System.Drawing.Point(18, 143);
-            this.btnDiscountFreeDeserts.Name = "btnDiscountFreeDeserts";
-            this.btnDiscountFreeDeserts.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeDeserts.TabIndex = 78;
-            this.btnDiscountFreeDeserts.Text = "FREE DESERTS";
-            this.btnDiscountFreeDeserts.UseVisualStyleBackColor = false;
-            this.btnDiscountFreeDeserts.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
-            // 
-            // btnDiscountFreeDrinks
-            // 
-            this.btnDiscountFreeDrinks.AccessibleName = "";
-            this.btnDiscountFreeDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeDrinks.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeDrinks.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeDrinks.Location = new System.Drawing.Point(18, 97);
-            this.btnDiscountFreeDrinks.Name = "btnDiscountFreeDrinks";
-            this.btnDiscountFreeDrinks.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeDrinks.TabIndex = 77;
-            this.btnDiscountFreeDrinks.Text = "FREE DRINKS";
-            this.btnDiscountFreeDrinks.UseVisualStyleBackColor = false;
-            this.btnDiscountFreeDrinks.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
-            // 
-            // btnDiscountFreeModifiers
-            // 
-            this.btnDiscountFreeModifiers.AccessibleName = "";
-            this.btnDiscountFreeModifiers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountFreeModifiers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountFreeModifiers.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountFreeModifiers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountFreeModifiers.Location = new System.Drawing.Point(18, 51);
-            this.btnDiscountFreeModifiers.Name = "btnDiscountFreeModifiers";
-            this.btnDiscountFreeModifiers.Size = new System.Drawing.Size(143, 40);
-            this.btnDiscountFreeModifiers.TabIndex = 76;
-            this.btnDiscountFreeModifiers.Text = "FREE MODIFIERS";
-            this.btnDiscountFreeModifiers.UseVisualStyleBackColor = false;
-            this.btnDiscountFreeModifiers.Click += new System.EventHandler(this.btnDiscountQuickActions_Click);
+            this.label27.Text = "ADD DISCOUNT";
             // 
             // panel12
             // 
@@ -2001,59 +1923,19 @@
             this.panel12.Size = new System.Drawing.Size(706, 48);
             this.panel12.TabIndex = 69;
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.label31);
-            this.flowLayoutPanel2.Controls.Add(this.panel19);
-            this.flowLayoutPanel2.Controls.Add(this.lblDiscountIsPercent);
-            this.flowLayoutPanel2.Controls.Add(this.lblDiscountSelection);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 107);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 80);
-            this.flowLayoutPanel2.TabIndex = 107;
-            this.flowLayoutPanel2.Tag = "";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.label31.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label31.Location = new System.Drawing.Point(0, 15);
-            this.label31.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.label31.MaximumSize = new System.Drawing.Size(0, 21);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(152, 20);
-            this.label31.TabIndex = 105;
-            this.label31.Text = "Apply FREE MODIFIERS";
-            // 
-            // lblDiscountIsPercent
-            // 
-            this.lblDiscountIsPercent.AutoSize = true;
-            this.lblDiscountIsPercent.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.lblDiscountIsPercent.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDiscountIsPercent.Location = new System.Drawing.Point(259, 15);
-            this.lblDiscountIsPercent.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.lblDiscountIsPercent.MaximumSize = new System.Drawing.Size(0, 21);
-            this.lblDiscountIsPercent.Name = "lblDiscountIsPercent";
-            this.lblDiscountIsPercent.Size = new System.Drawing.Size(60, 20);
-            this.lblDiscountIsPercent.TabIndex = 107;
-            this.lblDiscountIsPercent.Text = "( % ) on:";
-            // 
-            // lblDiscountSelection
-            // 
-            this.lblDiscountSelection.AutoSize = true;
-            this.lblDiscountSelection.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDiscountSelection.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblDiscountSelection.Location = new System.Drawing.Point(319, 15);
-            this.lblDiscountSelection.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.lblDiscountSelection.Name = "lblDiscountSelection";
-            this.lblDiscountSelection.Size = new System.Drawing.Size(101, 20);
-            this.lblDiscountSelection.TabIndex = 106;
-            this.lblDiscountSelection.Text = "just this item";
-            // 
             // Modifier
             // 
             this.Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.Modifier.Controls.Add(this.label25);
+            this.Modifier.Controls.Add(this.panel10);
+            this.Modifier.Controls.Add(this.panel20);
+            this.Modifier.Controls.Add(this.label29);
+            this.Modifier.Controls.Add(this.label31);
+            this.Modifier.Controls.Add(this.panel21);
+            this.Modifier.Controls.Add(this.flowLayoutPanel2);
+            this.Modifier.Controls.Add(this.label32);
+            this.Modifier.Controls.Add(this.label33);
+            this.Modifier.Controls.Add(this.button88);
             this.Modifier.Controls.Add(this.panel13);
             this.Modifier.Location = new System.Drawing.Point(4, 22);
             this.Modifier.Margin = new System.Windows.Forms.Padding(0);
@@ -2345,6 +2227,996 @@
             this.CartSystem.ItemEdit += new System.EventHandler(this.CartSystem_ItemEdit);
             this.CartSystem.ItemDiscount += new System.EventHandler(this.CartSystem_ItemDiscount);
             // 
+            // button88
+            // 
+            this.button88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button88.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button88.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.button88.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button88.Location = new System.Drawing.Point(580, 662);
+            this.button88.Name = "button88";
+            this.button88.Size = new System.Drawing.Size(106, 39);
+            this.button88.TabIndex = 111;
+            this.button88.Text = "APPLY";
+            this.button88.UseVisualStyleBackColor = false;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(475, 67);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(157, 21);
+            this.label26.TabIndex = 111;
+            this.label26.Text = "POPULAR MODIFIERS";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
+            this.panel18.Controls.Add(this.button1);
+            this.panel18.Controls.Add(this.button98);
+            this.panel18.Controls.Add(this.button99);
+            this.panel18.Controls.Add(this.button100);
+            this.panel18.Controls.Add(this.button101);
+            this.panel18.Controls.Add(this.button102);
+            this.panel18.Controls.Add(this.button103);
+            this.panel18.Controls.Add(this.button104);
+            this.panel18.Controls.Add(this.button105);
+            this.panel18.Location = new System.Drawing.Point(479, 104);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(211, 141);
+            this.panel18.TabIndex = 110;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleName = "";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Location = new System.Drawing.Point(143, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 40);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "FREE MODIFIERS";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button98
+            // 
+            this.button98.AccessibleName = "";
+            this.button98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button98.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button98.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button98.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button98.Location = new System.Drawing.Point(74, 95);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(64, 40);
+            this.button98.TabIndex = 83;
+            this.button98.Text = "FREE MODIFIERS";
+            this.button98.UseVisualStyleBackColor = false;
+            // 
+            // button99
+            // 
+            this.button99.AccessibleName = "";
+            this.button99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button99.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button99.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button99.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button99.Location = new System.Drawing.Point(4, 95);
+            this.button99.Name = "button99";
+            this.button99.Size = new System.Drawing.Size(64, 40);
+            this.button99.TabIndex = 82;
+            this.button99.Text = "FREE MODIFIERS";
+            this.button99.UseVisualStyleBackColor = false;
+            // 
+            // button100
+            // 
+            this.button100.AccessibleName = "";
+            this.button100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button100.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button100.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button100.Location = new System.Drawing.Point(143, 49);
+            this.button100.Name = "button100";
+            this.button100.Size = new System.Drawing.Size(64, 40);
+            this.button100.TabIndex = 81;
+            this.button100.Text = "FREE MODIFIERS";
+            this.button100.UseVisualStyleBackColor = false;
+            // 
+            // button101
+            // 
+            this.button101.AccessibleName = "";
+            this.button101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button101.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button101.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button101.Location = new System.Drawing.Point(74, 48);
+            this.button101.Name = "button101";
+            this.button101.Size = new System.Drawing.Size(64, 40);
+            this.button101.TabIndex = 80;
+            this.button101.Text = "FREE MODIFIERS";
+            this.button101.UseVisualStyleBackColor = false;
+            // 
+            // button102
+            // 
+            this.button102.AccessibleName = "";
+            this.button102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button102.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button102.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button102.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button102.Location = new System.Drawing.Point(4, 49);
+            this.button102.Name = "button102";
+            this.button102.Size = new System.Drawing.Size(64, 40);
+            this.button102.TabIndex = 79;
+            this.button102.Text = "FREE MODIFIERS";
+            this.button102.UseVisualStyleBackColor = false;
+            // 
+            // button103
+            // 
+            this.button103.AccessibleName = "";
+            this.button103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button103.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button103.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button103.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button103.Location = new System.Drawing.Point(143, 3);
+            this.button103.Name = "button103";
+            this.button103.Size = new System.Drawing.Size(64, 40);
+            this.button103.TabIndex = 78;
+            this.button103.Text = "FREE MODIFIERS";
+            this.button103.UseVisualStyleBackColor = false;
+            // 
+            // button104
+            // 
+            this.button104.AccessibleName = "";
+            this.button104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button104.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button104.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button104.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button104.Location = new System.Drawing.Point(74, 3);
+            this.button104.Name = "button104";
+            this.button104.Size = new System.Drawing.Size(64, 40);
+            this.button104.TabIndex = 77;
+            this.button104.Text = "FREE MODIFIERS";
+            this.button104.UseVisualStyleBackColor = false;
+            // 
+            // button105
+            // 
+            this.button105.AccessibleName = "";
+            this.button105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button105.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button105.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button105.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button105.Location = new System.Drawing.Point(4, 3);
+            this.button105.Name = "button105";
+            this.button105.Size = new System.Drawing.Size(64, 40);
+            this.button105.TabIndex = 76;
+            this.button105.Text = "FREE MODIFIERS";
+            this.button105.UseVisualStyleBackColor = false;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(475, 67);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(163, 21);
+            this.label25.TabIndex = 120;
+            this.label25.Text = "POPULAR DISCOUNTS";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
+            this.panel10.Controls.Add(this.button2);
+            this.panel10.Controls.Add(this.button24);
+            this.panel10.Controls.Add(this.button54);
+            this.panel10.Controls.Add(this.button55);
+            this.panel10.Controls.Add(this.button56);
+            this.panel10.Controls.Add(this.button57);
+            this.panel10.Controls.Add(this.button58);
+            this.panel10.Controls.Add(this.button59);
+            this.panel10.Controls.Add(this.button60);
+            this.panel10.Location = new System.Drawing.Point(479, 104);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(211, 141);
+            this.panel10.TabIndex = 119;
+            // 
+            // button60
+            // 
+            this.button60.AccessibleName = "";
+            this.button60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button60.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button60.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button60.Location = new System.Drawing.Point(4, 3);
+            this.button60.Name = "button60";
+            this.button60.Size = new System.Drawing.Size(64, 40);
+            this.button60.TabIndex = 76;
+            this.button60.Text = "HALF PRICE";
+            this.button60.UseVisualStyleBackColor = false;
+            // 
+            // panel20
+            // 
+            this.panel20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel20.Controls.Add(this.textBox1);
+            this.panel20.Location = new System.Drawing.Point(326, 149);
+            this.panel20.Name = "panel20";
+            this.panel20.Padding = new System.Windows.Forms.Padding(7);
+            this.panel20.Size = new System.Drawing.Size(101, 46);
+            this.panel20.TabIndex = 113;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.25F);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox1.Location = new System.Drawing.Point(7, 7);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(87, 32);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "2.00";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI Light", 15F);
+            this.label29.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label29.Location = new System.Drawing.Point(430, 156);
+            this.label29.Margin = new System.Windows.Forms.Padding(0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(50, 28);
+            this.label29.TabIndex = 118;
+            this.label29.Text = "( % )";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label31.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label31.Location = new System.Drawing.Point(9, 125);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(108, 21);
+            this.label31.TabIndex = 117;
+            this.label31.Text = "Modifier Name";
+            // 
+            // panel21
+            // 
+            this.panel21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel21.Controls.Add(this.textBox2);
+            this.panel21.Location = new System.Drawing.Point(13, 149);
+            this.panel21.Name = "panel21";
+            this.panel21.Padding = new System.Windows.Forms.Padding(7);
+            this.panel21.Size = new System.Drawing.Size(307, 46);
+            this.panel21.TabIndex = 116;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 15.25F);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox2.Location = new System.Drawing.Point(7, 7);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(293, 32);
+            this.textBox2.TabIndex = 1;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.flowLayoutPanel2.Controls.Add(this.button61);
+            this.flowLayoutPanel2.Controls.Add(this.button62);
+            this.flowLayoutPanel2.Controls.Add(this.button63);
+            this.flowLayoutPanel2.Controls.Add(this.button64);
+            this.flowLayoutPanel2.Controls.Add(this.button65);
+            this.flowLayoutPanel2.Controls.Add(this.button66);
+            this.flowLayoutPanel2.Controls.Add(this.button67);
+            this.flowLayoutPanel2.Controls.Add(this.button68);
+            this.flowLayoutPanel2.Controls.Add(this.button69);
+            this.flowLayoutPanel2.Controls.Add(this.button70);
+            this.flowLayoutPanel2.Controls.Add(this.button71);
+            this.flowLayoutPanel2.Controls.Add(this.button72);
+            this.flowLayoutPanel2.Controls.Add(this.button73);
+            this.flowLayoutPanel2.Controls.Add(this.button74);
+            this.flowLayoutPanel2.Controls.Add(this.button75);
+            this.flowLayoutPanel2.Controls.Add(this.button76);
+            this.flowLayoutPanel2.Controls.Add(this.button77);
+            this.flowLayoutPanel2.Controls.Add(this.button78);
+            this.flowLayoutPanel2.Controls.Add(this.button79);
+            this.flowLayoutPanel2.Controls.Add(this.button80);
+            this.flowLayoutPanel2.Controls.Add(this.button81);
+            this.flowLayoutPanel2.Controls.Add(this.button82);
+            this.flowLayoutPanel2.Controls.Add(this.button83);
+            this.flowLayoutPanel2.Controls.Add(this.button84);
+            this.flowLayoutPanel2.Controls.Add(this.button85);
+            this.flowLayoutPanel2.Controls.Add(this.button86);
+            this.flowLayoutPanel2.Controls.Add(this.button87);
+            this.flowLayoutPanel2.Controls.Add(this.button89);
+            this.flowLayoutPanel2.Controls.Add(this.button90);
+            this.flowLayoutPanel2.Controls.Add(this.button91);
+            this.flowLayoutPanel2.Controls.Add(this.button92);
+            this.flowLayoutPanel2.Controls.Add(this.button93);
+            this.flowLayoutPanel2.Controls.Add(this.button94);
+            this.flowLayoutPanel2.Controls.Add(this.button95);
+            this.flowLayoutPanel2.Controls.Add(this.button96);
+            this.flowLayoutPanel2.Controls.Add(this.button97);
+            this.flowLayoutPanel2.Controls.Add(this.button106);
+            this.flowLayoutPanel2.Controls.Add(this.button107);
+            this.flowLayoutPanel2.Controls.Add(this.button108);
+            this.flowLayoutPanel2.Controls.Add(this.button109);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 299);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(677, 336);
+            this.flowLayoutPanel2.TabIndex = 115;
+            // 
+            // button61
+            // 
+            this.button61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button61.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button61.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button61.Location = new System.Drawing.Point(3, 3);
+            this.button61.Name = "button61";
+            this.button61.Size = new System.Drawing.Size(125, 40);
+            this.button61.TabIndex = 97;
+            this.button61.Text = "ORDER DISCOUNT";
+            this.button61.UseVisualStyleBackColor = false;
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(9, 272);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(150, 21);
+            this.label32.TabIndex = 114;
+            this.label32.Text = "BROWSE MODIFIERS";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(9, 67);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(114, 21);
+            this.label33.TabIndex = 112;
+            this.label33.Text = "ADD MODIFIER";
+            // 
+            // button57
+            // 
+            this.button57.AccessibleName = "";
+            this.button57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button57.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button57.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button57.Location = new System.Drawing.Point(4, 49);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(64, 40);
+            this.button57.TabIndex = 79;
+            this.button57.Text = "HALF PRICE";
+            this.button57.UseVisualStyleBackColor = false;
+            // 
+            // button54
+            // 
+            this.button54.AccessibleName = "";
+            this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button54.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button54.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button54.Location = new System.Drawing.Point(4, 95);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(64, 40);
+            this.button54.TabIndex = 82;
+            this.button54.Text = "HALF PRICE";
+            this.button54.UseVisualStyleBackColor = false;
+            // 
+            // button58
+            // 
+            this.button58.AccessibleName = "";
+            this.button58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button58.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button58.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button58.Location = new System.Drawing.Point(143, 3);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(64, 40);
+            this.button58.TabIndex = 78;
+            this.button58.Text = "HALF PRICE";
+            this.button58.UseVisualStyleBackColor = false;
+            // 
+            // button56
+            // 
+            this.button56.AccessibleName = "";
+            this.button56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button56.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button56.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button56.Location = new System.Drawing.Point(74, 48);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(64, 40);
+            this.button56.TabIndex = 80;
+            this.button56.Text = "HALF PRICE";
+            this.button56.UseVisualStyleBackColor = false;
+            // 
+            // button55
+            // 
+            this.button55.AccessibleName = "";
+            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button55.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button55.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button55.Location = new System.Drawing.Point(143, 49);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(64, 40);
+            this.button55.TabIndex = 81;
+            this.button55.Text = "HALF PRICE";
+            this.button55.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            this.button24.AccessibleName = "";
+            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button24.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button24.Location = new System.Drawing.Point(74, 95);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(64, 40);
+            this.button24.TabIndex = 83;
+            this.button24.Text = "HALF PRICE";
+            this.button24.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.AccessibleName = "";
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button2.Location = new System.Drawing.Point(143, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 40);
+            this.button2.TabIndex = 84;
+            this.button2.Text = "HALF PRICE";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button59
+            // 
+            this.button59.AccessibleName = "";
+            this.button59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button59.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button59.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button59.Location = new System.Drawing.Point(74, 3);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(64, 40);
+            this.button59.TabIndex = 77;
+            this.button59.Text = "HALF PRICE";
+            this.button59.UseVisualStyleBackColor = false;
+            // 
+            // button62
+            // 
+            this.button62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button62.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button62.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button62.Location = new System.Drawing.Point(134, 3);
+            this.button62.Name = "button62";
+            this.button62.Size = new System.Drawing.Size(125, 40);
+            this.button62.TabIndex = 98;
+            this.button62.Text = "ORDER DISCOUNT";
+            this.button62.UseVisualStyleBackColor = false;
+            // 
+            // button63
+            // 
+            this.button63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button63.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button63.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button63.Location = new System.Drawing.Point(265, 3);
+            this.button63.Name = "button63";
+            this.button63.Size = new System.Drawing.Size(125, 40);
+            this.button63.TabIndex = 99;
+            this.button63.Text = "ORDER DISCOUNT";
+            this.button63.UseVisualStyleBackColor = false;
+            // 
+            // button64
+            // 
+            this.button64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button64.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button64.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button64.Location = new System.Drawing.Point(396, 3);
+            this.button64.Name = "button64";
+            this.button64.Size = new System.Drawing.Size(125, 40);
+            this.button64.TabIndex = 100;
+            this.button64.Text = "ORDER DISCOUNT";
+            this.button64.UseVisualStyleBackColor = false;
+            // 
+            // button65
+            // 
+            this.button65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button65.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button65.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button65.Location = new System.Drawing.Point(527, 3);
+            this.button65.Name = "button65";
+            this.button65.Size = new System.Drawing.Size(125, 40);
+            this.button65.TabIndex = 101;
+            this.button65.Text = "ORDER DISCOUNT";
+            this.button65.UseVisualStyleBackColor = false;
+            // 
+            // button66
+            // 
+            this.button66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button66.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button66.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button66.Location = new System.Drawing.Point(3, 49);
+            this.button66.Name = "button66";
+            this.button66.Size = new System.Drawing.Size(125, 40);
+            this.button66.TabIndex = 102;
+            this.button66.Text = "ORDER DISCOUNT";
+            this.button66.UseVisualStyleBackColor = false;
+            // 
+            // button67
+            // 
+            this.button67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button67.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button67.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button67.Location = new System.Drawing.Point(134, 49);
+            this.button67.Name = "button67";
+            this.button67.Size = new System.Drawing.Size(125, 40);
+            this.button67.TabIndex = 103;
+            this.button67.Text = "ORDER DISCOUNT";
+            this.button67.UseVisualStyleBackColor = false;
+            // 
+            // button68
+            // 
+            this.button68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button68.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button68.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button68.Location = new System.Drawing.Point(265, 49);
+            this.button68.Name = "button68";
+            this.button68.Size = new System.Drawing.Size(125, 40);
+            this.button68.TabIndex = 104;
+            this.button68.Text = "ORDER DISCOUNT";
+            this.button68.UseVisualStyleBackColor = false;
+            // 
+            // button69
+            // 
+            this.button69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button69.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button69.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button69.Location = new System.Drawing.Point(396, 49);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(125, 40);
+            this.button69.TabIndex = 105;
+            this.button69.Text = "ORDER DISCOUNT";
+            this.button69.UseVisualStyleBackColor = false;
+            // 
+            // button70
+            // 
+            this.button70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button70.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button70.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button70.Location = new System.Drawing.Point(527, 49);
+            this.button70.Name = "button70";
+            this.button70.Size = new System.Drawing.Size(125, 40);
+            this.button70.TabIndex = 106;
+            this.button70.Text = "ORDER DISCOUNT";
+            this.button70.UseVisualStyleBackColor = false;
+            // 
+            // button71
+            // 
+            this.button71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button71.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button71.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button71.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button71.Location = new System.Drawing.Point(3, 95);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(125, 40);
+            this.button71.TabIndex = 107;
+            this.button71.Text = "ORDER DISCOUNT";
+            this.button71.UseVisualStyleBackColor = false;
+            // 
+            // button72
+            // 
+            this.button72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button72.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button72.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button72.Location = new System.Drawing.Point(134, 95);
+            this.button72.Name = "button72";
+            this.button72.Size = new System.Drawing.Size(125, 40);
+            this.button72.TabIndex = 108;
+            this.button72.Text = "ORDER DISCOUNT";
+            this.button72.UseVisualStyleBackColor = false;
+            // 
+            // button73
+            // 
+            this.button73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button73.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button73.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button73.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button73.Location = new System.Drawing.Point(265, 95);
+            this.button73.Name = "button73";
+            this.button73.Size = new System.Drawing.Size(125, 40);
+            this.button73.TabIndex = 109;
+            this.button73.Text = "ORDER DISCOUNT";
+            this.button73.UseVisualStyleBackColor = false;
+            // 
+            // button74
+            // 
+            this.button74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button74.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button74.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button74.Location = new System.Drawing.Point(396, 95);
+            this.button74.Name = "button74";
+            this.button74.Size = new System.Drawing.Size(125, 40);
+            this.button74.TabIndex = 110;
+            this.button74.Text = "ORDER DISCOUNT";
+            this.button74.UseVisualStyleBackColor = false;
+            // 
+            // button75
+            // 
+            this.button75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button75.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button75.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button75.Location = new System.Drawing.Point(527, 95);
+            this.button75.Name = "button75";
+            this.button75.Size = new System.Drawing.Size(125, 40);
+            this.button75.TabIndex = 111;
+            this.button75.Text = "ORDER DISCOUNT";
+            this.button75.UseVisualStyleBackColor = false;
+            // 
+            // button76
+            // 
+            this.button76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button76.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button76.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button76.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button76.Location = new System.Drawing.Point(3, 141);
+            this.button76.Name = "button76";
+            this.button76.Size = new System.Drawing.Size(125, 40);
+            this.button76.TabIndex = 112;
+            this.button76.Text = "ORDER DISCOUNT";
+            this.button76.UseVisualStyleBackColor = false;
+            // 
+            // button77
+            // 
+            this.button77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button77.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button77.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button77.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button77.Location = new System.Drawing.Point(134, 141);
+            this.button77.Name = "button77";
+            this.button77.Size = new System.Drawing.Size(125, 40);
+            this.button77.TabIndex = 113;
+            this.button77.Text = "ORDER DISCOUNT";
+            this.button77.UseVisualStyleBackColor = false;
+            // 
+            // button78
+            // 
+            this.button78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button78.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button78.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button78.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button78.Location = new System.Drawing.Point(265, 141);
+            this.button78.Name = "button78";
+            this.button78.Size = new System.Drawing.Size(125, 40);
+            this.button78.TabIndex = 114;
+            this.button78.Text = "ORDER DISCOUNT";
+            this.button78.UseVisualStyleBackColor = false;
+            // 
+            // button79
+            // 
+            this.button79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button79.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button79.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button79.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button79.Location = new System.Drawing.Point(396, 141);
+            this.button79.Name = "button79";
+            this.button79.Size = new System.Drawing.Size(125, 40);
+            this.button79.TabIndex = 115;
+            this.button79.Text = "ORDER DISCOUNT";
+            this.button79.UseVisualStyleBackColor = false;
+            // 
+            // button80
+            // 
+            this.button80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button80.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button80.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button80.Location = new System.Drawing.Point(527, 141);
+            this.button80.Name = "button80";
+            this.button80.Size = new System.Drawing.Size(125, 40);
+            this.button80.TabIndex = 116;
+            this.button80.Text = "ORDER DISCOUNT";
+            this.button80.UseVisualStyleBackColor = false;
+            // 
+            // button81
+            // 
+            this.button81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button81.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button81.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button81.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button81.Location = new System.Drawing.Point(3, 187);
+            this.button81.Name = "button81";
+            this.button81.Size = new System.Drawing.Size(125, 40);
+            this.button81.TabIndex = 117;
+            this.button81.Text = "ORDER DISCOUNT";
+            this.button81.UseVisualStyleBackColor = false;
+            // 
+            // button82
+            // 
+            this.button82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button82.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button82.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button82.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button82.Location = new System.Drawing.Point(134, 187);
+            this.button82.Name = "button82";
+            this.button82.Size = new System.Drawing.Size(125, 40);
+            this.button82.TabIndex = 118;
+            this.button82.Text = "ORDER DISCOUNT";
+            this.button82.UseVisualStyleBackColor = false;
+            // 
+            // button83
+            // 
+            this.button83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button83.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button83.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button83.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button83.Location = new System.Drawing.Point(265, 187);
+            this.button83.Name = "button83";
+            this.button83.Size = new System.Drawing.Size(125, 40);
+            this.button83.TabIndex = 119;
+            this.button83.Text = "ORDER DISCOUNT";
+            this.button83.UseVisualStyleBackColor = false;
+            // 
+            // button84
+            // 
+            this.button84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button84.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button84.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button84.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button84.Location = new System.Drawing.Point(396, 187);
+            this.button84.Name = "button84";
+            this.button84.Size = new System.Drawing.Size(125, 40);
+            this.button84.TabIndex = 120;
+            this.button84.Text = "ORDER DISCOUNT";
+            this.button84.UseVisualStyleBackColor = false;
+            // 
+            // button85
+            // 
+            this.button85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button85.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button85.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button85.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button85.Location = new System.Drawing.Point(527, 187);
+            this.button85.Name = "button85";
+            this.button85.Size = new System.Drawing.Size(125, 40);
+            this.button85.TabIndex = 121;
+            this.button85.Text = "ORDER DISCOUNT";
+            this.button85.UseVisualStyleBackColor = false;
+            // 
+            // button86
+            // 
+            this.button86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button86.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button86.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button86.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button86.Location = new System.Drawing.Point(3, 233);
+            this.button86.Name = "button86";
+            this.button86.Size = new System.Drawing.Size(125, 40);
+            this.button86.TabIndex = 122;
+            this.button86.Text = "ORDER DISCOUNT";
+            this.button86.UseVisualStyleBackColor = false;
+            // 
+            // button87
+            // 
+            this.button87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button87.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button87.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button87.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button87.Location = new System.Drawing.Point(134, 233);
+            this.button87.Name = "button87";
+            this.button87.Size = new System.Drawing.Size(125, 40);
+            this.button87.TabIndex = 123;
+            this.button87.Text = "ORDER DISCOUNT";
+            this.button87.UseVisualStyleBackColor = false;
+            // 
+            // button89
+            // 
+            this.button89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button89.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button89.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button89.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button89.Location = new System.Drawing.Point(265, 233);
+            this.button89.Name = "button89";
+            this.button89.Size = new System.Drawing.Size(125, 40);
+            this.button89.TabIndex = 124;
+            this.button89.Text = "ORDER DISCOUNT";
+            this.button89.UseVisualStyleBackColor = false;
+            // 
+            // button90
+            // 
+            this.button90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button90.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button90.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button90.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button90.Location = new System.Drawing.Point(396, 233);
+            this.button90.Name = "button90";
+            this.button90.Size = new System.Drawing.Size(125, 40);
+            this.button90.TabIndex = 125;
+            this.button90.Text = "ORDER DISCOUNT";
+            this.button90.UseVisualStyleBackColor = false;
+            // 
+            // button91
+            // 
+            this.button91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button91.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button91.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button91.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button91.Location = new System.Drawing.Point(527, 233);
+            this.button91.Name = "button91";
+            this.button91.Size = new System.Drawing.Size(125, 40);
+            this.button91.TabIndex = 126;
+            this.button91.Text = "ORDER DISCOUNT";
+            this.button91.UseVisualStyleBackColor = false;
+            // 
+            // button92
+            // 
+            this.button92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button92.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button92.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button92.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button92.Location = new System.Drawing.Point(3, 279);
+            this.button92.Name = "button92";
+            this.button92.Size = new System.Drawing.Size(125, 40);
+            this.button92.TabIndex = 127;
+            this.button92.Text = "ORDER DISCOUNT";
+            this.button92.UseVisualStyleBackColor = false;
+            // 
+            // button93
+            // 
+            this.button93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button93.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button93.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button93.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button93.Location = new System.Drawing.Point(134, 279);
+            this.button93.Name = "button93";
+            this.button93.Size = new System.Drawing.Size(125, 40);
+            this.button93.TabIndex = 128;
+            this.button93.Text = "ORDER DISCOUNT";
+            this.button93.UseVisualStyleBackColor = false;
+            // 
+            // button94
+            // 
+            this.button94.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button94.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button94.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button94.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button94.Location = new System.Drawing.Point(265, 279);
+            this.button94.Name = "button94";
+            this.button94.Size = new System.Drawing.Size(125, 40);
+            this.button94.TabIndex = 129;
+            this.button94.Text = "ORDER DISCOUNT";
+            this.button94.UseVisualStyleBackColor = false;
+            // 
+            // button95
+            // 
+            this.button95.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button95.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button95.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button95.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button95.Location = new System.Drawing.Point(396, 279);
+            this.button95.Name = "button95";
+            this.button95.Size = new System.Drawing.Size(125, 40);
+            this.button95.TabIndex = 130;
+            this.button95.Text = "ORDER DISCOUNT";
+            this.button95.UseVisualStyleBackColor = false;
+            // 
+            // button96
+            // 
+            this.button96.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button96.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button96.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button96.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button96.Location = new System.Drawing.Point(527, 279);
+            this.button96.Name = "button96";
+            this.button96.Size = new System.Drawing.Size(125, 40);
+            this.button96.TabIndex = 131;
+            this.button96.Text = "ORDER DISCOUNT";
+            this.button96.UseVisualStyleBackColor = false;
+            // 
+            // button97
+            // 
+            this.button97.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button97.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button97.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button97.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button97.Location = new System.Drawing.Point(3, 325);
+            this.button97.Name = "button97";
+            this.button97.Size = new System.Drawing.Size(125, 40);
+            this.button97.TabIndex = 132;
+            this.button97.Text = "ORDER DISCOUNT";
+            this.button97.UseVisualStyleBackColor = false;
+            // 
+            // button106
+            // 
+            this.button106.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button106.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button106.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button106.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button106.Location = new System.Drawing.Point(134, 325);
+            this.button106.Name = "button106";
+            this.button106.Size = new System.Drawing.Size(125, 40);
+            this.button106.TabIndex = 133;
+            this.button106.Text = "ORDER DISCOUNT";
+            this.button106.UseVisualStyleBackColor = false;
+            // 
+            // button107
+            // 
+            this.button107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button107.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button107.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button107.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button107.Location = new System.Drawing.Point(265, 325);
+            this.button107.Name = "button107";
+            this.button107.Size = new System.Drawing.Size(125, 40);
+            this.button107.TabIndex = 134;
+            this.button107.Text = "ORDER DISCOUNT";
+            this.button107.UseVisualStyleBackColor = false;
+            // 
+            // button108
+            // 
+            this.button108.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button108.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button108.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button108.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button108.Location = new System.Drawing.Point(396, 325);
+            this.button108.Name = "button108";
+            this.button108.Size = new System.Drawing.Size(125, 40);
+            this.button108.TabIndex = 135;
+            this.button108.Text = "ORDER DISCOUNT";
+            this.button108.UseVisualStyleBackColor = false;
+            // 
+            // button109
+            // 
+            this.button109.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button109.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button109.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button109.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button109.Location = new System.Drawing.Point(527, 325);
+            this.button109.Name = "button109";
+            this.button109.Size = new System.Drawing.Size(125, 40);
+            this.button109.TabIndex = 136;
+            this.button109.Text = "ORDER DISCOUNT";
+            this.button109.UseVisualStyleBackColor = false;
+            // 
             // frmNewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2379,7 +3251,6 @@
             this.panel5.PerformLayout();
             this.flp_products.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.Lookup.ResumeLayout(false);
             this.Edit.ResumeLayout(false);
             this.Edit.PerformLayout();
             this.panel16.ResumeLayout(false);
@@ -2394,10 +3265,8 @@
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.flp_discounts.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.Modifier.ResumeLayout(false);
+            this.Modifier.PerformLayout();
             this.ConvertOrder.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -2409,6 +3278,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Payment.ResumeLayout(false);
             this.Payment.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2445,11 +3321,9 @@
         private System.Windows.Forms.TabControl OrderTab;
         private System.Windows.Forms.TabPage Dashboard;
         private System.Windows.Forms.TabPage Products;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabPage Lookup;
         private System.Windows.Forms.TabPage Print;
         private System.Windows.Forms.TabPage Edit;
         private System.Windows.Forms.TabPage Discount;
@@ -2495,7 +3369,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnDelivery;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
@@ -2516,16 +3389,6 @@
         private System.Windows.Forms.Button btnEditSave;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button btnDiscountFreeOrder;
-        private System.Windows.Forms.Button btnDiscountAllItems;
-        private System.Windows.Forms.Button btnDiscountOrder;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button btnDiscountFreeDeserts;
-        private System.Windows.Forms.Button btnDiscountFreeDrinks;
-        private System.Windows.Forms.Button btnDiscountFreeModifiers;
         private System.Windows.Forms.Button btnDiscountSave;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox txtEditPrice;
@@ -2565,14 +3428,85 @@
         private System.Windows.Forms.Button button51;
         private System.Windows.Forms.Button button52;
         private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.Button button54;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.TextBox txtDiscountName;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label lblDiscountSelection;
-        private System.Windows.Forms.Button btnDiscountJustThis;
         private System.Windows.Forms.Label lblDiscountIsPercent;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button88;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button98;
+        private System.Windows.Forms.Button button99;
+        private System.Windows.Forms.Button button100;
+        private System.Windows.Forms.Button button101;
+        private System.Windows.Forms.Button button102;
+        private System.Windows.Forms.Button button103;
+        private System.Windows.Forms.Button button104;
+        private System.Windows.Forms.Button button105;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button button60;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button button61;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button54;
+        private System.Windows.Forms.Button button55;
+        private System.Windows.Forms.Button button56;
+        private System.Windows.Forms.Button button57;
+        private System.Windows.Forms.Button button58;
+        private System.Windows.Forms.Button button59;
+        private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.Button button63;
+        private System.Windows.Forms.Button button64;
+        private System.Windows.Forms.Button button65;
+        private System.Windows.Forms.Button button66;
+        private System.Windows.Forms.Button button67;
+        private System.Windows.Forms.Button button68;
+        private System.Windows.Forms.Button button69;
+        private System.Windows.Forms.Button button70;
+        private System.Windows.Forms.Button button71;
+        private System.Windows.Forms.Button button72;
+        private System.Windows.Forms.Button button73;
+        private System.Windows.Forms.Button button74;
+        private System.Windows.Forms.Button button75;
+        private System.Windows.Forms.Button button76;
+        private System.Windows.Forms.Button button77;
+        private System.Windows.Forms.Button button78;
+        private System.Windows.Forms.Button button79;
+        private System.Windows.Forms.Button button80;
+        private System.Windows.Forms.Button button81;
+        private System.Windows.Forms.Button button82;
+        private System.Windows.Forms.Button button83;
+        private System.Windows.Forms.Button button84;
+        private System.Windows.Forms.Button button85;
+        private System.Windows.Forms.Button button86;
+        private System.Windows.Forms.Button button87;
+        private System.Windows.Forms.Button button89;
+        private System.Windows.Forms.Button button90;
+        private System.Windows.Forms.Button button91;
+        private System.Windows.Forms.Button button92;
+        private System.Windows.Forms.Button button93;
+        private System.Windows.Forms.Button button94;
+        private System.Windows.Forms.Button button95;
+        private System.Windows.Forms.Button button96;
+        private System.Windows.Forms.Button button97;
+        private System.Windows.Forms.Button button106;
+        private System.Windows.Forms.Button button107;
+        private System.Windows.Forms.Button button108;
+        private System.Windows.Forms.Button button109;
     }
 }
