@@ -985,14 +985,6 @@ namespace POS
 
         }
 
-        //Sanitisation
-        void SanitiseDiscount()
-        {
-            lblDiscountIsPercent.Text = "( % )";
-            txtDiscountAmount.Parent.Show();
-            txtDiscountAmount.Text = "0.00";
-        }
-
         void btnFirstPageItems_Click(object sender, EventArgs e)
         {
             Control c = (Control)sender;
@@ -1100,26 +1092,52 @@ namespace POS
             txtEditPrice.Text = CartSystem.GetSelectedItem().Price;
 
         }
-
         private void CartSystem_ItemDiscount(object sender, EventArgs e)
         {
-            SanitiseDiscount();
+            lblDiscountIsPercent.Text = "( % )";
+            txtDiscountAmount.Parent.Show();
+            txtDiscountAmount.Text = "0.00";
+            txtDiscountName.Clear();
             OrderTab.SelectTab("Discount");
             lblCartTitle.Text = "DISCOUNT ITEM";
         }
+        private void CartSystem_ItemModify(object sender, EventArgs e)
+        {
+            lblModifierIsPercent.Text = "( % )";
+            txtModifierAmount.Parent.Show();
+            txtModifierAmount.Text = "0.00";
+            txtModifierName.Clear();
+            OrderTab.SelectTab("Modifier");
+            lblCartTitle.Text = "ADD MODIFIER";
+        }
+    
         private void edit_Qty(object sender, EventArgs e)
         {
             int qty = ((Button)sender).Name.Contains("Down") ? Convert.ToInt16(lblEditQty.Text) - 1 : Convert.ToInt16(lblEditQty.Text) + 1;
 
             if (qty > 0) //and less than max-qty
+            {
                 lblEditQty.Text = qty.ToString();
+                txtEditPrice.Text = Convert.ToDecimal((Convert.ToInt16(lblEditQty.Text) * Convert.ToDecimal(CartSystem.GetSelectedItem().Price))).ToString(".##");
+            }
         }
         private void btnEditSave_Click(object sender, EventArgs e)
         {
             CartSystem.EditItem(lblEditQty.Text, txtEditDescription.Text, txtEditPrice.Text);
         }
 
-        private void btnDiscountSave_Click(object sender, EventArgs e)
+        private void txtDiscountAmount_Click(object sender, EventArgs e)
+        {
+            lblDiscountIsPercent.Text = lblDiscountIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " )" : "( % )";
+        }
+        private void txtModifierAmount_Click(object sender, EventArgs e)
+        {
+            lblModifierIsPercent.Text = lblModifierIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " )" : "( % )";
+
+        }
+
+
+        private void btnDiscountApply_Click(object sender, EventArgs e)
         {
             string name = txtDiscountName.TextLength > 0 ? txtDiscountName.Text : "Unnamed Discount";
             decimal price = txtDiscountAmount.TextLength > 0 ? Convert.ToDecimal(txtDiscountAmount.Text) + 0.00M : 0.00M;
@@ -1136,9 +1154,21 @@ namespace POS
             }
         }
 
-        private void txtDiscountAmount_Click(object sender, EventArgs e)
+        private void btnModifierApply_Click(object sender, EventArgs e)
         {
-            lblDiscountIsPercent.Text = lblDiscountIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " )" : "( % )";
+            string name = txtModifierName.TextLength > 0 ? txtModifierName.Text : "Unnamed Modifier";
+            decimal price = txtModifierAmount.TextLength > 0 ? Convert.ToDecimal(txtModifierAmount.Text) + 0.00M : 0.00M;
+
+            if (txtModifierAmount.TextLength == 0)
+            {
+                Functions.HighlightTextBox(txtModifierAmount);
+            }
+            else
+            {
+                bool isPercent = lblModifierIsPercent.Text.Contains("%") ? true : false;
+
+                CartSystem.AddSubItem(false, name, price.ToString(), isPercent);
+            }
         }
     }
 }

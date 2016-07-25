@@ -102,10 +102,22 @@
             this.txtEditDescription = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.Discount = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button98 = new System.Windows.Forms.Button();
+            this.button99 = new System.Windows.Forms.Button();
+            this.button100 = new System.Windows.Forms.Button();
+            this.button101 = new System.Windows.Forms.Button();
+            this.button102 = new System.Windows.Forms.Button();
+            this.button103 = new System.Windows.Forms.Button();
+            this.button104 = new System.Windows.Forms.Button();
+            this.button105 = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
             this.txtDiscountAmount = new System.Windows.Forms.TextBox();
             this.lblDiscountIsPercent = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.btnDiscountApply = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.txtDiscountName = new System.Windows.Forms.TextBox();
             this.flp_discounts = new System.Windows.Forms.FlowLayoutPanel();
@@ -146,68 +158,28 @@
             this.button20 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
-            this.btnDiscountSave = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.Modifier = new System.Windows.Forms.TabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.ConvertOrder = new System.Windows.Forms.TabPage();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Payment = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CartSystem = new POS.Controls.CartSystem();
-            this.button88 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button98 = new System.Windows.Forms.Button();
-            this.button99 = new System.Windows.Forms.Button();
-            this.button100 = new System.Windows.Forms.Button();
-            this.button101 = new System.Windows.Forms.Button();
-            this.button102 = new System.Windows.Forms.Button();
-            this.button103 = new System.Windows.Forms.Button();
-            this.button104 = new System.Windows.Forms.Button();
-            this.button105 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button54 = new System.Windows.Forms.Button();
+            this.button55 = new System.Windows.Forms.Button();
+            this.button56 = new System.Windows.Forms.Button();
+            this.button57 = new System.Windows.Forms.Button();
+            this.button58 = new System.Windows.Forms.Button();
+            this.button59 = new System.Windows.Forms.Button();
             this.button60 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
+            this.txtModifierAmount = new System.Windows.Forms.TextBox();
+            this.lblModifierIsPercent = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtModifierName = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button61 = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.button57 = new System.Windows.Forms.Button();
-            this.button54 = new System.Windows.Forms.Button();
-            this.button58 = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
-            this.button55 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button59 = new System.Windows.Forms.Button();
             this.button62 = new System.Windows.Forms.Button();
             this.button63 = new System.Windows.Forms.Button();
             this.button64 = new System.Windows.Forms.Button();
@@ -247,6 +219,34 @@
             this.button107 = new System.Windows.Forms.Button();
             this.button108 = new System.Windows.Forms.Button();
             this.button109 = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.btnModifierApply = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ConvertOrder = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Payment = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CartSystem = new POS.Controls.CartSystem();
             this.Tab.SuspendLayout();
             this.OrderType.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -268,10 +268,15 @@
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
             this.Discount.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel17.SuspendLayout();
             this.flp_discounts.SuspendLayout();
             this.Modifier.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.ConvertOrder.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -282,11 +287,6 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Payment.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tab
@@ -1274,10 +1274,10 @@
             this.Discount.Controls.Add(this.panel19);
             this.Discount.Controls.Add(this.lblDiscountIsPercent);
             this.Discount.Controls.Add(this.label30);
+            this.Discount.Controls.Add(this.btnDiscountApply);
             this.Discount.Controls.Add(this.panel17);
             this.Discount.Controls.Add(this.flp_discounts);
             this.Discount.Controls.Add(this.label28);
-            this.Discount.Controls.Add(this.btnDiscountSave);
             this.Discount.Controls.Add(this.label27);
             this.Discount.Controls.Add(this.panel12);
             this.Discount.Location = new System.Drawing.Point(4, 22);
@@ -1286,6 +1286,161 @@
             this.Discount.Size = new System.Drawing.Size(706, 742);
             this.Discount.TabIndex = 5;
             this.Discount.Text = "Discount";
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(475, 67);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(157, 21);
+            this.label26.TabIndex = 111;
+            this.label26.Text = "POPULAR MODIFIERS";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
+            this.panel18.Controls.Add(this.button1);
+            this.panel18.Controls.Add(this.button98);
+            this.panel18.Controls.Add(this.button99);
+            this.panel18.Controls.Add(this.button100);
+            this.panel18.Controls.Add(this.button101);
+            this.panel18.Controls.Add(this.button102);
+            this.panel18.Controls.Add(this.button103);
+            this.panel18.Controls.Add(this.button104);
+            this.panel18.Controls.Add(this.button105);
+            this.panel18.Location = new System.Drawing.Point(479, 104);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(211, 141);
+            this.panel18.TabIndex = 110;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleName = "";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Location = new System.Drawing.Point(143, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 40);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "FREE MODIFIERS";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button98
+            // 
+            this.button98.AccessibleName = "";
+            this.button98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button98.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button98.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button98.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button98.Location = new System.Drawing.Point(74, 95);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(64, 40);
+            this.button98.TabIndex = 83;
+            this.button98.Text = "FREE MODIFIERS";
+            this.button98.UseVisualStyleBackColor = false;
+            // 
+            // button99
+            // 
+            this.button99.AccessibleName = "";
+            this.button99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button99.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button99.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button99.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button99.Location = new System.Drawing.Point(4, 95);
+            this.button99.Name = "button99";
+            this.button99.Size = new System.Drawing.Size(64, 40);
+            this.button99.TabIndex = 82;
+            this.button99.Text = "FREE MODIFIERS";
+            this.button99.UseVisualStyleBackColor = false;
+            // 
+            // button100
+            // 
+            this.button100.AccessibleName = "";
+            this.button100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button100.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button100.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button100.Location = new System.Drawing.Point(143, 49);
+            this.button100.Name = "button100";
+            this.button100.Size = new System.Drawing.Size(64, 40);
+            this.button100.TabIndex = 81;
+            this.button100.Text = "FREE MODIFIERS";
+            this.button100.UseVisualStyleBackColor = false;
+            // 
+            // button101
+            // 
+            this.button101.AccessibleName = "";
+            this.button101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button101.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button101.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button101.Location = new System.Drawing.Point(74, 48);
+            this.button101.Name = "button101";
+            this.button101.Size = new System.Drawing.Size(64, 40);
+            this.button101.TabIndex = 80;
+            this.button101.Text = "FREE MODIFIERS";
+            this.button101.UseVisualStyleBackColor = false;
+            // 
+            // button102
+            // 
+            this.button102.AccessibleName = "";
+            this.button102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button102.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button102.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button102.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button102.Location = new System.Drawing.Point(4, 49);
+            this.button102.Name = "button102";
+            this.button102.Size = new System.Drawing.Size(64, 40);
+            this.button102.TabIndex = 79;
+            this.button102.Text = "FREE MODIFIERS";
+            this.button102.UseVisualStyleBackColor = false;
+            // 
+            // button103
+            // 
+            this.button103.AccessibleName = "";
+            this.button103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button103.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button103.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button103.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button103.Location = new System.Drawing.Point(143, 3);
+            this.button103.Name = "button103";
+            this.button103.Size = new System.Drawing.Size(64, 40);
+            this.button103.TabIndex = 78;
+            this.button103.Text = "FREE MODIFIERS";
+            this.button103.UseVisualStyleBackColor = false;
+            // 
+            // button104
+            // 
+            this.button104.AccessibleName = "";
+            this.button104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button104.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button104.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button104.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button104.Location = new System.Drawing.Point(74, 3);
+            this.button104.Name = "button104";
+            this.button104.Size = new System.Drawing.Size(64, 40);
+            this.button104.TabIndex = 77;
+            this.button104.Text = "FREE MODIFIERS";
+            this.button104.UseVisualStyleBackColor = false;
+            // 
+            // button105
+            // 
+            this.button105.AccessibleName = "";
+            this.button105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button105.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button105.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button105.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button105.Location = new System.Drawing.Point(4, 3);
+            this.button105.Name = "button105";
+            this.button105.Size = new System.Drawing.Size(64, 40);
+            this.button105.TabIndex = 76;
+            this.button105.Text = "FREE MODIFIERS";
+            this.button105.UseVisualStyleBackColor = false;
             // 
             // panel19
             // 
@@ -1336,6 +1491,20 @@
             this.label30.Size = new System.Drawing.Size(113, 21);
             this.label30.TabIndex = 106;
             this.label30.Text = "Discount Name";
+            // 
+            // btnDiscountApply
+            // 
+            this.btnDiscountApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnDiscountApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountApply.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDiscountApply.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDiscountApply.Location = new System.Drawing.Point(584, 682);
+            this.btnDiscountApply.Name = "btnDiscountApply";
+            this.btnDiscountApply.Size = new System.Drawing.Size(106, 39);
+            this.btnDiscountApply.TabIndex = 95;
+            this.btnDiscountApply.Text = "APPLY";
+            this.btnDiscountApply.UseVisualStyleBackColor = false;
+            this.btnDiscountApply.Click += new System.EventHandler(this.btnDiscountApply_Click);
             // 
             // panel17
             // 
@@ -1887,20 +2056,6 @@
             this.label28.TabIndex = 101;
             this.label28.Text = "BROWSE DISCOUNTS";
             // 
-            // btnDiscountSave
-            // 
-            this.btnDiscountSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.btnDiscountSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDiscountSave.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscountSave.Location = new System.Drawing.Point(584, 682);
-            this.btnDiscountSave.Name = "btnDiscountSave";
-            this.btnDiscountSave.Size = new System.Drawing.Size(106, 39);
-            this.btnDiscountSave.TabIndex = 95;
-            this.btnDiscountSave.Text = "APPLY";
-            this.btnDiscountSave.UseVisualStyleBackColor = false;
-            this.btnDiscountSave.Click += new System.EventHandler(this.btnDiscountSave_Click);
-            // 
             // label27
             // 
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1929,13 +2084,13 @@
             this.Modifier.Controls.Add(this.label25);
             this.Modifier.Controls.Add(this.panel10);
             this.Modifier.Controls.Add(this.panel20);
-            this.Modifier.Controls.Add(this.label29);
+            this.Modifier.Controls.Add(this.lblModifierIsPercent);
             this.Modifier.Controls.Add(this.label31);
             this.Modifier.Controls.Add(this.panel21);
             this.Modifier.Controls.Add(this.flowLayoutPanel2);
             this.Modifier.Controls.Add(this.label32);
             this.Modifier.Controls.Add(this.label33);
-            this.Modifier.Controls.Add(this.button88);
+            this.Modifier.Controls.Add(this.btnModifierApply);
             this.Modifier.Controls.Add(this.panel13);
             this.Modifier.Location = new System.Drawing.Point(4, 22);
             this.Modifier.Margin = new System.Windows.Forms.Padding(0);
@@ -1943,457 +2098,6 @@
             this.Modifier.Size = new System.Drawing.Size(706, 742);
             this.Modifier.TabIndex = 6;
             this.Modifier.Text = "Modifier";
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(706, 48);
-            this.panel13.TabIndex = 69;
-            // 
-            // ConvertOrder
-            // 
-            this.ConvertOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.ConvertOrder.Controls.Add(this.panel9);
-            this.ConvertOrder.Controls.Add(this.panel8);
-            this.ConvertOrder.Controls.Add(this.panel7);
-            this.ConvertOrder.Controls.Add(this.panel6);
-            this.ConvertOrder.Location = new System.Drawing.Point(4, 22);
-            this.ConvertOrder.Name = "ConvertOrder";
-            this.ConvertOrder.Padding = new System.Windows.Forms.Padding(3);
-            this.ConvertOrder.Size = new System.Drawing.Size(706, 742);
-            this.ConvertOrder.TabIndex = 7;
-            this.ConvertOrder.Text = "Convert";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel9.Controls.Add(this.label15);
-            this.panel9.Controls.Add(this.label16);
-            this.panel9.Controls.Add(this.pictureBox6);
-            this.panel9.Location = new System.Drawing.Point(495, 53);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(157, 226);
-            this.panel9.TabIndex = 3;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Green;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label15.Location = new System.Drawing.Point(100, 201);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 25);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "£3.49";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label16.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label16.Location = new System.Drawing.Point(0, 116);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(157, 33);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "A Glass of Coca Cola";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.pictureBox5);
-            this.panel8.Location = new System.Drawing.Point(332, 53);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(157, 226);
-            this.panel8.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Green;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(100, 201);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 25);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "£3.49";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(0, 116);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(157, 33);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "A Glass of Coca Cola";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.pictureBox4);
-            this.panel7.Location = new System.Drawing.Point(169, 53);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(157, 226);
-            this.panel7.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Green;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(100, 201);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 25);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "£3.49";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(0, 116);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 33);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "A Glass of Coca Cola";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Location = new System.Drawing.Point(6, 53);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(157, 226);
-            this.panel6.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Green;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(100, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 25);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "£3.49";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(0, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "A Glass of Coca Cola";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(28, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(-15645, -12619);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 25);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Your Cart";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label8.Location = new System.Drawing.Point(-16057, -12921);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 25);
-            this.label8.TabIndex = 58;
-            this.label8.Text = "Your Cart";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(-16469, -13218);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 25);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Your Cart";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(-16881, -13525);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 25);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Cart";
-            // 
-            // Payment
-            // 
-            this.Payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
-            this.Payment.Controls.Add(this.label9);
-            this.Payment.Location = new System.Drawing.Point(4, 22);
-            this.Payment.Name = "Payment";
-            this.Payment.Padding = new System.Windows.Forms.Padding(3);
-            this.Payment.Size = new System.Drawing.Size(1016, 742);
-            this.Payment.TabIndex = 3;
-            this.Payment.Text = "Payment";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Light", 13F);
-            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(-16057, -12921);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Payment";
-            // 
-            // CartSystem
-            // 
-            this.CartSystem.AutoSize = true;
-            this.CartSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.CartSystem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.CartSystem.Location = new System.Drawing.Point(0, 0);
-            this.CartSystem.Margin = new System.Windows.Forms.Padding(0);
-            this.CartSystem.Name = "CartSystem";
-            this.CartSystem.Size = new System.Drawing.Size(302, 742);
-            this.CartSystem.TabIndex = 32;
-            this.CartSystem.ItemEdit += new System.EventHandler(this.CartSystem_ItemEdit);
-            this.CartSystem.ItemDiscount += new System.EventHandler(this.CartSystem_ItemDiscount);
-            // 
-            // button88
-            // 
-            this.button88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button88.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button88.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button88.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button88.Location = new System.Drawing.Point(580, 662);
-            this.button88.Name = "button88";
-            this.button88.Size = new System.Drawing.Size(106, 39);
-            this.button88.TabIndex = 111;
-            this.button88.Text = "APPLY";
-            this.button88.UseVisualStyleBackColor = false;
-            // 
-            // label26
-            // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(475, 67);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(157, 21);
-            this.label26.TabIndex = 111;
-            this.label26.Text = "POPULAR MODIFIERS";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(47)))), ((int)(((byte)(65)))));
-            this.panel18.Controls.Add(this.button1);
-            this.panel18.Controls.Add(this.button98);
-            this.panel18.Controls.Add(this.button99);
-            this.panel18.Controls.Add(this.button100);
-            this.panel18.Controls.Add(this.button101);
-            this.panel18.Controls.Add(this.button102);
-            this.panel18.Controls.Add(this.button103);
-            this.panel18.Controls.Add(this.button104);
-            this.panel18.Controls.Add(this.button105);
-            this.panel18.Location = new System.Drawing.Point(479, 104);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(211, 141);
-            this.panel18.TabIndex = 110;
-            // 
-            // button1
-            // 
-            this.button1.AccessibleName = "";
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(143, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 40);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "FREE MODIFIERS";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button98
-            // 
-            this.button98.AccessibleName = "";
-            this.button98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button98.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button98.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button98.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button98.Location = new System.Drawing.Point(74, 95);
-            this.button98.Name = "button98";
-            this.button98.Size = new System.Drawing.Size(64, 40);
-            this.button98.TabIndex = 83;
-            this.button98.Text = "FREE MODIFIERS";
-            this.button98.UseVisualStyleBackColor = false;
-            // 
-            // button99
-            // 
-            this.button99.AccessibleName = "";
-            this.button99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button99.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button99.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button99.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button99.Location = new System.Drawing.Point(4, 95);
-            this.button99.Name = "button99";
-            this.button99.Size = new System.Drawing.Size(64, 40);
-            this.button99.TabIndex = 82;
-            this.button99.Text = "FREE MODIFIERS";
-            this.button99.UseVisualStyleBackColor = false;
-            // 
-            // button100
-            // 
-            this.button100.AccessibleName = "";
-            this.button100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button100.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button100.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button100.Location = new System.Drawing.Point(143, 49);
-            this.button100.Name = "button100";
-            this.button100.Size = new System.Drawing.Size(64, 40);
-            this.button100.TabIndex = 81;
-            this.button100.Text = "FREE MODIFIERS";
-            this.button100.UseVisualStyleBackColor = false;
-            // 
-            // button101
-            // 
-            this.button101.AccessibleName = "";
-            this.button101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button101.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button101.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button101.Location = new System.Drawing.Point(74, 48);
-            this.button101.Name = "button101";
-            this.button101.Size = new System.Drawing.Size(64, 40);
-            this.button101.TabIndex = 80;
-            this.button101.Text = "FREE MODIFIERS";
-            this.button101.UseVisualStyleBackColor = false;
-            // 
-            // button102
-            // 
-            this.button102.AccessibleName = "";
-            this.button102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button102.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button102.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button102.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button102.Location = new System.Drawing.Point(4, 49);
-            this.button102.Name = "button102";
-            this.button102.Size = new System.Drawing.Size(64, 40);
-            this.button102.TabIndex = 79;
-            this.button102.Text = "FREE MODIFIERS";
-            this.button102.UseVisualStyleBackColor = false;
-            // 
-            // button103
-            // 
-            this.button103.AccessibleName = "";
-            this.button103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button103.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button103.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button103.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button103.Location = new System.Drawing.Point(143, 3);
-            this.button103.Name = "button103";
-            this.button103.Size = new System.Drawing.Size(64, 40);
-            this.button103.TabIndex = 78;
-            this.button103.Text = "FREE MODIFIERS";
-            this.button103.UseVisualStyleBackColor = false;
-            // 
-            // button104
-            // 
-            this.button104.AccessibleName = "";
-            this.button104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button104.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button104.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button104.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button104.Location = new System.Drawing.Point(74, 3);
-            this.button104.Name = "button104";
-            this.button104.Size = new System.Drawing.Size(64, 40);
-            this.button104.TabIndex = 77;
-            this.button104.Text = "FREE MODIFIERS";
-            this.button104.UseVisualStyleBackColor = false;
-            // 
-            // button105
-            // 
-            this.button105.AccessibleName = "";
-            this.button105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button105.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button105.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button105.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button105.Location = new System.Drawing.Point(4, 3);
-            this.button105.Name = "button105";
-            this.button105.Size = new System.Drawing.Size(64, 40);
-            this.button105.TabIndex = 76;
-            this.button105.Text = "FREE MODIFIERS";
-            this.button105.UseVisualStyleBackColor = false;
             // 
             // label25
             // 
@@ -2403,9 +2107,9 @@
             this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(475, 67);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(163, 21);
+            this.label25.Size = new System.Drawing.Size(157, 21);
             this.label25.TabIndex = 120;
-            this.label25.Text = "POPULAR DISCOUNTS";
+            this.label25.Text = "POPULAR MODIFIERS";
             // 
             // panel10
             // 
@@ -2424,6 +2128,118 @@
             this.panel10.Size = new System.Drawing.Size(211, 141);
             this.panel10.TabIndex = 119;
             // 
+            // button2
+            // 
+            this.button2.AccessibleName = "";
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button2.Location = new System.Drawing.Point(143, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 40);
+            this.button2.TabIndex = 84;
+            this.button2.Text = "MODIFIER";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            this.button24.AccessibleName = "";
+            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button24.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button24.Location = new System.Drawing.Point(74, 95);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(64, 40);
+            this.button24.TabIndex = 83;
+            this.button24.Text = "MODIFIER";
+            this.button24.UseVisualStyleBackColor = false;
+            // 
+            // button54
+            // 
+            this.button54.AccessibleName = "";
+            this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button54.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button54.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button54.Location = new System.Drawing.Point(4, 95);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(64, 40);
+            this.button54.TabIndex = 82;
+            this.button54.Text = "MODIFIER";
+            this.button54.UseVisualStyleBackColor = false;
+            // 
+            // button55
+            // 
+            this.button55.AccessibleName = "";
+            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button55.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button55.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button55.Location = new System.Drawing.Point(143, 49);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(64, 40);
+            this.button55.TabIndex = 81;
+            this.button55.Text = "MODIFIER";
+            this.button55.UseVisualStyleBackColor = false;
+            // 
+            // button56
+            // 
+            this.button56.AccessibleName = "";
+            this.button56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button56.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button56.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button56.Location = new System.Drawing.Point(74, 48);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(64, 40);
+            this.button56.TabIndex = 80;
+            this.button56.Text = "MODIFIER";
+            this.button56.UseVisualStyleBackColor = false;
+            // 
+            // button57
+            // 
+            this.button57.AccessibleName = "";
+            this.button57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button57.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button57.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button57.Location = new System.Drawing.Point(4, 49);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(64, 40);
+            this.button57.TabIndex = 79;
+            this.button57.Text = "MODIFIER";
+            this.button57.UseVisualStyleBackColor = false;
+            // 
+            // button58
+            // 
+            this.button58.AccessibleName = "";
+            this.button58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button58.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button58.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button58.Location = new System.Drawing.Point(143, 3);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(64, 40);
+            this.button58.TabIndex = 78;
+            this.button58.Text = "MODIFIER";
+            this.button58.UseVisualStyleBackColor = false;
+            // 
+            // button59
+            // 
+            this.button59.AccessibleName = "";
+            this.button59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button59.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
+            this.button59.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button59.Location = new System.Drawing.Point(74, 3);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(64, 40);
+            this.button59.TabIndex = 77;
+            this.button59.Text = "MODIFIER";
+            this.button59.UseVisualStyleBackColor = false;
+            // 
             // button60
             // 
             this.button60.AccessibleName = "";
@@ -2435,46 +2251,47 @@
             this.button60.Name = "button60";
             this.button60.Size = new System.Drawing.Size(64, 40);
             this.button60.TabIndex = 76;
-            this.button60.Text = "HALF PRICE";
+            this.button60.Text = "MODIFIER";
             this.button60.UseVisualStyleBackColor = false;
             // 
             // panel20
             // 
             this.panel20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel20.Controls.Add(this.textBox1);
+            this.panel20.Controls.Add(this.txtModifierAmount);
             this.panel20.Location = new System.Drawing.Point(326, 149);
             this.panel20.Name = "panel20";
             this.panel20.Padding = new System.Windows.Forms.Padding(7);
             this.panel20.Size = new System.Drawing.Size(101, 46);
             this.panel20.TabIndex = 113;
             // 
-            // textBox1
+            // txtModifierAmount
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.25F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.Location = new System.Drawing.Point(7, 7);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 32);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "2.00";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtModifierAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.txtModifierAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtModifierAmount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtModifierAmount.Font = new System.Drawing.Font("Segoe UI", 15.25F);
+            this.txtModifierAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtModifierAmount.Location = new System.Drawing.Point(7, 7);
+            this.txtModifierAmount.Multiline = true;
+            this.txtModifierAmount.Name = "txtModifierAmount";
+            this.txtModifierAmount.Size = new System.Drawing.Size(87, 32);
+            this.txtModifierAmount.TabIndex = 1;
+            this.txtModifierAmount.Text = "2.00";
+            this.txtModifierAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtModifierAmount.Click += new System.EventHandler(this.txtModifierAmount_Click);
             // 
-            // label29
+            // lblModifierIsPercent
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Light", 15F);
-            this.label29.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label29.Location = new System.Drawing.Point(430, 156);
-            this.label29.Margin = new System.Windows.Forms.Padding(0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(50, 28);
-            this.label29.TabIndex = 118;
-            this.label29.Text = "( % )";
+            this.lblModifierIsPercent.AutoSize = true;
+            this.lblModifierIsPercent.Font = new System.Drawing.Font("Segoe UI Light", 15F);
+            this.lblModifierIsPercent.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblModifierIsPercent.Location = new System.Drawing.Point(430, 156);
+            this.lblModifierIsPercent.Margin = new System.Windows.Forms.Padding(0);
+            this.lblModifierIsPercent.Name = "lblModifierIsPercent";
+            this.lblModifierIsPercent.Size = new System.Drawing.Size(50, 28);
+            this.lblModifierIsPercent.TabIndex = 118;
+            this.lblModifierIsPercent.Text = "( % )";
             // 
             // label31
             // 
@@ -2491,25 +2308,25 @@
             // 
             this.panel21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.panel21.Controls.Add(this.textBox2);
+            this.panel21.Controls.Add(this.txtModifierName);
             this.panel21.Location = new System.Drawing.Point(13, 149);
             this.panel21.Name = "panel21";
             this.panel21.Padding = new System.Windows.Forms.Padding(7);
             this.panel21.Size = new System.Drawing.Size(307, 46);
             this.panel21.TabIndex = 116;
             // 
-            // textBox2
+            // txtModifierName
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 15.25F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.Location = new System.Drawing.Point(7, 7);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(293, 32);
-            this.textBox2.TabIndex = 1;
+            this.txtModifierName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.txtModifierName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtModifierName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtModifierName.Font = new System.Drawing.Font("Segoe UI", 15.25F);
+            this.txtModifierName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtModifierName.Location = new System.Drawing.Point(7, 7);
+            this.txtModifierName.Multiline = true;
+            this.txtModifierName.Name = "txtModifierName";
+            this.txtModifierName.Size = new System.Drawing.Size(293, 32);
+            this.txtModifierName.TabIndex = 1;
             // 
             // flowLayoutPanel2
             // 
@@ -2573,142 +2390,6 @@
             this.button61.TabIndex = 97;
             this.button61.Text = "ORDER DISCOUNT";
             this.button61.UseVisualStyleBackColor = false;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(9, 272);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(150, 21);
-            this.label32.TabIndex = 114;
-            this.label32.Text = "BROWSE MODIFIERS";
-            // 
-            // label33
-            // 
-            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(9, 67);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(114, 21);
-            this.label33.TabIndex = 112;
-            this.label33.Text = "ADD MODIFIER";
-            // 
-            // button57
-            // 
-            this.button57.AccessibleName = "";
-            this.button57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button57.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button57.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button57.Location = new System.Drawing.Point(4, 49);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(64, 40);
-            this.button57.TabIndex = 79;
-            this.button57.Text = "HALF PRICE";
-            this.button57.UseVisualStyleBackColor = false;
-            // 
-            // button54
-            // 
-            this.button54.AccessibleName = "";
-            this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button54.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button54.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button54.Location = new System.Drawing.Point(4, 95);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(64, 40);
-            this.button54.TabIndex = 82;
-            this.button54.Text = "HALF PRICE";
-            this.button54.UseVisualStyleBackColor = false;
-            // 
-            // button58
-            // 
-            this.button58.AccessibleName = "";
-            this.button58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button58.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button58.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button58.Location = new System.Drawing.Point(143, 3);
-            this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(64, 40);
-            this.button58.TabIndex = 78;
-            this.button58.Text = "HALF PRICE";
-            this.button58.UseVisualStyleBackColor = false;
-            // 
-            // button56
-            // 
-            this.button56.AccessibleName = "";
-            this.button56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button56.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button56.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button56.Location = new System.Drawing.Point(74, 48);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(64, 40);
-            this.button56.TabIndex = 80;
-            this.button56.Text = "HALF PRICE";
-            this.button56.UseVisualStyleBackColor = false;
-            // 
-            // button55
-            // 
-            this.button55.AccessibleName = "";
-            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button55.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button55.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button55.Location = new System.Drawing.Point(143, 49);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(64, 40);
-            this.button55.TabIndex = 81;
-            this.button55.Text = "HALF PRICE";
-            this.button55.UseVisualStyleBackColor = false;
-            // 
-            // button24
-            // 
-            this.button24.AccessibleName = "";
-            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button24.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button24.Location = new System.Drawing.Point(74, 95);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(64, 40);
-            this.button24.TabIndex = 83;
-            this.button24.Text = "HALF PRICE";
-            this.button24.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.AccessibleName = "";
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(143, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 40);
-            this.button2.TabIndex = 84;
-            this.button2.Text = "HALF PRICE";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button59
-            // 
-            this.button59.AccessibleName = "";
-            this.button59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button59.Font = new System.Drawing.Font("Segoe UI", 7.25F, System.Drawing.FontStyle.Bold);
-            this.button59.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button59.Location = new System.Drawing.Point(74, 3);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(64, 40);
-            this.button59.TabIndex = 77;
-            this.button59.Text = "HALF PRICE";
-            this.button59.UseVisualStyleBackColor = false;
             // 
             // button62
             // 
@@ -3217,6 +2898,328 @@
             this.button109.Text = "ORDER DISCOUNT";
             this.button109.UseVisualStyleBackColor = false;
             // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(9, 272);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(150, 21);
+            this.label32.TabIndex = 114;
+            this.label32.Text = "BROWSE MODIFIERS";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(9, 67);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(114, 21);
+            this.label33.TabIndex = 112;
+            this.label33.Text = "ADD MODIFIER";
+            // 
+            // btnModifierApply
+            // 
+            this.btnModifierApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.btnModifierApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifierApply.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModifierApply.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnModifierApply.Location = new System.Drawing.Point(584, 682);
+            this.btnModifierApply.Name = "btnModifierApply";
+            this.btnModifierApply.Size = new System.Drawing.Size(106, 39);
+            this.btnModifierApply.TabIndex = 111;
+            this.btnModifierApply.Text = "APPLY";
+            this.btnModifierApply.UseVisualStyleBackColor = false;
+            this.btnModifierApply.Click += new System.EventHandler(this.btnModifierApply_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(48)))), ((int)(((byte)(66)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(706, 48);
+            this.panel13.TabIndex = 69;
+            // 
+            // ConvertOrder
+            // 
+            this.ConvertOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.ConvertOrder.Controls.Add(this.panel9);
+            this.ConvertOrder.Controls.Add(this.panel8);
+            this.ConvertOrder.Controls.Add(this.panel7);
+            this.ConvertOrder.Controls.Add(this.panel6);
+            this.ConvertOrder.Location = new System.Drawing.Point(4, 22);
+            this.ConvertOrder.Name = "ConvertOrder";
+            this.ConvertOrder.Padding = new System.Windows.Forms.Padding(3);
+            this.ConvertOrder.Size = new System.Drawing.Size(706, 742);
+            this.ConvertOrder.TabIndex = 7;
+            this.ConvertOrder.Text = "Convert";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Controls.Add(this.label16);
+            this.panel9.Controls.Add(this.pictureBox6);
+            this.panel9.Location = new System.Drawing.Point(495, 53);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(157, 226);
+            this.panel9.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Green;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.Location = new System.Drawing.Point(100, 201);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 25);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "£3.49";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label16.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label16.Location = new System.Drawing.Point(0, 116);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(157, 33);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "A Glass of Coca Cola";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel8.Controls.Add(this.label12);
+            this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.pictureBox5);
+            this.panel8.Location = new System.Drawing.Point(332, 53);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(157, 226);
+            this.panel8.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Green;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.Location = new System.Drawing.Point(100, 201);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 25);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "£3.49";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(0, 116);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(157, 33);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "A Glass of Coca Cola";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.pictureBox4);
+            this.panel7.Location = new System.Drawing.Point(169, 53);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(157, 226);
+            this.panel7.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Green;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(100, 201);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 25);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "£3.49";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label10.Location = new System.Drawing.Point(0, 116);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(157, 33);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "A Glass of Coca Cola";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Location = new System.Drawing.Point(6, 53);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(157, 226);
+            this.panel6.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Green;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(100, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "£3.49";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(0, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "A Glass of Coca Cola";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(28, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(-15645, -12619);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 25);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Your Cart";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label8.Location = new System.Drawing.Point(-16057, -12921);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 25);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "Your Cart";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(-16469, -13218);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 25);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Your Cart";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(-16881, -13525);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Cart";
+            // 
+            // Payment
+            // 
+            this.Payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
+            this.Payment.Controls.Add(this.label9);
+            this.Payment.Location = new System.Drawing.Point(4, 22);
+            this.Payment.Name = "Payment";
+            this.Payment.Padding = new System.Windows.Forms.Padding(3);
+            this.Payment.Size = new System.Drawing.Size(1016, 742);
+            this.Payment.TabIndex = 3;
+            this.Payment.Text = "Payment";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(-16057, -12921);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Payment";
+            // 
+            // CartSystem
+            // 
+            this.CartSystem.AutoSize = true;
+            this.CartSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.CartSystem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CartSystem.Location = new System.Drawing.Point(0, 0);
+            this.CartSystem.Margin = new System.Windows.Forms.Padding(0);
+            this.CartSystem.Name = "CartSystem";
+            this.CartSystem.Size = new System.Drawing.Size(302, 742);
+            this.CartSystem.TabIndex = 32;
+            this.CartSystem.ItemEdit += new System.EventHandler(this.CartSystem_ItemEdit);
+            this.CartSystem.ItemDiscount += new System.EventHandler(this.CartSystem_ItemDiscount);
+            this.CartSystem.ItemModify += new System.EventHandler(this.CartSystem_ItemModify);
+            // 
             // frmNewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3260,6 +3263,7 @@
             this.panel14.PerformLayout();
             this.Discount.ResumeLayout(false);
             this.Discount.PerformLayout();
+            this.panel18.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.panel17.ResumeLayout(false);
@@ -3267,6 +3271,12 @@
             this.flp_discounts.ResumeLayout(false);
             this.Modifier.ResumeLayout(false);
             this.Modifier.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ConvertOrder.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -3278,13 +3288,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Payment.ResumeLayout(false);
             this.Payment.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3389,7 +3392,7 @@
         private System.Windows.Forms.Button btnEditSave;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button btnDiscountSave;
+        private System.Windows.Forms.Button btnDiscountApply;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox txtEditPrice;
         private System.Windows.Forms.Panel panel19;
@@ -3436,7 +3439,7 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button88;
+        private System.Windows.Forms.Button btnModifierApply;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Button button1;
@@ -3452,11 +3455,11 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button60;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtModifierAmount;
+        private System.Windows.Forms.Label lblModifierIsPercent;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtModifierName;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button61;
         private System.Windows.Forms.Label label32;

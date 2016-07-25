@@ -45,6 +45,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOptions = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnModifier = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnModifier = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
@@ -240,11 +240,36 @@
             this.pnlOptions.Controls.Add(this.btnEdit);
             this.pnlOptions.Controls.Add(this.btnDiscount);
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlOptions.Location = new System.Drawing.Point(0, 623);
+            this.pnlOptions.Location = new System.Drawing.Point(0, 742);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pnlOptions.Size = new System.Drawing.Size(302, 119);
+            this.pnlOptions.Size = new System.Drawing.Size(302, 0);
             this.pnlOptions.TabIndex = 67;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(150, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 13);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "MODIFIER";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnModifier
+            // 
+            this.btnModifier.BackColor = System.Drawing.Color.Teal;
+            this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModifier.Font = new System.Drawing.Font("Heydings Icons", 15.25F);
+            this.btnModifier.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnModifier.Location = new System.Drawing.Point(150, 35);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(63, 69);
+            this.btnModifier.TabIndex = 43;
+            this.btnModifier.Text = "a";
+            this.btnModifier.UseVisualStyleBackColor = false;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // label7
             // 
@@ -364,31 +389,6 @@
             this.label10.TabIndex = 70;
             this.label10.Text = "PRICE";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(150, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 13);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "MODIFIER";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnModifier
-            // 
-            this.btnModifier.BackColor = System.Drawing.Color.Teal;
-            this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModifier.Font = new System.Drawing.Font("Heydings Icons", 15.25F);
-            this.btnModifier.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnModifier.Location = new System.Drawing.Point(150, 35);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(63, 69);
-            this.btnModifier.TabIndex = 43;
-            this.btnModifier.Text = "a";
-            this.btnModifier.UseVisualStyleBackColor = false;
-            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // CartSystem
             // 

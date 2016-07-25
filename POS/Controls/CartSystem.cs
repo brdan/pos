@@ -131,7 +131,19 @@ namespace POS.Controls
                 MessageBox.Show("You must select an item to add this to...", "No item selected");
             }
             else
-            {
+            { 
+                //subtract based on greater value
+                decimal difference = 0.00M;
+                if (Convert.ToDecimal(price) > Convert.ToDecimal(GetSelectedItem().Price))
+                {
+                    difference = Convert.ToDecimal(price) - Convert.ToDecimal(GetSelectedItem().Price);
+                    totalPrice += difference;
+                }
+                else
+                {
+                    difference = Convert.ToDecimal(GetSelectedItem().Price) - Convert.ToDecimal(price);
+                    totalPrice -= difference;
+                }
                 selectedItem.Controls[0].Text = qty;
                 selectedItem.Controls[1].Text = description;
                 selectedItem.Controls[2].Text = Settings.Setting["currency"] + price;
@@ -175,7 +187,7 @@ namespace POS.Controls
                 }
                 #endregion
 
-                #region Price Updating
+                #region Price Calculations
                 // The above code checks if the selected item has a "sub-item's box" - if it does, it adds the sub-item accordingly; if not, it creates it, then adds the item.
                 decimal newParentItemPrice = 0.00M;
                 //Updating prices according to the added/deducted price on the item, also will need to update the item's `Price` field accordingly
@@ -196,8 +208,12 @@ namespace POS.Controls
                 else
                 {
                     decimal parentItemPrice = Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1));
-                    newParentItemPrice = Convert.ToDecimal(priceString) + parentItemPrice;
-                    totalPrice += Convert.ToDecimal(priceString);
+
+                    //is price fixed or percentage? 
+                    decimal priceToAdd = isPercent ? (Convert.ToDecimal(priceString) * parentItemPrice) / 100 : Convert.ToDecimal(priceString);
+
+                    newParentItemPrice = Convert.ToDecimal(priceToAdd) + parentItemPrice;
+                    totalPrice += Convert.ToDecimal(priceToAdd);
                 }
                 #endregion
 
