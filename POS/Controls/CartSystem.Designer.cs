@@ -250,7 +250,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(150, 16);
+            this.label11.Location = new System.Drawing.Point(154, 14);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 44;
@@ -263,7 +263,7 @@
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModifier.Font = new System.Drawing.Font("Heydings Icons", 15.25F);
             this.btnModifier.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnModifier.Location = new System.Drawing.Point(150, 35);
+            this.btnModifier.Location = new System.Drawing.Point(154, 33);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(63, 69);
             this.btnModifier.TabIndex = 43;
@@ -275,7 +275,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(219, 16);
+            this.label7.Location = new System.Drawing.Point(223, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 13);
             this.label7.TabIndex = 42;
@@ -286,7 +286,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(81, 16);
+            this.label6.Location = new System.Drawing.Point(85, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 41;
@@ -297,7 +297,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(16, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 40;
@@ -310,7 +310,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Heydings Icons", 15.25F);
             this.btnDelete.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDelete.Location = new System.Drawing.Point(219, 35);
+            this.btnDelete.Location = new System.Drawing.Point(223, 33);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(63, 69);
             this.btnDelete.TabIndex = 2;
@@ -324,7 +324,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.Font = new System.Drawing.Font("Heydings Icons", 15.25F);
             this.btnEdit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEdit.Location = new System.Drawing.Point(81, 35);
+            this.btnEdit.Location = new System.Drawing.Point(85, 33);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(63, 69);
             this.btnEdit.TabIndex = 1;
@@ -338,7 +338,7 @@
             this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDiscount.Font = new System.Drawing.Font("Heydings Icons", 15.25F);
             this.btnDiscount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDiscount.Location = new System.Drawing.Point(12, 35);
+            this.btnDiscount.Location = new System.Drawing.Point(16, 33);
             this.btnDiscount.Name = "btnDiscount";
             this.btnDiscount.Size = new System.Drawing.Size(63, 69);
             this.btnDiscount.TabIndex = 0;

@@ -31,7 +31,7 @@ namespace POS
         public void loadCart(Order o)
         {
             Tab.SelectTab("Cart");
-
+            MsgGlobal.Tell("There's no back button here. If you want to return, save the order, or void it.");
         }
         public void initOrder(Button btn)
         {
@@ -62,8 +62,10 @@ namespace POS
             switch (routePath)
             {
                 case 1:
+                    //When the order type goes straight to the cart, like for Bar
                     loadCart(tempOrder);
-                    //lblTitle.Text = "Creating Order...";
+                    lblTitle.Hide();
+                    btnBack.Hide();
                     // btnBack.AccessibleName = "1";
                     break;
 
@@ -999,35 +1001,15 @@ namespace POS
         {
             CartSystem.AddItem(Collections.Products.Where(pr => pr.ID == Convert.ToInt64(((Control)sender).AccessibleName)).First());
         }
-
         void frmNewOrder_Load(object sender, EventArgs e)
         {
-            Functions.GiveBorder(Tab, this, Color.FromArgb(44, 62, 80));
+            Functions.GiveBorder(Tab, Wrapper, Color.FromArgb(44, 62, 80));
             Functions.GiveBorder(OrderTab, Cart, Color.FromArgb(44, 62, 80));
         }
         void btnOrderType(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             initOrder(btn);
-        }
-        void btnBack_Click(object sender, EventArgs e)
-        {
-            /*
-             1 - Back to Order Menu
-
-             */
-
-            switch (Convert.ToInt16(((PictureBox)sender).AccessibleName))
-            {
-                case 1:
-                    Tab.SelectTab(0);
-                    //lblTitle.Text = "Order Menu";
-                    break;
-
-
-                default:
-                    break;
-            }
         }
         void btnMenu_Click(object sender, EventArgs e)
         {
@@ -1081,7 +1063,7 @@ namespace POS
             CartSystem.AddSubItem(true, "Student Discount", "1.00");
         }
 
-        private void CartSystem_ItemEdit(object sender, EventArgs e)
+        void CartSystem_ItemEdit(object sender, EventArgs e)
         {
             OrderTab.SelectTab("Edit");
             lblCartTitle.Text = "EDIT ITEM";
@@ -1092,7 +1074,7 @@ namespace POS
             txtEditPrice.Text = CartSystem.GetSelectedItem().Price;
 
         }
-        private void CartSystem_ItemDiscount(object sender, EventArgs e)
+        void CartSystem_ItemDiscount(object sender, EventArgs e)
         {
             lblDiscountIsPercent.Text = "( % )";
             txtDiscountAmount.Parent.Show();
@@ -1101,7 +1083,7 @@ namespace POS
             OrderTab.SelectTab("Discount");
             lblCartTitle.Text = "DISCOUNT ITEM";
         }
-        private void CartSystem_ItemModify(object sender, EventArgs e)
+        void CartSystem_ItemModify(object sender, EventArgs e)
         {
             lblModifierIsPercent.Text = "( % )";
             txtModifierAmount.Parent.Show();
@@ -1111,7 +1093,7 @@ namespace POS
             lblCartTitle.Text = "ADD MODIFIER";
         }
     
-        private void edit_Qty(object sender, EventArgs e)
+        void edit_Qty(object sender, EventArgs e)
         {
             int qty = ((Button)sender).Name.Contains("Down") ? Convert.ToInt16(lblEditQty.Text) - 1 : Convert.ToInt16(lblEditQty.Text) + 1;
 
@@ -1121,23 +1103,23 @@ namespace POS
                 txtEditPrice.Text = Convert.ToDecimal((Convert.ToInt16(lblEditQty.Text) * Convert.ToDecimal(CartSystem.GetSelectedItem().Price))).ToString(".##");
             }
         }
-        private void btnEditSave_Click(object sender, EventArgs e)
+        void btnEditSave_Click(object sender, EventArgs e)
         {
             CartSystem.EditItem(lblEditQty.Text, txtEditDescription.Text, txtEditPrice.Text);
         }
 
-        private void txtDiscountAmount_Click(object sender, EventArgs e)
+        void txtDiscountAmount_Click(object sender, EventArgs e)
         {
             lblDiscountIsPercent.Text = lblDiscountIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " )" : "( % )";
         }
-        private void txtModifierAmount_Click(object sender, EventArgs e)
+        void txtModifierAmount_Click(object sender, EventArgs e)
         {
             lblModifierIsPercent.Text = lblModifierIsPercent.Text.Contains("%") ? "( " + Settings.Setting["currency"] + " )" : "( % )";
 
         }
 
 
-        private void btnDiscountApply_Click(object sender, EventArgs e)
+        void btnDiscountApply_Click(object sender, EventArgs e)
         {
             string name = txtDiscountName.TextLength > 0 ? txtDiscountName.Text : "Unnamed Discount";
             decimal price = txtDiscountAmount.TextLength > 0 ? Convert.ToDecimal(txtDiscountAmount.Text) + 0.00M : 0.00M;
@@ -1154,7 +1136,7 @@ namespace POS
             }
         }
 
-        private void btnModifierApply_Click(object sender, EventArgs e)
+        void btnModifierApply_Click(object sender, EventArgs e)
         {
             string name = txtModifierName.TextLength > 0 ? txtModifierName.Text : "Unnamed Modifier";
             decimal price = txtModifierAmount.TextLength > 0 ? Convert.ToDecimal(txtModifierAmount.Text) + 0.00M : 0.00M;
@@ -1168,6 +1150,30 @@ namespace POS
                 bool isPercent = lblModifierIsPercent.Text.Contains("%") ? true : false;
 
                 CartSystem.AddSubItem(false, name, price.ToString(), isPercent);
+            }
+        }
+
+        void btnBack_Click(object sender, EventArgs e)
+        {
+            switch (Convert.ToInt32(lblTitle.AccessibleName))
+            {
+                case 0:
+                    Router.Dashboard();
+                    System.Threading.Thread.Sleep(50);
+                    this.Hide();
+                    break;
+
+                case 1:
+                    //Back To Order menu 
+                    Tab.SelectTab("OrderType");
+                    lblTitle.Text = "Dashboard";
+                    lblTitle.AccessibleName = "0";
+                    Index();
+                    break;
+
+                default:
+                    MessageBox.Show("All I know is ... that this is supposed to go back somewhere :p");
+                    break;
             }
         }
     }
