@@ -208,6 +208,10 @@ namespace POS.Classes
             }
             return sIs;
         }
+        public static string Monify (string money)
+        {
+            return Convert.ToDecimal(money).ToString("0#.00");
+        }
 
 
     }

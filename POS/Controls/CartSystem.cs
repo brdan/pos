@@ -16,13 +16,14 @@ namespace POS.Controls
         int coolValue = 0;
         int selectedItemIndex = -1;
         decimal _totalPrice = 0.00M;
-        decimal totalPrice
+        public  decimal totalPrice
         {
             get { return _totalPrice; }
             set
             {
                 _totalPrice = value;
-                lblTotalPrice.Text = Settings.Setting["currency"] + _totalPrice.ToString();
+                lblTotalPrice.Text = Settings.Setting["currency"] + Functions.Monify(_totalPrice.ToString());
+                lblTotalPrice2.Text = Settings.Setting["currency"] + Functions.Monify(_totalPrice.ToString());
             }
         }
 
@@ -97,7 +98,7 @@ namespace POS.Controls
             //Item Price Label
             Label lblPrice = new Label();
             lblPrice.Font = new Font("Segoe UI", 10.00f, FontStyle.Bold);
-            lblPrice.Text = Settings.Setting["currency"] + p.CostPrice;
+            lblPrice.Text = Settings.Setting["currency"] + Functions.Monify(p.CostPrice.ToString());
             lblPrice.TextAlign = ContentAlignment.MiddleCenter;
             lblPrice.ForeColor = Color.Gainsboro;
             lblPrice.BackColor = pattern;
@@ -146,7 +147,7 @@ namespace POS.Controls
                 }
                 selectedItem.Controls[0].Text = qty;
                 selectedItem.Controls[1].Text = description;
-                selectedItem.Controls[2].Text = Settings.Setting["currency"] + price;
+                selectedItem.Controls[2].Text = Settings.Setting["currency"] + Functions.Monify(price);
             }
         }
         public void AddSubItem(bool DiscountOrModifier, string textString, string priceString, bool isPercent = false)
@@ -253,7 +254,7 @@ namespace POS.Controls
 
                 decimal displayPrice = isPercent ? ((Convert.ToDecimal(priceString) * Convert.ToDecimal(selectedItem.Controls[2].Text.Substring(1))) / 100) : Convert.ToDecimal(priceString);
 
-                lblPrice.Text = str + Settings.Setting["currency"] + Math.Round(displayPrice, 2, MidpointRounding.AwayFromZero);
+                lblPrice.Text = str + Settings.Setting["currency"] + Functions.Monify(displayPrice.ToString());
                 Font font = new Font("Segoe UI", 10.00f);
                 if (lblPrice.Text.Length > 5)
                     font = new Font("Segoe UI", 9.00f);
@@ -278,7 +279,7 @@ namespace POS.Controls
                 #endregion
 
                 #region Finally, updating price visual and changing the colour to indicate price influence
-                flp_cart.Controls[selectedItemIndex].Controls[2].Text = Settings.Setting["currency"] + Math.Round(newParentItemPrice, 2, MidpointRounding.AwayFromZero);
+                flp_cart.Controls[selectedItemIndex].Controls[2].Text = Settings.Setting["currency"] + Functions.Monify(newParentItemPrice.ToString());
                 flp_cart.Controls[selectedItemIndex].Controls[2].ForeColor = Color.FromArgb(232, 126, 4);
                 #endregion 
             }
@@ -343,21 +344,29 @@ namespace POS.Controls
         private void tmrOptions_Tick(object sender, EventArgs e)
         {
             if (!pnlOptionsVisible)
+                //going up
                 if (pnlOptions.Height < 122)
                     pnlOptions.Height += 2;
                 else
                 {
                     tmrOptions.Stop();
                     pnlOptions.Visible = true;
+                    panel3.Show();
                 }
+
             else if (pnlOptionsVisible)
+                //going down
+            {
+                panel3.Hide(); //hide first here instead of after animation, simply looks prettier :)
                 if (pnlOptions.Height > 0)
                     pnlOptions.Height -= 2;
                 else
                 {
                     tmrOptions.Stop();
                     pnlOptionsVisible = false;
+
                 }
+            }
         }
         #endregion
 
@@ -477,11 +486,20 @@ namespace POS.Controls
                 {
                     if (thisItem != flp_cart.Controls.Count)
                     {
-                        selectedItemIndex = thisItem;
+                        //making sure what I'm selecting isn't a freakin sub-box
+                        
+                            selectedItemIndex = thisItem;
                     }
                     else
                     {
-                        selectedItemIndex = thisItem - 1;
+                        if (flp_cart.Controls[thisItem - 1].Margin.Left == 0)
+                            selectedItemIndex = thisItem - 1;
+                        else
+                        {
+                            //one more step
+                            if (flp_cart.Controls[thisItem - 2].Margin.Left == 0)
+                                selectedItemIndex = thisItem - 2;
+                        }
                     }
 
                     flp_cart.Controls[selectedItemIndex].Controls.OfType<Control>().ToList().ForEach(c => c.BackColor = Color.FromArgb(41, 128, 185));

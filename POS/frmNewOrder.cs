@@ -1090,6 +1090,8 @@ namespace POS
             txtModifierAmount.Text = "0.00";
             txtModifierName.Clear();
             OrderTab.SelectTab("Modifier");
+
+
             lblCartTitle.Text = "ADD MODIFIER";
         }
     
@@ -1139,7 +1141,7 @@ namespace POS
         void btnModifierApply_Click(object sender, EventArgs e)
         {
             string name = txtModifierName.TextLength > 0 ? txtModifierName.Text : "Unnamed Modifier";
-            decimal price = txtModifierAmount.TextLength > 0 ? Convert.ToDecimal(txtModifierAmount.Text) + 0.00M : 0.00M;
+            decimal price = txtModifierAmount.TextLength > 0 ? Convert.ToDecimal(txtModifierAmount.Text) : 0.00M;
 
             if (txtModifierAmount.TextLength == 0)
             {
@@ -1175,6 +1177,18 @@ namespace POS
                     MessageBox.Show("All I know is ... that this is supposed to go back somewhere :p");
                     break;
             }
+        }
+
+        private void btnSaveQuit_Click(object sender, EventArgs e)
+        {
+            //just make a huge window that says "Exit to Menu" and "Continue Order"
+
+            if(MessageBox.Show("This order has been saved. Would you like to continue?", "Continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //continue
+
+            }
+            
         }
     }
 }

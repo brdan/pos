@@ -40,10 +40,10 @@
             this.lblSubTotal = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblVAT = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.btnModifier = new System.Windows.Forms.Button();
@@ -57,9 +57,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTotalPrice2 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnlOptions.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // flp_cart
@@ -178,6 +182,22 @@
             this.lblVAT.TabIndex = 42;
             this.lblVAT.Text = "0.00";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(43)))), ((int)(((byte)(61)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.lblVAT);
+            this.panel1.Controls.Add(this.lblDiscount);
+            this.panel1.Controls.Add(this.lblSubTotal);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(0, 623);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(267, 119);
+            this.panel1.TabIndex = 34;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
@@ -188,7 +208,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(129, 119);
-            this.panel2.TabIndex = 43;
+            this.panel2.TabIndex = 71;
             // 
             // lblTotalPrice
             // 
@@ -211,22 +231,6 @@
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 37;
             this.label4.Text = "TOTAL";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(43)))), ((int)(((byte)(61)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lblVAT);
-            this.panel1.Controls.Add(this.lblDiscount);
-            this.panel1.Controls.Add(this.lblSubTotal);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 623);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 119);
-            this.panel1.TabIndex = 34;
             // 
             // pnlOptions
             // 
@@ -390,16 +394,51 @@
             this.label10.Text = "PRICE";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(38)))), ((int)(((byte)(56)))));
+            this.panel3.Controls.Add(this.lblTotalPrice2);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Location = new System.Drawing.Point(138, 548);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(129, 76);
+            this.panel3.TabIndex = 73;
+            this.panel3.Visible = false;
+            // 
+            // lblTotalPrice2
+            // 
+            this.lblTotalPrice2.AutoSize = true;
+            this.lblTotalPrice2.Font = new System.Drawing.Font("Segoe UI Light", 13F);
+            this.lblTotalPrice2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.lblTotalPrice2.Location = new System.Drawing.Point(7, 36);
+            this.lblTotalPrice2.Name = "lblTotalPrice2";
+            this.lblTotalPrice2.Size = new System.Drawing.Size(43, 25);
+            this.lblTotalPrice2.TabIndex = 38;
+            this.lblTotalPrice2.Text = "0.00";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label13.Location = new System.Drawing.Point(9, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "TOTAL";
+            // 
             // CartSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.Controls.Add(this.pnlOptions);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.sd);
             this.Controls.Add(this.su);
             this.Controls.Add(this.panel1);
@@ -407,11 +446,13 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CartSystem";
             this.Size = new System.Drawing.Size(302, 742);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnlOptions.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -429,9 +470,6 @@
         private System.Windows.Forms.Label lblSubTotal;
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label lblVAT;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTotalPrice;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.Button btnDelete;
@@ -446,5 +484,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnModifier;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblTotalPrice2;
+        private System.Windows.Forms.Label label13;
     }
 }

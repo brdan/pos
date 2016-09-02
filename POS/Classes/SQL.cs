@@ -17,8 +17,9 @@ namespace POS.Classes
         public static void Init()
         {
             //Initial Connection (Used for everything)
-            SqlConnection cnx = new SqlConnection(cnxString); cnx.Open();
 
+            SqlConnection cnx = new SqlConnection(cnxString); cnx.Open();
+            
             //Emergency Start-Up Queries For Testing Should Start Here
             //using (SqlCommand cmd = new SqlCommand("UPDATE customers SET avatar=@img WHERE id=1", cnx))
             //{
