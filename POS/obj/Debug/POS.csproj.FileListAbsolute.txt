@@ -14,7 +14,6 @@ C:\Users\moham\documents\visual studio 2015\Projects\POS\POS\obj\Debug\POS.cspro
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\bin\Debug\POS.exe.config
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\obj\Debug\POS.exe
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS\POS\obj\Debug\POS.pdb
-C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.exe
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\bin\Debug\POS.exe.config
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\bin\Debug\POS.exe
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\bin\Debug\POS.pdb
@@ -30,5 +29,6 @@ C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.Controls.
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.frmNewOrder.resources
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.Properties.Resources.resources
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.csproj.GenerateResource.Cache
+C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.exe
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.pdb
 C:\Users\mohamed\Desktop\PROJECTS\APPS\POS (Current)\POS\obj\Debug\POS.csprojResolveAssemblyReference.cache

@@ -15,8 +15,10 @@ namespace POS.Controls
         bool cartScrollDirection;
         int coolValue = 0;
         int selectedItemIndex = -1;
-        decimal _totalPrice = 0;
-        public  decimal totalPrice
+
+        private decimal _totalPrice;
+
+        public decimal totalPrice
         {
             get { return _totalPrice; }
             set
@@ -26,6 +28,7 @@ namespace POS.Controls
                 lblTotalPrice2.Text = Settings.Setting["currency"] + Functions.Monify(_totalPrice.ToString());
             }
         }
+
 
         Cart TempCart = new Cart();
 

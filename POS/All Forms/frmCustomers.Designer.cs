@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomers));
             this.lblTitle = new System.Windows.Forms.Label();
             this.View = new System.Windows.Forms.TabPage();
+            this.btnSelectCustomer = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.lblNotes = new System.Windows.Forms.Label();
@@ -115,7 +116,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.pbCreateAvatar = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.btnSelectCustomer = new System.Windows.Forms.Button();
             this.View.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.Search.SuspendLayout();
@@ -187,6 +187,21 @@
             this.View.Size = new System.Drawing.Size(992, 640);
             this.View.TabIndex = 1;
             this.View.Text = "View";
+            // 
+            // btnSelectCustomer
+            // 
+            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(163)))), ((int)(((byte)(223)))));
+            this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelectCustomer.ForeColor = System.Drawing.Color.Snow;
+            this.btnSelectCustomer.Location = new System.Drawing.Point(733, 30);
+            this.btnSelectCustomer.Name = "btnSelectCustomer";
+            this.btnSelectCustomer.Size = new System.Drawing.Size(109, 39);
+            this.btnSelectCustomer.TabIndex = 53;
+            this.btnSelectCustomer.Text = "SELECT";
+            this.btnSelectCustomer.UseVisualStyleBackColor = false;
+            this.btnSelectCustomer.Visible = false;
+            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
             // 
             // btnEdit
             // 
@@ -1228,21 +1243,6 @@
             this.btnBack.TabIndex = 5;
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnSelectCustomer
-            // 
-            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(163)))), ((int)(((byte)(223)))));
-            this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSelectCustomer.ForeColor = System.Drawing.Color.Snow;
-            this.btnSelectCustomer.Location = new System.Drawing.Point(733, 30);
-            this.btnSelectCustomer.Name = "btnSelectCustomer";
-            this.btnSelectCustomer.Size = new System.Drawing.Size(109, 39);
-            this.btnSelectCustomer.TabIndex = 53;
-            this.btnSelectCustomer.Text = "SELECT";
-            this.btnSelectCustomer.UseVisualStyleBackColor = false;
-            this.btnSelectCustomer.Visible = false;
-            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
             // 
             // frmCustomers
             // 
