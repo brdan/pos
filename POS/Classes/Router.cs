@@ -24,9 +24,9 @@ namespace POS.Classes
         {
             return rDashboard.Index();
         }
-        public static bool Customers()
+        public static bool Customers(bool select = false)
         {
-            return rCustomers.Index();
+            return rCustomers.Index(select);
         }
 
         public static bool StockManagement()

@@ -15,7 +15,7 @@ namespace POS.Controls
         bool cartScrollDirection;
         int coolValue = 0;
         int selectedItemIndex = -1;
-        decimal _totalPrice = 0.00M;
+        decimal _totalPrice = 0;
         public  decimal totalPrice
         {
             get { return _totalPrice; }

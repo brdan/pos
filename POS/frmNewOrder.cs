@@ -1179,16 +1179,28 @@ namespace POS
             }
         }
 
-        private void btnSaveQuit_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             //just make a huge window that says "Exit to Menu" and "Continue Order"
 
             if(MessageBox.Show("This order has been saved. Would you like to continue?", "Continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //continue
-
+                Tab.SelectTab("Payment");
             }
             
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            Router.Customers(true);
+        }
+
+        private void btnsSwitchPaymentType(object sender, EventArgs e)
+        {
+            lblTransactionType.Text = ((Button)sender).Text;
+
+            ((Button)sender).BackColor = Color.FromArgb(10, 28, 46);
         }
     }
 }

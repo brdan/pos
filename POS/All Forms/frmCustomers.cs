@@ -22,7 +22,7 @@ namespace POS
          
         }
         Customer viewedCustomer;
-        public bool Index()
+        public bool Index(bool select = false)
         {
             //Clears pane and begins to draw customers
             flp_customers.Controls.Clear();
@@ -30,6 +30,12 @@ namespace POS
                 paintCustomer(c);
             lblRecordCount.Text = Collections.Customers.Count.ToString();
             this.Show();
+
+            if (select)
+                btnSelectCustomer.Show();
+            else
+                btnSelectCustomer.Hide();
+
             return true;
         }
         public void paintCustomer(Customer c)
@@ -366,5 +372,9 @@ namespace POS
             pbCreateAvatar.ImageLocation = ofd.FileName;
         }
 
+        private void btnSelectCustomer_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have selected this customer: " + viewedCustomer.FirstName);
+        }
     }
 }

@@ -115,6 +115,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.pbCreateAvatar = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
+            this.btnSelectCustomer = new System.Windows.Forms.Button();
             this.View.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.Search.SuspendLayout();
@@ -155,6 +156,7 @@
             // View
             // 
             this.View.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.View.Controls.Add(this.btnSelectCustomer);
             this.View.Controls.Add(this.btnEdit);
             this.View.Controls.Add(this.label28);
             this.View.Controls.Add(this.lblNotes);
@@ -1227,6 +1229,21 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnSelectCustomer
+            // 
+            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(163)))), ((int)(((byte)(223)))));
+            this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelectCustomer.ForeColor = System.Drawing.Color.Snow;
+            this.btnSelectCustomer.Location = new System.Drawing.Point(733, 30);
+            this.btnSelectCustomer.Name = "btnSelectCustomer";
+            this.btnSelectCustomer.Size = new System.Drawing.Size(109, 39);
+            this.btnSelectCustomer.TabIndex = 53;
+            this.btnSelectCustomer.Text = "SELECT";
+            this.btnSelectCustomer.UseVisualStyleBackColor = false;
+            this.btnSelectCustomer.Visible = false;
+            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
+            // 
             // frmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1371,5 +1388,6 @@
         private System.Windows.Forms.LinkLabel lblUploadImage;
         private System.Windows.Forms.Button btnCreateNew;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSelectCustomer;
     }
 }
