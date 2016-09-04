@@ -21,12 +21,13 @@ namespace POS
         Order tempOrder;
         int itemViewMode = 0; //0 - Rectangles, 1 - List, 2 - Information Boxes
 
-        public bool Index()
+        // Public Functions
+        public frmNewOrder Index()
         {
             Tab.SelectTab(0);
             this.Show();
             lblCartTitle.Location = new Point(315, 13);
-            return true;
+            return this;
         }
         public void loadCart(Order o)
         {
@@ -80,7 +81,13 @@ namespace POS
             }
 
         }
+        public void setCustomer(int ID)
+        {
+            tempOrder.CustomerID = ID;
+        }
 
+
+        // Private Functions
         /*First and Second are named so because it can contain both Categories & Subcategories
         Whereas the third page can only ever contain products, hence the naming convention*/
         void generateFirstPageItems()
@@ -986,7 +993,8 @@ namespace POS
             }
 
         }
-
+        
+        // Event handlers
         void btnFirstPageItems_Click(object sender, EventArgs e)
         {
             Control c = (Control)sender;
@@ -1208,6 +1216,7 @@ namespace POS
         {
             Router.frmCustFromOrder = true;
             Router.Customers();
+            
         }
     }
 }

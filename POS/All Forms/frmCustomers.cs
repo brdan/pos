@@ -384,7 +384,9 @@ namespace POS
 
         private void btnSelectCustomer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You have selected this customer: " + viewedCustomer.FirstName);
+            Router.NewOrder().setCustomer(viewedCustomer.ID);
+            this.Hide();
+            
         }
     }
 }

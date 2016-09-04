@@ -41,7 +41,7 @@ namespace POS
                 default:
                     try
                     {
-                        if ((bool)typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null))
+                        if (typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null).ToString().Length > 0)
                         {
                             Thread.Sleep(50);
                             this.Hide();

@@ -38,7 +38,7 @@ namespace POS.Classes
             return rStock.Index();
         }
 
-        public static bool NewOrder()
+        public static frmNewOrder NewOrder()
         {
             return rOrder.Index();
         }
