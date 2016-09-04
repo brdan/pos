@@ -9,6 +9,7 @@ namespace POS.Classes
     public static class Settings
     {
         public static Dictionary<string, string> Setting = new Dictionary<string, string>();
+
         public static List<Table> Tables = new List<Table>();
 
 

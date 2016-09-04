@@ -30,6 +30,9 @@ namespace POS
 
         private void btns_Click(object sender, EventArgs e)
         {
+            // NEUTRALIZE ================
+            Router.frmCustFromOrder = false;
+
             Button btn = (Button)sender;
             switch (btn.Name)
             {
@@ -38,7 +41,7 @@ namespace POS
                 default:
                     try
                     {
-                        if((bool)typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null))
+                        if ((bool)typeof(Router).GetMethod(btn.AccessibleName).Invoke(typeof(Router).GetMethod(btn.AccessibleName), null))
                         {
                             Thread.Sleep(50);
                             this.Hide();

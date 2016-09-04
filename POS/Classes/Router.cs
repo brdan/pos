@@ -16,6 +16,10 @@ namespace POS.Classes
         static frmStock rStock = new frmStock();
         static frmNewOrder rOrder = new frmNewOrder();
 
+        // STATE CHANGERS ================
+        public static bool frmCustFromOrder = false;
+
+
         public static bool Login()
         {
             return rLogin.Index();
@@ -24,9 +28,9 @@ namespace POS.Classes
         {
             return rDashboard.Index();
         }
-        public static bool Customers(bool select = false)
+        public static bool Customers()
         {
-            return rCustomers.Index(select);
+            return rCustomers.Index();
         }
 
         public static bool StockManagement()

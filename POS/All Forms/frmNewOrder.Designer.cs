@@ -255,6 +255,7 @@
             this.Payment = new System.Windows.Forms.TabPage();
             this.label35 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.btnCatDelete = new System.Windows.Forms.Button();
             this.button129 = new System.Windows.Forms.Button();
             this.button130 = new System.Windows.Forms.Button();
             this.button131 = new System.Windows.Forms.Button();
@@ -302,7 +303,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.Wrapper = new System.Windows.Forms.Panel();
             this.MsgGlobal = new POS.Controls.MsgGlobal();
-            this.btnCatDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.Customer.SuspendLayout();
             this.panel32.SuspendLayout();
@@ -457,9 +457,9 @@
             this.label47.ForeColor = System.Drawing.Color.Gainsboro;
             this.label47.Location = new System.Drawing.Point(434, 201);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(107, 19);
+            this.label47.Size = new System.Drawing.Size(111, 19);
             this.label47.TabIndex = 26;
-            this.label47.Text = "- No Customer-";
+            this.label47.Text = "- No Customer -";
             // 
             // label9
             // 
@@ -3424,6 +3424,19 @@
             this.panel23.Size = new System.Drawing.Size(253, 621);
             this.panel23.TabIndex = 75;
             // 
+            // btnCatDelete
+            // 
+            this.btnCatDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnCatDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCatDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCatDelete.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCatDelete.Location = new System.Drawing.Point(13, 484);
+            this.btnCatDelete.Name = "btnCatDelete";
+            this.btnCatDelete.Size = new System.Drawing.Size(231, 33);
+            this.btnCatDelete.TabIndex = 84;
+            this.btnCatDelete.Text = "RESET ALL PAYMENT METHODS";
+            this.btnCatDelete.UseVisualStyleBackColor = false;
+            // 
             // button129
             // 
             this.button129.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(60)))));
@@ -4035,19 +4048,6 @@
             this.MsgGlobal.Name = "MsgGlobal";
             this.MsgGlobal.Size = new System.Drawing.Size(288, 85);
             this.MsgGlobal.TabIndex = 20;
-            // 
-            // btnCatDelete
-            // 
-            this.btnCatDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.btnCatDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCatDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCatDelete.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCatDelete.Location = new System.Drawing.Point(13, 484);
-            this.btnCatDelete.Name = "btnCatDelete";
-            this.btnCatDelete.Size = new System.Drawing.Size(231, 33);
-            this.btnCatDelete.TabIndex = 84;
-            this.btnCatDelete.Text = "RESET ALL PAYMENT METHODS";
-            this.btnCatDelete.UseVisualStyleBackColor = false;
             // 
             // frmNewOrder
             // 

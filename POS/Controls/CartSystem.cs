@@ -24,8 +24,11 @@ namespace POS.Controls
             set
             {
                 _totalPrice = value;
-                lblTotalPrice.Text = Settings.Setting["currency"] + Functions.Monify(_totalPrice.ToString());
-                lblTotalPrice2.Text = Settings.Setting["currency"] + Functions.Monify(_totalPrice.ToString());
+
+                string moneyString = Settings.Setting.ContainsKey("currency") ? Settings.Setting["currency"] + Functions.Monify(_totalPrice.ToString()) : Functions.Monify(_totalPrice.ToString());
+
+                lblTotalPrice.Text = moneyString;
+                lblTotalPrice2.Text = moneyString;
             }
         }
 

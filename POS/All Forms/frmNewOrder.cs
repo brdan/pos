@@ -1173,6 +1173,14 @@ namespace POS
                     Index();
                     break;
 
+                case 2:
+                    //Back to Cart Menu
+                    Tab.SelectTab("Cart");
+                    lblTitle.Hide();
+                    btnBack.Hide();
+
+                    break;
+
                 default:
                     MessageBox.Show("All I know is ... that this is supposed to go back somewhere :p");
                     break;
@@ -1185,15 +1193,21 @@ namespace POS
 
             if (MessageBox.Show("This order has been saved. Would you like to continue?", "Continue?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //continue
+                //Change tab and show back button
                 Tab.SelectTab("Customer");
+
+                btnBack.Show();
+                lblTitle.AccessibleName = "2";
+                lblTitle.Text = "Cart";
+                lblTitle.Show();
             }
 
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            Router.Customers(true);
+            Router.frmCustFromOrder = true;
+            Router.Customers();
         }
     }
 }

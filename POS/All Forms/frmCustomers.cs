@@ -22,19 +22,25 @@ namespace POS
          
         }
         Customer viewedCustomer;
-        public bool Index(bool select = false)
+        public bool Index()
         {
             //Clears pane and begins to draw customers
             flp_customers.Controls.Clear();
+            btnSelectCustomer.Hide();
+            lblTitle.Text = "Customers";
+            lblTitle.AccessibleName = "0";
             foreach (Customer c in Collections.Customers)
                 paintCustomer(c);
             lblRecordCount.Text = Collections.Customers.Count.ToString();
             this.Show();
 
-            if (select)
+
+            if (Router.frmCustFromOrder)
+            {
                 btnSelectCustomer.Show();
-            else
-                btnSelectCustomer.Hide();
+                lblTitle.Text = "Back to Order";
+                lblTitle.AccessibleName = "3";
+            }
 
             return true;
         }
@@ -182,6 +188,10 @@ namespace POS
                     Tab.SelectTab("View");
                     lblTitle.Text = "Viewing Customer...";
                     lblTitle.AccessibleName = "1";
+                    break;
+
+                case 3:
+                    this.Hide();
                     break;
                 default:
                     MessageBox.Show("All I know is ... that this is supposed to go back somewhere :p");
